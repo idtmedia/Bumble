@@ -1,0 +1,209 @@
+/* demo css*/
+.wrap{padding:100px 0;}
+.demo-container{width:1130px;margin:0 auto;}
+.container-row{margin:0 -15px;}
+.clear{clear:both}
+.demo-grid{ float:left;margin-bottom:30px;padding:0 15px;position:relative;}
+.demo-grid .demo-template-wrap .ai1wmdi-modal{
+	transform: translateY(-50%);
+right: 0;
+left: 0;
+	
+}
+.demo-grid .ai1wmdi-modal #setting-error-classiadspro{display:none;}
+.demo-template-wrap{
+	background: #fff;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);
+	padding:1px;
+	position:relative;
+}
+.demo-title{}
+.demo-title h5,
+.video_tuts_title h5{font-size:18px;text-transform:uppercase;text-align:center;}
+.demo-template-wrap .figure{}
+.demo-template-wrap .figure img{}
+.demo-download-btn{
+	padding: 30px;
+	vertical-align: middle;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align:center;
+}
+.demo-download-btn a{
+	background: #fff;
+    border-radius: 5px;
+    color: #333;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    min-width: 200px;
+    min-height: 54px;
+    line-height: 54px;
+}
+
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: none;
+    margin: 32px auto 0; /* 15% from the top and centered */
+    padding: 0;
+    width: 770px; /* Could be more or less, depending on screen size */
+	position:relative;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+	position:absolute;
+	z-index:100;
+	top:5;
+	right:10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.demo-video-wrap{background:#fff;padding:10px;box-shadow:0 0 5px 2px rgba(0,0,0,0.1);}
+
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 770px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+.demo-downloader{width:70%;margin:0 auto;text-align:center;padding:30px;background:#fff;border:1px solid #eee;box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);}
+.demo-downloader p{text-align:left;}
+.demo-downloader ul li{text-align:left;padding:5px 0;list-style-type: circle;}
+.demo-container .notice{background:rgba(229,115,42,0.6);}
+.demo-container .notice p{color:#fff; text-align:left;font-size:16px;}
+.demo-steps{padding:30px;background:#fff;border:#eee;}
+.demo-steps p{text-align:left;}
+.demo-steps li{text-align:left;list-style-type: circle;}
+.demo-template-wrap .figure{
+	position:relative;
+}
+.demo-template-wrap:hover .figure .overlay{
+	opacity:1;
+	transition:all 0.3s ease;
+}
+.demo-template-wrap .figure .overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+	background:#0083c9;
+	height:100%;
+	opacity:0;
+	transition:all 0.3s ease;
+	visibility:visible;
+}
+.ai1wm-not-visible {
+    display:none;
+}
+#wpfooter {
+    position: fixed !important;
+}

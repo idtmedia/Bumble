@@ -1,0 +1,53 @@
+/*
+Theme Name:		ClassiadsPro Child
+Theme URI:		http://themeforest.net/user/designinvento
+Description:	Child theme for the ClassiadsPro theme 
+Author:			Designinvento
+Theme URI:		http://themeforest.net/user/designinvento
+Template:		classiadspro
+Version:		1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+.how_we_work .wpb_column.vc_column_container.vc_col-sm-4{
+
+position:relative}
+.how_we_work .wpb_column.vc_column_container.vc_col-sm-4:nth-child(1):after{
+    content: "";
+    background: url(img/one_two.png) no-repeat center center;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -28%;
+    display: block;
+    z-index: 9;
+    width: 200px;
+    height: 50px;
+}
+.how_we_work .wpb_column.vc_column_container.vc_col-sm-4:nth-child(2):after{
+    content: "";
+    background: url(img/two_to_three.png) no-repeat center center;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -28%;
+    display: block;
+    z-index: 9;
+    width: 200px;
+    height: 50px;
+}
+.dhvc-form-role-box .dhvc-form-label{
+	display: none;
+}
+
+.dhvc-form-flat .dhvc-form-role-box i{
+	height: 17px!important;
+	margin: 0!important;
+	position: relative;
+	top: 0;
+}
+
+.dhvc-form-flat .dhvc-form-role-box label{
+	line-height: 38px!important;
+}

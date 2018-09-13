@@ -1,0 +1,480 @@
+/************************   Bootstrap Additional CSS rules   ************************/
+.form-control-feedback.glyphicon {
+	color: #555555;
+}
+
+.alsp-ajax-loading {
+	background: url('../images/ajax-indicator.gif') no-repeat center;
+}
+.alsp-admin-wrap {
+	float: left;
+	margin: 4px 15px 0 0;
+	width: 100%;
+}
+.sidebar {
+	float: right;
+	width: 20%;
+	margin-right: 1%;
+}
+.sidebar .postbox {
+	min-width: inherit;
+}
+.sidebar .postbox h3 {
+	padding: 10px;
+}
+.alsp-settings-wrap {
+	float: left;
+	width: 78%;
+	margin-right: 1%;
+}
+.alsp-index-setting-row {
+	border-top: 1px solid #DFDFDF;
+}
+.alsp-index-setting-row th {
+	text-align: center;
+}
+.alsp-description-big {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+}
+.alsp-red-asterisk {
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1px;
+	padding: 2px;
+}
+.clear_float {
+	clear: both;
+}
+
+/* Listing locations input */
+.alsp-locations-metabox {
+	padding-bottom: 10px;
+}
+
+.alsp-locations-metabox label {
+	width: 160px;
+	display: inline-block;
+}
+.alsp-location-in-metabox {
+	border-bottom: 1px solid #EFEFEF;
+	padding: 15px 0;
+}
+.alsp-location-input {
+	overflow: hidden;
+}
+.alsp-get-location {
+	display: inline-block;
+	right: 15px;
+	top: 0;
+	cursor: pointer;
+}
+
+/* Icons selection dialog */
+.alsp-icons-theme-name {
+	font-size: 14px;
+	color: black;
+	font-weight: bold;
+	padding-bottom: 4px;
+	text-align: center;
+}
+.alsp-icons-theme-block {
+	padding: 8px;
+}
+.alsp-icon, .fa-icon {
+	padding: 3px;
+	float: left;
+	background-color: white;
+	cursor: pointer;
+	font-size: 25px !important;
+}
+.alsp-selected-icon {
+	background-color: #FCA057;
+}
+.alsp-icon:hover, .fa-icon:hover {
+	background-color: #EFEFEF;
+}
+.alsp-selected-icon:hover {
+	background-color: #FCA057;
+}
+.alsp-icon-tag {
+	font-size: 20px !important;
+}
+.alsp-marker-icon-tag {
+	box-shadow: none !important;
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+	font-size: 23px !important;
+}
+.wp-picker-input-wrap {
+	position: relative;
+}
+
+
+.alsp-tax-dropdowns-wrap select {
+    min-width: 200px
+}
+
+/* jQuery UI sortable widget customizations */
+.ui-sortable-placeholder {
+	background-color: #FFFBCC !important;
+}
+.ui-sortable tr, .alsp-move-label {
+	cursor: move;
+}
+.ui-widget-overlay {
+    background-repeat: repeat !important;
+	z-index: 5 !important;
+}
+/* Content fields select/radio/checkboxes configuration */
+#selection_items_wrapper {
+	display: inline-block;
+}
+
+
+.alsp-content .ui-slider-horizontal {
+	height: 8px;
+}
+.alsp-content .ui-slider .ui-slider-handle.ui-corner-all {
+	top: -8px;
+	width: 21px;
+	height: 21px;
+	border-radius: 10px;
+}
+
+/* Content fields */
+.alsp-delete-selection-item {
+	    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 42px;
+
+}
+.alsp-field {
+	padding: 10px 0;
+}
+.alsp-field-input-select {
+	min-width: 200px
+}
+.alsp-field-icon {
+	box-shadow: none !important;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.alsp-content-fields-metabox .alsp-field {
+	padding: 10px 0;
+	
+}
+.alsp-content-fields-metabox .alsp-field p {
+	margin: 0;
+}
+span.alsp-week-day {
+	display: inline-block;
+	width: 160px;
+}
+
+#alsp-upload-functions {
+	margin: 20px 0 40px;
+}
+.alsp-upload-option {
+	margin: 10px 0;
+}
+.alsp-attached-item {
+	float: left;
+	margin: 15px;
+}
+.alsp-attached-item > label {
+	display: block;
+}
+.alsp-img-div-border {
+	background-color: #FFFFFF;
+	border: 2px solid #DAE2E8;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+.alsp-img-div-border > a {
+	display: inline-block;
+}
+.alsp-img-div-border img {
+	padding: 0 !important;
+	margin: 0 !important;
+	border: 0 none !important;
+	background: none repeat scroll 0 0 #FFFFFF !important;
+	box-shadow: none !important;
+	vertical-align: middle !important;
+	border-radius: 0;
+}
+.alsp-img-div-helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.alsp-delete-attached-item {
+	width: 20px;
+	height: 20px;
+	background: url('../images/delete.png') no-repeat center;
+	cursor: pointer;
+}
+
+.alsp-maps-canvas {
+	margin: 20px 0;
+	border: 1px solid black;
+}
+.alsp-maps-canvas .gm-style img {
+	max-width: none !important;
+	box-shadow: none !important;
+}
+.alsp-maps-canvas .gm-style label {
+	width: auto !important;
+	display: inline !important;
+}
+.alsp-maps-canvas .gm-style-cc > div {
+	word-wrap: normal;
+}
+
+.alsp-map-marker, .alsp-map-marker-empty {
+	border-radius: 50% 50% 50% 0;
+	height: 40px;
+	margin: -30% 0;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	width: 40px;
+	cursor: pointer;
+	text-align: center;
+}
+.alsp-map-marker:after {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 50%;
+	content: "";
+	display: block;
+	height: 78%;
+	left: 11%;
+	position: absolute;
+	top: 11%;
+	width: 78%;
+}
+.alsp-map-marker-empty:after {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 50%;
+	content: "";
+	display: block;
+	height: 40%;
+	left: 32%;
+	position: absolute;
+	top: 28%;
+	width: 40%;
+}
+.alsp-map-marker .alsp-map-marker-icon {
+	font-size: 22px !important;
+	position: relative;
+	top: 20%;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	z-index: 1;
+	vertical-align: middle;
+}
+
+.alsp-badge {
+	border-radius: 10px;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1;
+	min-width: 10px;
+	padding: 3px 7px;
+	text-align: center;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+.alsp-listing-status-active, .alsp-invoice-status-paid {
+	background-color: #5BB75B;
+}
+.alsp-listing-status-expired {
+	background-color: #DA4F49;
+}
+.alsp-listing-status-unpaid, .alsp-invoice-status-unpaid {
+	background-color: #FAA732;
+}
+.alsp-listing-status-stopped, .alsp-invoice-status-pending {
+	background-color: #000000;
+}
+
+/* We do not need restore section in vafpress-framework */
+#section_restore {
+	display: none !important;
+}
+
+
+/* 
+	Bootstrap has default img max-width set to 100% and for some reason lightbox stops resizing
+	http://stackoverflow.com/questions/17523977/lightbox-v2-shrinks-the-image-in-the-box
+*/
+.lb-image{
+	max-width: inherit;
+}
+
+.alsp-admin-table label input[type="checkbox"] {
+    margin-top: 3px !important;
+	margin-left: 0 !important;
+}
+
+#alsp-upload-wrapper {
+	margin-bottom: 50px;
+}
+
+.vp-wrap .vp-checkbox .field label, .vp-wrap .vp-radiobutton .field label {
+  display: block !important;
+}
+
+/* Content fields and Groups */
+.wp-list-table.contentfields tbody tr:nth-child(odd) {
+	background: #f9f9f9
+}
+.alsp-nested-sortable-wrapper {
+	width: 500px;
+}
+ul.alsp-nested-sortable, ul.alsp-nested-sortable ul {
+	list-style-type: none;
+	/* margin: 20px 0; */
+}
+ul.alsp-nested-sortable li, ul.alsp-nested-sortable ol li {
+	background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-color: #d4d4d4 #d4d4d4 #bcbcbc;
+	border-image: none;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	cursor: move;
+	margin: 10px 0;
+	padding: 10px 20px;
+}
+ul.alsp-nested-sortable li.alsp-sortable-group, ul.alsp-nested-sortable ol li.alsp-sortable-group {
+	background: linear-gradient(to bottom, #ffffff 0%, #A6A6A6 47%, #A6A6A6 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-color: #d4d4d4 #d4d4d4 #bcbcbc;
+}
+
+.bootstrap-select .btn.dropdown-toggle,
+.bootstrap-select .dropdown-menu.open{display:none;}
+
+#select_field_icon_dialog,
+#select_field_icon_dialog2{background:#333;}
+#select_field_icon_dialog .cat_alsp-icon,
+#select_field_icon_dialog2 .alsp-icon2{display:inline-block;width:100px;height:100px;}
+#adminmenu li.toplevel_page_alsp_settings,
+#adminmenu li.toplevel_page_alsp_settings:hover
+#adminmenu li.toplevel_page_alsp_settings:focus{
+	background:#7FB33F !important;
+	color:#fff;
+}
+#adminmenu li.toplevel_page_alsp_settings:after{
+	display:none !important;
+}
+.toplevel_page_alsp_settings.menu-top-first,
+.toplevel_page_alsp_settings.menu-top-first:hover{
+	color;#fff;
+}
+.checkbox-wrap {margin:0 !important;}
+.checkbox-wrap .checkbox {
+    width: 25% !important;
+	position:relative;
+}
+.cz-creat-listing .checkbox label span.radio-check-item::before, label span.radio-check-item::before {
+    left: 15px !important;
+    top: 19px !important;
+	display:none !important;
+}
+.cz-creat-listing .checkbox label input[type=checkbox]:not(old):checked + span.radio-check-item:before,
+label input[type=radio]:not(old):checked + span.radio-check-item:before,
+.cz-creat-listing ul.alsp-categorychecklist li label input[type=checkbox]:not(old):checked + span.radio-check-item:before{
+	content:"\f00c";
+	
+}
+.checkbox.alsp-location-input{position:relative;}
+.checkbox.alsp-location-input label{
+	width: 100% !important;
+	padding-left:10px;
+}
+.input-date-time-wrap label {
+    display: block !important;
+}
+
+
+.checkbox_how_to_show,
+.check_icon_type{
+	display: block;
+	overflow: hidden;
+}
+
+.alsp-configuration-page-wrap{
+	width:60%;
+	background:#fff;
+	border:1px solid #d9d9d9;
+	padding:0 30px;
+}
+.checkbox_how_to_show{
+	
+}
+.checkbox_how_to_show .item-label label,
+.check_icon_type .item-label label{
+	color:#444;
+	font-size:16px;
+	margin:10px 0;
+	display:block;
+}
+.checkbox_how_to_show .how-to-show-input,
+.check_icon_type .check_icon_type_input{
+	background: #eee;
+	display: block;
+	width: 100%;
+	padding: 15px;
+	border:2px dashed #d9d9d9;
+}
+#selection_items_wrapper{
+	display:block;
+	overflow:hidden;
+}
+#selection_items_wrapper .selection_item{
+	display: block;
+	background: #eeee;
+	padding: 15px;
+	border: 2px dashed #d9d9d9;
+	max-width: 100%;
+	margin-top: 10px;
+}
+#selection_items_wrapper .selection_item input{
+	padding: 10px;
+	border-radius: 4px;
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	float:left;
+	width:46.5%;
+}
+#selection_items_wrapper .selection_item .alsp-move-label{
+	float: right;
+	line-height: 42px;
+	font-size: 32px;
+	color: #a1a1a1;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#add_selection_item{margin-top:30px;}
+.alsp-configuration-page-wrap p.submit{display:inline-block;}
+
+.admin-note-from-author {
+
+    padding: 30px;
+    background: #fff;
+    width: 50%;
+    margin-top: 30px;
+
+}

@@ -1,0 +1,1 @@
+<a href="#" id="ai1wm-import-url-echo"><?php _e( 'Intall', AI1WMDI_PLUGIN_NAME ); ?></a>

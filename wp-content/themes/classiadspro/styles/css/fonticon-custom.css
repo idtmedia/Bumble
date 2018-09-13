@@ -1,0 +1,5765 @@
+/* flaticon */
+
+[class*=" pacz-flaticon-"]:before,
+[class*=" pacz-post-type-icon-"]:before,
+[class^=pacz-flaticon-]:before,
+[class^=pacz-post-type-icon-]:before {
+	font-family: Flaticon;
+	display: inline-block;
+	speak: none;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1
+}
+.pacz-flaticon-amplified:before {
+	content: "\e000"
+}
+.pacz-flaticon-arrow434:before {
+	content: "\e001"
+}
+.pacz-flaticon-arrow435:before {
+	content: "\e002"
+}
+.pacz-flaticon-arrow436:before {
+	content: "\e003"
+}
+.pacz-flaticon-arrow437:before {
+	content: "\e004"
+}
+.pacz-flaticon-arrowhead4:before {
+	content: "\e005"
+}
+.pacz-flaticon-audio28:before {
+	content: "\e006"
+}
+.pacz-flaticon-battery74:before {
+	content: "\e007"
+}
+.pacz-flaticon-big80:before {
+	content: "\e008"
+}
+.pacz-flaticon-big81:before {
+	content: "\e009"
+}
+.pacz-flaticon-blank20:before {
+	content: "\e00a"
+}
+.pacz-flaticon-camera43:before {
+	content: "\e00b"
+}
+.pacz-flaticon-cassette7:before {
+	content: "\e00c"
+}
+.pacz-flaticon-cinema13:before {
+	content: "\e00d"
+}
+.pacz-flaticon-circular45:before {
+	content: "\e00e"
+}
+.pacz-flaticon-circular46:before {
+	content: "\e00f"
+}
+.pacz-flaticon-circular47:before {
+	content: "\e010"
+}
+.pacz-flaticon-circular48:before {
+	content: "\e011"
+}
+.pacz-flaticon-circular49:before {
+	content: "\e012"
+}
+.pacz-flaticon-circular50:before {
+	content: "\e013"
+}
+.pacz-flaticon-cloud102:before {
+	content: "\e014"
+}
+.pacz-flaticon-cloudy12:before {
+	content: "\e015"
+}
+.pacz-flaticon-coffee17:before {
+	content: "\e016"
+}
+.pacz-flaticon-cogwheel8:before {
+	content: "\e017"
+}
+.pacz-flaticon-compact8:before {
+	content: "\e018"
+}
+.pacz-flaticon-compass39:before {
+	content: "\e019"
+}
+.pacz-flaticon-connected8:before {
+	content: "\e01a"
+}
+.pacz-flaticon-crop2:before {
+	content: "\e01b"
+}
+.pacz-flaticon-cross39:before {
+	content: "\e01c"
+}
+.pacz-flaticon-curve19:before {
+	content: "\e01d"
+}
+.pacz-flaticon-diamond18:before {
+	content: "\e01e"
+}
+.pacz-flaticon-document58:before {
+	content: "\e01f"
+}
+.pacz-flaticon-dollar79:before {
+	content: "\e020"
+}
+.pacz-flaticon-door7:before {
+	content: "\e021"
+}
+.pacz-flaticon-double23:before,
+.pacz-post-type-icon-audio:before {
+	content: "\e022"
+}
+.pacz-flaticon-double24:before {
+	content: "\e023"
+}
+.pacz-flaticon-downloading3:before {
+	content: "\e024"
+}
+.pacz-flaticon-drawing4:before {
+	content: "\e025"
+}
+.pacz-flaticon-empty20:before {
+	content: "\e026"
+}
+.pacz-flaticon-eyes:before {
+	content: "\e027"
+}
+.pacz-flaticon-fast10:before {
+	content: "\e028"
+}
+.pacz-flaticon-fast11:before {
+	content: "\e029"
+}
+.pacz-flaticon-file24:before {
+	content: "\e02a"
+}
+.pacz-flaticon-film24:before {
+	content: "\e02b"
+}
+.pacz-flaticon-fire13:before {
+	content: "\e02c"
+}
+.pacz-flaticon-flag26:before {
+	content: "\e02d"
+}
+.pacz-flaticon-flat10:before {
+	content: "\e02e"
+}
+.pacz-flaticon-fluff1:before {
+	content: "\e02f"
+}
+.pacz-flaticon-four26:before {
+	content: "\e030"
+}
+.pacz-flaticon-full21:before {
+	content: "\e031"
+}
+.pacz-flaticon-grocery10:before {
+	content: "\e032"
+}
+.pacz-flaticon-half11:before {
+	content: "\e033"
+}
+.pacz-flaticon-heart66:before {
+	content: "\e034"
+}
+.pacz-flaticon-home62:before {
+	content: "\e035"
+}
+.pacz-flaticon-huge3:before {
+	content: "\e036"
+}
+.pacz-flaticon-increasing5:before {
+	content: "\e037"
+}
+.pacz-flaticon-kings:before {
+	content: "\e038"
+}
+.pacz-flaticon-letter11:before {
+	content: "\e039"
+}
+.pacz-flaticon-light44:before {
+	content: "\e03a"
+}
+.pacz-flaticon-lines:before {
+	content: "\e03b"
+}
+.pacz-flaticon-low20:before {
+	content: "\e03c"
+}
+.pacz-flaticon-magnification3:before {
+	content: "\e03d"
+}
+.pacz-flaticon-maps5:before {
+	content: "\e03e"
+}
+.pacz-flaticon-mathematical3:before {
+	content: "\e03f"
+}
+.pacz-flaticon-microphone26:before {
+	content: "\e040"
+}
+.pacz-flaticon-molecular:before {
+	content: "\e041"
+}
+.pacz-flaticon-multiple18:before {
+	content: "\e042"
+}
+.pacz-flaticon-music63:before {
+	content: "\e043"
+}
+.pacz-flaticon-mute7:before {
+	content: "\e044"
+}
+.pacz-flaticon-navigation8:before {
+	content: "\e045"
+}
+.pacz-flaticon-newspaper8:before {
+	content: "\e046"
+}
+.pacz-flaticon-no16:before {
+	content: "\e047"
+}
+.pacz-flaticon-open89:before {
+	content: "\e048"
+}
+.pacz-flaticon-open90:before {
+	content: "\e049"
+}
+.pacz-flaticon-padlock18:before {
+	content: "\e04a"
+}
+.pacz-flaticon-paint26:before {
+	content: "\e04b"
+}
+.pacz-flaticon-paper43:before {
+	content: "\e04c"
+}
+.pacz-flaticon-paper44:before {
+	content: "\e04d"
+}
+.pacz-flaticon-personal5:before {
+	content: "\e04e"
+}
+.pacz-flaticon-phone51:before {
+	content: "\e04f"
+}
+.pacz-flaticon-picture10:before,
+.pacz-post-type-icon-image:before {
+	content: "\e050"
+}
+.pacz-flaticon-plant10:before {
+	content: "\e051"
+}
+.pacz-flaticon-play35:before,
+.pacz-post-type-icon-video:before {
+	content: "\e052"
+}
+.pacz-flaticon-previous6:before {
+	content: "\e053"
+}
+.pacz-flaticon-profile7:before {
+	content: "\e054"
+}
+.pacz-flaticon-public5:before {
+	content: "\e055"
+}
+.pacz-flaticon-rainy5:before {
+	content: "\e056"
+}
+.pacz-flaticon-religion1:before {
+	content: "\e057"
+}
+.pacz-flaticon-rewind22:before {
+	content: "\e058"
+}
+.pacz-flaticon-rotating10:before {
+	content: "\e059"
+}
+.pacz-flaticon-rotating9:before {
+	content: "\e05a"
+}
+.pacz-flaticon-round30:before,
+.pacz-post-type-icon-gallery:before {
+	content: "\e05b"
+}
+.pacz-flaticon-round31:before {
+	content: "\e05c"
+}
+.pacz-flaticon-rounded25:before {
+	content: "\e05d"
+}
+.pacz-flaticon-rounded26:before {
+	content: "\e05e"
+}
+.pacz-flaticon-royalty:before {
+	content: "\e05f"
+}
+.pacz-flaticon-scissors14:before {
+	content: "\e060"
+}
+.pacz-flaticon-shopping63:before {
+	content: "\e061"
+}
+.pacz-flaticon-signal21:before {
+	content: "\e062"
+}
+.pacz-flaticon-simple47:before {
+	content: "\e063"
+}
+.pacz-flaticon-small139:before {
+	content: "\e064"
+}
+.pacz-flaticon-snowflake3:before {
+	content: "\e065"
+}
+.pacz-flaticon-speech54:before {
+	content: "\e066"
+}
+.pacz-flaticon-spring11:before {
+	content: "\e067"
+}
+.pacz-flaticon-square51:before {
+	content: "\e068"
+}
+.pacz-flaticon-square52:before {
+	content: "\e069"
+}
+.pacz-flaticon-square53:before {
+	content: "\e06a"
+}
+.pacz-flaticon-square54:before {
+	content: "\e06b"
+}
+.pacz-flaticon-square55:before {
+	content: "\e06c"
+}
+.pacz-flaticon-square56:before {
+	content: "\e06d"
+}
+.pacz-flaticon-square57:before {
+	content: "\e06e"
+}
+.pacz-flaticon-stop20:before {
+	content: "\e06f"
+}
+.pacz-flaticon-sun30:before {
+	content: "\e070"
+}
+.pacz-flaticon-syncing:before {
+	content: "\e071"
+}
+.pacz-flaticon-telephone63:before {
+	content: "\e072"
+}
+.pacz-flaticon-trash27:before {
+	content: "\e073"
+}
+.pacz-flaticon-triangle14:before {
+	content: "\e074"
+}
+.pacz-flaticon-tshirt14:before {
+	content: "\e075"
+}
+.pacz-flaticon-umbrella14:before {
+	content: "\e076"
+}
+.pacz-flaticon-user73:before {
+	content: "\e077"
+}
+.pacz-flaticon-wide6:before {
+	content: "\e078"
+}
+.pacz-flaticon-world29:before {
+	content: "\e079"
+}
+/*flaticon custom*/
+
+
+[class*=" pacz-fic-"]:after,
+[class*=" pacz-fic-"]:before,
+[class^=pacz-fic-]:after,
+[class^=pacz-fic-]:before {
+	font-family:pacz-fic;
+	display:inline-block;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1
+}
+.pacz-fic-alien:before {
+	content:"\f100"
+}
+.pacz-fic-ambulance:before {
+	content:"\f101"
+}
+.pacz-fic-ambulance-1:before {
+	content:"\f102"
+}
+.pacz-fic-aries:before {
+	content:"\f103"
+}
+.pacz-fic-armchair:before {
+	content:"\f104"
+}
+.pacz-fic-baby:before {
+	content:"\f105"
+}
+.pacz-fic-baby-1:before {
+	content:"\f106"
+}
+.pacz-fic-baby-girl:before {
+	content:"\f107"
+}
+.pacz-fic-back:before {
+	content:"\f108"
+}
+.pacz-fic-balance:before {
+	content:"\f109"
+}
+.pacz-fic-bar-chart:before {
+	content:"\f10a"
+}
+.pacz-fic-bar-chart-1:before {
+	content:"\f10b"
+}
+.pacz-fic-battery:before {
+	content:"\f10c"
+}
+.pacz-fic-battery-1:before {
+	content:"\f10d"
+}
+.pacz-fic-battery-2:before {
+	content:"\f10e"
+}
+.pacz-fic-battery-3:before {
+	content:"\f10f"
+}
+.pacz-fic-battery-4:before {
+	content:"\f110"
+}
+.pacz-fic-bedside-table:before {
+	content:"\f111"
+}
+.pacz-fic-beer:before {
+	content:"\f112"
+}
+.pacz-fic-binoculars:before {
+	content:"\f113"
+}
+.pacz-fic-blind:before {
+	content:"\f114"
+}
+.pacz-fic-book:before {
+	content:"\f115"
+}
+.pacz-fic-cancer:before {
+	content:"\f116"
+}
+.pacz-fic-car:before {
+	content:"\f117"
+}
+.pacz-fic-car-1:before {
+	content:"\f118"
+}
+.pacz-fic-car-2:before {
+	content:"\f119"
+}
+.pacz-fic-center-alignment:before {
+	content:"\f11a"
+}
+.pacz-fic-center-alignment-1:before {
+	content:"\f11b"
+}
+.pacz-fic-chicken:before {
+	content:"\f11c"
+}
+.pacz-fic-chicken-1:before {
+	content:"\f11d"
+}
+.pacz-fic-chicken-2:before {
+	content:"\f11e"
+}
+.pacz-fic-clock:before {
+	content:"\f11f"
+}
+.pacz-fic-clock-1:before {
+	content:"\f120"
+}
+.pacz-fic-clock-2:before {
+	content:"\f121"
+}
+.pacz-fic-clock-3:before {
+	content:"\f122"
+}
+.pacz-fic-clock-4:before {
+	content:"\f123"
+}
+.pacz-fic-cloud:before {
+	content:"\f124"
+}
+.pacz-fic-cloud-1:before {
+	content:"\f125"
+}
+.pacz-fic-cloud-2:before {
+	content:"\f126"
+}
+.pacz-fic-cloud-computing:before {
+	content:"\f127"
+}
+.pacz-fic-cloudy:before {
+	content:"\f128"
+}
+.pacz-fic-coins:before {
+	content:"\f129"
+}
+.pacz-fic-compass:before {
+	content:"\f12a"
+}
+.pacz-fic-conga:before {
+	content:"\f12b"
+}
+.pacz-fic-copy:before {
+	content:"\f12c"
+}
+.pacz-fic-corndog:before {
+	content:"\f12d"
+}
+.pacz-fic-cow:before {
+	content:"\f12e"
+}
+.pacz-fic-customer-service:before {
+	content:"\f12f"
+}
+.pacz-fic-cutlery:before {
+	content:"\f130"
+}
+.pacz-fic-diagonal-arrow:before {
+	content:"\f131"
+}
+.pacz-fic-diagonal-arrow-1:before {
+	content:"\f132"
+}
+.pacz-fic-diagonal-arrow-2:before {
+	content:"\f133"
+}
+.pacz-fic-diagonal-arrow-3:before {
+	content:"\f134"
+}
+.pacz-fic-diamond:before {
+	content:"\f135"
+}
+.pacz-fic-diaper:before {
+	content:"\f136"
+}
+.pacz-fic-download:before {
+	content:"\f137"
+}
+.pacz-fic-download-1:before {
+	content:"\f138"
+}
+.pacz-fic-electric-guitar:before {
+	content:"\f139"
+}
+.pacz-fic-emoticon:before {
+	content:"\f13a"
+}
+.pacz-fic-export:before {
+	content:"\f13b"
+}
+.pacz-fic-eye:before {
+	content:"\f13c"
+}
+.pacz-fic-eye-1:before {
+	content:"\f13d"
+}
+.pacz-fic-feeding-bottle:before {
+	content:"\f13e"
+}
+.pacz-fic-file:before {
+	content:"\f13f"
+}
+.pacz-fic-file-1:before {
+	content:"\f140"
+}
+.pacz-fic-file-2:before {
+	content:"\f141"
+}
+.pacz-fic-file-3:before {
+	content:"\f142"
+}
+.pacz-fic-film-strip:before {
+	content:"\f143"
+}
+.pacz-fic-flag:before {
+	content:"\f144"
+}
+.pacz-fic-flash:before {
+	content:"\f145"
+}
+.pacz-fic-fork:before {
+	content:"\f146"
+}
+.pacz-fic-fountain-pen:before {
+	content:"\f147"
+}
+.pacz-fic-fountain-pen-1:before {
+	content:"\f148"
+}
+.pacz-fic-fountain-pen-2:before {
+	content:"\f149"
+}
+.pacz-fic-fountain-pen-3:before {
+	content:"\f14a"
+}
+.pacz-fic-fountain-pen-4:before {
+	content:"\f14b"
+}
+.pacz-fic-gemini:before {
+	content:"\f14c"
+}
+.pacz-fic-glass-of-water:before {
+	content:"\f14d"
+}
+.pacz-fic-guitar:before {
+	content:"\f14e"
+}
+.pacz-fic-ham:before {
+	content:"\f14f"
+}
+.pacz-fic-happy:before {
+	content:"\f150"
+}
+.pacz-fic-happy-1:before {
+	content:"\f151"
+}
+.pacz-fic-head:before {
+	content:"\f152"
+}
+.pacz-fic-heavy-metal:before {
+	content:"\f153"
+}
+.pacz-fic-home:before {
+	content:"\f154"
+}
+.pacz-fic-home-1:before {
+	content:"\f155"
+}
+.pacz-fic-home-2:before {
+	content:"\f156"
+}
+.pacz-fic-home-3:before {
+	content:"\f157"
+}
+.pacz-fic-home-4:before {
+	content:"\f158"
+}
+.pacz-fic-horse:before {
+	content:"\f159"
+}
+.pacz-fic-id-card:before {
+	content:"\f15a"
+}
+.pacz-fic-jar:before {
+	content:"\f15b"
+}
+.pacz-fic-justify:before {
+	content:"\f15c"
+}
+.pacz-fic-laundry:before {
+	content:"\f15d"
+}
+.pacz-fic-laundry-1:before {
+	content:"\f15e"
+}
+.pacz-fic-laundry-2:before {
+	content:"\f15f"
+}
+.pacz-fic-laundry-3:before {
+	content:"\f160"
+}
+.pacz-fic-laundry-4:before {
+	content:"\f161"
+}
+.pacz-fic-laundry-5:before {
+	content:"\f162"
+}
+.pacz-fic-left-alignment:before {
+	content:"\f163"
+}
+.pacz-fic-left-alignment-1:before {
+	content:"\f164"
+}
+.pacz-fic-lemon:before {
+	content:"\f165"
+}
+.pacz-fic-lemon-1:before {
+	content:"\f166"
+}
+.pacz-fic-lemonade:before {
+	content:"\f167"
+}
+.pacz-fic-lemonade-1:before {
+	content:"\f168"
+}
+.pacz-fic-leo:before {
+	content:"\f169"
+}
+.pacz-fic-light-bulb:before {
+	content:"\f16a"
+}
+.pacz-fic-like:before {
+	content:"\f16b"
+}
+.pacz-fic-mail:before {
+	content:"\f16c"
+}
+.pacz-fic-mail-1:before {
+	content:"\f16d"
+}
+.pacz-fic-mail-2:before {
+	content:"\f16e"
+}
+.pacz-fic-mail-3:before {
+	content:"\f16f"
+}
+.pacz-fic-mail-4:before {
+	content:"\f170"
+}
+.pacz-fic-mail-5:before {
+	content:"\f171"
+}
+.pacz-fic-man:before {
+	content:"\f172"
+}
+.pacz-fic-man-1:before {
+	content:"\f173"
+}
+.pacz-fic-map:before {
+	content:"\f174"
+}
+.pacz-fic-maths:before {
+	content:"\f175"
+}
+.pacz-fic-medical-result:before {
+	content:"\f176"
+}
+.pacz-fic-money:before {
+	content:"\f177"
+}
+.pacz-fic-monitor:before {
+	content:"\f178"
+}
+.pacz-fic-monitor-1:before {
+	content:"\f179"
+}
+.pacz-fic-monitor-2:before {
+	content:"\f17a"
+}
+.pacz-fic-monitor-3:before {
+	content:"\f17b"
+}
+.pacz-fic-monitor-4:before {
+	content:"\f17c"
+}
+.pacz-fic-monitor-5:before {
+	content:"\f17d"
+}
+.pacz-fic-muted:before {
+	content:"\f17e"
+}
+.pacz-fic-next:before {
+	content:"\f17f"
+}
+.pacz-fic-ninja:before {
+	content:"\f180"
+}
+.pacz-fic-padlock:before {
+	content:"\f181"
+}
+.pacz-fic-padlock-1:before {
+	content:"\f182"
+}
+.pacz-fic-pear:before {
+	content:"\f183"
+}
+.pacz-fic-phone-call:before {
+	content:"\f184"
+}
+.pacz-fic-phone-call-1:before {
+	content:"\f185"
+}
+.pacz-fic-phone-call-2:before {
+	content:"\f186"
+}
+.pacz-fic-phone-call-3:before {
+	content:"\f187"
+}
+.pacz-fic-photo-camera:before {
+	content:"\f188"
+}
+.pacz-fic-pie-chart:before {
+	content:"\f189"
+}
+.pacz-fic-pie-chart-1:before {
+	content:"\f18a"
+}
+.pacz-fic-piggy-bank:before {
+	content:"\f18b"
+}
+.pacz-fic-pin:before {
+	content:"\f18c"
+}
+.pacz-fic-placeholder:before {
+	content:"\f18d"
+}
+.pacz-fic-placeholder-1:before {
+	content:"\f18e"
+}
+.pacz-fic-placeholder-2:before {
+	content:"\f18f"
+}
+.pacz-fic-plug:before {
+	content:"\f190"
+}
+.pacz-fic-plug-1:before {
+	content:"\f191"
+}
+.pacz-fic-pointing:before {
+	content:"\f192"
+}
+.pacz-fic-rain:before {
+	content:"\f193"
+}
+.pacz-fic-right-alignment:before {
+	content:"\f194"
+}
+.pacz-fic-right-alignment-1:before {
+	content:"\f195"
+}
+.pacz-fic-rolling-pin:before {
+	content:"\f196"
+}
+.pacz-fic-ruler:before {
+	content:"\f197"
+}
+.pacz-fic-ruler-1:before {
+	content:"\f198"
+}
+.pacz-fic-sad:before {
+	content:"\f199"
+}
+.pacz-fic-saturn:before {
+	content:"\f19a"
+}
+.pacz-fic-saturn-1:before {
+	content:"\f19b"
+}
+.pacz-fic-sausage:before {
+	content:"\f19c"
+}
+.pacz-fic-sheep:before {
+	content:"\f19d"
+}
+.pacz-fic-sheep-1:before {
+	content:"\f19e"
+}
+.pacz-fic-shield:before {
+	content:"\f19f"
+}
+.pacz-fic-shop:before {
+	content:"\f1a0"
+}
+.pacz-fic-shopping-bag:before {
+	content:"\f1a1"
+}
+.pacz-fic-shopping-basket:before {
+	content:"\f1a2"
+}
+.pacz-fic-smartphone:before {
+	content:"\f1a3"
+}
+.pacz-fic-smartphone-1:before {
+	content:"\f1a4"
+}
+.pacz-fic-smartphone-2:before {
+	content:"\f1a5"
+}
+.pacz-fic-smartphone-3:before {
+	content:"\f1a6"
+}
+.pacz-fic-smile:before {
+	content:"\f1a7"
+}
+.pacz-fic-socket:before {
+	content:"\f1a8"
+}
+.pacz-fic-speech-bubble:before {
+	content:"\f1a9"
+}
+.pacz-fic-speech-bubble-1:before {
+	content:"\f1aa"
+}
+.pacz-fic-speech-bubble-2:before {
+	content:"\f1ab"
+}
+.pacz-fic-speech-bubble-3:before {
+	content:"\f1ac"
+}
+.pacz-fic-spoon:before {
+	content:"\f1ad"
+}
+.pacz-fic-sun:before {
+	content:"\f1ae"
+}
+.pacz-fic-surprised:before {
+	content:"\f1af"
+}
+.pacz-fic-syringe:before {
+	content:"\f1b0"
+}
+.pacz-fic-table:before {
+	content:"\f1b1"
+}
+.pacz-fic-tap:before {
+	content:"\f1b2"
+}
+.pacz-fic-tap-1:before {
+	content:"\f1b3"
+}
+.pacz-fic-tap-2:before {
+	content:"\f1b4"
+}
+.pacz-fic-taurus:before {
+	content:"\f1b5"
+}
+.pacz-fic-telephone:before {
+	content:"\f1b6"
+}
+.pacz-fic-toaster:before {
+	content:"\f1b7"
+}
+.pacz-fic-ufo:before {
+	content:"\f1b8"
+}
+.pacz-fic-upload:before {
+	content:"\f1b9"
+}
+.pacz-fic-upload-1:before {
+	content:"\f1ba"
+}
+.pacz-fic-van:before {
+	content:"\f1bb"
+}
+.pacz-fic-victory:before {
+	content:"\f1bc"
+}
+.pacz-fic-video-camera:before {
+	content:"\f1bd"
+}
+.pacz-fic-video-camera-1:before {
+	content:"\f1be"
+}
+.pacz-fic-watermelon:before {
+	content:"\f1bf"
+}
+.pacz-fic-weight:before {
+	content:"\f1c0"
+}
+.pacz-fic-wifi:before {
+	content:"\f1c1"
+}
+.pacz-fic-wifi-1:before {
+	content:"\f1c2"
+}
+.pacz-fic-wifi-2:before {
+	content:"\f1c3"
+}
+.pacz-fic-wifi-3:before {
+	content:"\f1c4"
+}
+.pacz-fic-woman:before {
+	content:"\f1c5"
+}
+.pacz-fic-woman-1:before {
+	content:"\f1c6"
+}
+.pacz-fic-zip:before {
+	content:"\f1c7"
+}
+/* flaticon collection1 */
+
+[class*=" pacz-fic1-"]:after,
+[class*=" pacz-fic1-"]:before,
+[class^=pacz-fic1-]:after,
+[class^=pacz-fic1-]:before {
+	font-family:pacz-fic1;
+	display:inline-block;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1
+}
+.pacz-fic1-agenda:before {
+	content:"\f100"
+}
+.pacz-fic1-ai:before {
+	content:"\f101"
+}
+.pacz-fic1-ambulance:before {
+	content:"\f102"
+}
+.pacz-fic1-ammeter:before {
+	content:"\f103"
+}
+.pacz-fic1-apple:before {
+	content:"\f104"
+}
+.pacz-fic1-arrow:before {
+	content:"\f105"
+}
+.pacz-fic1-arrows:before {
+	content:"\f106"
+}
+.pacz-fic1-attached:before {
+	content:"\f107"
+}
+.pacz-fic1-avatar:before {
+	content:"\f108"
+}
+.pacz-fic1-background:before {
+	content:"\f109"
+}
+.pacz-fic1-background-1:before {
+	content:"\f10a"
+}
+.pacz-fic1-band-aid:before {
+	content:"\f10b"
+}
+.pacz-fic1-barrel:before {
+	content:"\f10c"
+}
+.pacz-fic1-battery:before {
+	content:"\f10d"
+}
+.pacz-fic1-battery-1:before {
+	content:"\f10e"
+}
+.pacz-fic1-battery-2:before {
+	content:"\f10f"
+}
+.pacz-fic1-biodiesel:before {
+	content:"\f110"
+}
+.pacz-fic1-blueprint:before {
+	content:"\f111"
+}
+.pacz-fic1-blueprint-1:before {
+	content:"\f112"
+}
+.pacz-fic1-book:before {
+	content:"\f113"
+}
+.pacz-fic1-browser:before {
+	content:"\f114"
+}
+.pacz-fic1-browser-1:before {
+	content:"\f115"
+}
+.pacz-fic1-browser-2:before {
+	content:"\f116"
+}
+.pacz-fic1-building:before {
+	content:"\f117"
+}
+.pacz-fic1-building-1:before {
+	content:"\f118"
+}
+.pacz-fic1-charity:before {
+	content:"\f119"
+}
+.pacz-fic1-charity-1:before {
+	content:"\f11a"
+}
+.pacz-fic1-chat:before {
+	content:"\f11b"
+}
+.pacz-fic1-cloud-computing:before {
+	content:"\f11c"
+}
+.pacz-fic1-coin:before {
+	content:"\f11d"
+}
+.pacz-fic1-color-palette:before {
+	content:"\f11e"
+}
+.pacz-fic1-compass:before {
+	content:"\f11f"
+}
+.pacz-fic1-computer:before {
+	content:"\f120"
+}
+.pacz-fic1-computer-1:before {
+	content:"\f121"
+}
+.pacz-fic1-contract:before {
+	content:"\f122"
+}
+.pacz-fic1-css:before {
+	content:"\f123"
+}
+.pacz-fic1-cursor:before {
+	content:"\f124"
+}
+.pacz-fic1-cut:before {
+	content:"\f125"
+}
+.pacz-fic1-delivery-truck:before {
+	content:"\f126"
+}
+.pacz-fic1-desk:before {
+	content:"\f127"
+}
+.pacz-fic1-devices:before {
+	content:"\f128"
+}
+.pacz-fic1-devices-1:before {
+	content:"\f129"
+}
+.pacz-fic1-diagram:before {
+	content:"\f12a"
+}
+.pacz-fic1-diamond:before {
+	content:"\f12b"
+}
+.pacz-fic1-direction:before {
+	content:"\f12c"
+}
+.pacz-fic1-direction-1:before {
+	content:"\f12d"
+}
+.pacz-fic1-directional:before {
+	content:"\f12e"
+}
+.pacz-fic1-distance:before {
+	content:"\f12f"
+}
+.pacz-fic1-dna:before {
+	content:"\f130"
+}
+.pacz-fic1-donation:before {
+	content:"\f131"
+}
+.pacz-fic1-donation-1:before {
+	content:"\f132"
+}
+.pacz-fic1-donation-2:before {
+	content:"\f133"
+}
+.pacz-fic1-donation-3:before {
+	content:"\f134"
+}
+.pacz-fic1-donation-4:before {
+	content:"\f135"
+}
+.pacz-fic1-donation-5:before {
+	content:"\f136"
+}
+.pacz-fic1-dove:before {
+	content:"\f137"
+}
+.pacz-fic1-draw:before {
+	content:"\f138"
+}
+.pacz-fic1-drop:before {
+	content:"\f139"
+}
+.pacz-fic1-earth-globe:before {
+	content:"\f13a"
+}
+.pacz-fic1-ecology:before {
+	content:"\f13b"
+}
+.pacz-fic1-ecology-1:before {
+	content:"\f13c"
+}
+.pacz-fic1-ecology-2:before {
+	content:"\f13d"
+}
+.pacz-fic1-ecology-3:before {
+	content:"\f13e"
+}
+.pacz-fic1-electric-car:before {
+	content:"\f13f"
+}
+.pacz-fic1-engineer:before {
+	content:"\f140"
+}
+.pacz-fic1-expand:before {
+	content:"\f141"
+}
+.pacz-fic1-factory:before {
+	content:"\f142"
+}
+.pacz-fic1-factory-1:before {
+	content:"\f143"
+}
+.pacz-fic1-favorite:before {
+	content:"\f144"
+}
+.pacz-fic1-file:before {
+	content:"\f145"
+}
+.pacz-fic1-file-1:before {
+	content:"\f146"
+}
+.pacz-fic1-file-2:before {
+	content:"\f147"
+}
+.pacz-fic1-file-3:before {
+	content:"\f148"
+}
+.pacz-fic1-first-aid-kit:before {
+	content:"\f149"
+}
+.pacz-fic1-folder:before {
+	content:"\f14a"
+}
+.pacz-fic1-folder-1:before {
+	content:"\f14b"
+}
+.pacz-fic1-folder-2:before {
+	content:"\f14c"
+}
+.pacz-fic1-for-sale:before {
+	content:"\f14d"
+}
+.pacz-fic1-gandhi:before {
+	content:"\f14e"
+}
+.pacz-fic1-garbage:before {
+	content:"\f14f"
+}
+.pacz-fic1-gas-station:before {
+	content:"\f150"
+}
+.pacz-fic1-generator:before {
+	content:"\f151"
+}
+.pacz-fic1-geolocalization:before {
+	content:"\f152"
+}
+.pacz-fic1-global:before {
+	content:"\f153"
+}
+.pacz-fic1-global-warming:before {
+	content:"\f154"
+}
+.pacz-fic1-graphic-design:before {
+	content:"\f155"
+}
+.pacz-fic1-graphic-design-1:before {
+	content:"\f156"
+}
+.pacz-fic1-graphic-design-2:before {
+	content:"\f157"
+}
+.pacz-fic1-graphic-design-3:before {
+	content:"\f158"
+}
+.pacz-fic1-group:before {
+	content:"\f159"
+}
+.pacz-fic1-group-1:before {
+	content:"\f15a"
+}
+.pacz-fic1-growth:before {
+	content:"\f15b"
+}
+.pacz-fic1-hand:before {
+	content:"\f15c"
+}
+.pacz-fic1-heart:before {
+	content:"\f15d"
+}
+.pacz-fic1-hospital:before {
+	content:"\f15e"
+}
+.pacz-fic1-house:before {
+	content:"\f15f"
+}
+.pacz-fic1-house-1:before {
+	content:"\f160"
+}
+.pacz-fic1-house-2:before {
+	content:"\f161"
+}
+.pacz-fic1-house-3:before {
+	content:"\f162"
+}
+.pacz-fic1-house-4:before {
+	content:"\f163"
+}
+.pacz-fic1-house-5:before {
+	content:"\f164"
+}
+.pacz-fic1-house-6:before {
+	content:"\f165"
+}
+.pacz-fic1-house-7:before {
+	content:"\f166"
+}
+.pacz-fic1-html:before {
+	content:"\f167"
+}
+.pacz-fic1-hydro-power:before {
+	content:"\f168"
+}
+.pacz-fic1-image:before {
+	content:"\f169"
+}
+.pacz-fic1-image-1:before {
+	content:"\f16a"
+}
+.pacz-fic1-image-2:before {
+	content:"\f16b"
+}
+.pacz-fic1-infographic:before {
+	content:"\f16c"
+}
+.pacz-fic1-injury:before {
+	content:"\f16d"
+}
+.pacz-fic1-interface:before {
+	content:"\f16e"
+}
+.pacz-fic1-interface-1:before {
+	content:"\f16f"
+}
+.pacz-fic1-interface-2:before {
+	content:"\f170"
+}
+.pacz-fic1-interface-3:before {
+	content:"\f171"
+}
+.pacz-fic1-interface-4:before {
+	content:"\f172"
+}
+.pacz-fic1-key:before {
+	content:"\f173"
+}
+.pacz-fic1-keyboard:before {
+	content:"\f174"
+}
+.pacz-fic1-landing-page:before {
+	content:"\f175"
+}
+.pacz-fic1-levels:before {
+	content:"\f176"
+}
+.pacz-fic1-light-bulb:before {
+	content:"\f177"
+}
+.pacz-fic1-light-bulb-1:before {
+	content:"\f178"
+}
+.pacz-fic1-light-bulb-2:before {
+	content:"\f179"
+}
+.pacz-fic1-light-bulb-3:before {
+	content:"\f17a"
+}
+.pacz-fic1-link:before {
+	content:"\f17b"
+}
+.pacz-fic1-locations:before {
+	content:"\f17c"
+}
+.pacz-fic1-lungs:before {
+	content:"\f17d"
+}
+.pacz-fic1-map:before {
+	content:"\f17e"
+}
+.pacz-fic1-map-1:before {
+	content:"\f17f"
+}
+.pacz-fic1-map-2:before {
+	content:"\f180"
+}
+.pacz-fic1-medical-history:before {
+	content:"\f181"
+}
+.pacz-fic1-medicine:before {
+	content:"\f182"
+}
+.pacz-fic1-medicine-1:before {
+	content:"\f183"
+}
+.pacz-fic1-medicine-2:before {
+	content:"\f184"
+}
+.pacz-fic1-money:before {
+	content:"\f185"
+}
+.pacz-fic1-monitor:before {
+	content:"\f186"
+}
+.pacz-fic1-mortgage:before {
+	content:"\f187"
+}
+.pacz-fic1-mortgage-1:before {
+	content:"\f188"
+}
+.pacz-fic1-mouse:before {
+	content:"\f189"
+}
+.pacz-fic1-multimedia:before {
+	content:"\f18a"
+}
+.pacz-fic1-networking:before {
+	content:"\f18b"
+}
+.pacz-fic1-nurse:before {
+	content:"\f18c"
+}
+.pacz-fic1-oil:before {
+	content:"\f18d"
+}
+.pacz-fic1-olive:before {
+	content:"\f18e"
+}
+.pacz-fic1-package:before {
+	content:"\f18f"
+}
+.pacz-fic1-paint:before {
+	content:"\f190"
+}
+.pacz-fic1-paint-roller:before {
+	content:"\f191"
+}
+.pacz-fic1-password:before {
+	content:"\f192"
+}
+.pacz-fic1-pencil:before {
+	content:"\f193"
+}
+.pacz-fic1-photo-camera:before {
+	content:"\f194"
+}
+.pacz-fic1-pill:before {
+	content:"\f195"
+}
+.pacz-fic1-placeholder:before {
+	content:"\f196"
+}
+.pacz-fic1-placeholder-1:before {
+	content:"\f197"
+}
+.pacz-fic1-placeholder-2:before {
+	content:"\f198"
+}
+.pacz-fic1-placeholder-3:before {
+	content:"\f199"
+}
+.pacz-fic1-placeholder-4:before {
+	content:"\f19a"
+}
+.pacz-fic1-placeholder-5:before {
+	content:"\f19b"
+}
+.pacz-fic1-placeholder-6:before {
+	content:"\f19c"
+}
+.pacz-fic1-placeholder-7:before {
+	content:"\f19d"
+}
+.pacz-fic1-planet-earth:before {
+	content:"\f19e"
+}
+.pacz-fic1-plant:before {
+	content:"\f19f"
+}
+.pacz-fic1-plug:before {
+	content:"\f1a0"
+}
+.pacz-fic1-pollution:before {
+	content:"\f1a1"
+}
+.pacz-fic1-position:before {
+	content:"\f1a2"
+}
+.pacz-fic1-position-1:before {
+	content:"\f1a3"
+}
+.pacz-fic1-position-2:before {
+	content:"\f1a4"
+}
+.pacz-fic1-position-3:before {
+	content:"\f1a5"
+}
+.pacz-fic1-position-4:before {
+	content:"\f1a6"
+}
+.pacz-fic1-power:before {
+	content:"\f1a7"
+}
+.pacz-fic1-praying:before {
+	content:"\f1a8"
+}
+.pacz-fic1-profile:before {
+	content:"\f1a9"
+}
+.pacz-fic1-psd:before {
+	content:"\f1aa"
+}
+.pacz-fic1-pumpjack:before {
+	content:"\f1ab"
+}
+.pacz-fic1-real-estate:before {
+	content:"\f1ac"
+}
+.pacz-fic1-recycled-bag:before {
+	content:"\f1ad"
+}
+.pacz-fic1-renewable-energy:before {
+	content:"\f1ae"
+}
+.pacz-fic1-renewable-energy-1:before {
+	content:"\f1af"
+}
+.pacz-fic1-rgb:before {
+	content:"\f1b0"
+}
+.pacz-fic1-ribbon:before {
+	content:"\f1b1"
+}
+.pacz-fic1-route:before {
+	content:"\f1b2"
+}
+.pacz-fic1-route-1:before {
+	content:"\f1b3"
+}
+.pacz-fic1-ruler:before {
+	content:"\f1b4"
+}
+.pacz-fic1-satellite-dish:before {
+	content:"\f1b5"
+}
+.pacz-fic1-science:before {
+	content:"\f1b6"
+}
+.pacz-fic1-scissors:before {
+	content:"\f1b7"
+}
+.pacz-fic1-search:before {
+	content:"\f1b8"
+}
+.pacz-fic1-search-1:before {
+	content:"\f1b9"
+}
+.pacz-fic1-shopping:before {
+	content:"\f1ba"
+}
+.pacz-fic1-signpost:before {
+	content:"\f1bb"
+}
+.pacz-fic1-signs:before {
+	content:"\f1bc"
+}
+.pacz-fic1-sketchbook:before {
+	content:"\f1bd"
+}
+.pacz-fic1-social:before {
+	content:"\f1be"
+}
+.pacz-fic1-socket:before {
+	content:"\f1bf"
+}
+.pacz-fic1-solar-panel:before {
+	content:"\f1c0"
+}
+.pacz-fic1-street-map:before {
+	content:"\f1c1"
+}
+.pacz-fic1-street-map-1:before {
+	content:"\f1c2"
+}
+.pacz-fic1-street-map-2:before {
+	content:"\f1c3"
+}
+.pacz-fic1-surgeon:before {
+	content:"\f1c4"
+}
+.pacz-fic1-syringe:before {
+	content:"\f1c5"
+}
+.pacz-fic1-tank:before {
+	content:"\f1c6"
+}
+.pacz-fic1-tap:before {
+	content:"\f1c7"
+}
+.pacz-fic1-target:before {
+	content:"\f1c8"
+}
+.pacz-fic1-target-1:before {
+	content:"\f1c9"
+}
+.pacz-fic1-target-2:before {
+	content:"\f1ca"
+}
+.pacz-fic1-tea-cup:before {
+	content:"\f1cb"
+}
+.pacz-fic1-teamwork:before {
+	content:"\f1cc"
+}
+.pacz-fic1-technology:before {
+	content:"\f1cd"
+}
+.pacz-fic1-technology-1:before {
+	content:"\f1ce"
+}
+.pacz-fic1-technology-2:before {
+	content:"\f1cf"
+}
+.pacz-fic1-technology-3:before {
+	content:"\f1d0"
+}
+.pacz-fic1-technology-4:before {
+	content:"\f1d1"
+}
+.pacz-fic1-technology-5:before {
+	content:"\f1d2"
+}
+.pacz-fic1-technology-6:before {
+	content:"\f1d3"
+}
+.pacz-fic1-tesla-coil:before {
+	content:"\f1d4"
+}
+.pacz-fic1-text-editor:before {
+	content:"\f1d5"
+}
+.pacz-fic1-text-editor-1:before {
+	content:"\f1d6"
+}
+.pacz-fic1-thermometer:before {
+	content:"\f1d7"
+}
+.pacz-fic1-tooth:before {
+	content:"\f1d8"
+}
+.pacz-fic1-transfusion:before {
+	content:"\f1d9"
+}
+.pacz-fic1-travel:before {
+	content:"\f1da"
+}
+.pacz-fic1-vector:before {
+	content:"\f1db"
+}
+.pacz-fic1-vector-1:before {
+	content:"\f1dc"
+}
+.pacz-fic1-video-player:before {
+	content:"\f1dd"
+}
+.pacz-fic1-wagon:before {
+	content:"\f1de"
+}
+.pacz-fic1-web:before {
+	content:"\f1df"
+}
+.pacz-fic1-web-1:before {
+	content:"\f1e0"
+}
+.pacz-fic1-web-2:before {
+	content:"\f1e1"
+}
+.pacz-fic1-web-3:before {
+	content:"\f1e2"
+}
+.pacz-fic1-web-4:before {
+	content:"\f1e3"
+}
+.pacz-fic1-web-5:before {
+	content:"\f1e4"
+}
+.pacz-fic1-web-design:before {
+	content:"\f1e5"
+}
+.pacz-fic1-website:before {
+	content:"\f1e6"
+}
+.pacz-fic1-wheelchair:before {
+	content:"\f1e7"
+}
+.pacz-fic1-wind-engine:before {
+	content:"\f1e8"
+}
+.pacz-fic1-wind-rose:before {
+	content:"\f1e9"
+}
+.pacz-fic1-windmill:before {
+	content:"\f1ea"
+}
+.pacz-fic1-witch:before {
+	content:"\f1eb"
+}
+.pacz-fic1-worldwide:before {
+	content:"\f1ec"
+}
+.pacz-fic1-write:before {
+	content:"\f1ed"
+}
+/* flaticon collection2 */
+
+[class*=" pacz-fic2-"]:after,
+[class*=" pacz-fic2-"]:before,
+[class^=pacz-fic2-]:before,
+[class^=flaticon-]:after {
+	font-family:pacz-fic2;
+	display:inline-block;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1
+}
+.pacz-fic2-abacus:before {
+	content:"\f100"
+}
+.pacz-fic2-air-conditioner:before {
+	content:"\f101"
+}
+.pacz-fic2-air-conditioner-1:before {
+	content:"\f102"
+}
+.pacz-fic2-artichoke:before {
+	content:"\f103"
+}
+.pacz-fic2-balcony:before {
+	content:"\f104"
+}
+.pacz-fic2-bar:before {
+	content:"\f105"
+}
+.pacz-fic2-bar-1:before {
+	content:"\f106"
+}
+.pacz-fic2-beer:before {
+	content:"\f107"
+}
+.pacz-fic2-beer-1:before {
+	content:"\f108"
+}
+.pacz-fic2-bell:before {
+	content:"\f109"
+}
+.pacz-fic2-bell-pepper:before {
+	content:"\f10a"
+}
+.pacz-fic2-bench:before {
+	content:"\f10b"
+}
+.pacz-fic2-bicycle:before {
+	content:"\f10c"
+}
+.pacz-fic2-birthday-cake:before {
+	content:"\f10d"
+}
+.pacz-fic2-blackboard:before {
+	content:"\f10e"
+}
+.pacz-fic2-blackboard-1:before {
+	content:"\f10f"
+}
+.pacz-fic2-blueprint:before {
+	content:"\f110"
+}
+.pacz-fic2-blueprint-1:before {
+	content:"\f111"
+}
+.pacz-fic2-blueprint-2:before {
+	content:"\f112"
+}
+.pacz-fic2-book:before {
+	content:"\f113"
+}
+.pacz-fic2-books:before {
+	content:"\f114"
+}
+.pacz-fic2-books-1:before {
+	content:"\f115"
+}
+.pacz-fic2-bread:before {
+	content:"\f116"
+}
+.pacz-fic2-brickwall:before {
+	content:"\f117"
+}
+.pacz-fic2-brickwall-1:before {
+	content:"\f118"
+}
+.pacz-fic2-broccoli:before {
+	content:"\f119"
+}
+.pacz-fic2-building:before {
+	content:"\f11a"
+}
+.pacz-fic2-building-1:before {
+	content:"\f11b"
+}
+.pacz-fic2-burger:before {
+	content:"\f11c"
+}
+.pacz-fic2-burrito:before {
+	content:"\f11d"
+}
+.pacz-fic2-bus:before {
+	content:"\f11e"
+}
+.pacz-fic2-business:before {
+	content:"\f11f"
+}
+.pacz-fic2-cabbage:before {
+	content:"\f120"
+}
+.pacz-fic2-calculator:before {
+	content:"\f121"
+}
+.pacz-fic2-car:before {
+	content:"\f122"
+}
+.pacz-fic2-carrot:before {
+	content:"\f123"
+}
+.pacz-fic2-champagne:before {
+	content:"\f124"
+}
+.pacz-fic2-check:before {
+	content:"\f125"
+}
+.pacz-fic2-cheese:before {
+	content:"\f126"
+}
+.pacz-fic2-cheese-burger:before {
+	content:"\f127"
+}
+.pacz-fic2-cherries:before {
+	content:"\f128"
+}
+.pacz-fic2-city-hall:before {
+	content:"\f129"
+}
+.pacz-fic2-city-hall-1:before {
+	content:"\f12a"
+}
+.pacz-fic2-cityscape:before {
+	content:"\f12b"
+}
+.pacz-fic2-compass:before {
+	content:"\f12c"
+}
+.pacz-fic2-computer:before {
+	content:"\f12d"
+}
+.pacz-fic2-computer-1:before {
+	content:"\f12e"
+}
+.pacz-fic2-concrete-mixer:before {
+	content:"\f12f"
+}
+.pacz-fic2-construction:before {
+	content:"\f130"
+}
+.pacz-fic2-construction-1:before {
+	content:"\f131"
+}
+.pacz-fic2-construction-2:before {
+	content:"\f132"
+}
+.pacz-fic2-construction-3:before {
+	content:"\f133"
+}
+.pacz-fic2-construction-4:before {
+	content:"\f134"
+}
+.pacz-fic2-construction-5:before {
+	content:"\f135"
+}
+.pacz-fic2-construction-6:before {
+	content:"\f136"
+}
+.pacz-fic2-construction-7:before {
+	content:"\f137"
+}
+.pacz-fic2-cooking:before {
+	content:"\f138"
+}
+.pacz-fic2-crab:before {
+	content:"\f139"
+}
+.pacz-fic2-crane:before {
+	content:"\f13a"
+}
+.pacz-fic2-cutlery:before {
+	content:"\f13b"
+}
+.pacz-fic2-cutlery-1:before {
+	content:"\f13c"
+}
+.pacz-fic2-cutlery-2:before {
+	content:"\f13d"
+}
+.pacz-fic2-decoration:before {
+	content:"\f13e"
+}
+.pacz-fic2-decoration-1:before {
+	content:"\f13f"
+}
+.pacz-fic2-devices:before {
+	content:"\f140"
+}
+.pacz-fic2-devices-1:before {
+	content:"\f141"
+}
+.pacz-fic2-devices-2:before {
+	content:"\f142"
+}
+.pacz-fic2-diploma:before {
+	content:"\f143"
+}
+.pacz-fic2-document:before {
+	content:"\f144"
+}
+.pacz-fic2-documents:before {
+	content:"\f145"
+}
+.pacz-fic2-door:before {
+	content:"\f146"
+}
+.pacz-fic2-doughnut:before {
+	content:"\f147"
+}
+.pacz-fic2-drawing:before {
+	content:"\f148"
+}
+.pacz-fic2-driller:before {
+	content:"\f149"
+}
+.pacz-fic2-drink:before {
+	content:"\f14a"
+}
+.pacz-fic2-drink-1:before {
+	content:"\f14b"
+}
+.pacz-fic2-drink-2:before {
+	content:"\f14c"
+}
+.pacz-fic2-drink-3:before {
+	content:"\f14d"
+}
+.pacz-fic2-earth-globe:before {
+	content:"\f14e"
+}
+.pacz-fic2-eggplant:before {
+	content:"\f14f"
+}
+.pacz-fic2-elevator:before {
+	content:"\f150"
+}
+.pacz-fic2-exam:before {
+	content:"\f151"
+}
+.pacz-fic2-exam-1:before {
+	content:"\f152"
+}
+.pacz-fic2-faucet:before {
+	content:"\f153"
+}
+.pacz-fic2-fence:before {
+	content:"\f154"
+}
+.pacz-fic2-ferris:before {
+	content:"\f155"
+}
+.pacz-fic2-fish:before {
+	content:"\f156"
+}
+.pacz-fic2-food:before {
+	content:"\f157"
+}
+.pacz-fic2-food-1:before {
+	content:"\f158"
+}
+.pacz-fic2-food-10:before {
+	content:"\f159"
+}
+.pacz-fic2-food-11:before {
+	content:"\f15a"
+}
+.pacz-fic2-food-12:before {
+	content:"\f15b"
+}
+.pacz-fic2-food-13:before {
+	content:"\f15c"
+}
+.pacz-fic2-food-14:before {
+	content:"\f15d"
+}
+.pacz-fic2-food-15:before {
+	content:"\f15e"
+}
+.pacz-fic2-food-16:before {
+	content:"\f15f"
+}
+.pacz-fic2-food-17:before {
+	content:"\f160"
+}
+.pacz-fic2-food-18:before {
+	content:"\f161"
+}
+.pacz-fic2-food-19:before {
+	content:"\f162"
+}
+.pacz-fic2-food-2:before {
+	content:"\f163"
+}
+.pacz-fic2-food-20:before {
+	content:"\f164"
+}
+.pacz-fic2-food-21:before {
+	content:"\f165"
+}
+.pacz-fic2-food-22:before {
+	content:"\f166"
+}
+.pacz-fic2-food-23:before {
+	content:"\f167"
+}
+.pacz-fic2-food-24:before {
+	content:"\f168"
+}
+.pacz-fic2-food-25:before {
+	content:"\f169"
+}
+.pacz-fic2-food-26:before {
+	content:"\f16a"
+}
+.pacz-fic2-food-3:before {
+	content:"\f16b"
+}
+.pacz-fic2-food-4:before {
+	content:"\f16c"
+}
+.pacz-fic2-food-5:before {
+	content:"\f16d"
+}
+.pacz-fic2-food-6:before {
+	content:"\f16e"
+}
+.pacz-fic2-food-7:before {
+	content:"\f16f"
+}
+.pacz-fic2-food-8:before {
+	content:"\f170"
+}
+.pacz-fic2-food-9:before {
+	content:"\f171"
+}
+.pacz-fic2-fountain:before {
+	content:"\f172"
+}
+.pacz-fic2-french-fries:before {
+	content:"\f173"
+}
+.pacz-fic2-fruit:before {
+	content:"\f174"
+}
+.pacz-fic2-fruit-1:before {
+	content:"\f175"
+}
+.pacz-fic2-fruit-2:before {
+	content:"\f176"
+}
+.pacz-fic2-fruit-3:before {
+	content:"\f177"
+}
+.pacz-fic2-grapes:before {
+	content:"\f178"
+}
+.pacz-fic2-hammer:before {
+	content:"\f179"
+}
+.pacz-fic2-hangar:before {
+	content:"\f17a"
+}
+.pacz-fic2-hard-drive:before {
+	content:"\f17b"
+}
+.pacz-fic2-heater:before {
+	content:"\f17c"
+}
+.pacz-fic2-helmet:before {
+	content:"\f17d"
+}
+.pacz-fic2-high-voltage:before {
+	content:"\f17e"
+}
+.pacz-fic2-home:before {
+	content:"\f17f"
+}
+.pacz-fic2-home-1:before {
+	content:"\f180"
+}
+.pacz-fic2-hot-air-balloon:before {
+	content:"\f181"
+}
+.pacz-fic2-house:before {
+	content:"\f182"
+}
+.pacz-fic2-house-1:before {
+	content:"\f183"
+}
+.pacz-fic2-ice-cream:before {
+	content:"\f184"
+}
+.pacz-fic2-imac:before {
+	content:"\f185"
+}
+.pacz-fic2-imac-1:before {
+	content:"\f186"
+}
+.pacz-fic2-ink:before {
+	content:"\f187"
+}
+.pacz-fic2-interface:before {
+	content:"\f188"
+}
+.pacz-fic2-ipad:before {
+	content:"\f189"
+}
+.pacz-fic2-iphone:before {
+	content:"\f18a"
+}
+.pacz-fic2-kettle:before {
+	content:"\f18b"
+}
+.pacz-fic2-key:before {
+	content:"\f18c"
+}
+.pacz-fic2-keyboard:before {
+	content:"\f18d"
+}
+.pacz-fic2-kitchen:before {
+	content:"\f18e"
+}
+.pacz-fic2-kitchen-utensils:before {
+	content:"\f18f"
+}
+.pacz-fic2-kitchen-utensils-1:before {
+	content:"\f190"
+}
+.pacz-fic2-kiwi:before {
+	content:"\f191"
+}
+.pacz-fic2-knife:before {
+	content:"\f192"
+}
+.pacz-fic2-ladder:before {
+	content:"\f193"
+}
+.pacz-fic2-lamp:before {
+	content:"\f194"
+}
+.pacz-fic2-laptop:before {
+	content:"\f195"
+}
+.pacz-fic2-lemon:before {
+	content:"\f196"
+}
+.pacz-fic2-lemonade:before {
+	content:"\f197"
+}
+.pacz-fic2-letter:before {
+	content:"\f198"
+}
+.pacz-fic2-library:before {
+	content:"\f199"
+}
+.pacz-fic2-line-chart:before {
+	content:"\f19a"
+}
+.pacz-fic2-lock:before {
+	content:"\f19b"
+}
+.pacz-fic2-mailbox:before {
+	content:"\f19c"
+}
+.pacz-fic2-mansion:before {
+	content:"\f19d"
+}
+.pacz-fic2-measuring-tape:before {
+	content:"\f19e"
+}
+.pacz-fic2-metro:before {
+	content:"\f19f"
+}
+.pacz-fic2-microchip:before {
+	content:"\f1a0"
+}
+.pacz-fic2-mobile-phone:before {
+	content:"\f1a1"
+}
+.pacz-fic2-monument:before {
+	content:"\f1a2"
+}
+.pacz-fic2-mortarboard:before {
+	content:"\f1a3"
+}
+.pacz-fic2-motherboard:before {
+	content:"\f1a4"
+}
+.pacz-fic2-mouse:before {
+	content:"\f1a5"
+}
+.pacz-fic2-muffin:before {
+	content:"\f1a6"
+}
+.pacz-fic2-multimedia:before {
+	content:"\f1a7"
+}
+.pacz-fic2-multimedia-1:before {
+	content:"\f1a8"
+}
+.pacz-fic2-office:before {
+	content:"\f1a9"
+}
+.pacz-fic2-office-block:before {
+	content:"\f1aa"
+}
+.pacz-fic2-olive-oil:before {
+	content:"\f1ab"
+}
+.pacz-fic2-olives:before {
+	content:"\f1ac"
+}
+.pacz-fic2-open-book:before {
+	content:"\f1ad"
+}
+.pacz-fic2-orange:before {
+	content:"\f1ae"
+}
+.pacz-fic2-padlock:before {
+	content:"\f1af"
+}
+.pacz-fic2-paint-brush:before {
+	content:"\f1b0"
+}
+.pacz-fic2-pancakes:before {
+	content:"\f1b1"
+}
+.pacz-fic2-parking:before {
+	content:"\f1b2"
+}
+.pacz-fic2-parquet:before {
+	content:"\f1b3"
+}
+.pacz-fic2-pear:before {
+	content:"\f1b4"
+}
+.pacz-fic2-pineapple:before {
+	content:"\f1b5"
+}
+.pacz-fic2-pipe:before {
+	content:"\f1b6"
+}
+.pacz-fic2-pizza:before {
+	content:"\f1b7"
+}
+.pacz-fic2-plug:before {
+	content:"\f1b8"
+}
+.pacz-fic2-portfolio:before {
+	content:"\f1b9"
+}
+.pacz-fic2-professor:before {
+	content:"\f1ba"
+}
+.pacz-fic2-radish:before {
+	content:"\f1bb"
+}
+.pacz-fic2-rice:before {
+	content:"\f1bc"
+}
+.pacz-fic2-roast-chicken:before {
+	content:"\f1bd"
+}
+.pacz-fic2-robot:before {
+	content:"\f1be"
+}
+.pacz-fic2-roller:before {
+	content:"\f1bf"
+}
+.pacz-fic2-salad:before {
+	content:"\f1c0"
+}
+.pacz-fic2-saw:before {
+	content:"\f1c1"
+}
+.pacz-fic2-school-material:before {
+	content:"\f1c2"
+}
+.pacz-fic2-scooter:before {
+	content:"\f1c3"
+}
+.pacz-fic2-screw:before {
+	content:"\f1c4"
+}
+.pacz-fic2-screwdriver:before {
+	content:"\f1c5"
+}
+.pacz-fic2-search:before {
+	content:"\f1c6"
+}
+.pacz-fic2-shrimp:before {
+	content:"\f1c7"
+}
+.pacz-fic2-signs:before {
+	content:"\f1c8"
+}
+.pacz-fic2-skyscraper:before {
+	content:"\f1c9"
+}
+.pacz-fic2-skyscraper-1:before {
+	content:"\f1ca"
+}
+.pacz-fic2-smartphone:before {
+	content:"\f1cb"
+}
+.pacz-fic2-smartwatch:before {
+	content:"\f1cc"
+}
+.pacz-fic2-soda:before {
+	content:"\f1cd"
+}
+.pacz-fic2-soda-1:before {
+	content:"\f1ce"
+}
+.pacz-fic2-soda-2:before {
+	content:"\f1cf"
+}
+.pacz-fic2-soup:before {
+	content:"\f1d0"
+}
+.pacz-fic2-spaghetti:before {
+	content:"\f1d1"
+}
+.pacz-fic2-spoon:before {
+	content:"\f1d2"
+}
+.pacz-fic2-strawberry:before {
+	content:"\f1d3"
+}
+.pacz-fic2-student:before {
+	content:"\f1d4"
+}
+.pacz-fic2-student-1:before {
+	content:"\f1d5"
+}
+.pacz-fic2-technology:before {
+	content:"\f1d6"
+}
+.pacz-fic2-technology-1:before {
+	content:"\f1d7"
+}
+.pacz-fic2-tomato:before {
+	content:"\f1d8"
+}
+.pacz-fic2-tool:before {
+	content:"\f1d9"
+}
+.pacz-fic2-tools:before {
+	content:"\f1da"
+}
+.pacz-fic2-traffic-light:before {
+	content:"\f1db"
+}
+.pacz-fic2-traffic-light-1:before {
+	content:"\f1dc"
+}
+.pacz-fic2-travel:before {
+	content:"\f1dd"
+}
+.pacz-fic2-trowel:before {
+	content:"\f1de"
+}
+.pacz-fic2-truck:before {
+	content:"\f1df"
+}
+.pacz-fic2-truck-1:before {
+	content:"\f1e0"
+}
+.pacz-fic2-university:before {
+	content:"\f1e1"
+}
+.pacz-fic2-vehicle:before {
+	content:"\f1e2"
+}
+.pacz-fic2-wall:before {
+	content:"\f1e3"
+}
+.pacz-fic2-water:before {
+	content:"\f1e4"
+}
+.pacz-fic2-water-1:before {
+	content:"\f1e5"
+}
+.pacz-fic2-window:before {
+	content:"\f1e6"
+}
+.pacz-fic2-wine-glass:before {
+	content:"\f1e7"
+}
+.pacz-fic2-wine-glass-1:before {
+	content:"\f1e8"
+}
+.pacz-fic2-wrench:before {
+	content:"\f1e9"
+}
+.pacz-fic2-wristwatch:before {
+	content:"\f1ea"
+}
+/* flaticon collection3 */
+
+[class*=" pacz-fic3-"]:after,
+[class*=" pacz-fic3-"]:before,
+[class^=pacz-fic3-]:after,
+[class^=pacz-fic3-]:before {
+	font-family:pacz-fic3;
+	display:inline-block;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1
+}
+.pacz-fic3-chat:before {
+	content:"\f100"
+}
+.pacz-fic3-big-speech-balloon:before {
+	content:"\f101"
+}
+.pacz-fic3-speech-bubble-oval-shape-with-text-lines:before {
+	content:"\f102"
+}
+.pacz-fic3-commenting:before {
+	content:"\f103"
+}
+.pacz-fic3-list-4:before {
+	content:"\f104"
+}
+.pacz-fic3-squares:before {
+	content:"\f105"
+}
+.pacz-fic3-3x3-grid:before {
+	content:"\f106"
+}
+.pacz-fic3-arrows-1:before {
+	content:"\f107"
+}
+.pacz-fic3-arrows:before {
+	content:"\f108"
+}
+.pacz-fic3-printer:before {
+	content:"\f109"
+}
+.pacz-fic3-cloud-computing-2:before {
+	content:"\f10a"
+}
+.pacz-fic3-cloud-computing-1:before {
+	content:"\f10b"
+}
+.pacz-fic3-download-1:before {
+	content:"\f10c"
+}
+.pacz-fic3-cloud-computing:before {
+	content:"\f10d"
+}
+.pacz-fic3-download:before {
+	content:"\f10e"
+}
+.pacz-fic3-line:before {
+	content:"\f10f"
+}
+.pacz-fic3-edit:before {
+	content:"\f110"
+}
+.pacz-fic3-shopping-cart-of-checkered-design:before {
+	content:"\f111"
+}
+.pacz-fic3-shopping-cart-black-shape:before {
+	content:"\f112"
+}
+.pacz-fic3-shopping-cart-2:before {
+	content:"\f113"
+}
+.pacz-fic3-shopping-cart-1:before {
+	content:"\f114"
+}
+.pacz-fic3-shopping-cart:before {
+	content:"\f115"
+}
+.pacz-fic3-list-3:before {
+	content:"\f116"
+}
+.pacz-fic3-list-2:before {
+	content:"\f117"
+}
+.pacz-fic3-list-1:before {
+	content:"\f118"
+}
+.pacz-fic3-list:before {
+	content:"\f119"
+}
+.pacz-fic3-pin-1:before {
+	content:"\f11a"
+}
+.pacz-fic3-pin:before {
+	content:"\f11b"
+}
+.pacz-fic3-tool:before {
+	content:"\f11c"
+}
+.pacz-fic3-medical:before {
+	content:"\f11d"
+}
+.pacz-fic3-clock-circular-outline:before {
+	content:"\f11e"
+}
+.pacz-fic3-interface:before {
+	content:"\f11f"
+}
+/* flaticon collection4 */
+
+[class*=" pacz-fic4-"]:after,
+[class*=" pacz-fic4-"]:before,
+[class^=pacz-fic4-]:after,
+[class^=pacz-fic4-]:before {
+	font-family:pacz-fic4;
+	display:inline-block;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1
+}
+.pacz-fic4-like-black-heart-button:before {
+	content:"\f100"
+}
+.pacz-fic4-printer:before {
+	content:"\f101"
+}
+.pacz-fic4-share-symbol:before {
+	content:"\f102"
+}
+.pacz-fic4-download-to-storage-drive:before {
+	content:"\f103"
+}
+.pacz-fic4-bookmark-black-shape:before {
+	content:"\f104"
+}
+.pacz-fic4-warning-sign:before {
+	content:"\f105"
+}
+.pacz-fic4-inbox-icon:before {
+	content:"\f106"
+}
+.pacz-fic4-black-male-user-symbol:before {
+	content:"\f107"
+}
+.pacz-fic4-layers-icon:before {
+	content:"\f108"
+}
+.pacz-fic4-warning-1:before {
+	content:"\f109"
+}
+.pacz-fic4-warning:before {
+	content:"\f10a"
+}
+.pacz-fic4-tick:before {
+	content:"\f10b"
+}
+.pacz-fic4-list:before {
+	content:"\f10c"
+}
+.pacz-fic4-magnifying-glass:before {
+	content:"\f10d"
+}
+.pacz-fic4-notification-bell:before {
+	content:"\f10e"
+}
+.pacz-fic4-speedometer:before {
+	content:"\f10f"
+}
+.pacz-fic4-line:before {
+	content:"\f110"
+}
+.pacz-fic4-signs:before {
+	content:"\f111"
+}
+.pacz-fic4-dollar-symbol:before {
+	content:"\f112"
+}
+.pacz-fic4-zoom-out:before {
+	content:"\f113"
+}
+.pacz-fic4-bookmark-white:before {
+	content:"\f114"
+}
+.pacz-fic4-arrows:before {
+	content:"\f115"
+}
+.pacz-fic4-next:before {
+	content:"\f116"
+}
+.pacz-fic4-error:before {
+	content:"\f117"
+}
+.pacz-fic4-more:before {
+	content:"\f118"
+}
+.pacz-fic4-big-heart:before {
+	content:"\f119"
+}
+.pacz-fic4-suitcase:before {
+	content:"\f11a"
+}
+.pacz-fic4-get-directions-button:before {
+	content:"\f11b"
+}
+.pacz-fic4-people:before {
+	content:"\f11c"
+}
+.pacz-fic4-man-with-raised-arms-lifting-dumbbells-weight:before {
+	content:"\f11d"
+}
+/* fontawesome */
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+.pacz-icon.pacz-icon-pull-left,
+.pacz-icon.pull-left {
+	margin-right:.3em
+}
+.pacz-icon-stack,
+a[class*=" pacz-icon-"],
+a[class^=pacz-icon-] {
+	display:inline-block
+}
+
+#wp-calendar #next:before,
+#wp-calendar #prev:before,
+.added-to-cart .product-loading-icon:before,
+.adding-to-cart .product-loading-icon:before,
+.widget-sub-navigation li a:before,
+.widget_archive li a:before,
+.widget_authors li a:before,
+.widget_categories li a:before,
+.widget_links li a:before,
+.widget_meta li a:before,
+.widget_nav_menu li a:before,
+.widget_pages li a:before,
+.widget_popular_tags li a:before,
+.widget_product_categories li a:before,
+.widget_recent_comments li:before,
+.widget_recent_entries li a:before,
+.widget_rss li a:before,
+.woocommerce .star-rating,
+[class*=" pacz-icon-"],
+[class^=pacz-icon-] {
+	font-family:FontAwesome;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:inherit;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+[class*=" pacz-icon-"]:before,
+[class^=pacz-icon-]:before {
+	text-decoration:inherit;
+	display:inline-block;
+	speak:none
+}
+.pacz-icon-lg {
+	font-size:1.33333333em;
+	line-height:.75em;
+	vertical-align:-15%
+}
+.pacz-icon-2x {
+	font-size:2em
+}
+.pacz-icon-3x {
+	font-size:3em
+}
+.pacz-icon-4x {
+	font-size:4em
+}
+.pacz-icon-5x {
+	font-size:5em
+}
+.pacz-icon-fw {
+	width:1.28571429em;
+	text-align:center
+}
+.pacz-icon-ul {
+	padding-left:0;
+	margin-left:2.14285714em;
+	list-style-type:none
+}
+.pacz-icon.pacz-icon-pull-right,
+.pacz-icon.pull-right {
+	margin-left:.3em
+}
+.pacz-icon-ul>li {
+	position:relative
+}
+.pacz-icon-li {
+	position:absolute;
+	left:-2.14285714em;
+	width:2.14285714em;
+	top:.14285714em;
+	text-align:center
+}
+.pacz-icon-li.pacz-icon-lg {
+	left:-1.85714286em
+}
+.pacz-icon-border {
+	padding:.2em .25em .15em;
+	border:.08em solid #eee;
+	border-radius:.1em
+}
+.pacz-icon-pull-left {
+	float:left
+}
+.pacz-icon-pull-right,
+.pull-right {
+	float:right
+}
+.pull-left {
+	float:left
+}
+.pacz-icon-spin {
+	-webkit-animation:fa-spin 2s infinite linear;
+	animation:fa-spin 2s infinite linear
+}
+.pacz-icon-pulse {
+	-webkit-animation:fa-spin 1s infinite steps(8);
+	animation:fa-spin 1s infinite steps(8)
+}
+@-webkit-keyframes fa-spin {
+	0% {
+		-webkit-transform:rotate(0);
+		transform:rotate(0)
+	}
+	100% {
+		-webkit-transform:rotate(359deg);
+		transform:rotate(359deg)
+	}
+}
+@keyframes fa-spin {
+	0% {
+		-webkit-transform:rotate(0);
+		transform:rotate(0)
+	}
+	100% {
+		-webkit-transform:rotate(359deg);
+		transform:rotate(359deg)
+	}
+}
+.pacz-icon-rotate-90 {
+	-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+	-webkit-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	transform:rotate(90deg)
+}
+.pacz-icon-rotate-180 {
+	-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+	-webkit-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	transform:rotate(180deg)
+}
+.pacz-icon-rotate-270 {
+	-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+	-webkit-transform:rotate(270deg);
+	-ms-transform:rotate(270deg);
+	transform:rotate(270deg)
+}
+.pacz-icon-flip-horizontal {
+	-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+	-webkit-transform:scale(-1,
+	1);
+	-ms-transform:scale(-1,
+	1);
+	transform:scale(-1,
+	1)
+}
+.pacz-icon-flip-vertical {
+	-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+	-webkit-transform:scale(1,
+	-1);
+	-ms-transform:scale(1,
+	-1);
+	transform:scale(1,
+	-1)
+}
+:root .pacz-icon-flip-horizontal,
+:root .pacz-icon-flip-vertical,
+:root .pacz-icon-rotate-180,
+:root .pacz-icon-rotate-270,
+:root .pacz-icon-rotate-90 {
+	filter:none
+}
+.pacz-icon-stack {
+	position:relative;
+	width:2em;
+	height:2em;
+	line-height:2em;
+	vertical-align:middle
+}
+.pacz-icon-stack-1x,
+.pacz-icon-stack-2x {
+	position:absolute;
+	left:0;
+	width:100%;
+	text-align:center
+}
+.pacz-icon-stack-1x {
+	line-height:inherit
+}
+.pacz-icon-stack-2x {
+	font-size:2em
+}
+.pacz-icon-inverse {
+	color:#fff
+}
+.pacz-icon-glass:before {
+	content:"\f000"
+}
+.pacz-icon-music:before {
+	content:"\f001"
+}
+.pacz-icon-search:before {
+	content:"\f002"
+}
+.pacz-icon-envelope-o:before {
+	content:"\f003"
+}
+.pacz-icon-heart:before {
+	content:"\f004"
+}
+.pacz-icon-star:before {
+	content:"\f005"
+}
+.pacz-icon-star-o:before {
+	content:"\f006"
+}
+.pacz-icon-user:before {
+	content:"\f007"
+}
+.pacz-icon-film:before {
+	content:"\f008"
+}
+.pacz-icon-th-large:before {
+	content:"\f009"
+}
+.pacz-icon-th:before {
+	content:"\f00a"
+}
+.pacz-icon-th-list:before {
+	content:"\f00b"
+}
+.pacz-icon-check:before {
+	content:"\f00c"
+}
+.pacz-icon-close:before,
+.pacz-icon-remove:before,
+.pacz-icon-times:before {
+	content:"\f00d"
+}
+.pacz-icon-search-plus:before {
+	content:"\f00e"
+}
+.pacz-icon-search-minus:before {
+	content:"\f010"
+}
+.pacz-icon-power-off:before {
+	content:"\f011"
+}
+.pacz-icon-signal:before {
+	content:"\f012"
+}
+.pacz-icon-cog:before,
+.pacz-icon-gear:before {
+	content:"\f013"
+}
+.pacz-icon-trash-o:before {
+	content:"\f014"
+}
+.pacz-icon-home:before {
+	content:"\f015"
+}
+.pacz-icon-file-o:before {
+	content:"\f016"
+}
+.pacz-icon-clock-o:before {
+	content:"\f017"
+}
+.pacz-icon-road:before {
+	content:"\f018"
+}
+.pacz-icon-download:before {
+	content:"\f019"
+}
+.pacz-icon-arrow-circle-o-down:before {
+	content:"\f01a"
+}
+.pacz-icon-arrow-circle-o-up:before {
+	content:"\f01b"
+}
+.pacz-icon-inbox:before {
+	content:"\f01c"
+}
+.pacz-icon-play-circle-o:before {
+	content:"\f01d"
+}
+.pacz-icon-repeat:before,
+.pacz-icon-rotate-right:before {
+	content:"\f01e"
+}
+.pacz-icon-refresh:before {
+	content:"\f021"
+}
+.pacz-icon-list-alt:before {
+	content:"\f022"
+}
+.pacz-icon-lock:before {
+	content:"\f023"
+}
+.pacz-icon-flag:before {
+	content:"\f024"
+}
+.pacz-icon-headphones:before {
+	content:"\f025"
+}
+.pacz-icon-volume-off:before {
+	content:"\f026"
+}
+.pacz-icon-volume-down:before {
+	content:"\f027"
+}
+.pacz-icon-volume-up:before {
+	content:"\f028"
+}
+.pacz-icon-qrcode:before {
+	content:"\f029"
+}
+.pacz-icon-barcode:before {
+	content:"\f02a"
+}
+.pacz-icon-tag:before {
+	content:"\f02b"
+}
+.pacz-icon-tags:before {
+	content:"\f02c"
+}
+.pacz-icon-book:before {
+	content:"\f02d"
+}
+.pacz-icon-bookmark:before {
+	content:"\f02e"
+}
+.pacz-icon-print:before {
+	content:"\f02f"
+}
+.pacz-icon-camera:before {
+	content:"\f030"
+}
+.pacz-icon-font:before {
+	content:"\f031"
+}
+.pacz-icon-bold:before {
+	content:"\f032"
+}
+.pacz-icon-italic:before {
+	content:"\f033"
+}
+.pacz-icon-text-height:before {
+	content:"\f034"
+}
+.pacz-icon-text-width:before {
+	content:"\f035"
+}
+.pacz-icon-align-left:before {
+	content:"\f036"
+}
+.pacz-icon-align-center:before {
+	content:"\f037"
+}
+.pacz-icon-align-right:before {
+	content:"\f038"
+}
+.pacz-icon-align-justify:before {
+	content:"\f039"
+}
+.pacz-icon-list:before {
+	content:"\f03a"
+}
+.pacz-icon-dedent:before,
+.pacz-icon-outdent:before {
+	content:"\f03b"
+}
+.pacz-icon-indent:before {
+	content:"\f03c"
+}
+.pacz-icon-video-camera:before {
+	content:"\f03d"
+}
+.pacz-icon-image:before,
+.pacz-icon-photo:before,
+.pacz-icon-picture-o:before {
+	content:"\f03e"
+}
+.pacz-icon-pencil:before {
+	content:"\f040"
+}
+.pacz-icon-map-marker:before {
+	content:"\f041"
+}
+.pacz-icon-adjust:before {
+	content:"\f042"
+}
+.pacz-icon-tint:before {
+	content:"\f043"
+}
+.pacz-icon-edit:before,
+.pacz-icon-pencil-square-o:before {
+	content:"\f044"
+}
+.pacz-icon-share-square-o:before {
+	content:"\f045"
+}
+.pacz-icon-check-square-o:before {
+	content:"\f046"
+}
+.pacz-icon-arrows:before {
+	content:"\f047"
+}
+.pacz-icon-step-backward:before {
+	content:"\f048"
+}
+.pacz-icon-fast-backward:before {
+	content:"\f049"
+}
+.pacz-icon-backward:before {
+	content:"\f04a"
+}
+.pacz-icon-play:before {
+	content:"\f04b"
+}
+.pacz-icon-pause:before {
+	content:"\f04c"
+}
+.pacz-icon-stop:before {
+	content:"\f04d"
+}
+.pacz-icon-forward:before {
+	content:"\f04e"
+}
+.pacz-icon-fast-forward:before {
+	content:"\f050"
+}
+.pacz-icon-step-forward:before {
+	content:"\f051"
+}
+.pacz-icon-eject:before {
+	content:"\f052"
+}
+.pacz-icon-chevron-left:before {
+	content:"\f053"
+}
+.pacz-icon-chevron-right:before {
+	content:"\f054"
+}
+.pacz-icon-plus-circle:before {
+	content:"\f055"
+}
+.pacz-icon-minus-circle:before {
+	content:"\f056"
+}
+.pacz-icon-times-circle:before {
+	content:"\f057"
+}
+.pacz-icon-check-circle:before {
+	content:"\f058"
+}
+.pacz-icon-question-circle:before {
+	content:"\f059"
+}
+.pacz-icon-info-circle:before {
+	content:"\f05a"
+}
+.pacz-icon-crosshairs:before {
+	content:"\f05b"
+}
+.pacz-icon-times-circle-o:before {
+	content:"\f05c"
+}
+.pacz-icon-check-circle-o:before {
+	content:"\f05d"
+}
+.pacz-icon-ban:before {
+	content:"\f05e"
+}
+.pacz-icon-arrow-left:before {
+	content:"\f060"
+}
+.pacz-icon-arrow-right:before {
+	content:"\f061"
+}
+.pacz-icon-arrow-up:before {
+	content:"\f062"
+}
+.pacz-icon-arrow-down:before {
+	content:"\f063"
+}
+.pacz-icon-mail-forward:before,
+.pacz-icon-share:before {
+	content:"\f064"
+}
+.pacz-icon-expand:before {
+	content:"\f065"
+}
+.pacz-icon-compress:before {
+	content:"\f066"
+}
+.pacz-icon-plus:before {
+	content:"\f067"
+}
+.pacz-icon-minus:before {
+	content:"\f068"
+}
+.pacz-icon-asterisk:before {
+	content:"\f069"
+}
+.pacz-icon-exclamation-circle:before {
+	content:"\f06a"
+}
+.pacz-icon-gift:before {
+	content:"\f06b"
+}
+.pacz-icon-leaf:before {
+	content:"\f06c"
+}
+.pacz-icon-fire:before {
+	content:"\f06d"
+}
+.pacz-icon-eye:before {
+	content:"\f06e"
+}
+.pacz-icon-eye-slash:before {
+	content:"\f070"
+}
+.pacz-icon-exclamation-triangle:before,
+.pacz-icon-warning:before {
+	content:"\f071"
+}
+.pacz-icon-plane:before {
+	content:"\f072"
+}
+.pacz-icon-calendar:before {
+	content:"\f073"
+}
+.pacz-icon-random:before {
+	content:"\f074"
+}
+.pacz-icon-comment:before {
+	content:"\f075"
+}
+.pacz-icon-magnet:before {
+	content:"\f076"
+}
+.pacz-icon-chevron-up:before {
+	content:"\f077"
+}
+.pacz-icon-chevron-down:before {
+	content:"\f078"
+}
+.pacz-icon-retweet:before {
+	content:"\f079"
+}
+.pacz-icon-shopping-cart:before {
+	content:"\f07a"
+}
+.pacz-icon-folder:before {
+	content:"\f07b"
+}
+.pacz-icon-folder-open:before {
+	content:"\f07c"
+}
+.pacz-icon-arrows-v:before {
+	content:"\f07d"
+}
+.pacz-icon-arrows-h:before {
+	content:"\f07e"
+}
+.pacz-icon-bar-chart-o:before,
+.pacz-icon-bar-chart:before {
+	content:"\f080"
+}
+.pacz-icon-twitter-square:before {
+	content:"\f081"
+}
+.pacz-icon-facebook-square:before {
+	content:"\f082"
+}
+.pacz-icon-camera-retro:before {
+	content:"\f083"
+}
+.pacz-icon-key:before {
+	content:"\f084"
+}
+.pacz-icon-cogs:before,
+.pacz-icon-gears:before {
+	content:"\f085"
+}
+.pacz-icon-comments:before {
+	content:"\f086"
+}
+.pacz-icon-thumbs-o-up:before {
+	content:"\f087"
+}
+.pacz-icon-thumbs-o-down:before {
+	content:"\f088"
+}
+.pacz-icon-star-half:before {
+	content:"\f089"
+}
+.pacz-icon-heart-o:before {
+	content:"\f08a"
+}
+.pacz-icon-sign-out:before {
+	content:"\f08b"
+}
+.pacz-icon-linkedin-square:before {
+	content:"\f08c"
+}
+.pacz-icon-thumb-tack:before {
+	content:"\f08d"
+}
+.pacz-icon-external-link:before {
+	content:"\f08e"
+}
+.pacz-icon-sign-in:before {
+	content:"\f090"
+}
+.pacz-icon-trophy:before {
+	content:"\f091"
+}
+.pacz-icon-github-square:before {
+	content:"\f092"
+}
+.pacz-icon-upload:before {
+	content:"\f093"
+}
+.pacz-icon-lemon-o:before {
+	content:"\f094"
+}
+.pacz-icon-phone:before {
+	content:"\f095"
+}
+.pacz-icon-square-o:before {
+	content:"\f096"
+}
+.pacz-icon-bookmark-o:before {
+	content:"\f097"
+}
+.pacz-icon-phone-square:before {
+	content:"\f098"
+}
+.pacz-icon-twitter:before {
+	content:"\f099"
+}
+.pacz-icon-facebook-f:before,
+.pacz-icon-facebook:before {
+	content:"\f09a"
+}
+.pacz-icon-github:before {
+	content:"\f09b"
+}
+.pacz-icon-unlock:before {
+	content:"\f09c"
+}
+.pacz-icon-credit-card:before {
+	content:"\f09d"
+}
+.pacz-icon-feed:before,
+.pacz-icon-rss:before {
+	content:"\f09e"
+}
+.pacz-icon-hdd-o:before {
+	content:"\f0a0"
+}
+.pacz-icon-bullhorn:before {
+	content:"\f0a1"
+}
+.pacz-icon-bell:before {
+	content:"\f0f3"
+}
+.pacz-icon-certificate:before {
+	content:"\f0a3"
+}
+.pacz-icon-hand-o-right:before {
+	content:"\f0a4"
+}
+.pacz-icon-hand-o-left:before {
+	content:"\f0a5"
+}
+.pacz-icon-hand-o-up:before {
+	content:"\f0a6"
+}
+.pacz-icon-hand-o-down:before {
+	content:"\f0a7"
+}
+.pacz-icon-arrow-circle-left:before {
+	content:"\f0a8"
+}
+.pacz-icon-arrow-circle-right:before {
+	content:"\f0a9"
+}
+.pacz-icon-arrow-circle-up:before {
+	content:"\f0aa"
+}
+.pacz-icon-arrow-circle-down:before {
+	content:"\f0ab"
+}
+.pacz-icon-globe:before {
+	content:"\f0ac"
+}
+.pacz-icon-wrench:before {
+	content:"\f0ad"
+}
+.pacz-icon-tasks:before {
+	content:"\f0ae"
+}
+.pacz-icon-filter:before {
+	content:"\f0b0"
+}
+.pacz-icon-briefcase:before {
+	content:"\f0b1"
+}
+.pacz-icon-arrows-alt:before {
+	content:"\f0b2"
+}
+.pacz-icon-group:before,
+.pacz-icon-users:before {
+	content:"\f0c0"
+}
+.pacz-icon-chain:before,
+.pacz-icon-link:before {
+	content:"\f0c1"
+}
+.pacz-icon-cloud:before {
+	content:"\f0c2"
+}
+.pacz-icon-flask:before {
+	content:"\f0c3"
+}
+.pacz-icon-cut:before,
+.pacz-icon-scissors:before {
+	content:"\f0c4"
+}
+.pacz-icon-copy:before,
+.pacz-icon-files-o:before {
+	content:"\f0c5"
+}
+.pacz-icon-paperclip:before {
+	content:"\f0c6"
+}
+.pacz-icon-floppy-o:before,
+.pacz-icon-save:before {
+	content:"\f0c7"
+}
+.pacz-icon-square:before {
+	content:"\f0c8"
+}
+.pacz-icon-bars:before,
+.pacz-icon-navicon:before,
+.pacz-icon-reorder:before {
+	content:"\f0c9"
+}
+.pacz-icon-list-ul:before {
+	content:"\f0ca"
+}
+.pacz-icon-list-ol:before {
+	content:"\f0cb"
+}
+.pacz-icon-strikethrough:before {
+	content:"\f0cc"
+}
+.pacz-icon-underline:before {
+	content:"\f0cd"
+}
+.pacz-icon-table:before {
+	content:"\f0ce"
+}
+.pacz-icon-magic:before {
+	content:"\f0d0"
+}
+.pacz-icon-truck:before {
+	content:"\f0d1"
+}
+.pacz-icon-pinterest:before {
+	content:"\f0d2"
+}
+.pacz-icon-pinterest-square:before {
+	content:"\f0d3"
+}
+.pacz-icon-google-plus-square:before {
+	content:"\f0d4"
+}
+.pacz-icon-google-plus:before {
+	content:"\f0d5"
+}
+.pacz-icon-money:before {
+	content:"\f0d6"
+}
+.pacz-icon-caret-down:before {
+	content:"\f0d7"
+}
+.pacz-icon-caret-up:before {
+	content:"\f0d8"
+}
+.pacz-icon-caret-left:before {
+	content:"\f0d9"
+}
+.pacz-icon-caret-right:before {
+	content:"\f0da"
+}
+.pacz-icon-columns:before {
+	content:"\f0db"
+}
+.pacz-icon-sort:before,
+.pacz-icon-unsorted:before {
+	content:"\f0dc"
+}
+.pacz-icon-sort-desc:before,
+.pacz-icon-sort-down:before {
+	content:"\f0dd"
+}
+.pacz-icon-sort-asc:before,
+.pacz-icon-sort-up:before {
+	content:"\f0de"
+}
+.pacz-icon-envelope:before {
+	content:"\f0e0"
+}
+.pacz-icon-linkedin:before {
+	content:"\f0e1"
+}
+.pacz-icon-rotate-left:before,
+.pacz-icon-undo:before {
+	content:"\f0e2"
+}
+.pacz-icon-gavel:before,
+.pacz-icon-legal:before {
+	content:"\f0e3"
+}
+.pacz-icon-dashboard:before,
+.pacz-icon-tachometer:before {
+	content:"\f0e4"
+}
+.pacz-icon-comment-o:before {
+	content:"\f0e5"
+}
+.pacz-icon-comments-o:before {
+	content:"\f0e6"
+}
+.pacz-icon-bolt:before,
+.pacz-icon-flash:before {
+	content:"\f0e7"
+}
+.pacz-icon-sitemap:before {
+	content:"\f0e8"
+}
+.pacz-icon-umbrella:before {
+	content:"\f0e9"
+}
+.pacz-icon-clipboard:before,
+.pacz-icon-paste:before {
+	content:"\f0ea"
+}
+.pacz-icon-lightbulb-o:before {
+	content:"\f0eb"
+}
+.pacz-icon-exchange:before {
+	content:"\f0ec"
+}
+.pacz-icon-cloud-download:before {
+	content:"\f0ed"
+}
+.pacz-icon-cloud-upload:before {
+	content:"\f0ee"
+}
+.pacz-icon-user-md:before {
+	content:"\f0f0"
+}
+.pacz-icon-stethoscope:before {
+	content:"\f0f1"
+}
+.pacz-icon-suitcase:before {
+	content:"\f0f2"
+}
+.pacz-icon-bell-o:before {
+	content:"\f0a2"
+}
+.pacz-icon-coffee:before {
+	content:"\f0f4"
+}
+.pacz-icon-cutlery:before {
+	content:"\f0f5"
+}
+.pacz-icon-file-text-o:before {
+	content:"\f0f6"
+}
+.pacz-icon-building-o:before {
+	content:"\f0f7"
+}
+.pacz-icon-hospital-o:before {
+	content:"\f0f8"
+}
+.pacz-icon-ambulance:before {
+	content:"\f0f9"
+}
+.pacz-icon-medkit:before {
+	content:"\f0fa"
+}
+.pacz-icon-fighter-jet:before {
+	content:"\f0fb"
+}
+.pacz-icon-beer:before {
+	content:"\f0fc"
+}
+.pacz-icon-h-square:before {
+	content:"\f0fd"
+}
+.pacz-icon-plus-square:before {
+	content:"\f0fe"
+}
+.pacz-icon-angle-double-left:before {
+	content:"\f100"
+}
+.pacz-icon-angle-double-right:before {
+	content:"\f101"
+}
+.pacz-icon-angle-double-up:before {
+	content:"\f102"
+}
+.pacz-icon-angle-double-down:before {
+	content:"\f103"
+}
+.pacz-icon-angle-left:before {
+	content:"\f104"
+}
+.pacz-icon-angle-right:before {
+	content:"\f105"
+}
+.pacz-icon-angle-up:before {
+	content:"\f106"
+}
+.pacz-icon-angle-down:before {
+	content:"\f107"
+}
+.pacz-icon-desktop:before {
+	content:"\f108"
+}
+.pacz-icon-laptop:before {
+	content:"\f109"
+}
+.pacz-icon-tablet:before {
+	content:"\f10a"
+}
+.pacz-icon-mobile-phone:before,
+.pacz-icon-mobile:before {
+	content:"\f10b"
+}
+.pacz-icon-circle-o:before {
+	content:"\f10c"
+}
+.pacz-icon-quote-left:before {
+	content:"\f10d"
+}
+.pacz-icon-quote-right:before {
+	content:"\f10e"
+}
+.pacz-icon-spinner:before {
+	content:"\f110"
+}
+.pacz-icon-circle:before {
+	content:"\f111"
+}
+.pacz-icon-mail-reply:before,
+.pacz-icon-reply:before {
+	content:"\f112"
+}
+.pacz-icon-github-alt:before {
+	content:"\f113"
+}
+.pacz-icon-folder-o:before {
+	content:"\f114"
+}
+.pacz-icon-folder-open-o:before {
+	content:"\f115"
+}
+.pacz-icon-smile-o:before {
+	content:"\f118"
+}
+.pacz-icon-frown-o:before {
+	content:"\f119"
+}
+.pacz-icon-meh-o:before {
+	content:"\f11a"
+}
+.pacz-icon-gamepad:before {
+	content:"\f11b"
+}
+.pacz-icon-keyboard-o:before {
+	content:"\f11c"
+}
+.pacz-icon-flag-o:before {
+	content:"\f11d"
+}
+.pacz-icon-flag-checkered:before {
+	content:"\f11e"
+}
+.pacz-icon-terminal:before {
+	content:"\f120"
+}
+.pacz-icon-code:before {
+	content:"\f121"
+}
+.pacz-icon-mail-reply-all:before,
+.pacz-icon-reply-all:before {
+	content:"\f122"
+}
+.pacz-icon-star-half-empty:before,
+.pacz-icon-star-half-full:before,
+.pacz-icon-star-half-o:before {
+	content:"\f123"
+}
+.pacz-icon-location-arrow:before {
+	content:"\f124"
+}
+.pacz-icon-crop:before {
+	content:"\f125"
+}
+.pacz-icon-code-fork:before {
+	content:"\f126"
+}
+.pacz-icon-chain-broken:before,
+.pacz-icon-unlink:before {
+	content:"\f127"
+}
+.pacz-icon-question:before {
+	content:"\f128"
+}
+.pacz-icon-info:before {
+	content:"\f129"
+}
+.pacz-icon-exclamation:before {
+	content:"\f12a"
+}
+.pacz-icon-superscript:before {
+	content:"\f12b"
+}
+.pacz-icon-subscript:before {
+	content:"\f12c"
+}
+.pacz-icon-eraser:before {
+	content:"\f12d"
+}
+.pacz-icon-puzzle-piece:before {
+	content:"\f12e"
+}
+.pacz-icon-microphone:before {
+	content:"\f130"
+}
+.pacz-icon-microphone-slash:before {
+	content:"\f131"
+}
+.pacz-icon-shield:before {
+	content:"\f132"
+}
+.pacz-icon-calendar-o:before {
+	content:"\f133"
+}
+.pacz-icon-fire-extinguisher:before {
+	content:"\f134"
+}
+.pacz-icon-rocket:before {
+	content:"\f135"
+}
+.pacz-icon-maxcdn:before {
+	content:"\f136"
+}
+.pacz-icon-chevron-circle-left:before {
+	content:"\f137"
+}
+.pacz-icon-chevron-circle-right:before {
+	content:"\f138"
+}
+.pacz-icon-chevron-circle-up:before {
+	content:"\f139"
+}
+.pacz-icon-chevron-circle-down:before {
+	content:"\f13a"
+}
+.pacz-icon-html5:before {
+	content:"\f13b"
+}
+.pacz-icon-css3:before {
+	content:"\f13c"
+}
+.pacz-icon-anchor:before {
+	content:"\f13d"
+}
+.pacz-icon-unlock-alt:before {
+	content:"\f13e"
+}
+.pacz-icon-bullseye:before {
+	content:"\f140"
+}
+.pacz-icon-ellipsis-h:before {
+	content:"\f141"
+}
+.pacz-icon-ellipsis-v:before {
+	content:"\f142"
+}
+.pacz-icon-rss-square:before {
+	content:"\f143"
+}
+.pacz-icon-play-circle:before {
+	content:"\f144"
+}
+.pacz-icon-ticket:before {
+	content:"\f145"
+}
+.pacz-icon-minus-square:before {
+	content:"\f146"
+}
+.pacz-icon-minus-square-o:before {
+	content:"\f147"
+}
+.pacz-icon-level-up:before {
+	content:"\f148"
+}
+.pacz-icon-level-down:before {
+	content:"\f149"
+}
+.pacz-icon-check-square:before {
+	content:"\f14a"
+}
+.pacz-icon-pencil-square:before {
+	content:"\f14b"
+}
+.pacz-icon-external-link-square:before {
+	content:"\f14c"
+}
+.pacz-icon-share-square:before {
+	content:"\f14d"
+}
+.pacz-icon-compass:before {
+	content:"\f14e"
+}
+.pacz-icon-caret-square-o-down:before,
+.pacz-icon-toggle-down:before {
+	content:"\f150"
+}
+.pacz-icon-caret-square-o-up:before,
+.pacz-icon-toggle-up:before {
+	content:"\f151"
+}
+.pacz-icon-caret-square-o-right:before,
+.pacz-icon-toggle-right:before {
+	content:"\f152"
+}
+.pacz-icon-eur:before,
+.pacz-icon-euro:before {
+	content:"\f153"
+}
+.pacz-icon-gbp:before {
+	content:"\f154"
+}
+.pacz-icon-dollar:before,
+.pacz-icon-usd:before {
+	content:"\f155"
+}
+.pacz-icon-inr:before,
+.pacz-icon-rupee:before {
+	content:"\f156"
+}
+.pacz-icon-cny:before,
+.pacz-icon-jpy:before,
+.pacz-icon-rmb:before,
+.pacz-icon-yen:before {
+	content:"\f157"
+}
+.pacz-icon-rouble:before,
+.pacz-icon-rub:before,
+.pacz-icon-ruble:before {
+	content:"\f158"
+}
+.pacz-icon-krw:before,
+.pacz-icon-won:before {
+	content:"\f159"
+}
+.pacz-icon-bitcoin:before,
+.pacz-icon-btc:before {
+	content:"\f15a"
+}
+.pacz-icon-file:before {
+	content:"\f15b"
+}
+.pacz-icon-file-text:before {
+	content:"\f15c"
+}
+.pacz-icon-sort-alpha-asc:before {
+	content:"\f15d"
+}
+.pacz-icon-sort-alpha-desc:before {
+	content:"\f15e"
+}
+.pacz-icon-sort-amount-asc:before {
+	content:"\f160"
+}
+.pacz-icon-sort-amount-desc:before {
+	content:"\f161"
+}
+.pacz-icon-sort-numeric-asc:before {
+	content:"\f162"
+}
+.pacz-icon-sort-numeric-desc:before {
+	content:"\f163"
+}
+.pacz-icon-thumbs-up:before {
+	content:"\f164"
+}
+.pacz-icon-thumbs-down:before {
+	content:"\f165"
+}
+.pacz-icon-youtube-square:before {
+	content:"\f166"
+}
+.pacz-icon-youtube:before {
+	content:"\f167"
+}
+.pacz-icon-xing:before {
+	content:"\f168"
+}
+.pacz-icon-xing-square:before {
+	content:"\f169"
+}
+.pacz-icon-youtube-play:before {
+	content:"\f16a"
+}
+.pacz-icon-dropbox:before {
+	content:"\f16b"
+}
+.pacz-icon-stack-overflow:before {
+	content:"\f16c"
+}
+.pacz-icon-instagram:before {
+	content:"\f16d"
+}
+.pacz-icon-flickr:before {
+	content:"\f16e"
+}
+.pacz-icon-adn:before {
+	content:"\f170"
+}
+.pacz-icon-bitbucket:before {
+	content:"\f171"
+}
+.pacz-icon-bitbucket-square:before {
+	content:"\f172"
+}
+.pacz-icon-tumblr:before {
+	content:"\f173"
+}
+.pacz-icon-tumblr-square:before {
+	content:"\f174"
+}
+.pacz-icon-long-arrow-down:before {
+	content:"\f175"
+}
+.pacz-icon-long-arrow-up:before {
+	content:"\f176"
+}
+.pacz-icon-long-arrow-left:before {
+	content:"\f177"
+}
+.pacz-icon-long-arrow-right:before {
+	content:"\f178"
+}
+.pacz-icon-apple:before {
+	content:"\f179"
+}
+.pacz-icon-windows:before {
+	content:"\f17a"
+}
+.pacz-icon-android:before {
+	content:"\f17b"
+}
+.pacz-icon-linux:before {
+	content:"\f17c"
+}
+.pacz-icon-dribbble:before {
+	content:"\f17d"
+}
+.pacz-icon-skype:before {
+	content:"\f17e"
+}
+.pacz-icon-foursquare:before {
+	content:"\f180"
+}
+.pacz-icon-trello:before {
+	content:"\f181"
+}
+.pacz-icon-female:before {
+	content:"\f182"
+}
+.pacz-icon-male:before {
+	content:"\f183"
+}
+.pacz-icon-gittip:before,
+.pacz-icon-gratipay:before {
+	content:"\f184"
+}
+.pacz-icon-sun-o:before {
+	content:"\f185"
+}
+.pacz-icon-moon-o:before {
+	content:"\f186"
+}
+.pacz-icon-archive:before {
+	content:"\f187"
+}
+.pacz-icon-bug:before {
+	content:"\f188"
+}
+.pacz-icon-vk:before {
+	content:"\f189"
+}
+.pacz-icon-weibo:before {
+	content:"\f18a"
+}
+.pacz-icon-renren:before {
+	content:"\f18b"
+}
+.pacz-icon-pagelines:before {
+	content:"\f18c"
+}
+.pacz-icon-stack-exchange:before {
+	content:"\f18d"
+}
+.pacz-icon-arrow-circle-o-right:before {
+	content:"\f18e"
+}
+.pacz-icon-arrow-circle-o-left:before {
+	content:"\f190"
+}
+.pacz-icon-caret-square-o-left:before,
+.pacz-icon-toggle-left:before {
+	content:"\f191"
+}
+.pacz-icon-dot-circle-o:before {
+	content:"\f192"
+}
+.pacz-icon-wheelchair:before {
+	content:"\f193"
+}
+.pacz-icon-vimeo-square:before {
+	content:"\f194"
+}
+.pacz-icon-try:before,
+.pacz-icon-turkish-lira:before {
+	content:"\f195"
+}
+.pacz-icon-plus-square-o:before {
+	content:"\f196"
+}
+.pacz-icon-space-shuttle:before {
+	content:"\f197"
+}
+.pacz-icon-slack:before {
+	content:"\f198"
+}
+.pacz-icon-envelope-square:before {
+	content:"\f199"
+}
+.pacz-icon-wordpress:before {
+	content:"\f19a"
+}
+.pacz-icon-openid:before {
+	content:"\f19b"
+}
+.pacz-icon-bank:before,
+.pacz-icon-institution:before,
+.pacz-icon-university:before {
+	content:"\f19c"
+}
+.pacz-icon-graduation-cap:before,
+.pacz-icon-mortar-board:before {
+	content:"\f19d"
+}
+.pacz-icon-yahoo:before {
+	content:"\f19e"
+}
+.pacz-icon-google:before {
+	content:"\f1a0"
+}
+.pacz-icon-reddit:before {
+	content:"\f1a1"
+}
+.pacz-icon-reddit-square:before {
+	content:"\f1a2"
+}
+.pacz-icon-stumbleupon-circle:before {
+	content:"\f1a3"
+}
+.pacz-icon-stumbleupon:before {
+	content:"\f1a4"
+}
+.pacz-icon-delicious:before {
+	content:"\f1a5"
+}
+.pacz-icon-digg:before {
+	content:"\f1a6"
+}
+.pacz-icon-pied-piper-pp:before {
+	content:"\f1a7"
+}
+.pacz-icon-pied-piper-alt:before {
+	content:"\f1a8"
+}
+.pacz-icon-drupal:before {
+	content:"\f1a9"
+}
+.pacz-icon-joomla:before {
+	content:"\f1aa"
+}
+.pacz-icon-language:before {
+	content:"\f1ab"
+}
+.pacz-icon-fax:before {
+	content:"\f1ac"
+}
+.pacz-icon-building:before {
+	content:"\f1ad"
+}
+.pacz-icon-child:before {
+	content:"\f1ae"
+}
+.pacz-icon-paw:before {
+	content:"\f1b0"
+}
+.pacz-icon-spoon:before {
+	content:"\f1b1"
+}
+.pacz-icon-cube:before {
+	content:"\f1b2"
+}
+.pacz-icon-cubes:before {
+	content:"\f1b3"
+}
+.pacz-icon-behance:before {
+	content:"\f1b4"
+}
+.pacz-icon-behance-square:before {
+	content:"\f1b5"
+}
+.pacz-icon-steam:before {
+	content:"\f1b6"
+}
+.pacz-icon-steam-square:before {
+	content:"\f1b7"
+}
+.pacz-icon-recycle:before {
+	content:"\f1b8"
+}
+.pacz-icon-automobile:before,
+.pacz-icon-car:before {
+	content:"\f1b9"
+}
+.pacz-icon-cab:before,
+.pacz-icon-taxi:before {
+	content:"\f1ba"
+}
+.pacz-icon-tree:before {
+	content:"\f1bb"
+}
+.pacz-icon-spotify:before {
+	content:"\f1bc"
+}
+.pacz-icon-deviantart:before {
+	content:"\f1bd"
+}
+.pacz-icon-soundcloud:before {
+	content:"\f1be"
+}
+.pacz-icon-database:before {
+	content:"\f1c0"
+}
+.pacz-icon-file-pdf-o:before {
+	content:"\f1c1"
+}
+.pacz-icon-file-word-o:before {
+	content:"\f1c2"
+}
+.pacz-icon-file-excel-o:before {
+	content:"\f1c3"
+}
+.pacz-icon-file-powerpoint-o:before {
+	content:"\f1c4"
+}
+.pacz-icon-file-image-o:before,
+.pacz-icon-file-photo-o:before,
+.pacz-icon-file-picture-o:before {
+	content:"\f1c5"
+}
+.pacz-icon-file-archive-o:before,
+.pacz-icon-file-zip-o:before {
+	content:"\f1c6"
+}
+.pacz-icon-file-audio-o:before,
+.pacz-icon-file-sound-o:before {
+	content:"\f1c7"
+}
+.pacz-icon-file-movie-o:before,
+.pacz-icon-file-video-o:before {
+	content:"\f1c8"
+}
+.pacz-icon-file-code-o:before {
+	content:"\f1c9"
+}
+.pacz-icon-vine:before {
+	content:"\f1ca"
+}
+.pacz-icon-codepen:before {
+	content:"\f1cb"
+}
+.pacz-icon-jsfiddle:before {
+	content:"\f1cc"
+}
+.pacz-icon-life-bouy:before,
+.pacz-icon-life-buoy:before,
+.pacz-icon-life-ring:before,
+.pacz-icon-life-saver:before,
+.pacz-icon-support:before {
+	content:"\f1cd"
+}
+.pacz-icon-circle-o-notch:before {
+	content:"\f1ce"
+}
+.pacz-icon-ra:before,
+.pacz-icon-rebel:before,
+.pacz-icon-resistance:before {
+	content:"\f1d0"
+}
+.pacz-icon-empire:before,
+.pacz-icon-ge:before {
+	content:"\f1d1"
+}
+.pacz-icon-git-square:before {
+	content:"\f1d2"
+}
+.pacz-icon-git:before {
+	content:"\f1d3"
+}
+.pacz-icon-hacker-news:before,
+.pacz-icon-y-combinator-square:before,
+.pacz-icon-yc-square:before {
+	content:"\f1d4"
+}
+.pacz-icon-tencent-weibo:before {
+	content:"\f1d5"
+}
+.pacz-icon-qq:before {
+	content:"\f1d6"
+}
+.pacz-icon-wechat:before,
+.pacz-icon-weixin:before {
+	content:"\f1d7"
+}
+.pacz-icon-paper-plane:before,
+.pacz-icon-send:before {
+	content:"\f1d8"
+}
+.pacz-icon-paper-plane-o:before,
+.pacz-icon-send-o:before {
+	content:"\f1d9"
+}
+.pacz-icon-history:before {
+	content:"\f1da"
+}
+.pacz-icon-circle-thin:before {
+	content:"\f1db"
+}
+.pacz-icon-header:before {
+	content:"\f1dc"
+}
+.pacz-icon-paragraph:before {
+	content:"\f1dd"
+}
+.pacz-icon-sliders:before {
+	content:"\f1de"
+}
+.pacz-icon-share-alt:before {
+	content:"\f1e0"
+}
+.pacz-icon-share-alt-square:before {
+	content:"\f1e1"
+}
+.pacz-icon-bomb:before {
+	content:"\f1e2"
+}
+.pacz-icon-futbol-o:before,
+.pacz-icon-soccer-ball-o:before {
+	content:"\f1e3"
+}
+.pacz-icon-tty:before {
+	content:"\f1e4"
+}
+.pacz-icon-binoculars:before {
+	content:"\f1e5"
+}
+.pacz-icon-plug:before {
+	content:"\f1e6"
+}
+.pacz-icon-slideshare:before {
+	content:"\f1e7"
+}
+.pacz-icon-twitch:before {
+	content:"\f1e8"
+}
+.pacz-icon-yelp:before {
+	content:"\f1e9"
+}
+.pacz-icon-newspaper-o:before {
+	content:"\f1ea"
+}
+.pacz-icon-wifi:before {
+	content:"\f1eb"
+}
+.pacz-icon-calculator:before {
+	content:"\f1ec"
+}
+.pacz-icon-paypal:before {
+	content:"\f1ed"
+}
+.pacz-icon-google-wallet:before {
+	content:"\f1ee"
+}
+.pacz-icon-cc-visa:before {
+	content:"\f1f0"
+}
+.pacz-icon-cc-mastercard:before {
+	content:"\f1f1"
+}
+.pacz-icon-cc-discover:before {
+	content:"\f1f2"
+}
+.pacz-icon-cc-amex:before {
+	content:"\f1f3"
+}
+.pacz-icon-cc-paypal:before {
+	content:"\f1f4"
+}
+.pacz-icon-cc-stripe:before {
+	content:"\f1f5"
+}
+.pacz-icon-bell-slash:before {
+	content:"\f1f6"
+}
+.pacz-icon-bell-slash-o:before {
+	content:"\f1f7"
+}
+.pacz-icon-trash:before {
+	content:"\f1f8"
+}
+.pacz-icon-copyright:before {
+	content:"\f1f9"
+}
+.pacz-icon-at:before {
+	content:"\f1fa"
+}
+.pacz-icon-eyedropper:before {
+	content:"\f1fb"
+}
+.pacz-icon-paint-brush:before {
+	content:"\f1fc"
+}
+.pacz-icon-birthday-cake:before {
+	content:"\f1fd"
+}
+.pacz-icon-area-chart:before {
+	content:"\f1fe"
+}
+.pacz-icon-pie-chart:before {
+	content:"\f200"
+}
+.pacz-icon-line-chart:before {
+	content:"\f201"
+}
+.pacz-icon-lastfm:before {
+	content:"\f202"
+}
+.pacz-icon-lastfm-square:before {
+	content:"\f203"
+}
+.pacz-icon-toggle-off:before {
+	content:"\f204"
+}
+.pacz-icon-toggle-on:before {
+	content:"\f205"
+}
+.pacz-icon-bicycle:before {
+	content:"\f206"
+}
+.pacz-icon-bus:before {
+	content:"\f207"
+}
+.pacz-icon-ioxhost:before {
+	content:"\f208"
+}
+.pacz-icon-angellist:before {
+	content:"\f209"
+}
+.pacz-icon-cc:before {
+	content:"\f20a"
+}
+.pacz-icon-ils:before,
+.pacz-icon-shekel:before,
+.pacz-icon-sheqel:before {
+	content:"\f20b"
+}
+.pacz-icon-meanpath:before {
+	content:"\f20c"
+}
+.pacz-icon-buysellads:before {
+	content:"\f20d"
+}
+.pacz-icon-connectdevelop:before {
+	content:"\f20e"
+}
+.pacz-icon-dashcube:before {
+	content:"\f210"
+}
+.pacz-icon-forumbee:before {
+	content:"\f211"
+}
+.pacz-icon-leanpub:before {
+	content:"\f212"
+}
+.pacz-icon-sellsy:before {
+	content:"\f213"
+}
+.pacz-icon-shirtsinbulk:before {
+	content:"\f214"
+}
+.pacz-icon-simplybuilt:before {
+	content:"\f215"
+}
+.pacz-icon-skyatlas:before {
+	content:"\f216"
+}
+.pacz-icon-cart-plus:before {
+	content:"\f217"
+}
+.pacz-icon-cart-arrow-down:before {
+	content:"\f218"
+}
+.pacz-icon-diamond:before {
+	content:"\f219"
+}
+.pacz-icon-ship:before {
+	content:"\f21a"
+}
+.pacz-icon-user-secret:before {
+	content:"\f21b"
+}
+.pacz-icon-motorcycle:before {
+	content:"\f21c"
+}
+.pacz-icon-street-view:before {
+	content:"\f21d"
+}
+.pacz-icon-heartbeat:before {
+	content:"\f21e"
+}
+.pacz-icon-venus:before {
+	content:"\f221"
+}
+.pacz-icon-mars:before {
+	content:"\f222"
+}
+.pacz-icon-mercury:before {
+	content:"\f223"
+}
+.pacz-icon-intersex:before,
+.pacz-icon-transgender:before {
+	content:"\f224"
+}
+.pacz-icon-transgender-alt:before {
+	content:"\f225"
+}
+.pacz-icon-venus-double:before {
+	content:"\f226"
+}
+.pacz-icon-mars-double:before {
+	content:"\f227"
+}
+.pacz-icon-venus-mars:before {
+	content:"\f228"
+}
+.pacz-icon-mars-stroke:before {
+	content:"\f229"
+}
+.pacz-icon-mars-stroke-v:before {
+	content:"\f22a"
+}
+.pacz-icon-mars-stroke-h:before {
+	content:"\f22b"
+}
+.pacz-icon-neuter:before {
+	content:"\f22c"
+}
+.pacz-icon-genderless:before {
+	content:"\f22d"
+}
+.pacz-icon-facebook-official:before {
+	content:"\f230"
+}
+.pacz-icon-pinterest-p:before {
+	content:"\f231"
+}
+.pacz-icon-whatsapp:before {
+	content:"\f232"
+}
+.pacz-icon-server:before {
+	content:"\f233"
+}
+.pacz-icon-user-plus:before {
+	content:"\f234"
+}
+.pacz-icon-user-times:before {
+	content:"\f235"
+}
+.pacz-icon-bed:before,
+.pacz-icon-hotel:before {
+	content:"\f236"
+}
+.pacz-icon-viacoin:before {
+	content:"\f237"
+}
+.pacz-icon-train:before {
+	content:"\f238"
+}
+.pacz-icon-subway:before {
+	content:"\f239"
+}
+.pacz-icon-medium:before {
+	content:"\f23a"
+}
+.pacz-icon-y-combinator:before,
+.pacz-icon-yc:before {
+	content:"\f23b"
+}
+.pacz-icon-optin-monster:before {
+	content:"\f23c"
+}
+.pacz-icon-opencart:before {
+	content:"\f23d"
+}
+.pacz-icon-expeditedssl:before {
+	content:"\f23e"
+}
+.pacz-icon-battery-4:before,
+.pacz-icon-battery-full:before,
+.pacz-icon-battery:before {
+	content:"\f240"
+}
+.pacz-icon-battery-3:before,
+.pacz-icon-battery-three-quarters:before {
+	content:"\f241"
+}
+.pacz-icon-battery-2:before,
+.pacz-icon-battery-half:before {
+	content:"\f242"
+}
+.pacz-icon-battery-1:before,
+.pacz-icon-battery-quarter:before {
+	content:"\f243"
+}
+.pacz-icon-battery-0:before,
+.pacz-icon-battery-empty:before {
+	content:"\f244"
+}
+.pacz-icon-mouse-pointer:before {
+	content:"\f245"
+}
+.pacz-icon-i-cursor:before {
+	content:"\f246"
+}
+.pacz-icon-object-group:before {
+	content:"\f247"
+}
+.pacz-icon-object-ungroup:before {
+	content:"\f248"
+}
+.pacz-icon-sticky-note:before {
+	content:"\f249"
+}
+.pacz-icon-sticky-note-o:before {
+	content:"\f24a"
+}
+.pacz-icon-cc-jcb:before {
+	content:"\f24b"
+}
+.pacz-icon-cc-diners-club:before {
+	content:"\f24c"
+}
+.pacz-icon-clone:before {
+	content:"\f24d"
+}
+.pacz-icon-balance-scale:before {
+	content:"\f24e"
+}
+.pacz-icon-hourglass-o:before {
+	content:"\f250"
+}
+.pacz-icon-hourglass-1:before,
+.pacz-icon-hourglass-start:before {
+	content:"\f251"
+}
+.pacz-icon-hourglass-2:before,
+.pacz-icon-hourglass-half:before {
+	content:"\f252"
+}
+.pacz-icon-hourglass-3:before,
+.pacz-icon-hourglass-end:before {
+	content:"\f253"
+}
+.pacz-icon-hourglass:before {
+	content:"\f254"
+}
+.pacz-icon-hand-grab-o:before,
+.pacz-icon-hand-rock-o:before {
+	content:"\f255"
+}
+.pacz-icon-hand-paper-o:before,
+.pacz-icon-hand-stop-o:before {
+	content:"\f256"
+}
+.pacz-icon-hand-scissors-o:before {
+	content:"\f257"
+}
+.pacz-icon-hand-lizard-o:before {
+	content:"\f258"
+}
+.pacz-icon-hand-spock-o:before {
+	content:"\f259"
+}
+.pacz-icon-hand-pointer-o:before {
+	content:"\f25a"
+}
+.pacz-icon-hand-peace-o:before {
+	content:"\f25b"
+}
+.pacz-icon-trademark:before {
+	content:"\f25c"
+}
+.pacz-icon-registered:before {
+	content:"\f25d"
+}
+.pacz-icon-creative-commons:before {
+	content:"\f25e"
+}
+.pacz-icon-gg:before {
+	content:"\f260"
+}
+.pacz-icon-gg-circle:before {
+	content:"\f261"
+}
+.pacz-icon-tripadvisor:before {
+	content:"\f262"
+}
+.pacz-icon-odnoklassniki:before {
+	content:"\f263"
+}
+.pacz-icon-odnoklassniki-square:before {
+	content:"\f264"
+}
+.pacz-icon-get-pocket:before {
+	content:"\f265"
+}
+.pacz-icon-wikipedia-w:before {
+	content:"\f266"
+}
+.pacz-icon-safari:before {
+	content:"\f267"
+}
+.pacz-icon-chrome:before {
+	content:"\f268"
+}
+.pacz-icon-firefox:before {
+	content:"\f269"
+}
+.pacz-icon-opera:before {
+	content:"\f26a"
+}
+.pacz-icon-internet-explorer:before {
+	content:"\f26b"
+}
+.pacz-icon-television:before,
+.pacz-icon-tv:before {
+	content:"\f26c"
+}
+.pacz-icon-contao:before {
+	content:"\f26d"
+}
+.pacz-icon-500px:before {
+	content:"\f26e"
+}
+.pacz-icon-amazon:before {
+	content:"\f270"
+}
+.pacz-icon-calendar-plus-o:before {
+	content:"\f271"
+}
+.pacz-icon-calendar-minus-o:before {
+	content:"\f272"
+}
+.pacz-icon-calendar-times-o:before {
+	content:"\f273"
+}
+.pacz-icon-calendar-check-o:before {
+	content:"\f274"
+}
+.pacz-icon-industry:before {
+	content:"\f275"
+}
+.pacz-icon-map-pin:before {
+	content:"\f276"
+}
+.pacz-icon-map-signs:before {
+	content:"\f277"
+}
+.pacz-icon-map-o:before {
+	content:"\f278"
+}
+.pacz-icon-map:before {
+	content:"\f279"
+}
+.pacz-icon-commenting:before {
+	content:"\f27a"
+}
+.pacz-icon-commenting-o:before {
+	content:"\f27b"
+}
+.pacz-icon-houzz:before {
+	content:"\f27c"
+}
+.pacz-icon-vimeo:before {
+	content:"\f27d"
+}
+.pacz-icon-black-tie:before {
+	content:"\f27e"
+}
+.pacz-icon-fonticons:before {
+	content:"\f280"
+}
+.pacz-icon-reddit-alien:before {
+	content:"\f281"
+}
+.pacz-icon-edge:before {
+	content:"\f282"
+}
+.pacz-icon-credit-card-alt:before {
+	content:"\f283"
+}
+.pacz-icon-codiepie:before {
+	content:"\f284"
+}
+.pacz-icon-modx:before {
+	content:"\f285"
+}
+.pacz-icon-fort-awesome:before {
+	content:"\f286"
+}
+.pacz-icon-usb:before {
+	content:"\f287"
+}
+.pacz-icon-product-hunt:before {
+	content:"\f288"
+}
+.pacz-icon-mixcloud:before {
+	content:"\f289"
+}
+.pacz-icon-scribd:before {
+	content:"\f28a"
+}
+.pacz-icon-pause-circle:before {
+	content:"\f28b"
+}
+.pacz-icon-pause-circle-o:before {
+	content:"\f28c"
+}
+.pacz-icon-stop-circle:before {
+	content:"\f28d"
+}
+.pacz-icon-stop-circle-o:before {
+	content:"\f28e"
+}
+.pacz-icon-shopping-bag:before {
+	content:"\f290"
+}
+.pacz-icon-shopping-basket:before {
+	content:"\f291"
+}
+.pacz-icon-hashtag:before {
+	content:"\f292"
+}
+.pacz-icon-bluetooth:before {
+	content:"\f293"
+}
+.pacz-icon-bluetooth-b:before {
+	content:"\f294"
+}
+.pacz-icon-percent:before {
+	content:"\f295"
+}
+.pacz-icon-gitlab:before {
+	content:"\f296"
+}
+.pacz-icon-wpbeginner:before {
+	content:"\f297"
+}
+.pacz-icon-wpforms:before {
+	content:"\f298"
+}
+.pacz-icon-envira:before {
+	content:"\f299"
+}
+.pacz-icon-universal-access:before {
+	content:"\f29a"
+}
+.pacz-icon-wheelchair-alt:before {
+	content:"\f29b"
+}
+.pacz-icon-question-circle-o:before {
+	content:"\f29c"
+}
+.pacz-icon-blind:before {
+	content:"\f29d"
+}
+.pacz-icon-audio-description:before {
+	content:"\f29e"
+}
+.pacz-icon-volume-control-phone:before {
+	content:"\f2a0"
+}
+.pacz-icon-braille:before {
+	content:"\f2a1"
+}
+.pacz-icon-assistive-listening-systems:before {
+	content:"\f2a2"
+}
+.pacz-icon-american-sign-language-interpreting:before,
+.pacz-icon-asl-interpreting:before {
+	content:"\f2a3"
+}
+.pacz-icon-deaf:before,
+.pacz-icon-deafness:before,
+.pacz-icon-hard-of-hearing:before {
+	content:"\f2a4"
+}
+.pacz-icon-glide:before {
+	content:"\f2a5"
+}
+.pacz-icon-glide-g:before {
+	content:"\f2a6"
+}
+.pacz-icon-sign-language:before,
+.pacz-icon-signing:before {
+	content:"\f2a7"
+}
+.pacz-icon-low-vision:before {
+	content:"\f2a8"
+}
+.pacz-icon-viadeo:before {
+	content:"\f2a9"
+}
+.pacz-icon-viadeo-square:before {
+	content:"\f2aa"
+}
+.pacz-icon-snapchat:before {
+	content:"\f2ab"
+}
+.pacz-icon-snapchat-ghost:before {
+	content:"\f2ac"
+}
+.pacz-icon-snapchat-square:before {
+	content:"\f2ad"
+}
+.pacz-icon-pied-piper:before {
+	content:"\f2ae"
+}
+.pacz-icon-first-order:before {
+	content:"\f2b0"
+}
+.pacz-icon-yoast:before {
+	content:"\f2b1"
+}
+.pacz-icon-themeisle:before {
+	content:"\f2b2"
+}
+.pacz-icon-google-plus-circle:before,
+.pacz-icon-google-plus-official:before {
+	content:"\f2b3"
+}
+.pacz-icon-fa:before,
+.pacz-icon-font-awesome:before {
+	content:"\f2b4"
+}
+.pacz-icon-handshake-o:before {
+	content:"\f2b5"
+}
+.pacz-icon-envelope-open:before {
+	content:"\f2b6"
+}
+.pacz-icon-envelope-open-o:before {
+	content:"\f2b7"
+}
+.pacz-icon-linode:before {
+	content:"\f2b8"
+}
+.pacz-icon-address-book:before {
+	content:"\f2b9"
+}
+.pacz-icon-address-book-o:before {
+	content:"\f2ba"
+}
+.pacz-icon-address-card:before,
+.pacz-icon-vcard:before {
+	content:"\f2bb"
+}
+.pacz-icon-address-card-o:before,
+.pacz-icon-vcard-o:before {
+	content:"\f2bc"
+}
+.pacz-icon-user-circle:before {
+	content:"\f2bd"
+}
+.pacz-icon-user-circle-o:before {
+	content:"\f2be"
+}
+.pacz-icon-user-o:before {
+	content:"\f2c0"
+}
+.pacz-icon-id-badge:before {
+	content:"\f2c1"
+}
+.pacz-icon-drivers-license:before,
+.pacz-icon-id-card:before {
+	content:"\f2c2"
+}
+.pacz-icon-drivers-license-o:before,
+.pacz-icon-id-card-o:before {
+	content:"\f2c3"
+}
+.pacz-icon-quora:before {
+	content:"\f2c4"
+}
+.pacz-icon-free-code-camp:before {
+	content:"\f2c5"
+}
+.pacz-icon-telegram:before {
+	content:"\f2c6"
+}
+.pacz-icon-thermometer-4:before,
+.pacz-icon-thermometer-full:before,
+.pacz-icon-thermometer:before {
+	content:"\f2c7"
+}
+.pacz-icon-thermometer-3:before,
+.pacz-icon-thermometer-three-quarters:before {
+	content:"\f2c8"
+}
+.pacz-icon-thermometer-2:before,
+.pacz-icon-thermometer-half:before {
+	content:"\f2c9"
+}
+.pacz-icon-thermometer-1:before,
+.pacz-icon-thermometer-quarter:before {
+	content:"\f2ca"
+}
+.pacz-icon-thermometer-0:before,
+.pacz-icon-thermometer-empty:before {
+	content:"\f2cb"
+}
+.pacz-icon-shower:before {
+	content:"\f2cc"
+}
+.pacz-icon-bath:before,
+.pacz-icon-bathtub:before,
+.pacz-icon-s15:before {
+	content:"\f2cd"
+}
+.pacz-icon-podcast:before {
+	content:"\f2ce"
+}
+.pacz-icon-window-maximize:before {
+	content:"\f2d0"
+}
+.pacz-icon-window-minimize:before {
+	content:"\f2d1"
+}
+.pacz-icon-window-restore:before {
+	content:"\f2d2"
+}
+.pacz-icon-times-rectangle:before,
+.pacz-icon-window-close:before {
+	content:"\f2d3"
+}
+.pacz-icon-times-rectangle-o:before,
+.pacz-icon-window-close-o:before {
+	content:"\f2d4"
+}
+.pacz-icon-bandcamp:before {
+	content:"\f2d5"
+}
+.pacz-icon-grav:before {
+	content:"\f2d6"
+}
+.pacz-icon-etsy:before {
+	content:"\f2d7"
+}
+.pacz-icon-imdb:before {
+	content:"\f2d8"
+}
+.pacz-icon-ravelry:before {
+	content:"\f2d9"
+}
+.pacz-icon-eercast:before {
+	content:"\f2da"
+}
+.pacz-icon-microchip:before {
+	content:"\f2db"
+}
+.pacz-icon-snowflake-o:before {
+	content:"\f2dc"
+}
+.pacz-icon-superpowers:before {
+	content:"\f2dd"
+}
+.pacz-icon-wpexplorer:before {
+	content:"\f2de"
+}
+.pacz-icon-meetup:before {
+	content:"\f2e0"
+}
+.sr-only {
+	position:absolute;
+	width:1px;
+	height:1px;
+	padding:0;
+	margin:-1px;
+	overflow:hidden;
+	clip:rect(0,
+	0,
+	0,
+	0);
+	border:0
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+	position:static;
+	width:auto;
+	height:auto;
+	margin:0;
+	overflow:visible;
+	clip:auto
+}
+/* pacz icons */
+
+
+.pacz-pagination-next a:before,
+.pacz-pagination-previous a:before,
+[class*=" pacz-theme-icon"],
+[class^=pacz-theme-icon] {
+	font-family:PaczWPTokens!important;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	line-height:normal;
+	vertical-align:middle
+}
+[class*=" pacz-theme-icon-"]:before,
+[class^=pacz-theme-icon-]:before {
+	text-decoration:inherit;
+	display:inline-block;
+	speak:none
+}
+.pacz-theme-icon-whatsapp:before {
+	content:"\e000"
+}
+.pacz-theme-icon-weibo:before {
+	content:"\e001"
+}
+.pacz-theme-icon-wechat:before {
+	content:"\e002"
+}
+.pacz-theme-icon-vk:before {
+	content:"\e003"
+}
+.pacz-theme-icon-tick2:before {
+	content:"\e004"
+}
+.pacz-theme-icon-renren:before {
+	content:"\e005"
+}
+.pacz-theme-icon-qzone:before {
+	content:"\e006"
+}
+.pacz-theme-icon-plus:before {
+	content:"\e676"
+}
+.pacz-theme-icon-play:before {
+	content:"\e008"
+}
+.pacz-theme-icon-magnifier:before {
+	content:"\e00a"
+}
+.pacz-theme-icon-imdb:before {
+	content:"\e00b"
+}
+.pacz-theme-icon-dashboard2:before {
+	content:"\e00c"
+}
+.pacz-theme-icon-close:before {
+	content:"\e00d"
+}
+.pacz-theme-icon-cart2:before {
+	content:"\e00e"
+}
+.pacz-theme-icon-burgerwide:before {
+	content:"\e00f"
+}
+.pacz-theme-icon-burger:before {
+	content:"\e010"
+}
+.pacz-theme-icon-behance:before {
+	content:"\e011"
+}
+.pacz-theme-icon-topnav:before {
+	content:"\e66e"
+}
+.pacz-theme-icon-rightsidebar:before {
+	content:"\e66f"
+}
+.pacz-theme-icon-leftsidebar:before {
+	content:"\e670"
+}
+.pacz-theme-icon-dashboard-o:before {
+	content:"\e671"
+}
+.pacz-theme-icon-bottomnav:before {
+	content:"\e672"
+}
+.pacz-theme-icon-boxed:before {
+	content:"\e66b"
+}
+.pacz-theme-icon-wide:before {
+	content:"\e66a"
+}
+.pacz-theme-icon-singlepage:before {
+	content:"\e66c"
+}
+.pacz-theme-icon-multipage:before {
+	content:"\e66d"
+}
+.pacz-theme-icon-dashboard:before {
+	content:"\e668"
+}
+.pacz-theme-icon-responsive:before {
+	content:"\e669"
+}
+.pacz-theme-icon-woman-bag:before {
+	content:"\e600"
+}
+.pacz-theme-icon-voicemessage:before {
+	content:"\e601"
+}
+.pacz-theme-icon-trashcan:before {
+	content:"\e602"
+}
+.pacz-theme-icon-thermostat:before {
+	content:"\e603"
+}
+.pacz-theme-icon-tag:before {
+	content:"\e604"
+}
+.pacz-theme-icon-sitemap:before {
+	content:"\e605"
+}
+.pacz-theme-icon-shirt:before {
+	content:"\e606"
+}
+.pacz-theme-icon-printer:before {
+	content:"\e607"
+}
+.pacz-theme-icon-video:before {
+	content:"\e608"
+}
+.pacz-theme-icon-user:before {
+	content:"\e609"
+}
+.pacz-theme-icon-top-small:before {
+	content:"\e60a"
+}
+.pacz-theme-icon-top-bigger:before {
+	content:"\e60b"
+}
+.pacz-theme-icon-top-big:before {
+	content:"\e60c"
+}
+.pacz-theme-icon-tick:before {
+	content:"\e60d"
+}
+.pacz-theme-icon-aside:before,
+.pacz-theme-icon-post:before,
+.pacz-theme-icon-status:before,
+.pacz-theme-icon-text:before {
+	content:"\e60e"
+}
+.pacz-theme-icon-star:before {
+	content:"\e60f"
+}
+.pacz-theme-icon-audio:before {
+	content:"\e610"
+}
+.pacz-theme-icon-social-youtube:before {
+	content:"\e611"
+}
+.pacz-theme-icon-social-yelp:before {
+	content:"\e612"
+}
+.pacz-theme-icon-social-yahoo:before {
+	content:"\e613"
+}
+.pacz-theme-icon-social-wordpress:before {
+	content:"\e614"
+}
+.pacz-theme-icon-social-vimeo:before {
+	content:"\e677"
+}
+.pacz-theme-icon-social-spotify:before {
+	content:"\e673"
+}
+.pacz-theme-icon-social-twitter:before {
+	content:"\e616"
+}
+.pacz-theme-icon-social-tumblr:before {
+	content:"\e617"
+}
+.pacz-theme-icon-social-technorati:before {
+	content:"\e618"
+}
+.pacz-theme-icon-social-stumbleupon:before {
+	content:"\e619"
+}
+.pacz-theme-icon-social-skype:before {
+	content:"\e61a"
+}
+.pacz-theme-icon-social-rss:before {
+	content:"\e61b"
+}
+.pacz-theme-icon-social-reddit:before {
+	content:"\e61c"
+}
+.pacz-theme-icon-social-pinterest:before {
+	content:"\e61d"
+}
+.pacz-theme-icon-social-path:before {
+	content:"\e61e"
+}
+.pacz-theme-icon-social-myspace:before {
+	content:"\e61f"
+}
+.pacz-theme-icon-social-livejournal:before {
+	content:"\e620"
+}
+.pacz-theme-icon-social-linkedin:before {
+	content:"\e621"
+}
+.pacz-theme-icon-social-lastfm:before {
+	content:"\e622"
+}
+.pacz-theme-icon-social-instagram:before {
+	content:"\e623"
+}
+.pacz-theme-icon-social-googleplus:before {
+	content:"\e624"
+}
+.pacz-theme-icon-social-github:before {
+	content:"\e625"
+}
+.pacz-theme-icon-social-flickr:before {
+	content:"\e626"
+}
+.pacz-theme-icon-social-facebook:before {
+	content:"\e627"
+}
+.pacz-theme-icon-social-envato:before {
+	content:"\e628"
+}
+.pacz-theme-icon-social-dropbox:before {
+	content:"\e629"
+}
+.pacz-theme-icon-social-dribbble:before {
+	content:"\e62a"
+}
+.pacz-theme-icon-social-digg:before {
+	content:"\e62b"
+}
+.pacz-theme-icon-social-behance:before {
+	content:"\e62c"
+}
+.pacz-theme-icon-social-bebo:before {
+	content:"\e62d"
+}
+.pacz-theme-icon-social-apple:before {
+	content:"\e62e"
+}
+.pacz-theme-icon-social-aim:before {
+	content:"\e62f"
+}
+.pacz-theme-icon-search:before {
+	content:"\e630"
+}
+.pacz-theme-icon-quote:before {
+	content:"\e631"
+}
+.pacz-theme-icon-prev-small:before {
+	content:"\e632"
+}
+.pacz-theme-icon-prev-big:before {
+	content:"\e675"
+}
+.pacz-theme-icon-portfolio:before {
+	content:"\e634"
+}
+.pacz-theme-icon-phone:before {
+	content:"\e636"
+}
+.pacz-theme-icon-link:before,
+.pacz-theme-icon-permalink:before {
+	content:"\e637"
+}
+.pacz-theme-icon-pause:before {
+	content:"\e638"
+}
+.pacz-theme-icon-office:before {
+	content:"\e639"
+}
+.pacz-theme-icon-next-small:before {
+	content:"\e63a"
+}
+.pacz-theme-icon-next-bigger:before {
+	content:"\e63b"
+}
+.pacz-theme-icon-next-big:before {
+	content:"\e674"
+}
+.pacz-theme-icon-messagebox-warning:before {
+	content:"\e63d"
+}
+.pacz-theme-icon-messagebox-solution:before {
+	content:"\e63e"
+}
+.pacz-theme-icon-messagebox-love:before {
+	content:"\e63f"
+}
+.pacz-theme-icon-messagebox-hint:before {
+	content:"\e640"
+}
+.pacz-theme-icon-messagebox-feature:before {
+	content:"\e641"
+}
+.pacz-theme-icon-messagebox-custom:before {
+	content:"\e642"
+}
+.pacz-theme-icon-messagebox-alert:before {
+	content:"\e643"
+}
+.pacz-theme-icon-love:before {
+	content:"\e644"
+}
+.pacz-theme-icon-prev-bigger:before {
+	content:"\e645"
+}
+.pacz-theme-icon-image:before {
+	content:"\e646"
+}
+.pacz-theme-icon-home:before {
+	content:"\e648"
+}
+.pacz-theme-icon-gallery:before {
+	content:"\e649"
+}
+.pacz-theme-icon-fax:before {
+	content:"\e64a"
+}
+.pacz-theme-icon-email:before {
+	content:"\e64b"
+}
+.pacz-theme-icon-comment:before {
+	content:"\e64c"
+}
+.pacz-theme-icon-cellphone:before {
+	content:"\e64d"
+}
+.pacz-theme-icon-cart:before,
+.pacz-theme-icon-product:before {
+	content:"\e64e"
+}
+.pacz-theme-icon-cancel:before {
+	content:"\e64f"
+}
+.pacz-theme-icon-bottom-small:before {
+	content:"\e650"
+}
+.pacz-theme-icon-bottom-bigger:before {
+	content:"\e651"
+}
+.pacz-theme-icon-bottom-big:before {
+	content:"\e652"
+}
+.pacz-theme-icon-blog:before {
+	content:"\e653"
+}
+.pacz-theme-icon-blog-share:before {
+	content:"\e654"
+}
+.pacz-theme-icon-macbookair:before {
+	content:"\e655"
+}
+.pacz-theme-icon-macbook:before {
+	content:"\e656"
+}
+.pacz-theme-icon-layers:before {
+	content:"\e657"
+}
+.pacz-theme-icon-lab:before {
+	content:"\e658"
+}
+.pacz-theme-icon-ipad:before {
+	content:"\e659"
+}
+.pacz-theme-icon-hamburger:before {
+	content:"\e65a"
+}
+.pacz-theme-icon-folder-2:before {
+	content:"\e65b"
+}
+.pacz-theme-icon-file:before,
+.pacz-theme-icon-page:before {
+	content:"\e65c"
+}
+.pacz-theme-icon-crop:before {
+	content:"\e65d"
+}
+.pacz-theme-icon-commandconsole:before {
+	content:"\e65e"
+}
+.pacz-theme-icon-chergerfull:before {
+	content:"\e65f"
+}
+.pacz-theme-icon-chargerhalf:before {
+	content:"\e660"
+}
+.pacz-theme-icon-chargerblank:before {
+	content:"\e661"
+}
+.pacz-theme-icon-cassette:before {
+	content:"\e662"
+}
+.pacz-theme-icon-card:before {
+	content:"\e663"
+}
+.pacz-theme-icon-card-2:before {
+	content:"\e664"
+}
+.pacz-theme-icon-camera:before {
+	content:"\e665"
+}
+.pacz-theme-icon-calendar:before {
+	content:"\e666"
+}
+.pacz-theme-icon-accordion:before {
+	content:"\e667"
+}
+/*line icons*/
+
+[class*=" pacz-li-"],
+[class^=pacz-li-] {
+	display:inline-block;
+	font-family:Pe-icon-line;
+	speak:none;
+	font-style:normal;
+	font-weight:400;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale
+}
+.pacz-li-web:before {
+	content:"\e600"
+}
+.pacz-li-volume:before {
+	content:"\e601"
+}
+.pacz-li-vinyl-disk:before {
+	content:"\e602"
+}
+.pacz-li-view:before {
+	content:"\e603"
+}
+.pacz-li-video:before {
+	content:"\e604"
+}
+.pacz-li-users:before {
+	content:"\e605"
+}
+.pacz-li-user:before {
+	content:"\e606"
+}
+.pacz-li-unlock:before {
+	content:"\e607"
+}
+.pacz-li-umbrella:before {
+	content:"\e608"
+}
+.pacz-li-tshirt:before {
+	content:"\e609"
+}
+.pacz-li-truck:before {
+	content:"\e60a"
+}
+.pacz-li-tool:before {
+	content:"\e60b"
+}
+.pacz-li-toilet-paper:before {
+	content:"\e60c"
+}
+.pacz-li-ticket:before {
+	content:"\e60d"
+}
+.pacz-li-target:before {
+	content:"\e60e"
+}
+.pacz-li-tablet:before {
+	content:"\e60f"
+}
+.pacz-li-sun:before {
+	content:"\e610"
+}
+.pacz-li-star:before {
+	content:"\e611"
+}
+.pacz-li-smile:before {
+	content:"\e612"
+}
+.pacz-li-shop:before {
+	content:"\e613"
+}
+.pacz-li-shield:before {
+	content:"\e614"
+}
+.pacz-li-settings:before {
+	content:"\e615"
+}
+.pacz-li-scissor:before {
+	content:"\e616"
+}
+.pacz-li-safe:before {
+	content:"\e617"
+}
+.pacz-li-rocket:before {
+	content:"\e618"
+}
+.pacz-li-refresh:before {
+	content:"\e619"
+}
+.pacz-li-posion:before {
+	content:"\e61a"
+}
+.pacz-li-portfolio:before {
+	content:"\e61b"
+}
+.pacz-li-pinmap:before {
+	content:"\e61c"
+}
+.pacz-li-pill:before {
+	content:"\e61d"
+}
+.pacz-li-image:before,
+.pacz-li-photo:before {
+	content:"\e61e"
+}
+.pacz-li-phone:before {
+	content:"\e61f"
+}
+.pacz-li-pencil:before {
+	content:"\e620"
+}
+.pacz-li-paper-plane:before {
+	content:"\e621"
+}
+.pacz-li-notepad:before {
+	content:"\e622"
+}
+.pacz-li-notebook:before {
+	content:"\e623"
+}
+.pacz-li-news:before {
+	content:"\e624"
+}
+.pacz-li-net:before {
+	content:"\e625"
+}
+.pacz-li-music:before {
+	content:"\e626"
+}
+.pacz-li-mortarboard:before {
+	content:"\e627"
+}
+.pacz-li-monitor:before {
+	content:"\e628"
+}
+.pacz-li-money:before {
+	content:"\e629"
+}
+.pacz-li-micro:before {
+	content:"\e62a"
+}
+.pacz-li-message:before {
+	content:"\e62b"
+}
+.pacz-li-map:before {
+	content:"\e62c"
+}
+.pacz-li-mail:before {
+	content:"\e62d"
+}
+.pacz-li-magnet:before {
+	content:"\e62e"
+}
+.pacz-li-love:before {
+	content:"\e62f"
+}
+.pacz-li-loupe:before {
+	content:"\e630"
+}
+.pacz-li-lock:before {
+	content:"\e631"
+}
+.pacz-li-link:before {
+	content:"\e632"
+}
+.pacz-li-like:before {
+	content:"\e633"
+}
+.pacz-li-light:before {
+	content:"\e634"
+}
+.pacz-li-leaf:before {
+	content:"\e635"
+}
+.pacz-li-lamp:before {
+	content:"\e636"
+}
+.pacz-li-lab:before {
+	content:"\e637"
+}
+.pacz-li-key:before {
+	content:"\e638"
+}
+.pacz-li-joy:before {
+	content:"\e639"
+}
+.pacz-li-inbox:before {
+	content:"\e63a"
+}
+.pacz-li-ice:before {
+	content:"\e63b"
+}
+.pacz-li-host:before {
+	content:"\e63c"
+}
+.pacz-li-help:before {
+	content:"\e63d"
+}
+.pacz-li-headphones:before {
+	content:"\e63e"
+}
+.pacz-li-graph:before {
+	content:"\e63f"
+}
+.pacz-li-garbage:before {
+	content:"\e640"
+}
+.pacz-li-game-pad:before {
+	content:"\e641"
+}
+.pacz-li-food:before {
+	content:"\e642"
+}
+.pacz-li-flag:before {
+	content:"\e643"
+}
+.pacz-li-file:before {
+	content:"\e644"
+}
+.pacz-li-expand:before {
+	content:"\e645"
+}
+.pacz-li-drop:before {
+	content:"\e646"
+}
+.pacz-li-cup:before {
+	content:"\e647"
+}
+.pacz-li-copy:before {
+	content:"\e648"
+}
+.pacz-li-config:before {
+	content:"\e649"
+}
+.pacz-li-compass:before {
+	content:"\e64a"
+}
+.pacz-li-comments:before {
+	content:"\e64b"
+}
+.pacz-li-coffee:before {
+	content:"\e64c"
+}
+.pacz-li-cloud:before {
+	content:"\e64d"
+}
+.pacz-li-clock:before {
+	content:"\e64e"
+}
+.pacz-li-clip:before {
+	content:"\e64f"
+}
+.pacz-li-cinema:before {
+	content:"\e650"
+}
+.pacz-li-check:before {
+	content:"\e651"
+}
+.pacz-li-cd:before {
+	content:"\e652"
+}
+.pacz-li-cassette:before {
+	content:"\e653"
+}
+.pacz-li-cart:before {
+	content:"\e654"
+}
+.pacz-li-camera:before {
+	content:"\e655"
+}
+.pacz-li-call:before {
+	content:"\e656"
+}
+.pacz-li-calendar:before {
+	content:"\e657"
+}
+.pacz-li-calculator:before {
+	content:"\e658"
+}
+.pacz-li-brush:before {
+	content:"\e659"
+}
+.pacz-li-browser:before {
+	content:"\e65a"
+}
+.pacz-li-book:before {
+	content:"\e65b"
+}
+.pacz-li-bicycle:before {
+	content:"\e65c"
+}
+.pacz-li-bell:before {
+	content:"\e65d"
+}
+.pacz-li-battery:before {
+	content:"\e65e"
+}
+.pacz-li-bag:before {
+	content:"\e65f"
+}
+.pacz-li-attention:before {
+	content:"\e660"
+}
+.pacz-li-atom:before {
+	content:"\e661"
+}
+.pacz-li-apeaker:before {
+	content:"\e662"
+}
+.pacz-li-alarm:before {
+	content:"\e663"
+}

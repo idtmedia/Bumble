@@ -1,0 +1,42 @@
+
+ USE DHVC FORM FOR VISUAL COMPOSER OLD VERSION < 4.0
+---------------
+  Use DHVC Form for Visla Composer old version < 4.0 (example in Salient theme use 3.7.3).
+  Please go to file "js_composer/assets/js/backend/composer-view.js"  (in Salien theme go to file "salient/wpbakery/js_composer/assets/js/backend/composer-view.js") line #689 search code like:
+  ------
+  
+  getParams: function() {
+	var attributes_settings = this.mapped_params,
+	    params = jQuery.extend(true, {}, this.model.get('params'));
+	_.each(attributes_settings, function (param) {
+	    params[param.param_name] = vc.atts.parse.call(this, param);
+	}, this);
+	return params;
+  }
+  
+  ------
+  then replace code in "getParams" function:
+  ------
+  
+   var attributes_settings = this.mapped_params,
+	    params = jQuery.extend(true, {}, this.model.get('params'));
+	_.each(attributes_settings, function (param) {
+	    params[param.param_name] = vc.atts.parse.call(this, param);
+	}, this);
+	return params;
+	
+   ------
+   to:
+   ------
+   
+	var attributes_settings = this.mapped_params;
+	this.params = jQuery.extend(true, {}, this.model.get('params'));
+	_.each(attributes_settings, function (param) {
+		this.params[param.param_name] = vc.atts.parse.call(this, param);
+	}, this);
+	_.each(vc.edit_form_callbacks, function(callback){
+		callback.call(this);
+	}, this);
+	return this.params;	
+	
+  

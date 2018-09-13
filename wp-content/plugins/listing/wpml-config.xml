@@ -1,0 +1,26 @@
+<wpml-config>
+    <custom-fields>
+	    <custom-field action="copy">_expiration_date</custom-field>
+	    <custom-field action="copy">_expiration_notification_sent</custom-field>
+	    <custom-field action="copy">_order_date</custom-field>
+	    <custom-field action="copy">_level_id</custom-field>
+	    <custom-field action="copy">_listing_created</custom-field>
+	    <custom-field action="copy">_listing_status</custom-field>
+	    <custom-field action="copy">_map_zoom</custom-field>
+	    <custom-field action="copy">_alsp_avg_rating</custom-field>
+	    <custom-field action="copy">_attached_image</custom-field>
+	    <custom-field action="copy">_attached_image_as_logo</custom-field>
+	    <custom-field action="copy">_attached_video_id</custom-field>
+	    <custom-field action="copy">_is_claimable</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">alsp_listing</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">alsp-category</taxonomy>
+        <taxonomy translate="1">alsp-location</taxonomy>
+        <taxonomy translate="1">alsp-tag</taxonomy>
+    </taxonomies>
+</wpml-config>
+
+

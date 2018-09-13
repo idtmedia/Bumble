@@ -1,0 +1,28 @@
+/*
+Theme Name: ClassiadsPro
+Theme URI: http://themeforest.net/user/designinvento/portfolio
+Description: A Beautiful, Professional and Ultimate Wordpress Theme Made by designinvento
+Author: DesignInvento
+Author URI: http://themeforest.net/user/designinvento
+Version: 5.4
+Text Domain: classiadspro
+Tags:translation-ready
+Tags:translation-ready
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+/*
+
+Please do not add your styles in this file and instead use 
+child theme or use custom.css in the same root this file locates.
+
+
+
+*/
+.ultimate-btn-inline-block{
+display:inline-block;
+}
+.owl-carousel{display:none;}
+.owl-carousel.owl-loaded{display:block !important;}

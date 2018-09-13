@@ -1,0 +1,32 @@
+.alsp-payments-free {
+	font-weight: bold;
+	color: red;
+}
+.alsp-price {
+	font-size: 60px;
+	line-height: 1;
+	padding-top:7px;
+}
+.alsp-price-cents {
+	vertical-align: super;
+	font-size: 50%;
+}
+.alsp-payment-method {
+	float: left;
+	padding: 2%;
+	width: 28%;
+	text-align: center;
+}
+.alsp-payment-method>a {
+	font-weight: bold;
+}
+.alsp-payment-gateway-icon {
+	margin-bottom: 20px
+}
+.widefat td, .widefat th {
+	padding: 8px 10px;
+}
+
+input[type="button"].alsp-reset-link, input[type="button"].alsp-reset-link:hover, input[type="button"].alsp-reset-link:focus {
+	
+}

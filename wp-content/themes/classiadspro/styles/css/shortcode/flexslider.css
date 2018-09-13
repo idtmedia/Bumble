@@ -1,0 +1,158 @@
+/* Plugins Styles 
+
+  jQuery FlexSlider v2.0
+  http://www.woothemes.com/flexslider/
+ 
+  Copyright 2012 WooThemes
+  Free to use under the GPLv2 license.
+  http://www.gnu.org/licenses/gpl-2.0.html
+ 
+  Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets */
+
+.flex-container a:active,
+.pacz-flexslider a:active,
+.flex-container a:focus,
+.pacz-flexslider a:focus {
+  outline: none;
+}
+.pacz-flex-slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* pacz-flexslider Necessary Styles
+*********************************/
+.pacz-flexslider {
+  margin: 0;
+  padding: 0;
+}
+.pacz-flexslider .pacz-flex-slides > li,
+.pacz-flexslider .pacz-banner-slides > li {
+  display: none;
+  margin: 0;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.pacz-flexslider .pacz-flex-slides img,
+.pacz-flexslider .pacz-banner-slides img {
+  display: block;
+  width: 100%;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.pacz-flex-slides:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: ".";
+  line-height: 0;
+}
+html[xmlns] .pacz-flex-slides {
+  display: block;
+}
+* html .pacz-flex-slides {
+  height: 1%;
+}
+.pacz-flexslider .pacz-banner-slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pacz-flexslider .pacz-banner-slides li {
+  margin: 0;
+}
+/* flexslider Default Theme
+*********************************/
+.pacz-flexslider {
+  position: relative;
+  margin: 0;
+  zoom: 1;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.loading .flex-viewport {
+  max-height: 100px;
+}
+.pacz-flexslider .pacz-flex-slides,
+.pacz-flexslider .pacz-banner-slides {
+  zoom: 1;
+}
+.carousel li {
+  margin-right: 5px;
+}
+/* Direction Nav */
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav a {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.flex-direction-nav .flex-next:hover {
+  opacity: 1;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=@opacity)';
+}
+.flex-direction-nav .flex-prev:hover {
+  opacity: 1;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=@opacity)';
+}
+.pacz-flexslider:hover .flex-next:hover,
+.pacz-flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+  opacity: .3!important;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+/* Control Nav */
+.flex-control-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.flex-control-nav li {
+  display: inline-block;
+  margin: 0 6px;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-paging li a {
+  display: block;
+  cursor: pointer;
+}
+.flex-control-paging li a.flex-active {
+  cursor: default;
+}

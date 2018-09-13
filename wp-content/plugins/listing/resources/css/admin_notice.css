@@ -1,0 +1,12 @@
+.update_submit {
+    min-width: 100px;
+    min-height: 30px;
+    box-shadow: none;
+    border: none;
+    background: #dc3232;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}

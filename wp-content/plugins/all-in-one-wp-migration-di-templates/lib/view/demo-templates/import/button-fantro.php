@@ -1,0 +1,1 @@
+<a href="#" id="ai1wm-import-url-fantro"><?php _e( 'Install', AI1WMDI_PLUGIN_NAME ); ?></a>

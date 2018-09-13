@@ -1,0 +1,73 @@
+.visuallyhidden { 
+  position: absolute !important; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0);
+  left:-100000px;
+  top:-100000px;
+  margin: -1px; padding: 0; border: 0; 
+}
+
+
+.pacz-metabox-holder {
+	padding: 20px;
+}
+
+.pacz-metabox-holder .form-table tr {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+
+.pacz-metabox-holder .form-table tr:last-child {
+  border-bottom: 0;
+}
+.pacz-metabox-holder .form-table tr th,
+.pacz-metabox-holder .form-table tr td {
+  color: #333333;
+}
+.pacz-metabox-holder .form-table tr th {
+  font-weight: 700;
+  width: 35%;
+  padding: 20px 30px 20px 0;
+}
+
+
+.pacz-metabox-holder .form-table tr .description {
+  font-weight: 400;
+  display: block;
+  color: #666666;
+  padding-top: 6px;
+  font-size: 12px;
+}
+
+.pacz-metabox-holder .form-table tr label {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.pacz-metabox-holder .form-table tr td .description {
+	color: #888888;
+}
+
+.pacz-metabox-holder .form-table input.text-input{
+	padding: 7px 10px;
+}
+
+
+#pacz-layout-metabox table{
+	table-layout: fixed !important;
+}
+
+#pacz-layout-metabox table tr {
+	border:none !important;
+	padding-bottom: 20px !important;
+	display: block;
+}
+
+#pacz-layout-metabox table tr th, #pacz-layout-metabox table tr td{
+	width: 100%;
+	display:block !important;
+	padding: 0 !important;
+}
+#pacz-layout-metabox table tr th {
+	margin-bottom: 10px !important;
+}

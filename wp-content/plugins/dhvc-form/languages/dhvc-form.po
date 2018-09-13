@@ -1,0 +1,2324 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DHVC Form\n"
+"POT-Creation-Date: 2018-05-11 09:30+0700\n"
+"PO-Revision-Date: 2018-05-11 09:30+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;esc_html_e;_e;esc_attr_e;"
+"esc_attr__;esc_html__\n"
+"X-Poedit-Basepath: /Volumes/WORK/webserver/www/wordpress/wp-content/plugins\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: dhvc-form\n"
+"X-Poedit-SearchPathExcluded-0: dhvc-form/assets\n"
+
+#: dhvc-form/includes/admin.php:41
+msgid "Are your sure?"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:53 dhvc-form/includes/post_types.php:20
+msgid "Forms"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:115 dhvc-form/includes/admin.php:118
+#: dhvc-form/includes/admin.php:120
+msgid "Form updated."
+msgstr ""
+
+#: dhvc-form/includes/admin.php:116
+msgid "Custom field updated."
+msgstr ""
+
+#: dhvc-form/includes/admin.php:117
+msgid "Custom field deleted."
+msgstr ""
+
+#: dhvc-form/includes/admin.php:119
+#, php-format
+msgid "Form restored to revision from %s"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:121
+msgid "Form saved."
+msgstr ""
+
+#: dhvc-form/includes/admin.php:122
+msgid "Form submitted."
+msgstr ""
+
+#: dhvc-form/includes/admin.php:123
+#, php-format
+msgid "Form scheduled for: <strong>%1$s</strong>."
+msgstr ""
+
+#: dhvc-form/includes/admin.php:123
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:124
+msgid "Form draft updated."
+msgstr ""
+
+#: dhvc-form/includes/admin.php:133 dhvc-form/includes/entries.php:168
+msgid "ID"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:134 dhvc-form/includes/fields/step.php:48
+msgid "Title"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:135
+msgid "Shortcode"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:170
+msgid "Delete this item permanently"
+msgstr ""
+
+#: dhvc-form/includes/admin.php:170
+msgid "Delete Permanently"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_backend.tpl.php:55
+msgid "Loading, please wait..."
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_backend.tpl.php:57
+msgid "Crunching..."
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:89
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:124
+#, php-format
+msgid "Drag to move %s"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:98
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:131
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:104
+#, php-format
+msgid "Add new %s"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:109
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:139
+#, php-format
+msgid "Clone %s"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:115
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:143
+#, php-format
+msgid "Delete %s"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:119
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:147
+#, php-format
+msgid "Show %s controls"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:135
+#, php-format
+msgid "Prepend to %s"
+msgstr ""
+
+#: dhvc-form/includes/editor-templates/editor_frontend.tpl.php:154
+#, php-format
+msgid "Append to %s"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:14 dhvc-form/includes/editor_backend.php:57
+#: dhvc-form/includes/fields/slider.php:59
+#: dhvc-form/includes/fields/step.php:21 dhvc-form/includes/fields/step.php:50
+#: dhvc-form/includes/fields/steps.php:31
+#: dhvc-form/includes/fields/steps.php:32
+msgid "Step"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:41 dhvc-form/includes/editor.php:43
+msgid "DHVC Form"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:48 dhvc-form/includes/entries.php:168
+msgid "Form Name"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:105 dhvc-form/includes/params.php:88
+msgid "If value this element"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:107 dhvc-form/includes/params.php:90
+msgid "equals"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:108 dhvc-form/includes/params.php:91
+msgid "is greater than"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:109 dhvc-form/includes/params.php:92
+msgid "is less than"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:110 dhvc-form/includes/params.php:93
+msgid "not empty"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:111 dhvc-form/includes/params.php:94
+msgid "is empty"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:115 dhvc-form/includes/editor.php:143
+#: dhvc-form/includes/params.php:98 dhvc-form/includes/params.php:157
+#: dhvc-form/includes/params.php:267
+msgid "Value"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:119 dhvc-form/includes/params.php:102
+msgid "Then"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:121 dhvc-form/includes/params.php:104
+msgid "Hide"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:122 dhvc-form/includes/params.php:105
+msgid "Show"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:126 dhvc-form/includes/params.php:109
+msgid "Element(s) name"
+msgstr ""
+
+#: dhvc-form/includes/editor.php:130 dhvc-form/includes/editor.php:147
+#: dhvc-form/includes/editor.php:166 dhvc-form/includes/editor.php:185
+#: dhvc-form/includes/editor.php:198 dhvc-form/includes/meta_box.php:809
+#: dhvc-form/includes/params.php:113 dhvc-form/includes/params.php:161
+#: dhvc-form/includes/params.php:224 dhvc-form/includes/params.php:287
+msgid "Remove"
+msgstr ""
+
+#: dhvc-form/includes/editor_backend_navbar.php:22
+msgid "Frontend Builder (beta)"
+msgstr ""
+
+#: dhvc-form/includes/editor_backend_navbar.php:29
+msgid "Templates"
+msgstr ""
+
+#: dhvc-form/includes/editor_backend_navbar.php:34
+msgid "Preview"
+msgstr ""
+
+#: dhvc-form/includes/editor_backend_navbar.php:40
+#: dhvc-form/includes/editor_frontend_navbar.php:148
+msgid "Update"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:44
+msgid "Toggle editor's guides"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:45
+msgid "Guides ON"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:58
+msgid "Desktop"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:64
+msgid "Tablet landscape mode"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:69
+msgid "Tablet portrait mode"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:74
+msgid "Smartphone landscape mode"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:79
+msgid "Smartphone portrait mode"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:87
+msgid "Responsive preview"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:115
+msgid "&wpb_vc_js_status=true"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:117
+msgid "Cancel all changes and return to WP dashboard"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:120
+msgid "Backend Editor"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:120
+#: dhvc-form/includes/post_types.php:25
+msgid "Edit"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:130
+msgid "Save Draft"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:134
+msgid "Save as Pending"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:138
+#: dhvc-form/includes/editor_frontend_navbar.php:139
+msgid "Publish"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:142
+#: dhvc-form/includes/editor_frontend_navbar.php:143
+msgid "Submit for Review"
+msgstr ""
+
+#: dhvc-form/includes/editor_frontend_navbar.php:164
+msgid "Exit Visual Composer edit mode"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:10 dhvc-form/includes/entries.php:174
+msgid "Entries"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:16 dhvc-form/includes/entries.php:21
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:51
+msgid "Go to the first page"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:58
+msgid "Go to the previous page"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:67
+msgid "Current page"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:78
+msgid "Go to the next page"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:85
+msgid "Go to the last page"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:109 dhvc-form/includes/entries.php:140
+#, php-format
+msgid "%s entry mask as read"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:116 dhvc-form/includes/entries.php:146
+#, php-format
+msgid "%s entry mask as un-read"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:123 dhvc-form/includes/entries.php:152
+#, php-format
+msgid "%s entry deleted"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:168 dhvc-form/includes/entries.php:458
+#: dhvc-form/includes/fields/datetime.php:31
+msgid "Date"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:184 dhvc-form/includes/entries.php:205
+msgid "All"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:190 dhvc-form/includes/entries.php:308
+msgid "Bulk Actions"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:191 dhvc-form/includes/entries.php:286
+#: dhvc-form/includes/entries.php:309
+msgid "Mark as read"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:192 dhvc-form/includes/entries.php:288
+#: dhvc-form/includes/entries.php:310
+msgid "Mark as unread"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:193 dhvc-form/includes/entries.php:290
+#: dhvc-form/includes/entries.php:311
+msgid "Delete"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:195 dhvc-form/includes/entries.php:313
+msgid "Apply"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:207
+msgid "per page"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:214
+msgid "Filter by form to export:"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:216
+msgid "View all form"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:222
+msgid "Export"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:277
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:284
+msgid "View this entry"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:284
+msgid "View"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:290
+msgid "Delete this entry"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:294 dhvc-form/includes/post_types.php:26
+#: dhvc-form/includes/shortcodes.php:137
+msgid "Edit Form"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:300
+msgid "No entries found."
+msgstr ""
+
+#: dhvc-form/includes/entries.php:357
+#, php-format
+msgid "Entry \"%s\""
+msgstr ""
+
+#: dhvc-form/includes/entries.php:362 dhvc-form/includes/entries.php:404
+#: dhvc-form/includes/entries.php:453
+msgid "Click to toggle"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:363
+msgid "Submitted form data"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:391
+msgid "Click to download"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:405
+msgid "Notes"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:427
+msgid "added on"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:427 dhvc-form/includes/entries.php:459
+msgid "Y/m/d g:i:s A"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:427
+msgid "Delete note"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:440
+msgid "Add Note"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:454
+msgid "Additional information"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:462 dhvc-form/includes/post_types.php:21
+msgid "Form"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:466
+msgid "Embed Url"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:471
+msgid "User"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:473
+msgid "View user profile"
+msgstr ""
+
+#: dhvc-form/includes/entries.php:478
+msgid "IP Address"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:166
+msgid "Form Simple Captcha"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:168
+#: dhvc-form/includes/fields/checkbox.php:28
+#: dhvc-form/includes/fields/color.php:20
+#: dhvc-form/includes/fields/datetime.php:22
+#: dhvc-form/includes/fields/email.php:21 dhvc-form/includes/fields/file.php:48
+#: dhvc-form/includes/fields/hidden.php:8 dhvc-form/includes/fields/label.php:8
+#: dhvc-form/includes/fields/multiple_select.php:28
+#: dhvc-form/includes/fields/password.php:30
+#: dhvc-form/includes/fields/paypal.php:8
+#: dhvc-form/includes/fields/radio.php:21 dhvc-form/includes/fields/rate.php:21
+#: dhvc-form/includes/fields/recaptcha.php:74
+#: dhvc-form/includes/fields/response.php:8
+#: dhvc-form/includes/fields/select.php:28
+#: dhvc-form/includes/fields/slider.php:19
+#: dhvc-form/includes/fields/step.php:23 dhvc-form/includes/fields/steps.php:7
+#: dhvc-form/includes/fields/submit_button.php:7
+#: dhvc-form/includes/fields/text.php:75
+#: dhvc-form/includes/fields/textarea.php:19
+msgid "Form Control"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:173
+#: dhvc-form/includes/fields/checkbox.php:33
+#: dhvc-form/includes/fields/color.php:25
+#: dhvc-form/includes/fields/datetime.php:38
+#: dhvc-form/includes/fields/email.php:26 dhvc-form/includes/fields/file.php:53
+#: dhvc-form/includes/fields/multiple_select.php:33
+#: dhvc-form/includes/fields/password.php:36
+#: dhvc-form/includes/fields/radio.php:26 dhvc-form/includes/fields/rate.php:26
+#: dhvc-form/includes/fields/recaptcha.php:122
+#: dhvc-form/includes/fields/select.php:33
+#: dhvc-form/includes/fields/slider.php:34
+#: dhvc-form/includes/fields/steps.php:40
+#: dhvc-form/includes/fields/submit_button.php:12
+#: dhvc-form/includes/fields/text.php:80
+#: dhvc-form/includes/fields/textarea.php:24 dhvc-form/includes/params.php:264
+msgid "Label"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:179
+#: dhvc-form/includes/fields/checkbox.php:39
+#: dhvc-form/includes/fields/color.php:31
+#: dhvc-form/includes/fields/datetime.php:44
+#: dhvc-form/includes/fields/email.php:32 dhvc-form/includes/fields/file.php:59
+#: dhvc-form/includes/fields/hidden.php:13
+#: dhvc-form/includes/fields/label.php:13
+#: dhvc-form/includes/fields/multiple_select.php:39
+#: dhvc-form/includes/fields/password.php:42
+#: dhvc-form/includes/fields/radio.php:32 dhvc-form/includes/fields/rate.php:32
+#: dhvc-form/includes/fields/recaptcha.php:128
+#: dhvc-form/includes/fields/select.php:39
+#: dhvc-form/includes/fields/slider.php:40
+#: dhvc-form/includes/fields/text.php:86
+#: dhvc-form/includes/fields/textarea.php:30
+msgid "Name"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:182
+#: dhvc-form/includes/fields/checkbox.php:42
+#: dhvc-form/includes/fields/color.php:34
+#: dhvc-form/includes/fields/datetime.php:47
+#: dhvc-form/includes/fields/email.php:35 dhvc-form/includes/fields/file.php:62
+#: dhvc-form/includes/fields/hidden.php:16
+#: dhvc-form/includes/fields/label.php:16
+#: dhvc-form/includes/fields/multiple_select.php:42
+#: dhvc-form/includes/fields/password.php:45
+#: dhvc-form/includes/fields/radio.php:35 dhvc-form/includes/fields/rate.php:35
+#: dhvc-form/includes/fields/recaptcha.php:131
+#: dhvc-form/includes/fields/select.php:42
+#: dhvc-form/includes/fields/slider.php:43
+#: dhvc-form/includes/fields/submit_button.php:16
+#: dhvc-form/includes/fields/text.php:89
+#: dhvc-form/includes/fields/textarea.php:33
+msgid ""
+"Field name is required.  Please enter single word, no spaces, no start with "
+"number. Underscores(_) allowed"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:186
+#: dhvc-form/includes/fields/color.php:43
+#: dhvc-form/includes/fields/datetime.php:56
+#: dhvc-form/includes/fields/email.php:49
+#: dhvc-form/includes/fields/password.php:67
+#: dhvc-form/includes/fields/text.php:108
+#: dhvc-form/includes/fields/textarea.php:42
+msgid "Placeholder text"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:191
+#: dhvc-form/includes/fields/checkbox.php:59
+#: dhvc-form/includes/fields/color.php:48
+#: dhvc-form/includes/fields/datetime.php:61
+#: dhvc-form/includes/fields/email.php:62 dhvc-form/includes/fields/file.php:66
+#: dhvc-form/includes/fields/multiple_select.php:52
+#: dhvc-form/includes/fields/password.php:80
+#: dhvc-form/includes/fields/radio.php:51 dhvc-form/includes/fields/rate.php:44
+#: dhvc-form/includes/fields/recaptcha.php:135
+#: dhvc-form/includes/fields/select.php:51
+#: dhvc-form/includes/fields/slider.php:70
+#: dhvc-form/includes/fields/text.php:121
+#: dhvc-form/includes/fields/textarea.php:47
+msgid "Help text"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:193
+#: dhvc-form/includes/fields/checkbox.php:61
+#: dhvc-form/includes/fields/color.php:50
+#: dhvc-form/includes/fields/datetime.php:63
+#: dhvc-form/includes/fields/email.php:64 dhvc-form/includes/fields/file.php:68
+#: dhvc-form/includes/fields/multiple_select.php:54
+#: dhvc-form/includes/fields/password.php:82
+#: dhvc-form/includes/fields/radio.php:53 dhvc-form/includes/fields/rate.php:46
+#: dhvc-form/includes/fields/recaptcha.php:137
+#: dhvc-form/includes/fields/select.php:53
+#: dhvc-form/includes/fields/slider.php:72
+#: dhvc-form/includes/fields/text.php:123
+#: dhvc-form/includes/fields/textarea.php:49
+msgid "This is the help text for this form control."
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:197
+#: dhvc-form/includes/fields/checkbox.php:87
+#: dhvc-form/includes/fields/color.php:76
+#: dhvc-form/includes/fields/datetime.php:89
+#: dhvc-form/includes/fields/email.php:91 dhvc-form/includes/fields/file.php:86
+#: dhvc-form/includes/fields/label.php:27
+#: dhvc-form/includes/fields/multiple_select.php:80
+#: dhvc-form/includes/fields/password.php:116
+#: dhvc-form/includes/fields/paypal.php:43
+#: dhvc-form/includes/fields/radio.php:79 dhvc-form/includes/fields/rate.php:56
+#: dhvc-form/includes/fields/recaptcha.php:141
+#: dhvc-form/includes/fields/response.php:14
+#: dhvc-form/includes/fields/select.php:85
+#: dhvc-form/includes/fields/slider.php:88
+#: dhvc-form/includes/fields/submit_button.php:20
+#: dhvc-form/includes/fields/text.php:162
+#: dhvc-form/includes/fields/textarea.php:75
+msgid "Extra class name"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:199
+#: dhvc-form/includes/fields/checkbox.php:89
+#: dhvc-form/includes/fields/color.php:78
+#: dhvc-form/includes/fields/datetime.php:91
+#: dhvc-form/includes/fields/email.php:93 dhvc-form/includes/fields/file.php:88
+#: dhvc-form/includes/fields/label.php:29
+#: dhvc-form/includes/fields/multiple_select.php:82
+#: dhvc-form/includes/fields/password.php:118
+#: dhvc-form/includes/fields/paypal.php:45
+#: dhvc-form/includes/fields/radio.php:81 dhvc-form/includes/fields/rate.php:58
+#: dhvc-form/includes/fields/recaptcha.php:143
+#: dhvc-form/includes/fields/response.php:16
+#: dhvc-form/includes/fields/select.php:87
+#: dhvc-form/includes/fields/slider.php:90
+#: dhvc-form/includes/fields/submit_button.php:22
+#: dhvc-form/includes/fields/text.php:164
+#: dhvc-form/includes/fields/textarea.php:77
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:203
+#: dhvc-form/includes/fields/checkbox.php:93
+#: dhvc-form/includes/fields/color.php:82
+#: dhvc-form/includes/fields/datetime.php:95
+#: dhvc-form/includes/fields/email.php:97 dhvc-form/includes/fields/file.php:92
+#: dhvc-form/includes/fields/label.php:33
+#: dhvc-form/includes/fields/multiple_select.php:86
+#: dhvc-form/includes/fields/password.php:122
+#: dhvc-form/includes/fields/paypal.php:49
+#: dhvc-form/includes/fields/radio.php:85 dhvc-form/includes/fields/rate.php:62
+#: dhvc-form/includes/fields/recaptcha.php:147
+#: dhvc-form/includes/fields/response.php:20
+#: dhvc-form/includes/fields/select.php:91
+#: dhvc-form/includes/fields/slider.php:94
+#: dhvc-form/includes/fields/submit_button.php:26
+#: dhvc-form/includes/fields/text.php:168
+#: dhvc-form/includes/fields/textarea.php:81
+msgid "CSS box"
+msgstr ""
+
+#: dhvc-form/includes/fields/captcha.php:205
+#: dhvc-form/includes/fields/checkbox.php:95
+#: dhvc-form/includes/fields/color.php:84
+#: dhvc-form/includes/fields/datetime.php:97
+#: dhvc-form/includes/fields/email.php:99 dhvc-form/includes/fields/file.php:94
+#: dhvc-form/includes/fields/label.php:35
+#: dhvc-form/includes/fields/multiple_select.php:88
+#: dhvc-form/includes/fields/password.php:124
+#: dhvc-form/includes/fields/paypal.php:51
+#: dhvc-form/includes/fields/radio.php:87 dhvc-form/includes/fields/rate.php:64
+#: dhvc-form/includes/fields/recaptcha.php:149
+#: dhvc-form/includes/fields/response.php:22
+#: dhvc-form/includes/fields/select.php:93
+#: dhvc-form/includes/fields/slider.php:96
+#: dhvc-form/includes/fields/submit_button.php:28
+#: dhvc-form/includes/fields/text.php:170
+#: dhvc-form/includes/fields/textarea.php:83
+msgid "Design Options"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:26
+msgid "Form Checkboxes"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:46
+#: dhvc-form/includes/fields/multiple_select.php:46
+#: dhvc-form/includes/fields/radio.php:39 dhvc-form/includes/fields/rate.php:39
+#: dhvc-form/includes/fields/select.php:46
+msgid "Options"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:49
+#: dhvc-form/includes/fields/radio.php:41
+msgid ""
+"You can use formart \"Label===Image_Src\" for option label to dipslay image "
+"select options, ex: 1 coffee==http://sitesao.com/dhvcform/wp-content/"
+"uploads/2017/10/coffee-big.png"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:53
+#: dhvc-form/includes/fields/radio.php:45
+msgid "Option with"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:55
+#: dhvc-form/includes/fields/radio.php:47
+msgid "Enter option item width (Note: CSS measurement units allowed),ex: 50%"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:65
+#: dhvc-form/includes/fields/color.php:54
+#: dhvc-form/includes/fields/datetime.php:67
+#: dhvc-form/includes/fields/email.php:68 dhvc-form/includes/fields/file.php:72
+#: dhvc-form/includes/fields/multiple_select.php:58
+#: dhvc-form/includes/fields/password.php:86
+#: dhvc-form/includes/fields/radio.php:57
+#: dhvc-form/includes/fields/select.php:57
+#: dhvc-form/includes/fields/text.php:127
+#: dhvc-form/includes/fields/textarea.php:53
+msgid "Required ? "
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:68
+#: dhvc-form/includes/fields/checkbox.php:76
+#: dhvc-form/includes/fields/color.php:57
+#: dhvc-form/includes/fields/color.php:65
+#: dhvc-form/includes/fields/datetime.php:70
+#: dhvc-form/includes/fields/datetime.php:78
+#: dhvc-form/includes/fields/email.php:71 dhvc-form/includes/fields/file.php:75
+#: dhvc-form/includes/fields/multiple_select.php:61
+#: dhvc-form/includes/fields/multiple_select.php:69
+#: dhvc-form/includes/fields/password.php:52
+#: dhvc-form/includes/fields/password.php:89
+#: dhvc-form/includes/fields/password.php:97
+#: dhvc-form/includes/fields/password.php:105
+#: dhvc-form/includes/fields/radio.php:60
+#: dhvc-form/includes/fields/radio.php:68
+#: dhvc-form/includes/fields/select.php:60
+#: dhvc-form/includes/fields/select.php:68
+#: dhvc-form/includes/fields/text.php:130
+#: dhvc-form/includes/fields/textarea.php:56
+#: dhvc-form/includes/fields/textarea.php:64
+msgid "Yes, please"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:73
+#: dhvc-form/includes/fields/multiple_select.php:66
+#: dhvc-form/includes/fields/radio.php:65
+#: dhvc-form/includes/fields/select.php:65
+msgid "Disabled ? "
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:81
+#: dhvc-form/includes/fields/radio.php:73 dhvc-form/includes/fields/rate.php:50
+#: dhvc-form/includes/fields/select.php:79
+#: dhvc-form/includes/fields/slider.php:76
+msgid "Conditional Logic"
+msgstr ""
+
+#: dhvc-form/includes/fields/checkbox.php:83
+#: dhvc-form/includes/fields/radio.php:75 dhvc-form/includes/fields/rate.php:52
+#: dhvc-form/includes/fields/select.php:81
+#: dhvc-form/includes/fields/slider.php:84
+msgid ""
+"Create rules to show or hide this field depending on the values of other "
+"fields "
+msgstr ""
+
+#: dhvc-form/includes/fields/color.php:18
+msgid "Form Color"
+msgstr ""
+
+#: dhvc-form/includes/fields/color.php:38
+#: dhvc-form/includes/fields/email.php:39
+#: dhvc-form/includes/fields/hidden.php:20
+#: dhvc-form/includes/fields/slider.php:65
+#: dhvc-form/includes/fields/text.php:93
+#: dhvc-form/includes/fields/textarea.php:37
+msgid "Default value"
+msgstr ""
+
+#: dhvc-form/includes/fields/color.php:62
+#: dhvc-form/includes/fields/datetime.php:75
+#: dhvc-form/includes/fields/email.php:76
+#: dhvc-form/includes/fields/password.php:94
+#: dhvc-form/includes/fields/text.php:135
+#: dhvc-form/includes/fields/textarea.php:61
+msgid "Read only ? "
+msgstr ""
+
+#: dhvc-form/includes/fields/color.php:70
+#: dhvc-form/includes/fields/datetime.php:83
+#: dhvc-form/includes/fields/email.php:85 dhvc-form/includes/fields/file.php:80
+#: dhvc-form/includes/fields/multiple_select.php:74
+#: dhvc-form/includes/fields/password.php:110
+#: dhvc-form/includes/fields/select.php:73
+#: dhvc-form/includes/fields/text.php:155
+#: dhvc-form/includes/fields/textarea.php:69
+msgid "Attributes"
+msgstr ""
+
+#: dhvc-form/includes/fields/color.php:72
+#: dhvc-form/includes/fields/datetime.php:85
+#: dhvc-form/includes/fields/email.php:87 dhvc-form/includes/fields/file.php:82
+#: dhvc-form/includes/fields/multiple_select.php:76
+#: dhvc-form/includes/fields/password.php:112
+#: dhvc-form/includes/fields/select.php:75
+#: dhvc-form/includes/fields/text.php:157
+#: dhvc-form/includes/fields/textarea.php:71
+msgid ""
+"Add attribute for this form control,eg: <em>onclick=\"\" onchange=\"\" </em> "
+"or '<em>data-*</em>'  attributes HTML5, not in attributes: <span style="
+"\"color:#ff0000\">type, value, name, required, placeholder, maxlength, id</"
+"span>"
+msgstr ""
+
+#: dhvc-form/includes/fields/datetime.php:20
+msgid "Form DateTime"
+msgstr ""
+
+#: dhvc-form/includes/fields/datetime.php:27
+#: dhvc-form/includes/fields/slider.php:24
+msgid "Type"
+msgstr ""
+
+#: dhvc-form/includes/fields/datetime.php:32
+msgid "Time"
+msgstr ""
+
+#: dhvc-form/includes/fields/datetime.php:33
+msgid "Date & Time"
+msgstr ""
+
+#: dhvc-form/includes/fields/datetime.php:51
+#: dhvc-form/includes/fields/email.php:44
+#: dhvc-form/includes/fields/text.php:103
+msgid "Maximum length characters"
+msgstr ""
+
+#: dhvc-form/includes/fields/email.php:19
+msgid "Form Email"
+msgstr ""
+
+#: dhvc-form/includes/fields/email.php:54
+#: dhvc-form/includes/fields/password.php:72
+#: dhvc-form/includes/fields/text.php:113
+msgid "Icon"
+msgstr ""
+
+#: dhvc-form/includes/fields/email.php:58
+#: dhvc-form/includes/fields/password.php:76
+#: dhvc-form/includes/fields/text.php:117
+msgid "Select icon add-on for this control."
+msgstr ""
+
+#: dhvc-form/includes/fields/email.php:79
+#: dhvc-form/includes/fields/text.php:138
+msgid "No"
+msgstr ""
+
+#: dhvc-form/includes/fields/email.php:80
+#: dhvc-form/includes/fields/text.php:139
+msgid "Yes"
+msgstr ""
+
+#: dhvc-form/includes/fields/file.php:46
+msgid "Form File"
+msgstr ""
+
+#: dhvc-form/includes/fields/hidden.php:6
+msgid "Form Hidden"
+msgstr ""
+
+#: dhvc-form/includes/fields/label.php:6
+msgid "Form Label"
+msgstr ""
+
+#: dhvc-form/includes/fields/label.php:21
+msgid "Text"
+msgstr ""
+
+#: dhvc-form/includes/fields/label.php:23
+msgid ""
+"<p>I am text block. Click edit button to change this text. Lorem ipsum dolor "
+"sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec "
+"ullamcorper mattis, pulvinar dapibus leo.</p>"
+msgstr ""
+
+#: dhvc-form/includes/fields/multiple_select.php:26
+msgid "Form Multiple Select"
+msgstr ""
+
+#: dhvc-form/includes/fields/password.php:28
+msgid "Form Password"
+msgstr ""
+
+#: dhvc-form/includes/fields/password.php:49
+msgid "Is confirmation ? "
+msgstr ""
+
+#: dhvc-form/includes/fields/password.php:57
+msgid "Password field "
+msgstr ""
+
+#: dhvc-form/includes/fields/password.php:63
+msgid "enter passwords field name to validate match"
+msgstr ""
+
+#: dhvc-form/includes/fields/password.php:102
+msgid "Password validator ? "
+msgstr ""
+
+#: dhvc-form/includes/fields/paypal.php:6
+msgid "Form Paypal"
+msgstr ""
+
+#: dhvc-form/includes/fields/paypal.php:13
+msgid "Paypal Order Description"
+msgstr ""
+
+#: dhvc-form/includes/fields/paypal.php:19
+msgid "Item text"
+msgstr ""
+
+#: dhvc-form/includes/fields/paypal.php:25
+msgid "Qty text"
+msgstr ""
+
+#: dhvc-form/includes/fields/paypal.php:31
+msgid "Price text"
+msgstr ""
+
+#: dhvc-form/includes/fields/paypal.php:37
+msgid "Items list"
+msgstr ""
+
+#: dhvc-form/includes/fields/paypal.php:39
+msgid "You can use operation ( + , - , * , / ) field, ex: field_1*field_2."
+msgstr ""
+
+#: dhvc-form/includes/fields/radio.php:19
+msgid "Form Radio"
+msgstr ""
+
+#: dhvc-form/includes/fields/rate.php:19
+msgid "Form Rate"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:72
+msgid "Form reCaptcha"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:76
+msgid "Display Google reCaptcha"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:80
+msgid "reCaptcha Version"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:84
+msgid "Version 1"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:85
+msgid "Version 2"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:87
+msgid "Select reCaptcha version you want use."
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:91
+msgid "Theme"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:94
+msgid "Red"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:95
+msgid "Clean"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:96
+msgid "White"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:97
+msgid "BlackGlass"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:105
+msgid "Defines which theme to use for reCAPTCHA."
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:109
+msgid "Language"
+msgstr ""
+
+#: dhvc-form/includes/fields/recaptcha.php:118
+msgid ""
+"Select the language you would like to use for the reCAPTCHA display from the "
+"available options."
+msgstr ""
+
+#: dhvc-form/includes/fields/response.php:6
+msgid "Form Response"
+msgstr ""
+
+#: dhvc-form/includes/fields/response.php:10
+msgid "Form message response"
+msgstr ""
+
+#: dhvc-form/includes/fields/select.php:26
+msgid "Form Select"
+msgstr ""
+
+#: dhvc-form/includes/fields/slider.php:17
+msgid "Form Slider"
+msgstr ""
+
+#: dhvc-form/includes/fields/slider.php:27
+msgid "Slider"
+msgstr ""
+
+#: dhvc-form/includes/fields/slider.php:28
+msgid "Range"
+msgstr ""
+
+#: dhvc-form/includes/fields/slider.php:47
+msgid "Minimum Value"
+msgstr ""
+
+#: dhvc-form/includes/fields/slider.php:53
+msgid "Maximum Value"
+msgstr ""
+
+#: dhvc-form/includes/fields/step.php:31
+msgid "Step content for Form Steps"
+msgstr ""
+
+#: dhvc-form/includes/fields/steps.php:5
+msgid "Form Steps"
+msgstr ""
+
+#: dhvc-form/includes/fields/steps.php:14
+msgid "Form steps section"
+msgstr ""
+
+#: dhvc-form/includes/fields/steps.php:42
+msgid "Steps"
+msgstr ""
+
+#: dhvc-form/includes/fields/steps.php:47
+msgid "Active section"
+msgstr ""
+
+#: dhvc-form/includes/fields/steps.php:49
+msgid ""
+"Enter active section number (Note: to have all sections closed on initial "
+"load enter non-existing number)."
+msgstr ""
+
+#: dhvc-form/includes/fields/submit_button.php:5
+msgid "Form Button Submit"
+msgstr ""
+
+#: dhvc-form/includes/fields/submit_button.php:14
+#: dhvc-form/includes/shortcodes.php:74
+#: dhvc-form/templates/dhvc_form_submit_button.php:5
+msgid "Submit"
+msgstr ""
+
+#: dhvc-form/includes/fields/text.php:73
+msgid "Form Text"
+msgstr ""
+
+#: dhvc-form/includes/fields/text.php:98
+msgid "Minimum length characters"
+msgstr ""
+
+#: dhvc-form/includes/fields/text.php:144
+msgid "Add validator"
+msgstr ""
+
+#: dhvc-form/includes/fields/textarea.php:17
+msgid "Form Textarea"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:6
+msgid "myMail Newsletters not exists!."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:17
+#: dhvc-form/includes/form_actions.php:48
+#: dhvc-form/includes/form_actions.php:207
+msgid "The email address isn't correct."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:24
+msgid "Not Subscribe to our Newsletters!"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:29
+msgid "Subscribe to our Newsletters successful!"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:38
+msgid "MailPoet Newsletters not exists!."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:63
+#, php-format
+msgid "MailPoet Added: %s to list <strong>%s</strong>"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:105
+msgid "This email is already subscribed."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:124
+msgid "Not Subscribe to Mailchimp!"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:129
+msgid "Subscribe to Mailchimp Successful!"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:145
+msgid "Wrong Username or Password!"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:150
+msgid "Login Successful!"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:176
+msgid "Registration complete."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:182
+msgid "Not allow register in site."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:195
+msgid "Please enter a username."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:197
+msgid ""
+"This username is invalid because it uses illegal characters. Please enter a "
+"valid username."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:200
+msgid "This username is already registered. Please choose another one."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:205
+msgid "Please type your email address."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:210
+msgid "This email is already registered, please choose another one."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:219
+msgid "Password must be 6 character long."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:221
+msgid "Not see password confirmation field."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:223
+msgid "Passwords do not match."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:246
+msgid "Couldn't register you... please contact the site administrator"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:290
+msgid "Password Reset. Please check your email."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:302
+msgid "<strong>ERROR</strong>: Enter a username or email address."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:306
+msgid ""
+"<strong>ERROR</strong>: There is no user registered with that email address."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:318
+msgid "<strong>ERROR</strong>: Invalid username or email."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:331
+msgid "Password reset is not allowed for this user"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:346
+msgid "Could not save password reset key to database."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:355
+msgid "Someone has requested a password reset for the following account:"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:357
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:358
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:359
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:367
+#, php-format
+msgid "[%s] Password Reset"
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:374
+msgid "The email could not be sent."
+msgstr ""
+
+#: dhvc-form/includes/form_actions.php:374
+msgid "Possible reason: your host may have disabled the mail() function."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:618
+msgid "Thank you for your message. It has been sent."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:619
+msgid "There was an error uploading the file."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:620
+msgid "reCaptcha Invalid"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:621
+msgid "Please verify that you are not a robot."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:622
+msgid "Your entered code is incorrect."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:623
+msgid "One or more fields have an error. Please check and try again."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:624 dhvc-form/includes/functions.php:625
+msgid "There was an error trying to send your message. Please try again later."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:626
+msgid "This field is required."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:627
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:628
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:629
+msgid "Please enter a valid date."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:630
+msgid "Please enter a valid number."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:631
+msgid "Please use only numbers (0-9) or brackets (), dashes – and plus +"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:632
+msgid "Please enter only digits."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:633
+#, php-format
+msgid "Please enter a value less than or equal to %s."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:634
+#, php-format
+msgid "Please enter a value greater than or equal to %s."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:635
+msgid "This input is too long."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:636
+msgid "This input is too short."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:637
+msgid "Please use letters only (a-z or A-Z) in this field."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:638
+msgid ""
+"Please use only letters (a-z or A-Z) or numbers (0-9) only in this field. No "
+"spaces or other characters are allowed."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:639
+msgid ""
+"Please enter a valid URL. Protocol is required (http://, https:// or ftp://)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:640
+msgid "Please enter a valid zip code. For example 90602 or 90602-1234."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:641
+msgid ""
+"Please enter a valid fax number. For example (123) 456-7890 or 123-456-7890."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:642
+msgid "Please make sure your passwords match."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:643
+msgid "Please select an option"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:644
+msgid "You are not allowed to upload files of this type."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:645
+msgid "There was an unknown error uploading the file."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:646
+msgid "The file is too big."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:669
+msgid "No Message"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1091
+msgid "Select a page..."
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1147
+msgid "English"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1148
+msgid "Portuguese"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1149
+msgid "French"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1150
+msgid "German"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1151
+msgid "Dutch"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1152
+msgid "Russian"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1153
+msgid "Spanish"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1154
+msgid "Turkish"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1190
+msgid "Site URL"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1191
+msgid "User IP"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1192
+msgid "User display name"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1193
+msgid "User email"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1194
+msgid "User login"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1195
+msgid "Form URL"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1196
+msgid "Form ID"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1197
+msgid "Form Title"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1198
+msgid "Post/page ID"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1199
+msgid "Post/page title"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1200
+msgid "Datetime submitted"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1206
+msgid "Date (only date)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1207
+msgid "Number (only number)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1208
+msgid "Number or brackets (), dashes – and plus +"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1209
+msgid ""
+"Digits (only number, avoid spaces or other characters such as dots or commas)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1210
+msgid "Alpha (only a-z or A-Z)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1211
+msgid "Alphanum (only a-z or A-Z or 0-9)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1212
+msgid "Url (only URL. Protocol is required: http://, https:// or ftp://)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1213
+msgid "Zip (example 90602 or 90602-1234)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1214
+msgid "Fax (example (123) 456-7890 or 123-456-7890)"
+msgstr ""
+
+#: dhvc-form/includes/functions.php:1278 dhvc-form/includes/settings.php:178
+msgid "None"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:79
+msgid "Form Options"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:86 dhvc-form/includes/meta_box.php:604
+msgid "General"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:90
+msgid "Save Submitted Form to Data ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:93
+msgid "If checked, the submitted form data will be saved to your database."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:104
+msgid "Action Type"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:107
+msgid "Default"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:108
+msgid "External URL"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:113 dhvc-form/includes/meta_box.php:211
+msgid "Enter URL"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:116
+msgid "Enter a action URL."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:120
+msgid "Use form action"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:126
+msgid "Mailpoet subscribers to These Lists"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:132
+msgid "Mymail subscribers to These Lists"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:138
+msgid "Mymail Double Opt In "
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:140
+msgid "Users have to confirm their subscription"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:145
+msgid "Method"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:148 dhvc-form/includes/meta_box.php:190
+msgid "Post"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:149
+msgid "Get"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:154
+msgid "Successful submit settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:158
+msgid "On successful submit"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:161
+msgid "Display a message"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:162
+msgid "Redirect to another page"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:167
+msgid "Message"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:171
+msgid ""
+"This is the text or HTML that is displayed when the form is successfully "
+"submitted"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:175
+msgid "Message Position"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:177
+msgid ""
+"You can use \"Form Response\" shortcode to locating response message box "
+"anywhere"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:179
+msgid "Top"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:180
+msgid "Bottom"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:185
+msgid "Redirect to"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:189
+msgid "Page"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:191
+msgid "Url"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:193
+msgid ""
+"When the form is successfully submitted you can redirect the user to post, "
+"page or URL."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:197
+msgid "Select page"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:204
+msgid "Select post"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:218
+msgid "Form popup settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:222
+msgid "Display the form in a popup ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:229
+msgid ""
+"Set data-toggle=\"dhvcformpopup\" on a controller element, like a button, "
+"along with a data-target=\"#dhvcformpopup-{form_ID}\" or href="
+"\"#dhvcformpopup-{form_ID}\" to target a specific form popup to toggle."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:233
+msgid "Show popup title ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:239
+msgid "Form popup width (px)"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:245
+msgid "Auto open popup ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:248
+msgid "If selected, form popup will auto open when load page."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:252
+msgid "Popup open delay (ms)"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:255
+msgid "Time delay for open popup."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:259
+msgid "Auto close popup ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:262
+msgid "If selected, form popup will auto close."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:266
+msgid "Popup close delay (ms)"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:269
+msgid "Time delay for close popup."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:273
+msgid "Only one time ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:276
+msgid "If selected,form will opens only on the first visit your site."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:285
+msgid "Notifications email settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:289
+msgid "Send form data via email ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:295 dhvc-form/includes/meta_box.php:370
+msgid "Sender Name"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:302
+msgid "Sender Email Type"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:306 dhvc-form/includes/meta_box.php:801
+msgid "Email"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:307
+msgid "Email Field"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:313 dhvc-form/includes/meta_box.php:377
+msgid "Sender Email"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:320
+msgid "Sender Field"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:322 dhvc-form/includes/meta_box.php:336
+#: dhvc-form/includes/meta_box.php:386
+msgid ""
+"The form must have at least one Email Address element to use this feature."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:326 dhvc-form/includes/meta_box.php:384
+msgid "Recipients"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:330
+msgid "Add email address(es) which the submitted form data will be sent to."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:334
+msgid "Reply To"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:340 dhvc-form/includes/meta_box.php:390
+msgid "Email subject"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:343
+msgid "New form submission"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:347 dhvc-form/includes/meta_box.php:397
+msgid "Email body"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:350 dhvc-form/includes/meta_box.php:401
+msgid ""
+"Use the label [form_body] to insert the form data in the email body. To use "
+"form control in email. please enter form control variables "
+"<strong>[form_control_name]</strong> in email."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:354 dhvc-form/includes/meta_box.php:405
+msgid "Use HTML content type ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:360
+msgid "Autoreply email settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:364
+msgid "Send autoreply email ?"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:393
+msgid "Just Confirming"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:400
+msgid "This is just a confirmation message. We have received you reply."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:416
+msgid "Style settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:420
+msgid "Form layout"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:423
+msgid "Vertical"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:424
+msgid "Horizontal"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:429
+msgid "Input icon position"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:432
+msgid "Right"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:433
+msgid "Left"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:438
+msgid "Label Color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:443
+msgid "Input Placeholder Text Color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:448
+msgid "Input Height (example enter:40px)"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:453
+msgid "Input Background Color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:458
+msgid "Input Text Color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:463
+msgid "Input border color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:468
+msgid "Input border Size (example enter:1px)"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:473
+msgid "Input hover border color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:478
+msgid "Input focus border color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:483
+msgid "Button Height (example enter:40px)"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:488
+msgid "Button background color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:493
+msgid "Seps control color"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:503
+msgid "Additional settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:507
+msgid "Additional Settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:508
+msgid "Trigger with form AJAX."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:519
+msgid "Messagess settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:537
+msgid "PayPal Settings"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:541
+msgid "PayPal Email"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:546
+msgid "PayPal Currency"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:553
+msgid "PayPal sandbox"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:556
+#, php-format
+msgid ""
+"PayPal sandbox can be used to test payments. Sign up for a <a href=\"%s\" "
+"target=\"_blank\">developer account</a>."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:560
+msgid "PayPal Cancel URL"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:562 dhvc-form/includes/meta_box.php:568
+#: dhvc-form/includes/meta_box.php:596
+msgid "Optional"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:566
+msgid "PayPal Return URL"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:572
+msgid "Paypal checkout"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:576
+msgid "Submit form to paypal checkout"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:582
+msgid "Order Description"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:584
+msgid ""
+"Optional, if left blank customer will be able to enter their own description "
+"at checkout"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:588
+msgid "Order Price"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:590
+msgid ""
+"Optional, if left blank customer will be able to enter their own price at "
+"checkout"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:594
+msgid "Order ID"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:607
+msgid "Mail"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:610
+msgid "Style"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:613
+msgid "Messages"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:616
+msgid "Payments"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:619
+msgid "Additional"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:703
+msgid "Example:"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:703
+msgid "Launch form popup"
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:709 dhvc-form/includes/meta_box.php:763
+#: dhvc-form/includes/params.php:14 dhvc-form/includes/params.php:41
+msgid "Insert variable..."
+msgstr ""
+
+#: dhvc-form/includes/meta_box.php:813 dhvc-form/includes/params.php:122
+#: dhvc-form/includes/params.php:170 dhvc-form/includes/params.php:233
+#: dhvc-form/includes/params.php:296
+msgid "Add"
+msgstr ""
+
+#: dhvc-form/includes/params.php:63
+msgid "Select validator..."
+msgstr ""
+
+#: dhvc-form/includes/params.php:198
+msgid "Items"
+msgstr ""
+
+#: dhvc-form/includes/params.php:201
+msgid "Qty"
+msgstr ""
+
+#: dhvc-form/includes/params.php:204
+msgid "Price"
+msgstr ""
+
+#: dhvc-form/includes/params.php:261
+msgid "Is Default"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:23
+msgid "Add Form"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:24
+msgid "Add New Form"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:27
+msgid "New Form"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:28 dhvc-form/includes/post_types.php:29
+msgid "View Form"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:30
+msgid "Search Forms"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:31
+msgid "No Forms found"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:32
+msgid "No Forms found in trash"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:33
+msgid "Parent Form"
+msgstr ""
+
+#: dhvc-form/includes/post_types.php:35
+msgid "This is where you can add new form."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:15 dhvc-form/includes/settings.php:251
+msgid "Settings"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:22
+msgid "General settings"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:27
+msgid "Allowed Files Upload Types"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:28
+msgid ""
+"Which files are allowed in the attachments? (Separate the extensions by a "
+"comma)"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:32
+msgid "Date Format"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:37
+msgid "Time Format"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:39
+msgid "Documentation on date and time formatting"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:43
+msgid "Time picker step"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:55
+msgid "Datetime Picker Language"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:113
+msgid "Conditional Container Element"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:118
+msgid "Users page settings"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:122
+msgid "Login page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:127
+msgid "Logout redirect to page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:132
+msgid "Register page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:137
+msgid "Lost password page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:142
+msgid "WooCommerce My Account page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:144
+msgid ""
+"User to override default Login and Register form in WooCommerce My Account "
+"page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:148
+msgid "WooCommerce Lost Password page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:150
+msgid ""
+"User to override default Lost Password form in WooCommerce My Account page"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:154
+msgid "Email settings"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:158
+msgid "Sender method"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:161
+msgid "PHP Mailer"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:162
+msgid "SMTP"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:167
+msgid "SMTP host"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:172
+msgid "SMTP port"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:176
+msgid "SMTP encryption"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:179
+msgid "TLS"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:180
+msgid "SSL"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:185
+msgid "SMTP username"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:189
+msgid "SMTP password"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:193
+msgid "reCaptcha settings"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:194
+msgid ""
+"In order to use the reCAPTCHA element in your form you must <a target="
+"\"_blank\" href=\"https://www.google.com/recaptcha\">sign up</a> for a free "
+"account to get your set of API keys."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:198
+msgid "Public key (Site Key)"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:202
+msgid "Private key (Secret Key)"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:206
+msgid "MailChimp settings"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:210
+msgid "MailChimp API Key"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:211
+msgid ""
+"Enter your API Key. <a href=\"http://admin.mailchimp.com/account/api-key-"
+"popup\" target=\"_blank\">Get your API key</a>"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:215
+msgid "MailChimp List"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:216
+msgid "Nothing Found..."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:217
+msgid ""
+"After you add your MailChimp API Key above and save it this list will be "
+"populated."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:221
+msgid "Enable Double Opt-In"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:222
+msgid ""
+"Learn more about <a href='http://kb.mailchimp.com/article/how-does-confirmed-"
+"optin-or-double-optin-work' target='_blank'>Double Opt-in</a>."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:226
+msgid "Send Welcome Email"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:227
+msgid ""
+"If your Double Opt-in is false and this is true, MailChimp will send your "
+"lists Welcome Email if this subscribe succeeds - this will not fire if "
+"MailChimp ends up updating an existing subscriber. If Double Opt-in is true, "
+"this has no effect. Learn more about <a href='http://blog.mailchimp.com/"
+"sending-welcome-emails-with-mailchimp/' target='_blank'>Welcome Emails</a>."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:231
+msgid "Group Name"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:232
+msgid ""
+"Optional: Enter the name of the group. Learn more about <a href=\"http://"
+"mailchimp.com/features/groups/\" target=\"_blank\">Groups</a>"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:236
+msgid "Group"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:237
+msgid "Optional: Comma delimited list of interest groups to add the email to."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:241
+msgid "Replace Interests"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:242
+msgid ""
+"Whether MailChimp will replace the interest groups with the groups provided "
+"or add the provided groups to the member's interest groups."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:282
+msgid "Save Changes"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:360
+msgid "Unable to load MailChimp lists, check your API Key."
+msgstr ""
+
+#: dhvc-form/includes/settings.php:363
+msgid "You have not created any lists at MailChimp"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:365
+msgid "Select a list"
+msgstr ""
+
+#: dhvc-form/includes/settings.php:367
+#, php-format
+msgid "ID: %1$s - Name: %2$s"
+msgstr ""
+
+#: dhvc-form/includes/shortcodes.php:18 dhvc-form/includes/shortcodes.php:22
+#: dhvc-form/includes/shortcodes.php:115
+msgid "No form yet! You should add some..."
+msgstr ""
+
+#: dhvc-form/includes/shortcodes.php:211
+msgid "Passwords field name to validate match is required"
+msgstr ""
+
+#: dhvc-form/includes/shortcodes.php:228
+msgid ""
+"ReCaptcha plugin needs a public key to be set in its parameters. Please "
+"contact a site administrator."
+msgstr ""
+
+#: dhvc-form/templates/dhvc_form_captcha.php:16
+#: dhvc-form/templates/dhvc_form_checkbox.php:19
+#: dhvc-form/templates/dhvc_form_color.php:33
+#: dhvc-form/templates/dhvc_form_datetime.php:25
+#: dhvc-form/templates/dhvc_form_email.php:21
+#: dhvc-form/templates/dhvc_form_file.php:16
+#: dhvc-form/templates/dhvc_form_hidden.php:10
+#: dhvc-form/templates/dhvc_form_label.php:11
+#: dhvc-form/templates/dhvc_form_password.php:22
+#: dhvc-form/templates/dhvc_form_radio.php:20
+#: dhvc-form/templates/dhvc_form_rate.php:18
+#: dhvc-form/templates/dhvc_form_recaptcha.php:64
+#: dhvc-form/templates/dhvc_form_select.php:21
+#: dhvc-form/templates/dhvc_form_slider.php:25
+#: dhvc-form/templates/dhvc_form_text.php:22
+#: dhvc-form/templates/dhvc_form_textarea.php:18
+msgid "Field name is required"
+msgstr ""
+
+#: dhvc-form/templates/dhvc_form_captcha.php:33
+#, php-format
+msgid "To use CAPTCHA, you need %s plugin installed."
+msgstr ""
+
+#: dhvc-form/templates/dhvc_form_file.php:34
+msgid "Browse"
+msgstr ""
+
+#: dhvc-form/templates/dhvc_form_paypal.php:51
+#: dhvc-form/templates/dhvc_form_paypal.php:52
+msgid "Total"
+msgstr ""
+
+#: dhvc-form/templates/dhvc_form_recaptcha.php:96
+msgid "Plese settup site Captcha in DHVC Form Settings"
+msgstr ""
