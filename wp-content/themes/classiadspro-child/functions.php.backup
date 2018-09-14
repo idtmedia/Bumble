@@ -330,45 +330,13 @@ function custom_wp_new_user_notification_email( $wp_new_user_notification_email,
     return $wp_new_user_notification_email;
 }
 
-add_action( 'wp', 'unpublish_expired_listings_hourly' );
-function unpublish_expired_listings_hourly() {
-    if ( ! wp_next_scheduled( 'unpublish_expired_listings' ) ) {
-        wp_schedule_event( time(), 'hourly', 'unpublish_expired_listings');
-    }
+function is_contractor(){
+	if(is_user_logged_in()){
+		$user = wp_get_current_user();
+		$role = ( array ) $user->roles;
+		return ($role[0]=='contractor');
+	}else{
+		return false;
+	}	
 }
-add_action( 'unpublish_expired_listings', 'unpublish_expired_listings_callback' );
 
-//https://wordpress.stackexchange.com/questions/152786/posts-to-expire-deleted-after-a-date
-function unpublish_expired_listings_callback() {
-    $args = array(
-        'post_type' => 'alsp_listing',
-        'posts_per_page' => -1
-    );
-
-	$listings = new WP_Query($args);
-	if ($listings->have_posts()):
-		while($listings->have_posts()): $listings->the_post();    
-
-			$duration = get_post_meta( get_the_ID(), '_content_field_38', true );
-			if($duration>0){			
-				switch($duration){
-					case 1:
-						$life_time = 259200;
-						break;
-					case 2: 
-						$life_time = 604800;
-						break;
-					case 3: 
-					default:
-						$life_time = 1209600;
-						break;
-				}
-				$expiration_date_time = get_the_time('U') + $life_time;
-				if ($expiration_date_time < time()) {
-					$post = array( 'ID' => get_the_ID(), 'post_status' => 'draft' );
-					wp_update_post($post);             
-				}
-			}
-		endwhile;
-		endif;
-}

@@ -3388,7 +3388,9 @@ $alsp_dynamic_styles[] = array(
 		</li>
 		<?php } ?>
 		<?php //do_action('alsp_dashboard_links', $frontend_controller); ?>
-		<?php if(class_exists('WooCommerce') && $ALSP_ADIMN_SETTINGS['alsp_woocommerce_frontend_links']){ ?>
+		<?php if(class_exists('WooCommerce') && $ALSP_ADIMN_SETTINGS['alsp_woocommerce_frontend_links']){ 
+		if(is_contractor()):
+		?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span><?php _e('Packages', 'ALSP'); ?></span>
@@ -3405,6 +3407,7 @@ $alsp_dynamic_styles[] = array(
             
           </ul>
         </li>
+		<?php endif; ?>
 		<?php } ?> 
 		<?php if($ALSP_ADIMN_SETTINGS['alsp_payments_addon'] == 'alsp_buitin_payment'){ ?>
 			<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'invoices')); ?>"><i class="pacz-icon-user"></i><span><?php _e('Invoices', 'ALSP'); ?></span></a></li>

@@ -564,4 +564,16 @@ global $pacz_settings, $pacz_accent_color, $post, $classiadspro_json;
 
 
 
-<?php } ?>
+<?php }
+
+function is_contractor(){
+	if(is_user_logged_in()){
+		$user = wp_get_current_user();
+		$role = ( array ) $user->roles;
+		return ($role[0]=='contractor');
+	}else{
+		return false;
+	}	
+}
+
+ ?>
