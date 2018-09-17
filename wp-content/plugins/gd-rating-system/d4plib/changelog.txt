@@ -1,0 +1,90 @@
+=== Dev4Press Library ===
+== Changelog ==
+
+= Version 2.3.4 - 2018.07.15 =
+* New: Improvements to the metabox styling
+* Updated: Various minor updates and tweaks
+
+= Version 2.3.3 - 2018.07.11 =
+* New: Improvements to the admin settings rendering
+
+= Version 2.3.2 - 2018.06.18 =
+* New: Function to sanitize file path
+
+= Version 2.3.1 - 2018.06.05 =
+* New: Cookies library, version 2.2.0
+
+= Version 2.3 - 2018.05.24 =
+* New: Several new icons in font
+* Updated: Font with icons rebuilt
+
+= Version 2.2.7 - 2018.03.20 =
+* Updated: Few more metabox styling updates
+
+= Version 2.2.6 - 2018.03.14 =
+* Updated: Few more metabox styling updates
+
+= Version 2.2.5 - 2018.03.07 =
+* Updated: Metabox styling updates for Gutenberg editor
+
+= Version 2.2.4 - 2018.01.11 =
+* Updated: Some styling improvements
+
+= Version 2.2.3 - 2018.01.08 =
+* New: Settings Field - Expandable Raw Text
+* Updated: Minor changes to the JavaScript files
+
+= Version 2.2.2 - 2017.12.25 =
+* New: Interface support for RTL
+
+= Version 2.2.1 - 2017.12.01 =
+* Updated: Improvements to WPDB wrapper class
+* Updated: Improvements to datetime class
+
+= Version 2.2 - 2017.11.08 =
+* New: Refactored names of various classes
+* New: Improved organization of the library
+* New: Simple CSS grid layout
+* New: Setup Wizard resources
+* New: Shared about page template for plugins
+
+= Version 2.1.2 - 2017.10.06 =
+* Updated: Minor changes to the Settings rendering
+* Updated: Few other minor updates to functions
+* Updated: POT Translation file
+
+= Version 2.1.1 - 2017.09.05 =
+* Updated: Request handling for GEOIP objects
+* Fixed: Request processing for GEOIP objects
+
+= Version 2.1 - 2017.08.15 =
+* Added: Dedicated Object Cache class
+
+= Version 2.0.6 - 2017.08.12 =
+* Added: Cache Core class
+* Added: Function to cache posts by ID
+
+= Version 2.0.5 - 2017.08.02 =
+* Added: function to render hierarchical checkboxes control
+* Added: styling for the hierarchical checkboxes for widgets
+* Added: function to format URL for campaign
+* Added: admin related file with the walkers classes
+
+= Version 2.0.4 - 2017.07.04 =
+* Added: GeoIP class
+
+= Version 2.0.3 - 2017.06.27 =
+* Added: settings object type for slug with slashes
+* Removed: pretty print library to new library
+
+= Version 2.0.2 - 2017.06.17 =
+* Updated: some core classes renamed
+* Updated: several minor changes
+
+= Version 2.0.1 - 2017.05.27 =
+* New: added readme and changelog files 
+* Updated: styling for responsive checkboxes
+
+= Version 2.0 - 2017.05.18 =
+* New: switched to Git
+* Removed: units librarie

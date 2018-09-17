@@ -1,0 +1,7 @@
+=== GD Rating System ===
+== List of included languages ==
+
+= German (de_DE) =
+* Plugin Version: 2.3
+* Translated by: Martin Pohle
+* Translator URL: https://www.foto-video-berlin.de/

@@ -15,11 +15,11 @@ global $ALSP_ADIMN_SETTINGS;
 $layout = $pacz_settings['archive-layout'];
 $columns = $pacz_settings['archive-columns'];
 $loop_style = $pacz_settings['archive-loop-style'];
-	
+
 		$author = get_user_by( 'slug', get_query_var( 'author_name' ) );
 		$authorID = $author->ID;
-		
-		$author_img_url = get_the_author_meta('pacz_author_avatar_url', $authorID, true); 
+
+		$author_img_url = get_the_author_meta('pacz_author_avatar_url', $authorID, true);
 		$author_name = get_the_author_meta('display_name', $authorID);
 		if($ALSP_ADIMN_SETTINGS['frontend_panel_user_phone']){ $phone_number = get_the_author_meta('user_phone', $authorID); }
 		$author_email = get_the_author_meta('email', $authorID);
@@ -27,7 +27,7 @@ $loop_style = $pacz_settings['archive-loop-style'];
 		if($ALSP_ADIMN_SETTINGS['frontend_panel_user_address']){ $author_address = get_the_author_meta('address', $authorID); }
 		if($ALSP_ADIMN_SETTINGS['frontend_panel_user_type']){ $author_type = get_the_author_meta('_user_type', $authorID); }
 		$author_verified = get_the_author_meta('author_verified', $authorID);
-		
+
 		//$email_id = $instance['email_id'];
 		$registered = date_i18n( "M m, Y", strtotime( get_the_author_meta( 'user_registered', $authorID ) ) );
 		if($ALSP_ADIMN_SETTINGS['frontend_panel_social_links']){
@@ -42,7 +42,7 @@ $loop_style = $pacz_settings['archive-loop-style'];
 			$author_behance = get_the_author_meta('author_behance', $authorID);
 			$author_dribbble = get_the_author_meta('author_dribbble', $authorID);
 		}
-		
+
 		if ( gearside_is_user_online($authorID) ){
 			$author_log_status = '<span class="author-active"></span>';
 		} else {
@@ -58,7 +58,7 @@ $loop_style = $pacz_settings['archive-loop-style'];
 function get_woocommerce_product_list() {
 	$full_product_list = array();
 	$loop = new WP_Query( array( 'post_type' => array('product', 'product_variation'), 'posts_per_page' => -1 ) );
- 
+
 	while ( $loop->have_posts() ) : $loop->the_post();
 		$theid = get_the_ID();
 		$product = new WC_Product($theid);
@@ -67,7 +67,7 @@ function get_woocommerce_product_list() {
 			$parent_id = wp_get_post_parent_id($theid );
 			$sku = get_post_meta($theid, '_sku', true );
 			$thetitle = get_the_title( $parent_id);
- 
+
     // ****** Some error checking for product database *******
             // check if variation sku is set
             if ($sku == '') {
@@ -88,7 +88,7 @@ function get_woocommerce_product_list() {
                 }
             }
  	// ****************** end error checking *****************
- 
+
         // its a simple product
         } else {
             $sku = get_post_meta($theid, '_sku', true );
@@ -118,7 +118,7 @@ get_header(); ?>
 							if(!empty($author_img_url)) {
 								$params = array( 'width' => 300, 'height' => 370, 'crop' => true );
 								$output .= "<img src='" . bfi_thumb( "$author_img_url", $params ) . "' alt='' />";
-							} else { 
+							} else {
 								$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $authorID), $size = '300' );
 								$output .='<img src="'.$avatar_url.'" alt="author" />';
 							}
@@ -154,7 +154,7 @@ get_header(); ?>
 									if($ALSP_ADIMN_SETTINGS['frontend_panel_social_links']){
 										$output .='<div class="author-details-info clearfix"><span class="author-info-title">'.esc_html__('Follow Me ', 'classiadspro').'</span>';
 											$output .='<ul class="author-info-content">';
-											
+
 												if(!empty($author_fb)){
 													$output .='<li><a href="'.$author_fb.'" target_blank><i class="pacz-icon-facebook"></i></a></li>';
 												}
@@ -185,10 +185,10 @@ get_header(); ?>
 												if(!empty($author_dribbble)){
 													$output .='<li><a href="'.$author_dribbble.'" target_blank><i class="pacz-icon-dribbble"></i></a></li>';
 												}
-											
+
 											$output .='</ul>';
 										$output .='</div>';
-									}	
+									}
 								$output .='</div>';
 							}
 						$output .='</div>';
@@ -229,18 +229,18 @@ get_header(); ?>
 					$single_listing_otherads_gridview_col = 2;
 				}
 				echo do_shortcode('[webdirectory-listings perpage="'.$single_listing_othoradd_limit.'" show_views_switcher="'.$single_listing_otherads_viewshitcher.'" hide_order="'.$hide_ordering_single_listing_otherads.'" hide_paginator="1" order_by="post_date" order="DESC" hide_count="1" listings_view_type="'.$single_listing_otherads_view_type.'" listings_view_grid_columns="'.$single_listing_otherads_gridview_col.'" author="'.$authorID.'"]');
-				
+
 			}
 			?>
-			
-<div class="clearboth"></div>	
-		
+
+<div class="clearboth"></div>
+
 		</div>
-		<?php if($layout != 'full') get_sidebar(); ?>	
+		<?php if($layout != 'full') get_sidebar(); ?>
 		</div>
-		
+
 		<div class="clearboth"></div>
-	</div>	
+	</div>
 </div>
 <?php endif; ?>
 <?php get_footer(); ?>
