@@ -41,13 +41,16 @@ position:relative}
 	display: none;
 }
 
-.dhvc-form-flat .dhvc-form-role-box i{
-	height: 17px!important;
-	margin: 0!important;
-	position: relative;
-	top: 0;
+#dhvcform-1878.dhvc-form-flat .dhvc-form-role-box i{
+    height: 17px!important;
+    margin: 0 6px 0 0!important;
+    position: relative;
+    top: 2px;
+    display: inline-block
 }
 
-.dhvc-form-flat .dhvc-form-role-box label{
+#dhvcform-1878.dhvc-form-flat .dhvc-form-role-box label{
 	line-height: 38px!important;
+    display: block;
+    padding-left: 0;
 }
