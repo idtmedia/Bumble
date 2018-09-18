@@ -12,105 +12,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="form-edit-account.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/classiadspro/woocommerce/myaccount/form-edit-account.php">
+      <file leaf-file-name="difp-class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/includes/difp-class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pacz_dhvc_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/pacz-custom-posts/includes/custom-post/shortcodes/pacz_dhvc_form.php">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+            <state relative-caret-position="186">
+              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/profile.tpl.php">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/classiadspro/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="84" column="57" lean-forward="false" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listing.tpl.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugins/listing/templates/frontend/listing.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="802" column="46" lean-forward="false" selection-start-line="802" selection-start-column="40" selection-end-line="802" selection-end-column="46" />
+            <state relative-caret-position="342">
+              <caret line="573" column="38" lean-forward="false" selection-start-line="573" selection-start-column="27" selection-end-line="573" selection-end-column="38" />
               <folding>
-                <marker date="1536594233000" expanded="true" signature="7516:7579" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="13030:13109" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="15156:15235" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="16525:16604" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="19488:19567" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="22862:22941" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="24538:24617" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="26519:26598" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="27679:27758" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="32368:32447" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="34259:34338" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="37802:37881" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="43129:43208" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="44536:44615" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="46950:47029" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="48334:48413" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="53126:53205" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="56756:56835" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="58082:58161" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="60131:60210" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-                <marker date="1536594233000" expanded="true" signature="64248:64327" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listings_controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/listing/classes/shortcodes/listings_controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1088">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comments.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/classiadspro/comments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3213">
-              <caret line="189" column="41" lean-forward="false" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class-direviews.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-reviews/includes/class-direviews.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2490">
-              <caret line="159" column="59" lean-forward="false" selection-start-line="159" selection-start-column="59" selection-end-line="159" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="author.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/classiadspro/author.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="227" column="22" lean-forward="false" selection-start-line="227" selection-start-column="22" selection-end-line="227" selection-end-column="22" />
-              <folding>
-                <element signature="e#6#184#0#PHP" expanded="true" />
+                <marker date="1537256525817" expanded="true" signature="15011:15024" ph="..." />
               </folding>
             </state>
           </provider>
@@ -135,8 +63,19 @@
       <find>comments.php</find>
       <find>comments_template</find>
       <find>comment</find>
+      <find>sh</find>
+      <find>shb]]</find>
+      <find>shb]]h</find>
+      <find>s</find>
+      <find>subscribe</find>
+      <find>subscriber</find>
+      <find>r</find>
+      <find>role</find>
+      <find>$roles</find>
+      <find>You do not have permission to access message system</find>
     </findStrings>
     <dirStrings>
+      <dir>D:\Projects\Bumble\Bumble\wp-content\plugins</dir>
       <dir>D:\Projects\Bumble\Bumble\wp-content</dir>
     </dirStrings>
   </component>
@@ -149,6 +88,7 @@
         <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/profile.tpl.php" />
         <option value="$PROJECT_DIR$/themes/classiadspro/single.php" />
         <option value="$PROJECT_DIR$/themes/classiadspro/author.php" />
+        <option value="$PROJECT_DIR$/themes/classiadspro/functions.php" />
       </list>
     </option>
   </component>
@@ -180,7 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -246,6 +185,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,6 +246,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -341,26 +287,28 @@
       <updated>1536913354086</updated>
       <workItem from="1536913355777" duration="2794000" />
       <workItem from="1537168183466" duration="4629000" />
+      <workItem from="1537255760243" duration="1346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7423000" />
+    <option name="totallyTimeSpent" value="8769000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22087745" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -380,46 +328,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/frontend/listing_single.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5916">
-          <caret line="351" column="12" lean-forward="false" selection-start-line="351" selection-start-column="12" selection-end-line="365" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/frontend/listing_single.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="299" column="34" lean-forward="false" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro/woocommerce/myaccount/form-edit-address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="56" column="110" lean-forward="false" selection-start-line="56" selection-start-column="98" selection-end-line="56" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/classiadspro/woocommerce/myaccount/form-edit-account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -430,7 +338,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/pacz-custom-posts/includes/custom-post/shortcodes/pacz_dhvc_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="1802">
           <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
           <folding />
         </state>
@@ -438,42 +346,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/profile.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="1428">
           <caret line="84" column="57" lean-forward="false" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro/views/blog/components/blog-single-comments.php">
+    <entry file="file://$PROJECT_DIR$/plugins/listing/classes/shortcodes/listings_controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro/author.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="227" column="22" lean-forward="false" selection-start-line="227" selection-start-column="22" selection-end-line="227" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#184#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-reviews/includes/class-direviews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="159" column="59" lean-forward="false" selection-start-line="159" selection-start-column="59" selection-end-line="159" selection-end-column="59" />
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -486,17 +368,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/classes/shortcodes/listings_controller.php">
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-reviews/includes/class-direviews.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1088">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="2703">
+          <caret line="159" column="59" lean-forward="false" selection-start-line="159" selection-start-column="59" selection-end-line="159" selection-end-column="59" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3859">
+          <caret line="227" column="22" lean-forward="false" selection-start-line="227" selection-start-column="22" selection-end-line="227" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#184#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/listing/templates/frontend/listing.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="13634">
           <caret line="802" column="46" lean-forward="false" selection-start-line="802" selection-start-column="40" selection-end-line="802" selection-end-column="46" />
           <folding>
             <marker date="1536594233000" expanded="true" signature="7516:7579" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
@@ -520,6 +412,173 @@
             <marker date="1536594233000" expanded="true" signature="58082:58161" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
             <marker date="1536594233000" expanded="true" signature="60131:60210" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
             <marker date="1536594233000" expanded="true" signature="64248:64327" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/frontend/listing_single.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/frontend/listing_single.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="299" column="34" lean-forward="false" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/woocommerce/myaccount/form-edit-address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="56" column="110" lean-forward="false" selection-start-line="56" selection-start-column="98" selection-end-line="56" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/woocommerce/myaccount/form-edit-account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/pacz-custom-posts/includes/custom-post/shortcodes/pacz_dhvc_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/profile.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="57" lean-forward="false" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/views/blog/components/blog-single-comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3723">
+          <caret line="227" column="22" lean-forward="false" selection-start-line="227" selection-start-column="22" selection-end-line="227" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#184#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-reviews/includes/class-direviews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2703">
+          <caret line="159" column="59" lean-forward="false" selection-start-line="159" selection-start-column="59" selection-end-line="159" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="189" column="41" lean-forward="false" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/classes/shortcodes/listings_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/frontend/listing.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="802" column="46" lean-forward="false" selection-start-line="802" selection-start-column="40" selection-end-line="802" selection-end-column="46" />
+          <folding>
+            <marker date="1536594233000" expanded="true" signature="7516:7579" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="13030:13109" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="15156:15235" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="16525:16604" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="19488:19567" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="22862:22941" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="24538:24617" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="26519:26598" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="27679:27758" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="32368:32447" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="34259:34338" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="37802:37881" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="43129:43208" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="44536:44615" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="46950:47029" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="48334:48413" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="53126:53205" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="56756:56835" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="58082:58161" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="60131:60210" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+            <marker date="1536594233000" expanded="true" signature="64248:64327" ph="SELECT id, t... ${$wpdb-&gt;prefix}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/includes/difp-class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="351" column="12" lean-forward="false" selection-start-line="351" selection-start-column="12" selection-end-line="365" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="573" column="38" lean-forward="false" selection-start-line="573" selection-start-column="27" selection-end-line="573" selection-end-column="38" />
+          <folding>
+            <marker date="1537256525817" expanded="true" signature="15011:15024" ph="..." />
           </folding>
         </state>
       </provider>
