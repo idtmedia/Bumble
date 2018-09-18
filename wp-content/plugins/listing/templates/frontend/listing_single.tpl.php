@@ -293,7 +293,7 @@ $id = uniqid();
                             <!-- Display the countdown timer in an element -->
                             <div class="alsp-field alsp-field-output-block alsp-field-output-block-string alsp-field-output-block-37">
                             <span class="alsp-field-caption">
-                                            <span class="alsp-field-name">Time left:</span>
+                                            <span class="alsp-field-name"><?php _e('THIS JOB WILL EXPIRE IN'); ?>:</span>
                                 </span>
                                                     <span class="alsp-field-content" id="time-countdown">
                             	</span>

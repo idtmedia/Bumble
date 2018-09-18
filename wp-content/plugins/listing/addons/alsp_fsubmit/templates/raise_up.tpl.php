@@ -4,7 +4,7 @@
 
 <p><?php _e('Listing will be raised up to the top of all lists, those ordered by date.', 'ALSP'); ?></p>
 <p><?php _e('Note, that listing will not stick on top, so new listings and other listings, those were raised up later, will place higher.', 'ALSP'); ?></p>
-
+<?php echo do_shortcode('[add_to_cart id="2802"]'); ?>
 <?php do_action('alsp_raise_up_html', $alsp_instance->current_listing); ?>
 
 <?php if ($frontend_controller->action == 'show'): ?>
