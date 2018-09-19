@@ -139,10 +139,18 @@
 							update_option('listing_image_height_'.$frontend_controller->hash, $listing_image_height);
 							update_option('main_block_hash', $frontend_controller->hash);
 						?>
-							
-						<article id="post-<?php the_ID(); ?>" class="<?php if ($frontend_controller->args['scroll'] == 1){ echo 'listing-scroll'; } ?> row alsp-listing <?php if($ALSP_ADIMN_SETTINGS['alsp_grid_masonry_display']){ ?> pacz-isotop-item isotop-item masonry-<?php echo $frontend_controller->hash; } ?> <?php  echo $alsp_responsive_col; ?> listing-post-style-<?php if (get_option('listing_style_to_show') == 'show_grid_style'){ echo $ALSP_ADIMN_SETTINGS['alsp_listing_post_style']; }else{ echo $ALSP_ADIMN_SETTINGS['alsp_listing_listview_post_style']; } ?> <?php if ($frontend_controller->listings[get_the_ID()]->level->featured) { echo 'alsp-featured';} ?> <?php if ($frontend_controller->listings[get_the_ID()]->level->sticky) echo 'alsp-sticky'; ?> clearfix" <?php if (get_option('listing_style_to_show') == 'show_grid_style'){ ?> style="padding-left:<?php echo $grid_padding; ?>px; padding-right: <?php echo $grid_padding; ?>px; margin-bottom: <?php echo $alsp_grid_margin_bottom; ?>px;" <?php } ?>>
+                            <?php  $bump_up = get_post_meta( get_the_ID(), '_content_field_39', true );
+                            $bump_class = "";
+                            if(($bump_up!="") && (time()-strtotime($bump_up)<604800)){
+                                $bump_class = "bumped";
+                            }
+                            ?>
+
+						<article id="post-<?php the_ID(); ?>" class="<?php echo $bump_class; ?> <?php if ($frontend_controller->args['scroll'] == 1){ echo 'listing-scroll'; } ?> row alsp-listing <?php if($ALSP_ADIMN_SETTINGS['alsp_grid_masonry_display']){ ?> pacz-isotop-item isotop-item masonry-<?php echo $frontend_controller->hash; } ?> <?php  echo $alsp_responsive_col; ?> listing-post-style-<?php if (get_option('listing_style_to_show') == 'show_grid_style'){ echo $ALSP_ADIMN_SETTINGS['alsp_listing_post_style']; }else{ echo $ALSP_ADIMN_SETTINGS['alsp_listing_listview_post_style']; } ?> <?php if ($frontend_controller->listings[get_the_ID()]->level->featured) { echo 'alsp-featured';} ?> <?php if ($frontend_controller->listings[get_the_ID()]->level->sticky) echo 'alsp-sticky'; ?> clearfix" <?php if (get_option('listing_style_to_show') == 'show_grid_style'){ ?> style="padding-left:<?php echo $grid_padding; ?>px; padding-right: <?php echo $grid_padding; ?>px; margin-bottom: <?php echo $alsp_grid_margin_bottom; ?>px;" <?php } ?>>
 							<div class="listing-wrapper clearfix">
-							<?php $frontend_controller->listings[get_the_ID()]->display(); ?>
+							<?php $frontend_controller->listings[get_the_ID()]->display();
+
+							?>
 							</div>
 						</article>
 						<?php endwhile; ?>

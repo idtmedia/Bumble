@@ -280,8 +280,11 @@ $id = uniqid();
                                         $life_time = 604800;
                                         break;
                                     case 3:
-                                    default:
                                         $life_time = 1209600;
+                                        break;
+                                    case 4:
+                                    default:
+                                        $life_time = 2592000;
                                         break;
                                 }
                                 $expiration_date_time = get_the_time('U') + $life_time;

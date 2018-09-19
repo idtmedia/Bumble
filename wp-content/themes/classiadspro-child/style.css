@@ -54,3 +54,7 @@ position:relative}
     display: block;
     padding-left: 0;
 }
+
+.bumped .listing-wrapper {
+    background: #fad03d;
+}

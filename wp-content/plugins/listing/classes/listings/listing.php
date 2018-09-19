@@ -389,8 +389,10 @@ class alsp_listing {
 				} else
 					$listings_ids[] = $this->post->ID;
 
-				foreach ($listings_ids AS $listing_id)
-					update_post_meta($listing_id, '_order_date', time());
+				foreach ($listings_ids AS $listing_id){
+                    update_post_meta($listing_id, '_order_date', time());
+                    update_post_meta($listing_id, '_content_field_39', date('Y-m-d H:i:s', time()));
+                }
 
 				return true;
 			}
