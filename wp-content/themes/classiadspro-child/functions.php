@@ -397,3 +397,91 @@ function createiveosc_user_contact_methods($createiveosc_user_contact)
 
 add_filter('user_contactmethods', 'createiveosc_user_contact_methods');
 
+/*function creativeosc_get_email(){
+    if(isset($_POST['cvf_action']) && $_POST['cvf_action'] == 'get_email' && ( $_POST['postalcode']!="" )) {
+        // echo $_POST['postalcode'];
+        // $responses = wp_remote_get('https://represent.opennorth.ca/postcodes/L5G4L3/');
+        if( is_wp_error( $request ) ) {
+            echo 'not found';
+        }else{
+            $request = wp_remote_get( 'https://represent.opennorth.ca/postcodes/'.$_POST['postalcode'].'/' );
+            $body = wp_remote_retrieve_body( $request );
+            $data = json_decode( $body );
+            if( ! empty( $data ) ) {
+                $email = array();
+                foreach( $data->representatives_centroid as $centroid ) {
+                    $email[] = $centroid->email;
+                }
+                echo implode(',', $email);
+            }
+        }
+
+    }
+    // Always exit to avoid further execution
+    exit();
+}
+add_action('wp_ajax_creativeosc_get_email', 'creativeosc_get_email');
+add_action('wp_ajax_nopriv_creativeosc_get_email', 'creativeosc_get_email');*/
+
+function get_client_ip() {
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP']))
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    else if(isset($_SERVER['REMOTE_ADDR']))
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    else
+        $ipaddress = '167.114.84.132';//default return Montreal/Quebec
+//    return '167.114.84.132';
+    return $ipaddress;
+}
+
+function get_current_address(){
+    $data = array();
+    $ip_address = get_client_ip();
+    $geo_data = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip_address));
+    $data['city'] = $geo_data['geoplugin_city'];
+    $data['state'] = $geo_data['geoplugin_region'];
+    $data['state_code'] = $geo_data['geoplugin_regionCode'];
+    return $data;
+}
+
+function get_current_city_state(){
+    $current_address = get_current_address();
+    $current_city_state = $current_address['city'].', '. $current_address['state_code'];
+    return $current_city_state;
+}
+
+function get_amount_matched_location(){
+    $current_address = get_current_address();
+    $args = array(
+       'role' => 'Contributor',
+        'meta_query' => array(
+            'relation' => 'AND',
+            array(
+                'key'     => 'city',
+//                'value'   => 'Montreal',
+                'value'   => $current_address['city'],
+                'compare' => '='
+            ),
+            array(
+                'key'     => 'state',
+//                'value'   => 'Quebec',
+                'value'   =>  $current_address['state'],
+                'compare' => '='
+            )
+        )
+    );
+
+    $contractors = new WP_User_Query( $args );
+
+    return $contractors->get_total();
+}
+

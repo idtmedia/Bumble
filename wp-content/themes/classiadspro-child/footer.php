@@ -317,5 +317,37 @@ $header_padding_type = $pacz_settings['sticky-header'] ? 'sticky-header' : 'none
 
 <?php wp_footer(); ?>
 
+<?php
+
+?>
+<script>
+    jQuery(document).ready(function(){
+        jQuery('#current-location').html('<?php echo get_current_city_state(); ?>');
+        jQuery('#contractors-amount').html('<?php echo get_amount_matched_location(); ?>');
+//        console.log('<?php //echo get_current_city_state()['geoplugin_city'].', '. get_current_city_state()['geoplugin_regionCode']; ?>//');
+//        var ajaxurl = '<?php //echo admin_url('admin-ajax.php'); ?>//';
+//        jQuery( "#postalcode" ).change(function() {
+            /*var data = {
+                'action': 'creativeosc_get_email',
+                'cvf_action': 'get_email',
+                'postalcode': jQuery('#postalcode').val()
+            };
+            jQuery.ajax({
+                type:"POST",
+                url: ajaxurl,
+                data: data,
+                success:function(data){
+                    if( data !="" && data!="no result" ){
+                        jQuery("#email-mp").attr('href', 'mailto:'+data+'?bcc=admin@canadatolebanon.ca&subject=Allowing%20direct%20travel%20from%20Canada%20to%20Lebanon&body=Dear%20MP%2C%0A%20%0AAs%20a%20constituent%20in%20your%20riding%20I%20wanted%20to%20bring%20an%20important%20issue%20to%20your%20attention.%0A%20%0ACanada%20is%20home%20to%20one%20of%20the%20largest%20Lebanese%20diasporas%20in%20the%20world.%20%20Although%20estimates%20vary%2C%20it%20is%20believed%20that%20almost%20quarter%20of%20a%20million%20Canadians%20are%20of%20Lebanese%20descent.%0A%20%0AIt%20should%20not%20come%20as%20a%20surprise%20therefore%20that%20the%20bonds%20between%20Canada%20and%20Lebanon%20go%20beyond%20just%20culture.%20%0A%20%0ATrade%2C%20tourism%20and%20innovation%20all%20forge%20strong%20connections%20between%20these%20two%20countries.%20%0A%20%0AUnfortunately%2C%20barriers%20to%20further%20expanding%20and%20improving%20these%20links%20remain.%0A%20%0AI%20support%20expanding%20and%20improving%20trade%2C%20tourism%20and%20innovation%20links%20between%20Canada%20and%20Lebanon%20to%20help%20better%20open%20markets%20and%20grow%20our%20economy.%20Direct%20flights%20between%20Canada%20and%20Lebanon%20would%20provide%20a%20strong%20boost.%0A%20%0ALet%27s%20add%20this%20key%20growth%20cornerstone.%0A%20%0ACan%20I%20count%20on%20your%20support%20to%20establish%20direct%20flights%20between%20Canada%20and%20Lebanon%3F%0A%20%0AThank%20you%2C');
+                    }
+
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            });*/
+//        });
+    });
+</script>
 </body>
 </html>
