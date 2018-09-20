@@ -6,25 +6,27 @@
 */
 
 /* enqueue parent stylesheet */
-function pacz_enqueue_styles() {
+function pacz_enqueue_styles()
+{
 
     $parent_style = 'parent-style';
 
-    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style',
+    wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('child-style',
         get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style ),time()
+        array($parent_style), time()
     );
 }
-add_action( 'wp_enqueue_scripts', 'pacz_enqueue_styles' );
+
+add_action('wp_enqueue_scripts', 'pacz_enqueue_styles');
 
 add_action('wp_head', 'font_stye_addddd', 100);
 
 function font_stye_addddd()
 {
- echo "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet'>";
-	echo "<style>";
-	echo "
+    echo "<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet'>";
+    echo "<style>";
+    echo "
 	
 header#pacz-header {
     position: absolute;
@@ -277,19 +279,19 @@ header.main-header a.logo img {
     z-index: 9999999999;
 }
 	";
-	echo "</style>";
+    echo "</style>";
 }
 
 add_role(
     'contractor',
-    __( 'Contractor' ),
+    __('Contractor'),
     array(
-        'read'         => true,  // true allows this capability
-        'edit_posts'   => true,
+        'read' => true,  // true allows this capability
+        'edit_posts' => true,
     )
 );
 
-remove_role( 'constractor' );
+remove_role('constractor');
 
 // add a link to the WP Toolbar
 /* function Edit_listing_custom_toolbar_link($wp_admin_bar) {
@@ -322,56 +324,76 @@ function daynamic_image_for_email(){
 */
 
 
-add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
+add_filter('wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3);
 
-function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user, $blogname ) {
-    $wp_new_user_notification_email['subject'] = sprintf( '[%s] New user %s test registered.', $blogname, $user->user_login );
-    $wp_new_user_notification_email['message'] = sprintf( "%s ( %s ) test has registerd to your blog %s.", $user->user_login, $user->user_email, $blogname );
+function custom_wp_new_user_notification_email($wp_new_user_notification_email, $user, $blogname)
+{
+    $wp_new_user_notification_email['subject'] = sprintf('[%s] New user %s test registered.', $blogname, $user->user_login);
+    $wp_new_user_notification_email['message'] = sprintf("%s ( %s ) test has registerd to your blog %s.", $user->user_login, $user->user_email, $blogname);
     return $wp_new_user_notification_email;
 }
 
-add_action( 'wp', 'unpublish_expired_listings_hourly' );
-function unpublish_expired_listings_hourly() {
-    if ( ! wp_next_scheduled( 'unpublish_expired_listings' ) ) {
-        wp_schedule_event( time(), 'hourly', 'unpublish_expired_listings');
+add_action('wp', 'unpublish_expired_listings_hourly');
+function unpublish_expired_listings_hourly()
+{
+    if (!wp_next_scheduled('unpublish_expired_listings')) {
+        wp_schedule_event(time(), 'hourly', 'unpublish_expired_listings');
     }
 }
-add_action( 'unpublish_expired_listings', 'unpublish_expired_listings_callback' );
+
+add_action('unpublish_expired_listings', 'unpublish_expired_listings_callback');
 
 //https://wordpress.stackexchange.com/questions/152786/posts-to-expire-deleted-after-a-date
-function unpublish_expired_listings_callback() {
+function unpublish_expired_listings_callback()
+{
     $args = array(
         'post_type' => 'alsp_listing',
         'posts_per_page' => -1
     );
 
-	$listings = new WP_Query($args);
-	if ($listings->have_posts()):
-		while($listings->have_posts()): $listings->the_post();    
+    $listings = new WP_Query($args);
+    if ($listings->have_posts()):
+        while ($listings->have_posts()): $listings->the_post();
 
-			$duration = get_post_meta( get_the_ID(), '_content_field_38', true );
-			if($duration>0){			
-				switch($duration){
-					case 1:
-						$life_time = 259200;
-						break;
-					case 2: 
-						$life_time = 604800;
-						break;
-					case 3:
-						$life_time = 1209600;
-						break;
+            $duration = get_post_meta(get_the_ID(), '_content_field_38', true);
+            if ($duration > 0) {
+                switch ($duration) {
+                    case 1:
+                        $life_time = 259200;
+                        break;
+                    case 2:
+                        $life_time = 604800;
+                        break;
+                    case 3:
+                        $life_time = 1209600;
+                        break;
                     case 4:
-					default:
-						$life_time = 2592000;
-						break;
-				}
-				$expiration_date_time = get_the_time('U') + $life_time;
-				if ($expiration_date_time < time()) {
-					$post = array( 'ID' => get_the_ID(), 'post_status' => 'draft' );
-					wp_update_post($post);             
-				}
-			}
-		endwhile;
-		endif;
+                    default:
+                        $life_time = 2592000;
+                        break;
+                }
+                $expiration_date_time = get_the_time('U') + $life_time;
+                if ($expiration_date_time < time()) {
+                    $post = array('ID' => get_the_ID(), 'post_status' => 'draft');
+                    wp_update_post($post);
+                }
+            }
+        endwhile;
+    endif;
 }
+
+//Add new customer fields: city, country, zip code
+
+// Add User Contact Methods
+function createiveosc_user_contact_methods($createiveosc_user_contact)
+{
+    $createiveosc_user_contact['city'] = __('City', 'classiadspro-child');
+    $createiveosc_user_contact['postalcode'] = __('Postal Code', 'classiadspro-child');
+    $createiveosc_user_contact['state'] = __('State', 'classiadspro-child');
+    $createiveosc_user_contact['country'] = __('Country', 'classiadspro-child');
+
+    return $createiveosc_user_contact;
+}
+
+add_filter('user_contactmethods', 'createiveosc_user_contact_methods');
+

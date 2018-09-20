@@ -174,6 +174,7 @@
 						<select name="display_name" class="form-control">
 						<?php
 							$public_display = array();
+
 							$public_display['display_username']  = $frontend_controller->user->user_login;
 							$public_display['display_nickname']  = $frontend_controller->user->nickname;
 							if (!empty($profileuser->first_name))
@@ -291,6 +292,23 @@
 						<label for="email"><?php _e('Address', 'ALSP'); ?></label>
 						<input type="text" name="address" class="form-control" value="<?php echo esc_attr($frontend_controller->user->address); ?>" />
 					</p>
+					<p>
+						<label for="email"><?php _e('City', 'ALSP'); ?></label>
+						<input type="text" name="city" class="form-control" value="<?php echo esc_attr($frontend_controller->user->city); ?>" />
+					</p>
+					<p>
+						<label for="email"><?php _e('State', 'ALSP'); ?></label>
+						<input type="text" name="state" class="form-control" value="<?php echo esc_attr($frontend_controller->user->state); ?>" />
+					</p>
+                    <p>
+                        <label for="email"><?php _e('Postcode', 'ALSP'); ?></label>
+                        <input type="text" name="postalcode" class="form-control" value="<?php echo esc_attr($frontend_controller->user->postalcode); ?>" />
+                    </p>
+					<p>
+						<label for="email"><?php _e('County', 'ALSP'); ?></label>
+						<input type="text" name="country" class="form-control" value="<?php echo esc_attr($frontend_controller->user->country); ?>" />
+					</p>
+
 					<div class="clearfix"></div>
 					<div class="billing-fileds">
 					<?php //endif; ?>
