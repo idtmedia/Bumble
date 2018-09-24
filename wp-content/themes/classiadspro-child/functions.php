@@ -485,3 +485,47 @@ function get_amount_matched_location(){
     return $contractors->get_total();
 }
 
+/*
+     * Add columns to exhibition post list
+     */
+function add_acf_columns ( $columns ) {
+    return array_merge ( $columns, array (
+        'contractor' => __ ( 'Contractor' ),
+        'rater'   => __ ( 'Rated By' ),
+        'score'   => __ ( 'Score' ),
+    ) );
+}
+add_filter ( 'manage_ratingcontractor_posts_columns', 'add_acf_columns' );
+
+/*
+* Add columns to ratingcontractor post list
+*/
+function exhibition_custom_column ( $column, $post_id ) {
+
+    switch ( $column ) {
+        case 'contractor':
+            $user_info = get_userdata(get_post_meta ( $post_id, 'contractor', true ));
+            echo $user_info->user_login;
+            break;
+        case 'rater':
+            $user_info = get_userdata(get_post_meta ( $post_id, 'rater', true ));
+            echo $user_info->user_login;
+            //echo get_post_meta ( $post_id, 'rater', true );
+            break;
+        case 'score':
+            echo get_post_meta ( $post_id, 'score', true );
+            break;
+    }
+}
+add_action ( 'manage_ratingcontractor_posts_custom_column', 'exhibition_custom_column', 10, 2 );
+
+function get_current_user_role() {
+    if(is_user_logged_in()) {
+        $user = wp_get_current_user();
+        $role = (array) $user->roles;
+        return $role[0];
+    }
+    else {
+        return false;
+    }
+}
