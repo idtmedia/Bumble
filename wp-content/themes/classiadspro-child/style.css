@@ -58,3 +58,7 @@ position:relative}
 .bumped .listing-wrapper {
     background: #fad03d;
 }
+
+.author #pacz-page-title{
+    display: none;
+}

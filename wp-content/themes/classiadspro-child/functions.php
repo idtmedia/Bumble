@@ -529,3 +529,22 @@ function get_current_user_role() {
         return false;
     }
 }
+
+add_action( 'user_register', 'creativeosc_user_register' );
+function creativeosc_user_register( $user_id ) {
+    if ( ! empty( $_POST['address'] ) ) {
+        update_user_meta( $user_id, 'address', $_POST['address'] );
+    }
+    if ( ! empty( $_POST['city'] ) ) {
+        update_user_meta( $user_id, 'city', $_POST['city'] );
+    }
+    if ( ! empty( $_POST['state'] ) ) {
+        update_user_meta( $user_id, 'state', $_POST['state'] );
+    }
+    if ( ! empty( $_POST['postalcode'] ) ) {
+        update_user_meta( $user_id, 'postalcode', $_POST['postalcode'] );
+    }
+    if ( ! empty( $_POST['country'] ) ) {
+        update_user_meta( $user_id, 'country', $_POST['country'] );
+    }
+}

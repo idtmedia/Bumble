@@ -289,24 +289,28 @@
 					</p>
 					<?php } ?>
 					<p>
-						<label for="email"><?php _e('Address', 'ALSP'); ?></label>
+						<label for="address"><?php _e('Address', 'ALSP'); ?></label>
 						<input type="text" name="address" class="form-control" value="<?php echo esc_attr($frontend_controller->user->address); ?>" />
 					</p>
 					<p>
-						<label for="email"><?php _e('City', 'ALSP'); ?></label>
+						<label for="city"><?php _e('City', 'ALSP'); ?></label>
 						<input type="text" name="city" class="form-control" value="<?php echo esc_attr($frontend_controller->user->city); ?>" />
 					</p>
 					<p>
-						<label for="email"><?php _e('State', 'ALSP'); ?></label>
+						<label for="state"><?php _e('State', 'ALSP'); ?></label>
 						<input type="text" name="state" class="form-control" value="<?php echo esc_attr($frontend_controller->user->state); ?>" />
 					</p>
                     <p>
-                        <label for="email"><?php _e('Postcode', 'ALSP'); ?></label>
+                        <label for="postalcode"><?php _e('Postcode', 'ALSP'); ?></label>
                         <input type="text" name="postalcode" class="form-control" value="<?php echo esc_attr($frontend_controller->user->postalcode); ?>" />
                     </p>
 					<p>
-						<label for="email"><?php _e('County', 'ALSP'); ?></label>
+						<label for="country"><?php _e('Country', 'ALSP'); ?></label>
 						<input type="text" name="country" class="form-control" value="<?php echo esc_attr($frontend_controller->user->country); ?>" />
+					</p>
+					<p>
+						<label for="email"><?php _e('Description', 'ALSP'); ?></label>
+                        <textarea name="description" class="form-control" style="min-height: 100px; line-height: 1.6;"><?php echo esc_attr($frontend_controller->user->description); ?></textarea>
 					</p>
 
 					<div class="clearfix"></div>

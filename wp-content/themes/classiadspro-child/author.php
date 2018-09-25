@@ -21,6 +21,7 @@ if (class_exists('alsp_plugin')):
 
     $author_img_url = get_the_author_meta('pacz_author_avatar_url', $authorID, true);
     $author_name = get_the_author_meta('display_name', $authorID);
+    $description = get_the_author_meta('description', $authorID);
     if ($ALSP_ADIMN_SETTINGS['frontend_panel_user_phone']) {
         $phone_number = get_the_author_meta('user_phone', $authorID);
     }
@@ -220,6 +221,12 @@ if (class_exists('alsp_plugin')):
 //                        echo $contractor_role[0];
                         if( $contractor_role[0] == 'contributor'):
                         ?>
+                            <div id="biography">
+                                <section>
+                                    <div class="single-post-fancy-title comments-heading-label"><span>Biography</span></div>
+                                    <div><?php echo $description; ?></div>
+                                </section>
+                            </div>
                         <div id="comments-reviews">
                             <section id="comments">
                                 <?php

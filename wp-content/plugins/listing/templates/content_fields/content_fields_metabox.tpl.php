@@ -54,8 +54,11 @@
 			<p class="col-md-12 alsp-description-big"><?php _e('Content fields may be dependent on selected categories', 'ALSP'); ?></p>
 			<?php
 			foreach ($content_fields AS $content_field) {
-				if (!$content_field->is_core_field)
-					$content_field->renderInput();
+			    if($content_field->slug !="raised_up_date"){ // ThangNN: Hide this field from job posting
+                    if (!$content_field->is_core_field)
+                        $content_field->renderInput();
+                }
+
 			}
 			?>
 		</div>
