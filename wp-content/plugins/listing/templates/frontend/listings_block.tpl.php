@@ -1,11 +1,11 @@
 <?php
-		$GLOBALS['view_switcher_status'] = 'off'; $GLOBALS['listing_view_style'] ='off'; 
+		$GLOBALS['view_switcher_status'] = 'off'; $GLOBALS['listing_view_style'] ='off';
 			if ($frontend_controller->args['listings_view_type'] == 'list'){
 				$GLOBALS['view_switcher_type'] = 'list';
 			}else{
 				$GLOBALS['view_switcher_type'] = 'grid';
 			}
-			
+
 			if(($frontend_controller->args['listings_view_type'] == 'grid' && !isset($_COOKIE['alsp_listings_view_'.$frontend_controller->hash])) || (isset($_COOKIE['alsp_listings_view_'.$frontend_controller->hash]) && $_COOKIE['alsp_listings_view_'.$frontend_controller->hash] == 'grid')){
 				$listing_style_to_show = 'show_grid_style';
 				update_option('listing_style_to_show', $listing_style_to_show);
@@ -19,7 +19,10 @@
 				$listing_style_to_show = 'show_grid_style';
 				update_option('listing_style_to_show', $listing_style_to_show);
 			}
-		global $ALSP_ADIMN_SETTINGS;
+            $listing_style_to_show = 'show_list_style';
+            update_option('listing_style_to_show',  'show_list_style');
+
+global $ALSP_ADIMN_SETTINGS;
 		$detect = new Mobile_Detect;
 		if($ALSP_ADIMN_SETTINGS['alsp_grid_masonry_display'] && $listing_style_to_show == 'show_grid_style' && !$detect->isMobile()){
 			$masonry = 'masonry';

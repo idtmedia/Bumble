@@ -62,3 +62,15 @@ position:relative}
 .author #pacz-page-title{
     display: none;
 }
+
+.page-template-default .alsp-listing-header h2 a:hover,
+.page-template-default .alsp-price,
+.page-template-default .premium-listing-text span,
+.page-template-default .alsp-price:hover,
+.page-template-default .view-all-btn, .view-all-btn:hover {
+    color: #000!important;
+    text-decoration: underline!important;
+}
+.author-name-header .author-displayname, .author-name-header span.author-nicename{
+    color: #000!important;
+}
