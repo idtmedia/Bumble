@@ -55,8 +55,8 @@ position:relative}
     padding-left: 0;
 }
 
-.bumped .listing-wrapper {
-    background: #fad03d;
+article.alsp-listing.listing-post-style-listview_ultra.bumped {
+    border: 2px solid #fad03d;
 }
 
 .author #pacz-page-title{
