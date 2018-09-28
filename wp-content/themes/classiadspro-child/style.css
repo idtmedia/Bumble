@@ -74,3 +74,7 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 .author-name-header .author-displayname, .author-name-header span.author-nicename{
     color: #000!important;
 }
+.theme-content .vc-row-content{
+    background: #fff;
+    padding-bottom: 30px!important;
+}

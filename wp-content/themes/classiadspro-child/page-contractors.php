@@ -20,14 +20,14 @@ get_header(); ?>
             <div class="theme-page-wrapper pacz-main-wrapper <?php echo esc_attr($layout); ?>-layout pacz-grid vc_row-fluid">
                 <div class="inner-page-wrapper">
                     <div class="theme-content" itemprop="mainContentOfPage">
-                        <div class="vc_row wpb_row vc_row-fluid"
+                        <div class="vc-row-content vc_row wpb_row vc_row-fluid"
                              style="padding-top:0px;padding-bottom:0px; margin-top:0px; margin-bottom:100px; top:0px; bottom:0px; z-index:; margin-left:px; margin-right:px; box-shadow:;  overflow:; position:relative;">
                             <div class="wpb_column vc_column_container vc_col-sm-12">
                                 <div class="vc_column-inner ">
                                     <div class="wpb_wrapper">
                                         <div class="listings listing-archive alsp-content">
                                             <div class="main-search-bar">
-                                                <form action="http://pwmhosting.ca/classiad/listings/"
+                                                <form action=""
                                                       class="search-form-style3 alsp-content alsp-search-form">
                                                     <input type="hidden" name="alsp_action" value="search">
                                                     <input type="hidden" name="hash" value="<?php echo $frontend_controller->hash; ?>">
@@ -44,7 +44,7 @@ get_header(); ?>
                                                                                                            value="">
                                                             </div>
 
-                                                            <script>
+                                                           <!-- <script>
                                                                 (function ($) {
                                                                     "use strict";
 
@@ -54,7 +54,7 @@ get_header(); ?>
                                                                         });
                                                                     });
                                                                 })(jQuery);
-                                                            </script>
+                                                            </script>-->
                                                             <div class="search-element-col alsp-has-feedback pull-left"
                                                                  style="width:25%; padding:0 10px;"><input type="text"
                                                                                                            name="address"
@@ -63,8 +63,8 @@ get_header(); ?>
                                                                                                            placeholder="Enter address or zip code"
                                                                                                            value=""
                                                                                                            autocomplete="off">
-                                                                <span class="alsp-get-location alsp-get-location-9447 glyphicon glyphicon-screenshot form-control-feedback"
-                                                                      title="Get my location"></span>
+                                                                <!--<span class="alsp-get-location alsp-get-location-9447 glyphicon glyphicon-screenshot form-control-feedback"
+                                                                      title="Get my location"></span>-->
                                                             </div>
 
 
@@ -84,11 +84,12 @@ get_header(); ?>
                                                  style="margin:0 -15px;"
                                                  id="alsp-controller-<?php echo $frontend_controller->hash; ?>"
                                                  data-controller-hash="<?php echo $frontend_controller->hash; ?>">
+                                                <?php $per_page = 4; ?>
                                                 <script>
                                                     alsp_controller_args_array['<?php echo $frontend_controller->hash; ?>'] = {
                                                         "controller": "contractor_controller",
                                                         "base_url": "<?php echo get_site_url(); ?>/contractors",
-                                                        "perpage": "8",
+                                                        "perpage": "<?php echo $per_page; ?>",
                                                         "paged": 1,
                                                         "listings_view_grid_columns": 4,
                                                         "logo_animation_effect": 6
@@ -103,7 +104,8 @@ get_header(); ?>
                                                          data-style="masonry"
                                                          data-uniqid="<?php echo $frontend_controller->hash; ?>">
                                                          <?php
-                                                         $contractor_query = new WP_User_Query( array( 'role' => 'Contributor', 'number' => 8 ) );
+
+                                                         $contractor_query = new WP_User_Query( array( 'role' => 'Contributor', 'number' => $per_page ) );
                                                          // User Loop
                                                          if ( ! empty( $contractor_query->get_results() ) ):
                                                              foreach ( $contractor_query->get_results() as $contractor ):
@@ -125,11 +127,11 @@ get_header(); ?>
                                                                          <figure class="alsp-listing-logo alsp-listings-own-page">
                                                                              <a href="<?php echo get_site_url().'/author/'.$contractor->user_login; ?>">
                                                                                  <?php if (!empty($contractor_img_url)) {
-                                                                                 $params = array('width' => 300, 'height' => 370, 'crop' => true);
+                                                                                 $params = array('width' => 300, 'height' => 370, 'crop' => false);
                                                                                  ?>
                                                                              <img
                                                                              alt="<?php echo $contractor_name; ?>"
-                                                                             src="<?php echo bfi_thumb("$contractor_img_url", $params); ?>"
+                                                                             src="<?php echo $contractor_img_url //bfi_thumb("$contractor_img_url", $params); ?>"
                                                                              width="370" height="260">
                                                                              <?php
                                                                                  } else {
@@ -187,9 +189,6 @@ get_header(); ?>
                                                              echo 'No contractors found.';
                                                          endif;
                                                         ?>
-
-
-
                                                     </div>
 
                                                     <button class="btn btn-primary btn-lg btn-block alsp-show-more-button pacz-new-btn-4"

@@ -32,8 +32,8 @@ class alsp_ajax_controller {
 
 		switch ($post_args['controller']) {
             case "contractor_controller": //ThangNN's additional code
-                $shortcode_atts = array_merge(array(
-                    'perpage' => 8,
+                /*$shortcode_atts = array_merge(array(
+                    'perpage' => 4,
                     'onepage' => 0,
                     'sticky_featured' => 0,
                     'order_by' => 'post_date',
@@ -59,7 +59,8 @@ class alsp_ajax_controller {
                     'gutter' => '30' , //cz custom
                     'paged' => 1,
                     'template' => array('frontend/listings_block.tpl.php'),
-                ), $post_args);
+                ), $post_args);*/
+                $shortcode_atts = $post_args;
                 // Strongly required for paginator
 //                set_query_var('page', $shortcode_atts['paged']);
                 $controller = new alsp_frontend_controller();
@@ -67,7 +68,12 @@ class alsp_ajax_controller {
                 $controller->hash = $post_args['hash'];
                 $controller->args = $shortcode_atts;
                 $controller->request_by = 'contractor_controller';
-                $controller->custom_home = (isset($shortcode_atts['custom_home']) && $shortcode_atts['custom_home']);
+//                $controller->custom_home = (isset($shortcode_atts['custom_home']) && $shortcode_atts['custom_home']);
+
+                $total_contractor_query = new WP_User_Query( array( 'role' => 'Contributor' ) );
+                $total_contactors =  $total_contractor_query->get_total();
+                $number_pages = ceil($total_contactors / $shortcode_atts['perpage']);
+//                echo $number_pages;
 
                 $args = array(
                     /*'post_type' => ALSP_POST_TYPE,
@@ -79,20 +85,8 @@ class alsp_ajax_controller {
 //                    'number' => $shortcode_atts['perpage'],
 //                    'offset' =>   $shortcode_atts['paged']*$shortcode_atts['perpage']
                     'number' =>  $shortcode_atts['perpage'],
-                    'offset' =>  ($post_args['paged']-1)*$shortcode_atts['perpage']
+                    'offset' =>  ($shortcode_atts['paged']-1)*$shortcode_atts['perpage']
                 );
-
-//                var_dump($args);
-
-                /*$args = apply_filters('alsp_search_args', $args, $shortcode_atts, true, $controller->hash);
-
-
-                // found some plugins those break WP_Query by injections in pre_get_posts action, so decided to remove this hook temporarily
-                global $wp_filter;
-                if (isset($wp_filter['pre_get_posts'])) {
-                    $pre_get_posts = $wp_filter['pre_get_posts'];
-                    unset($wp_filter['pre_get_posts']);
-                }*/
                 $controller->query = new WP_User_Query($args);
                 //var_dump($controller->query->request);
 
@@ -119,80 +113,61 @@ class alsp_ajax_controller {
                 $grid_padding = $ALSP_ADIMN_SETTINGS['alsp_grid_padding'];
                 $alsp_grid_margin_bottom = $ALSP_ADIMN_SETTINGS['alsp_grid_margin_bottom'];
                 $listings_html = '';
-                if (!isset($post_args['without_listings']) || !$post_args['without_listings']) {
-                    if (isset($post_args['do_append']) && $post_args['do_append']) {
-                        if ( !empty($controller->query->get_results()))
-                            foreach ($controller->query->get_results() as $contractor) {
-                                $contractorID = $contractor->ID;
-                                $contractor_img_url = get_the_author_meta('pacz_author_avatar_url', $contractorID, true);
-                                $contractor_name = get_the_author_meta('display_name', $contractorID);
-                                $contractor_address =      get_the_author_meta('address', $contractorID, true)
-                                    .', '.get_the_author_meta('city', $contractorID, true)
-                                    .', '.get_the_author_meta('state', $contractorID, true)
-                                    .', '.get_the_author_meta('postalcode', $contractorID, true)
-                                    .', '.get_the_author_meta('country', $contractorID, true);
-                               if (!empty($contractor_img_url)) {
-                                    $params = array('width' => 300, 'height' => 370, 'crop' => true);
-                                    $imageUrl = bfi_thumb("$contractor_img_url", $params);
+        if ( !empty($controller->query->get_results()))
+            foreach ($controller->query->get_results() as $contractor) {
+                $contractorID = $contractor->ID;
+                $contractor_img_url = get_the_author_meta('pacz_author_avatar_url', $contractorID, true);
+                $contractor_name = get_the_author_meta('display_name', $contractorID);
+                $contractor_address =      get_the_author_meta('address', $contractorID, true)
+                    .', '.get_the_author_meta('city', $contractorID, true)
+                    .', '.get_the_author_meta('state', $contractorID, true)
+                    .', '.get_the_author_meta('postalcode', $contractorID, true)
+                    .', '.get_the_author_meta('country', $contractorID, true);
+               if (!empty($contractor_img_url)) {
+                    $params = array('width' => 300, 'height' => 370, 'crop' => true);
+                    $imageUrl = $contractor_img_url; //bfi_thumb("$contractor_img_url", $params);
 
-                                } else {
-                                    $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', $contractorID), $size = '300');
-                                   $imageUrl = $avatar_url;
-                                }
-                                $listings_html .= '<article id="post-' . $contractorID . '" class="row alsp-listing listing-post-style-grid pacz-isotop-item isotop-item masonry-'.$controller->hash.'   clearfix isotope-item  " style="padding-left:'.$grid_padding.'px; padding-right:'.$grid_padding.'px; margin-bottom:'.$alsp_grid_margin_bottom.'px;" >';
-                                $listings_html .= '<div class="listing-wrapper clearfix">';
-                                //$listings_html .= $listing_style_to_show;
-//                                $listings_html .= $controller->listings[$contractorID]->display(false, true);
-//                                $listings_html .=  $shortcode_atts['paged'];
-                                $listings_html .= '<figure class="alsp-listing-logo alsp-listings-own-page">
-                                                     <a href="'.get_site_url().'/author/'.$contractor->user_login.'">
-                                                         
-                                                            <img
-                                                                alt="'.$contractor_name.'"
-                                                                src="'.$imageUrl.'"
-                                                                width="370" height="260">                                                                                  
-                                                        </a></figure>
-                                                        <div class="clearfix alsp-listing-text-content-wrap">                                                                                
-                                                            <header class="alsp-listing-header"><h2><a
-                                                                        href="'.get_site_url().'/author/'.$contractor->user_login.'"
-                                                                        title="'.$contractor_name.'">'.$contractor_name.'</a>
-                                                                    <!--<span
-                                                                            class="author-unverified pacz-icon-check-circle"></span>-->
-                                                                </h2></header>
-                                                            <p class="listing-location"><i
-                                                                    class="pacz-fic3-pin-1"></i><span
-                                                                    class="alsp-location" itemprop="address"
-                                                                    itemscope=""
-                                                                    itemtype="http://schema.org/PostalAddress"><span
-                                                                        class="alsp-show-on-map"
-                                                                        data-location-id=""><span
-                                                                            itemprop="streetAddress">'.$contractor_address.'</span></span>
-                                                            </p>
-                                                        </div>';
-                                 $listings_html .= '</div>';
-                                $listings_html .= '</article>';
-                            }
-                        unset($controller->args['do_append']);
-                    } else
-                        $listings_html = alsp_frontendRender('frontend/listings_block.tpl.php', array('frontend_controller' => $controller), true);
+                } else {
+                    $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', $contractorID), $size = '300');
+                   $imageUrl = $avatar_url;
                 }
+                $listings_html .= '<article id="post-' . $contractorID . '" class="row alsp-listing listing-post-style-grid pacz-isotop-item isotop-item masonry-'.$controller->hash.'   clearfix isotope-item  " style="padding-left:'.$grid_padding.'px; padding-right:'.$grid_padding.'px; margin-bottom:'.$alsp_grid_margin_bottom.'px;" >';
+                $listings_html .= '<div class="listing-wrapper clearfix">';
+                $listings_html .= '<figure class="alsp-listing-logo alsp-listings-own-page">
+                                     <a href="'.get_site_url().'/author/'.$contractor->user_login.'">
+                                         
+                                            <img
+                                                alt="'.$contractor_name.'"
+                                                src="'.$imageUrl.'"
+                                                width="370" height="260">                                                                                  
+                                        </a></figure>
+                                        <div class="clearfix alsp-listing-text-content-wrap">                                                                                
+                                            <header class="alsp-listing-header"><h2><a
+                                                        href="'.get_site_url().'/author/'.$contractor->user_login.'"
+                                                        title="'.$contractor_name.'">'.$contractor_name.'</a>
+                                                    <!--<span
+                                                            class="author-unverified pacz-icon-check-circle"></span>-->
+                                                </h2></header>
+                                            <p class="listing-location"><i
+                                                    class="pacz-fic3-pin-1"></i><span
+                                                    class="alsp-location" itemprop="address"
+                                                    itemscope=""
+                                                    itemtype="http://schema.org/PostalAddress"><span
+                                                        class="alsp-show-on-map"
+                                                        data-location-id=""><span
+                                                            itemprop="streetAddress">'.$contractor_address.'</span></span>
+                                            </p>
+                                        </div>';
+                 $listings_html .= '</div>';
+                $listings_html .= '</article>';
+            }
                 wp_reset_postdata();
 
                 $out = array(
                     'html' => $listings_html,
                     'hash' => $controller->hash,
-//                    'map_markers' => (($controller->google_map) ? $controller->google_map->locations_option_array : ''),
-                    'hide_show_more_listings_button' => ($shortcode_atts['paged'] >= $controller->query->max_num_pages) ? 1 : 0,
+                    'hide_show_more_listings_button' => ($shortcode_atts['paged'] >= $number_pages) ? 1 : 0,
                 );
-
-//                if (isset($alsp_instance->radius_values_array[$controller->hash]) && isset($alsp_instance->radius_values_array[$controller->hash]['x_coord']) && isset($alsp_instance->radius_values_array[$controller->hash]['y_coord'])) {
-//                    $out['radius_params'] = array(
-//                        'radius_value' => $alsp_instance->radius_values_array[$controller->hash]['radius'],
-//                        'map_coords_1' => $alsp_instance->radius_values_array[$controller->hash]['x_coord'],
-//                        'map_coords_2' => $alsp_instance->radius_values_array[$controller->hash]['y_coord'],
-//                        'dimension' => $ALSP_ADIMN_SETTINGS['alsp_miles_kilometers_in_search']
-//                    );
-//                }
 
                 echo json_encode($out);
 
