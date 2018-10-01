@@ -260,7 +260,7 @@ if (class_exists('alsp_plugin')):
                                                             $user_info = get_userdata($rater['ID']);
                                                             $author_img_url = get_the_author_meta('pacz_author_avatar_url', $user_info->ID, true);
                                                             if (!empty($author_img_url)) {
-                                                                $params = array('width' => 300, 'height' => 370, 'crop' => true);
+                                                                $params = array('width' => 300, 'height' => 300, 'crop' => true);
                                                                 echo "<img src='" . bfi_thumb("$author_img_url", $params) . "' alt='' />";
                                                             } else {
                                                                 $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', get_field('rater')), $size = '300');

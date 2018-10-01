@@ -22,7 +22,16 @@
 
 <?php
 
-
+//$args = array(
+//    'post_type' => 'alsp_listing',
+//);
+//$cpts = new WP_Query($args);
+//$meta_values = array();
+//if($cpts->have_posts()) : while($cpts->have_posts() ) : $cpts->the_post();
+//    $meta_values[] = get_post_meta($post->ID);
+//endwhile; endif;
+//var_dump($meta_values);
+//_expiration_date
 	
 
 

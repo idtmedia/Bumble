@@ -78,3 +78,7 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
     background: #fff;
     padding-bottom: 30px!important;
 }
+.home .author-name-header .author-displayname, .home .author-name-header span.author-nicename
+{
+	color: #fff!important;
+} 

@@ -333,7 +333,7 @@ function custom_wp_new_user_notification_email($wp_new_user_notification_email, 
     return $wp_new_user_notification_email;
 }
 
-add_action('wp', 'unpublish_expired_listings_hourly');
+/*add_action('wp', 'unpublish_expired_listings_hourly');
 function unpublish_expired_listings_hourly()
 {
     if (!wp_next_scheduled('unpublish_expired_listings')) {
@@ -374,13 +374,15 @@ function unpublish_expired_listings_callback()
                 }
                 $expiration_date_time = get_the_time('U') + $life_time;
                 if ($expiration_date_time < time()) {
-                    $post = array('ID' => get_the_ID(), 'post_status' => 'draft');
-                    wp_update_post($post);
+//                    $post = array('ID' => get_the_ID(), 'post_status' => 'draft');
+//                    wp_update_post($post);
+//                    $status = array('expired');
+                    update_post_meta(get_the_ID(), '_listing_status', 'expired');
                 }
             }
         endwhile;
     endif;
-}
+}*/
 
 //Add new customer fields: city, country, zip code
 

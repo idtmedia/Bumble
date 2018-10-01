@@ -270,7 +270,7 @@ $id = uniqid();
 						<div class="alsp-single-listing-text-content-wrap">
                             <?php
                             //Show time count down
-                            $duration = get_post_meta( get_the_ID(), '_content_field_38', true );
+                           /* $duration = get_post_meta( get_the_ID(), '_content_field_38', true );
                             if($duration>0) {
                                 switch ($duration) {
                                     case 1:
@@ -290,8 +290,10 @@ $id = uniqid();
                                 $expiration_date_time = get_the_time('U') + $life_time;
                                 //
 
-                            }
+                            }*/
 
+                            $expiration_date_time = get_post_meta( get_the_ID(), '_expiration_date', true );
+//                            echo $expiration_date_time;
                             ?>
                             <!-- Display the countdown timer in an element -->
                             <div class="alsp-field alsp-field-output-block alsp-field-output-block-string alsp-field-output-block-37">
