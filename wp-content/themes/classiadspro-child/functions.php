@@ -291,7 +291,7 @@ add_role(
     )
 );
 
-remove_role('constractor');
+//remove_role('constractor');
 
 // add a link to the WP Toolbar
 /* function Edit_listing_custom_toolbar_link($wp_admin_bar) {

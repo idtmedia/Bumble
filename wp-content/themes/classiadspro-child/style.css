@@ -81,4 +81,17 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 .home .author-name-header .author-displayname, .home .author-name-header span.author-nicename
 {
 	color: #fff!important;
-} 
+}
+.td_listings_level .pacz-icon-cog{
+    font-size: 26px;
+    color: #fad03d;
+    position: relative;
+    top: 4px;
+    margin-left: 6px;
+}
+.author-name-info span{
+    color: #fff;
+}
+.ui-datepicker .ui-datepicker-header{
+    background: #fff!important;
+}

@@ -1341,50 +1341,50 @@ function difp_info_output(){
 	}
 	
 	return $html;
-	
-}
 
-function difp_locate_template( $template_names, $load = false, $require_once = true ) {
-	
-	$locations = array();
-	$locations[10] = trailingslashit( STYLESHEETPATH ) . 'di-frontend-pm/';
-	$locations[20] = trailingslashit( TEMPLATEPATH ) . 'di-frontend-pm/';
-	$locations[30] = DIFP_PLUGIN_DIR . 'pro/templates/';
-	$locations[40] = DIFP_PLUGIN_DIR . 'templates/';
-	
-	$locations = apply_filters( 'difp_template_locations', $locations );
-	
-	// sort the $locations based on priority
-	ksort( $locations, SORT_NUMERIC );
-	
-	$template = '';
-	
-	if( ! is_array( $template_names ) )
-		$template_names = explode( ',', $template_names );
-	
-	foreach( $template_names as $template_name ){
-		
-		$template_name = trim( $template_name );
 
-		if ( empty( $template_name ) )
-			continue;
-		
-		if( strpos( $template_name, '../') !== false || strpos( $template_name, '..\\') !== false )
-			continue;
-		
-		foreach( $locations as $location ){
-			if( file_exists( $location . $template_name ) ) {
-				$template = $location . $template_name;
-				break 2;
-			}
-		}
-		
-	}
-	
-	if ( ( true == $load ) && ! empty( $template ) )
-		load_template( $template, $require_once );
-	
-	return apply_filters( 'difp_locate_template', $template, $template_names, $load, $require_once );
+    function difp_locate_template( $template_names, $load = false, $require_once = true ) {
+
+        $locations = array();
+        $locations[10] = trailingslashit( STYLESHEETPATH ) . 'di-frontend-pm/';
+        $locations[20] = trailingslashit( TEMPLATEPATH ) . 'di-frontend-pm/';
+        $locations[30] = DIFP_PLUGIN_DIR . 'pro/templates/';
+        $locations[40] = DIFP_PLUGIN_DIR . 'templates/';
+
+        $locations = apply_filters( 'difp_template_locations', $locations );
+
+        // sort the $locations based on priority
+        ksort( $locations, SORT_NUMERIC );
+
+        $template = '';
+
+        if( ! is_array( $template_names ) )
+            $template_names = explode( ',', $template_names );
+
+        foreach( $template_names as $template_name ){
+
+            $template_name = trim( $template_name );
+
+            if ( empty( $template_name ) )
+                continue;
+
+            if( strpos( $template_name, '../') !== false || strpos( $template_name, '..\\') !== false )
+                continue;
+
+            foreach( $locations as $location ){
+                if( file_exists( $location . $template_name ) ) {
+                    $template = $location . $template_name;
+                    break 2;
+                }
+            }
+
+        }
+
+        if ( ( true == $load ) && ! empty( $template ) )
+            load_template( $template, $require_once );
+
+        return apply_filters( 'difp_locate_template', $template, $template_names, $load, $require_once );
+    }
 }
 
 add_action('wp_loaded', 'difp_form_posted', 20 ); //After Email hook 

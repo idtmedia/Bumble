@@ -17,7 +17,9 @@
 	</ul>
 
 	<h3><?php _e('Choose new level', 'ALSP'); ?></h3>
-	<?php foreach ($levels->levels_array AS $level): ?>
+	<?php foreach ($levels->levels_array AS $level):
+
+            ?>
 	<p>
 		<label><input type="radio" name="new_level_id" value="<?php echo $level->id; ?>" /> <?php echo apply_filters('alsp_level_upgrade_option', $level->name, $listing->level, $level); ?></label>
 	</p>

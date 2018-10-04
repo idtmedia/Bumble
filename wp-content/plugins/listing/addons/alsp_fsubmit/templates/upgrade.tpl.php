@@ -7,10 +7,13 @@
 <form action="<?php echo alsp_dashboardUrl(array('alsp_action' => 'upgrade_listing', 'listing_id' => $alsp_instance->current_listing->post->ID, 'upgrade_action' => 'upgrade', 'referer' => urlencode($frontend_controller->referer))); ?>" method="POST">
 	<?php if ($frontend_controller->action == 'show'): ?>
 	<h3><?php _e('Choose new level', 'ALSP'); ?></h3>
-	<?php foreach ($alsp_instance->levels->levels_array AS $level): ?>
+	<?php foreach ($alsp_instance->levels->levels_array AS $level):
+            $name = $level->name;
+	        if($level->name=='Featured Listing') $name = 'Featured your listing for 7 days!';
+            ?>
 	<?php if ($alsp_instance->current_listing->level->id != $level->id && (!isset($alsp_instance->current_listing->level->upgrade_meta[$level->id]) || !$alsp_instance->current_listing->level->upgrade_meta[$level->id]['disabled'])): ?>
 	<p>
-		<label><input type="radio" name="new_level_id" value="<?php echo $level->id; ?>" /> <?php echo apply_filters('alsp_level_upgrade_option', $level->name, $alsp_instance->current_listing->level, $level); ?></label>
+		<label><input type="radio" name="new_level_id" value="<?php echo $level->id; ?>" /> <?php echo apply_filters('alsp_level_upgrade_option', $name, $alsp_instance->current_listing->level, $level); ?></label>
 	</p>
 	<?php endif; ?>
 	<?php endforeach; ?>
