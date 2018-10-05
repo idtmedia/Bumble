@@ -167,7 +167,7 @@ $id = uniqid();
 									} else {
 										$author_verified_icon = '<span class="unverified-ad-tag"><i class="author-unverified pacz-icon-check-circle"></i>'.esc_html__('unverified ad', 'ALSP').'</span>';
 									}
-							
+
 								?>
 								<header class="alsp-listing-header clearfix">
 									<?php if ($frontend_controller->breadcrumbs): ?>
@@ -268,7 +268,14 @@ $id = uniqid();
 						<div class="listing-main-content clearfix">
 							
 						<div class="alsp-single-listing-text-content-wrap">
+
+
                             <?php
+                            echo '<p class="message">';
+                            if ($_POST['post_application_nonce'] != "") {
+                                Job_board::post_application($_POST);
+                            }
+                            echo '</p>';
                             //Show time count down
                            /* $duration = get_post_meta( get_the_ID(), '_content_field_38', true );
                             if($duration>0) {
@@ -315,7 +322,7 @@ $id = uniqid();
 
                                     // Get todays date and time
                                     var now = new Date().getTime();
-                                    console.log(now);
+//                                    console.log(now);
                                     // Find the distance between now and the count down date
                                     var distance = countDownDate - now;
 
@@ -576,7 +583,8 @@ $id = uniqid();
 							}elseif( current_user_can('administrator')) {
 								echo esc_html__('Administrator can not send message from front-end', 'ALSP');
 							}else{
-								echo '<div class="form-new bidding-form">'.do_shortcode('[difp_shortcode_new_bidding_form to="'.$authoruser.'" listing_id="'.$listing->post->ID.'" subject="'.$listing->title().'"]').'</div>';
+//								echo '<div class="form-new bidding-form">'.do_shortcode('[difp_shortcode_new_bidding_form to="'.$authoruser.'" listing_id="'.$listing->post->ID.'" subject="'.$listing->title().'"]').'</div>';
+								echo '<div class="form-new bidding-form">'.do_shortcode('[bidding_form job_id='.$listing->post->ID.']').'</div>';
 							}
 						echo'</div>';
 					echo'</div>';

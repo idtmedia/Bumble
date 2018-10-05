@@ -121,15 +121,15 @@
 					<?php endif; ?>
 					<div class="td_listings_level">
 						<?php 
-							if ($listing->level->isUpgradable()):
-								echo '<a href="' . alsp_dashboardUrl(array('alsp_action' => 'upgrade_listing', 'listing_id' => $listing->post->ID)) . '" title="' . esc_attr__('Change level', 'ALSP') . '">'; 
+//							if ($listing->level->isUpgradable()):
+//								echo '<a href="' . alsp_dashboardUrl(array('alsp_action' => 'upgrade_listing', 'listing_id' => $listing->post->ID)) . '" title="' . esc_attr__('Change level', 'ALSP') . '">';
 									echo $listing->level->name;
-									if ($listing->level->isUpgradable()){
-										echo ' <i class="pacz-icon-cog"></i>'; 
-									}
+//									if ($listing->level->isUpgradable()){
+//										echo ' <i class="pacz-icon-cog"></i>';
+//									}
 						?>
-								</a>
-						<?php endif; ?>
+<!--								</a>-->
+						<?php //endif; ?>
 					</div>
 					<div class="td_listings_date">
 						<?php
@@ -198,6 +198,20 @@
 					
 					<?php } ?>
 				</div>
+                    <div class="td_listings_level clearfix">
+                        <?php
+                        if($listing->level->name=='Free Plan'):
+                            if ($listing->level->isUpgradable()):
+                                echo '<a class="feature-listing" href="' . alsp_dashboardUrl(array('alsp_action' => 'upgrade_listing', 'listing_id' => $listing->post->ID)) . '" title="' . esc_attr__('Change level', 'ALSP') . '">';
+                                _e('Feature Your Listing');
+    //                            if ($listing->level->isUpgradable()){
+    //                                echo ' <i class="pacz-icon-cog"></i>';
+    //                            }
+                                ?>
+                                </a>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                    </div>
 				</div>
 			</div>
 			</div>

@@ -442,6 +442,10 @@ class alsp_dashboard_controller extends alsp_frontend_controller {
 				$this->template = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'dashboard.tpl.php');
 					$this->subtemplate = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'messages.tpl.php');
 					$this->active_tab = 'messages';
+			}elseif ($alsp_instance->action == 'applications') {
+				$this->template = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'dashboard.tpl.php');
+					$this->subtemplate = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'applications.tpl.php');
+					$this->active_tab = 'applications';
 			}elseif ($alsp_instance->action == 'claim_listing' && isset($_GET['listing_id']) && is_numeric($_GET['listing_id'])) {
 				$listing_id = alsp_getValue($_GET, 'listing_id');
 				if ($listing_id && ($listing = $alsp_instance->listings_manager->loadListing($listing_id)) && $listing->is_claimable) {

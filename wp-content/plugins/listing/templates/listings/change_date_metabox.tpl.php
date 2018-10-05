@@ -39,12 +39,11 @@
 			<input type="text" id="expiration_date" class="form-control" />
 			<span class="glyphicon glyphicon-calendar form-control-feedback"></span>
 		</div>
-		<label class="col-md-1 alsp-control-label"><?php _e('Time:', 'ALSP'); ?></label>
+		<?php /*<label class="col-md-1 alsp-control-label"><?php _e('Time:', 'ALSP'); ?></label>
 		<div class="col-md-3">
 			<?php $hour = date('H', intval($listing->expiration_date)); ?>
 			<?php $minute = date('i', intval($listing->expiration_date)); ?>
 			<input type="hidden" name="expiration_date_tmstmp" value="<?php echo esc_attr(intval($listing->expiration_date) - ($hour*3600) - ($minute*60)); ?>"/>
-			<select name="expiration_date_hour" class="form-control">
 				<option value="00" <?php if ($hour == '00') echo 'selected'; ?>>00</option>
 				<option value="01" <?php if ($hour == '01') echo 'selected'; ?>>01</option>
 				<option value="02" <?php if ($hour == '02') echo 'selected'; ?>>02</option>
@@ -134,7 +133,7 @@
 				<option value="58" <?php if ($minute == '58') echo 'selected'; ?>>58</option>
 				<option value="59" <?php if ($minute == '59') echo 'selected'; ?>>59</option>
 			</select>
-		</div>
+		</div> */ ?>
 	</div>
 </div>
 	

@@ -4,7 +4,7 @@
 * Add your own functions here. You can also copy some of the theme functions into this file. 
 * Wordpress will use those functions instead of the original functions then.
 */
-
+require 'includes/WP_Mail.php';
 /* enqueue parent stylesheet */
 function pacz_enqueue_styles()
 {

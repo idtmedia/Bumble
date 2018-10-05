@@ -101,7 +101,7 @@ class alsp_listings_packages {
 		if (!current_user_can('edit_user', $user->ID))
 			return false;
 	?>
-		<h2><?php _e('listings available', 'ALSP'); ?></h3>
+		<h3><?php _e('listings available', 'ALSP'); ?></h3>
 
 		<table class="form-table">
 		<?php

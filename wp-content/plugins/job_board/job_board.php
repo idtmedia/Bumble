@@ -89,7 +89,9 @@ function bidding_form( $atts) {
 
     // Return output
     ob_start();
-    echo '<form action="" method="post" id="commentform" class="comment-form">
+    if(is_user_logged_in()) {
+        if(Job_board::check_can_apply(get_current_user_id(), $a['job_id'])){
+            echo '<form action="" method="post" id="commentform" class="comment-form" enctype="multipart/form-data">
             <p class="dir_message_field">
                 <label for="apply_cost">Cost:</label>
                 <input type="text" id="apply_cost" name="apply_cost" value="" placeholder="Cost" size="25">
@@ -101,10 +103,23 @@ function bidding_form( $atts) {
                 <input type="file" name="apply_attachment" id="apply_attachment" />
             </p>
             <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit application">
-                <input type="hidden" name="contractor" value="'.get_current_user_id().'">
-                <input type="hidden" name="job" value="'.$a['job_id'].'">
-                '.wp_nonce_field('post_application_action', 'post_application_nonce').'
+                <input type="hidden" name="contractor" value="' . get_current_user_id() . '">
+                <input type="hidden" name="job" value="' . $a['job_id'] . '">
+                ' . wp_nonce_field('post_application_action', 'post_application_nonce') . '
             </p>
-        </form>';
+            </form>';
+        }else{
+            _e('You dont have permission for access this form or you applied for this job already');
+        }
+    }else{
+        _e('Please login to access the form');
+    }
     return ob_get_clean();
 }
+
+// Deal with images uploaded from the front-end while allowing ACF to do it's thing
+//function my_acf_pre_save_post($post_id) {
+
+//}
+
+//add_filter('acf/pre_save_post' , 'my_acf_pre_save_post');

@@ -181,9 +181,12 @@ class Classiadspro_Widget_Author extends WP_Widget {
 				$output .= '</div>';
 				$output .= '<div class="author-btns style2">';
 					if(is_contractor()){
+
+
 						if($ALSP_ADIMN_SETTINGS['alsp_listing_contact']){ $output .= '<div class="author-btn-holder"><a class="" data-popup-open="single_contact_form" href="#">'.esc_html__('Send message', 'classiadspro').'</a></div>'; }
 						if($ALSP_ADIMN_SETTINGS['alsp_listing_bidding']){ $output .= '<div class="author-btn-holder"><a data-popup-open="single_contact_form_bid" href="#" class="">'. esc_html__('Send Offer', 'classiadspro').'</a></div>'; }
-					}						
+//						if($ALSP_ADIMN_SETTINGS['alsp_listing_bidding']){ $output .= '<div class="author-btn-holder"><a href="'.get_site_url().'/apply-form/?job=" class="">'. esc_html__('Send Offer', 'classiadspro').'</a></div>'; }
+					}
 				$output .= '</div>';
 				$output .= '<div class="about-social">';
 				
