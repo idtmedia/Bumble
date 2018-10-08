@@ -4,7 +4,6 @@
 * Add your own functions here. You can also copy some of the theme functions into this file. 
 * Wordpress will use those functions instead of the original functions then.
 */
-require 'includes/WP_Mail.php';
 /* enqueue parent stylesheet */
 function pacz_enqueue_styles()
 {
@@ -559,3 +558,68 @@ function vc_remove_wp_ver_css_js( $src ) {
 }
 add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+
+function creativeosc_jb_applications_status(){
+//    var_dump($_POST);
+    if(isset($_POST['action']) && $_POST['action'] == 'jb_applications_status' && $_POST['id']>0) {
+        update_field('bid_status', $_POST['status'], $_POST['id'] );
+        if($_POST['notify']==1){
+            $contractor = get_field('contractor', $_POST['id']);
+//            $to = get_the_author_meta( 'email' , $author );
+            $job_data = get_post($_POST['id']);
+
+            WP_Mail::init()
+                ->to($contractor['email'])
+                ->subject('Your application has been change status in '.get_bloginfo('name'))
+                ->template( get_stylesheet_directory(). '/emails/application-status.html' , [
+                    'status' => $_POST['status'],
+                    'job' => $job_data->post_title,
+//                            'skills' => [
+//                                'PHP',
+//                                'AWS',
+//                            ]
+                ])
+                ->send();
+        }
+
+        return true;
+//        var_dump($_POST);
+//        "array(4) {
+//  ["action"]=>
+//  string(22) "jb_applications_status"
+//  ["id"]=>
+//  string(4) "2993"
+//  ["status"]=>
+//  string(8) "Rejected"
+//  ["notify"]=>
+//  string(1) "0"
+//}
+//"
+        /*console.log('test');
+        // echo $_POST['postalcode'];
+        // $responses = wp_remote_get('https://represent.opennorth.ca/postcodes/L5G4L3/');
+        if( is_wp_error( $request ) ) {
+            echo 'not found';
+        }else{
+            $request = wp_remote_get( 'https://represent.opennorth.ca/postcodes/'.preg_replace('/\s+/', '', strtoupper($_POST['postalcode'])).'/' );
+            $body = wp_remote_retrieve_body( $request );
+            $data = json_decode( $body );
+            if( ! empty( $data ) ) {
+                $email = array();
+                foreach( $data->representatives_centroid as $centroid ) {
+                    $email[] = $centroid->email;
+                }
+                echo implode(',', $email);
+            }else{
+                echo 'no result';
+            }
+        }*/
+
+    }else{
+        return false;
+    }
+    // Always exit to avoid further execution
+    exit();
+}
+add_action('wp_ajax_jb_applications_status', 'creativeosc_jb_applications_status');
+add_action('wp_ajax_nopriv_jb_applications_status', 'creativeosc_jb_applications_status');

@@ -284,6 +284,10 @@ class Job_board
                     $field_cost = "field_5bb5cdfd7e66e";
                     $value = $post['apply_cost'];
                     update_field($field_cost, $value, $post_id);
+
+                    $field_cost = "field_5bb5cec6e588f";
+                    $value = 'New';
+                    update_field($field_cost, $value, $post_id);
 //                    echo plugins_url( 'emails/email.html', dirname(__FILE__));
 //                    echo plugin_dir_path( __FILE__ ). 'emails/email.html';
 //                    $to = 'thangnn1510@gmail.com';

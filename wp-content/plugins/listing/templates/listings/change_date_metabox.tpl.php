@@ -39,12 +39,13 @@
 			<input type="text" id="expiration_date" class="form-control" />
 			<span class="glyphicon glyphicon-calendar form-control-feedback"></span>
 		</div>
-		<?php /*<label class="col-md-1 alsp-control-label"><?php _e('Time:', 'ALSP'); ?></label>
-		<div class="col-md-3">
+		<label class="col-md-1 alsp-control-label" style="display: none;"><?php _e('Time:', 'ALSP'); ?></label>
+		<div class="col-md-3"  style="display: none;">
 			<?php $hour = date('H', intval($listing->expiration_date)); ?>
 			<?php $minute = date('i', intval($listing->expiration_date)); ?>
 			<input type="hidden" name="expiration_date_tmstmp" value="<?php echo esc_attr(intval($listing->expiration_date) - ($hour*3600) - ($minute*60)); ?>"/>
-				<option value="00" <?php if ($hour == '00') echo 'selected'; ?>>00</option>
+            <select name="expiration_date_hour" class="form-control">
+                <option value="00" <?php if ($hour == '00') echo 'selected'; ?>>00</option>
 				<option value="01" <?php if ($hour == '01') echo 'selected'; ?>>01</option>
 				<option value="02" <?php if ($hour == '02') echo 'selected'; ?>>02</option>
 				<option value="03" <?php if ($hour == '03') echo 'selected'; ?>>03</option>
@@ -70,7 +71,7 @@
 				<option value="23" <?php if ($hour == '23') echo 'selected'; ?>>23</option>
 			</select>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3"  style="display: none;">
 			<select name="expiration_date_minute" class="form-control">
 				<option value="00" <?php if ($minute == '00') echo 'selected'; ?>>00</option>
 				<option value="01" <?php if ($minute == '01') echo 'selected'; ?>>01</option>
@@ -133,7 +134,7 @@
 				<option value="58" <?php if ($minute == '58') echo 'selected'; ?>>58</option>
 				<option value="59" <?php if ($minute == '59') echo 'selected'; ?>>59</option>
 			</select>
-		</div> */ ?>
+		</div>
 	</div>
 </div>
 	
