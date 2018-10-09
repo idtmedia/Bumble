@@ -707,12 +707,26 @@ a.jb-manage-action:visited {
     content: '\e859';
 }
 
+.jb-icon-home:before {
+    content: '\e81f';
+}
+
+.jb-icon-right-open:before {
+    content: '\e85b';
+}
+
+.jb--icon-link-ext-alt:before {
+    content: '\f14c';
+}
+
 .jb-application-change-status-dropdown {
     background: white;
     padding: 3px 8px 4px 8px;
     font-size: 14px;
     width: 30%;
 }
+
+
 
 a.jb-button, .jb-upload-actions a.button {
     background: #F2F2F2;
@@ -737,6 +751,11 @@ a.jb-button:visited, .jb-upload-actions a.button:visited, a.jb-button:hover, .jb
     text-decoration: none;
 }
 
-.wpjb a.jb-button:hover {
+.jb a.jb-button:hover {
     border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.jb .jb-text-box > h3 {
+    text-transform: uppercase;
+    margin: 24px 0;
 }

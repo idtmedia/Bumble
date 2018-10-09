@@ -1,10 +1,10 @@
 <?php
 $user_id = get_current_user_id();
-$args = array(
-    'post_type' => 'bidding',
-    'orderby' => 'post_date',
-    'order' => 'ASC',
-);
+//$args = array(
+//    'post_type' => 'bidding',
+//    'orderby' => 'post_date',
+//    'order' => 'ASC',
+//);
 $args = array(
     'post_type' => 'alsp_listing',
     'author' => $user_id,
@@ -110,10 +110,11 @@ if($_REQUEST['job_status']!=""){
             $job = get_field('job', $post->ID);
             $status = (get_field('bid_status', $post->ID) != '' ) ? get_field('bid_status', $post->ID) : 'New';
             ?>
-            <div class="jb-grid-row jb-manage-item jb-manage-application jb-application-status-rejected"
+            <div class="jb-grid-row jb-manage-item jb-manage-application jb-application-status-<?php echo strtolower($status); ?>"
                  data-id="<?php echo $post->ID; ?>">
                 <div class="jb-grid-col jb-col-1 jb-manage-header-img" style="width:60px">
                     <?php //echo $contractor['user_avatar']; ?>
+                    <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>">
                     <?php
                     $author_img_url = get_the_author_meta('pacz_author_avatar_url', $contractor['ID'], true);
                     if (!empty($author_img_url)) {
@@ -124,6 +125,7 @@ if($_REQUEST['job_status']!=""){
                     echo '<img src="' . $avatar_url . '" alt="author" />';
                     }
                     ?>
+                    </a>
                 </div>
                 <div class="jb-grid-col jb-col-90" style="width:calc( 100% - 60px )">
                     <div class="jb-manage-header">
@@ -150,7 +152,7 @@ if($_REQUEST['job_status']!=""){
                     </div>
                     <div class="jb-manage-actions-wrap">
                         <span class="jb-manage-actions-left">
-                            <a href="https://demo.wpjobboard.net/employer-panel/application/104/"
+                            <a href="?alsp_action=applications&view=<?php echo $post->ID; ?>"
                                class="jb-manage-action jb-no-320-760"><span class="jb-glyphs jb-icon-eye"></span>View</a>
                             <a href="#" class="jb-manage-action jb-manage-app-status-change">
                                 <span class="jb-glyphs jb-icon-down-open"></span>
@@ -177,7 +179,9 @@ if($_REQUEST['job_status']!=""){
         <?php endforeach;
         wp_reset_postdata(); ?>
     <?php else: ?>
+     <div class="jb-grid-row jb-manage-item jb-manage-application">
         <?php _e("No application!"); ?>
+     </div>
     <?php endif; ?>
 </div>
 <div class="jb-paginate-links">
@@ -347,8 +351,11 @@ if($_REQUEST['job_status']!=""){
         this.element.item.removeClass (function (index, className) {
             return (className.match (/(^|\s)jb-application-status-\S+/g) || []).join(' ');
         });
-        this.element.item.addClass("jb-application-status-"+response.status.key);
-        this.button_click();
+//        console.log(response)
+//        this.element.item.addClass("jb-application-status-"+response.status.key);
+//        this.element.slider.slideToggle("fast");
+        this.element.slider.slideUp("fast");
+//        this.button_click();
     };
 
     jQuery(function($) {
