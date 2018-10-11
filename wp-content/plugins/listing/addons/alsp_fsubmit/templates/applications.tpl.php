@@ -1,10 +1,8 @@
 <?php
+if(get_current_user_role()=='contributor'):
+    _e('You dont have permission for accessing this section');
+else:
 $user_id = get_current_user_id();
-//$args = array(
-//    'post_type' => 'bidding',
-//    'orderby' => 'post_date',
-//    'order' => 'ASC',
-//);
 $args = array(
     'post_type' => 'alsp_listing',
     'author' => $user_id,
@@ -82,7 +80,7 @@ if($_REQUEST['job_status']!=""){
     ));
 }else{
     $applications = get_posts(array(
-        'numberposts' => -1,
+        'posts_per_page' => -1,
         'post_type' => 'bidding',
         'meta_query' => array(
 //            'relation'		=> 'AND',
@@ -370,3 +368,4 @@ if($_REQUEST['job_status']!=""){
     });
 
 </script>
+<?php endif; ?>

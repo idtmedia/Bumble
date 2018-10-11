@@ -1,6 +1,6 @@
 <?php global $ALSP_ADIMN_SETTINGS; ?>
 
-<?php 
+<?php
 if ($listing->level->featured){
 	$is_featured =  'featured-ad';
 }else{
@@ -12,19 +12,25 @@ if($is_featured != 'featured-ad'){
 	$no_featured = '';
 }
 	require_once PACZ_THEME_PLUGINS_CONFIG . "/image-cropping.php";
-				
+
 		if ($ALSP_ADIMN_SETTINGS['listing_image_width_height'] == 1){
 			if(get_option('listing_style_to_show') == 'show_list_style'){
-				
+
 					$width= 130;
 					$height= 130;
 					$image_src_array = wp_get_attachment_image_src($listing->logo_image, 'full');
-					$image_src = bfi_thumb($image_src_array[0], array(
-						'width' => $width,
-						'height' => $height,
-						'crop' => true
-					));
-				
+//					$image_src = bfi_thumb($image_src_array[0], array(
+//						'width' => $width,
+//						'height' => $height,
+//						'crop' => false
+//					));
+                if($image_src_array!=""){
+                    $image_src =  $image_src_array[0];
+                }else{
+                    $image_src = "";
+                }
+//                    var_dump($image_src_array);
+
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 1){
 				$width= 360;
 					$height= 390;
@@ -32,7 +38,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 2){
 				$width= 350;
@@ -41,7 +47,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 3){
 				$width= 360;
@@ -50,7 +56,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 4){
 				$width= 350;
@@ -59,7 +65,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 5){
 				$width= 370;
@@ -68,7 +74,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 6){
 				$width= 370;
@@ -77,7 +83,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 7){
 				$width= 370;
@@ -86,7 +92,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 8){
 				$width= 370;
@@ -95,7 +101,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 9){
 				$width= 350;
@@ -104,7 +110,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 10){
 				$width= 370;
@@ -113,7 +119,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 11){
 				$width= 270;
@@ -122,7 +128,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 12){
 				$width= 270;
@@ -131,7 +137,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 13){
 				$width= 270;
@@ -140,7 +146,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 14){
 				$width= 290;
@@ -149,7 +155,7 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style'){
 				$width= 370;
@@ -158,23 +164,23 @@ if($is_featured != 'featured-ad'){
 					$image_src = bfi_thumb($image_src_array[0], array(
 						'width' => $width,
 						'height' => $height,
-						'crop' => true
+						'crop' => false
 					));
 			}
-			
+
 		}else{
-			
+
 			if(get_option('listing_style_to_show') == 'show_list_style'){
-				
+
 				$width= $ALSP_ADIMN_SETTINGS['alsp_logo_width_listview'];
 				$height= $ALSP_ADIMN_SETTINGS['alsp_logo_height_listview'];
 				$image_src_array = wp_get_attachment_image_src($listing->logo_image, 'full');
 				$image_src       = bfi_thumb($image_src_array[0], array(
 					'width' => $width,
 					'height' => $width,
-					'crop' => true
+					'crop' => false
 				));
-				
+
 			}elseif(get_option('listing_style_to_show') == 'show_grid_style'){
 				$option_element = get_option('main_block_hash');
 				$width_value = get_option('listing_image_width_'.$option_element);
@@ -185,19 +191,19 @@ if($is_featured != 'featured-ad'){
 				$image_src = bfi_thumb($image_src_array[0], array(
 					'width' => $width,
 					'height' => $height,
-					'crop' => true
+					'crop' => false
 				));
 			}
-			
+
 		}
 
-					
-				
-				
+
+
+
 /*price*/
 global $term, $icon_image, $wpdb, $wpdb, $pacz_settings;
-$field_ids = $wpdb->get_results('SELECT id, type, slug FROM '.$wpdb->prefix.'alsp_content_fields');	
-	
+$field_ids = $wpdb->get_results('SELECT id, type, slug FROM '.$wpdb->prefix.'alsp_content_fields');
+
 if(class_exists('Classiadspro_Theme')){
 $id = uniqid();
 global $alsp_dynamic_styles;
@@ -221,15 +227,15 @@ global $direviews_plugin;
 if ( method_exists( $direviews_plugin, 'get_average_rating' ) ) {
 	$rating = $direviews_plugin->get_average_rating( $listing->post->ID);
 }
-	
- if ($listing->level->listings_own_page){ 
+
+ if ($listing->level->listings_own_page){
  $alsp_listings_own_page = 'alsp-listings-own-page';
  }else{
-	$alsp_listings_own_page = ''; 
+	$alsp_listings_own_page = '';
  }
- 
+
  /* cat icon */
- 
+
 	$terms = get_the_terms($listing->post->ID, ALSP_CATEGORIES_TAX);
 	if(is_array($terms)){
 		foreach ($terms AS $key=>$term){
@@ -240,7 +246,7 @@ if ( method_exists( $direviews_plugin, 'get_average_rating' ) ) {
 					$cat_color = 'style="background-color:'.$pacz_settings['accent-color'].';"';
 				}
 				$icon_file = alsp_getCategoryMarkerIcon($term->term_id);
-				$icon = '<span class="font-icon" '.$cat_color.'><span class="cat-icon '.$icon_file.'"></span></span>';	
+				$icon = '<span class="font-icon" '.$cat_color.'><span class="cat-icon '.$icon_file.'"></span></span>';
 				if($icon_file){
 					$cat_icon =  $icon;
 				}else{
@@ -254,16 +260,16 @@ if ( method_exists( $direviews_plugin, 'get_average_rating' ) ) {
 				}else{
 					$cat_icon = '';
 				}
-				
+
 			}elseif($ALSP_ADIMN_SETTINGS['cat_icon_type'] == 3){
 				$icon_file = get_term_meta ($term->term_id, 'category-svg-icon-id', true);
-					$icon = '<span class="cat-icon svg_icon">'.$icon_file.'</span>';	
+					$icon = '<span class="cat-icon svg_icon">'.$icon_file.'</span>';
 				if($icon_file){
 					$cat_icon =  $icon;
 				}else{
 					$cat_icon = '';
 				}
-				
+
 			}else{
 				if($cat_color_set = alsp_getCategorycolor($term->term_id)){
 					$cat_color = 'style="background-color:'.$cat_color_set.';"';
@@ -271,7 +277,7 @@ if ( method_exists( $direviews_plugin, 'get_average_rating' ) ) {
 					$cat_color = 'style="background-color:'.$pacz_settings['accent-color'].';"';
 				}
 				$icon_file = alsp_getCategoryMarkerIcon($term->term_id);
-				$icon = '<span class="font-icon" '.$cat_color.'><span class="cat-icon '.$icon_file.'"></span></span>';	
+				$icon = '<span class="font-icon" '.$cat_color.'><span class="cat-icon '.$icon_file.'"></span></span>';
 				if($icon_file){
 					$cat_icon =  $icon;
 				}else{
@@ -280,9 +286,9 @@ if ( method_exists( $direviews_plugin, 'get_average_rating' ) ) {
 			}
 		}
 	}
- 
+
  /* fav icon */
- 
+
 if (alsp_checkQuickList($listing->post->ID)){
 	$hear_icon = 'heart';
 }else{
@@ -296,7 +302,7 @@ if (alsp_checkQuickList($listing->post->ID)){
 	}else{
 	$nofollow = '';
 	}
-	
+
 							$authorID = get_the_author_meta( 'ID' );
 							if ( gearside_is_user_online($authorID) ){
 								$author_log_status = '<span class="author-active"></span>';
@@ -309,7 +315,7 @@ if (alsp_checkQuickList($listing->post->ID)){
 							} else {
 								$author_verified_icon = '<span class="author-unverified pacz-icon-check-circle"></span>';
 							}
-								$author_img_url = get_user_meta($authorID, "pacz_author_avatar_url", true); 
+								$author_img_url = get_user_meta($authorID, "pacz_author_avatar_url", true);
 /* listing title */
 	$title_limit = $ALSP_ADIMN_SETTINGS['max_title_length'];
 	if (!$listing->level->listings_own_page){
@@ -329,14 +335,14 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					echo '<div class="listing-logo-overlay"><a href="'.get_permalink().'"></a></div>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
 						echo '<a href="javascript:void(0);" class="add_to_favourites btn" listingid="'.$listing->post->ID.'"><span class="pacz-icon-'.$hear_icon.'"></span></a>';
 					}
 					echo '<span class="listing-cat-icon1">'.$cat_icon.'</span>';
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
@@ -344,16 +350,16 @@ $output = '';
 					echo '<header class="alsp-listing-header">';
 						echo $listing_title;
 					echo '</header>';
-					
+
 					echo '<div class="price">';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 					do_action('alsp_listing_title_html', $listing);
@@ -364,7 +370,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
 						echo '<a href="javascript:void(0);" class="add_to_favourites btn" listingid="'.$listing->post->ID.'"><span class="pacz-icon-'.$hear_icon.'"></span></a>';
 					}
@@ -372,7 +378,7 @@ $output = '';
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
 					}
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<header class="alsp-listing-header">';
 						echo $listing_title;
@@ -387,11 +393,11 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 				echo '</div>';
@@ -401,7 +407,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad"><i class="pacz-icon-star"></i></span>';
 					}
@@ -412,15 +418,15 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){			
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<header class="alsp-listing-header">';
 						echo $listing_title;
@@ -433,14 +439,14 @@ $output = '';
 					}
 					do_action('alsp_listing_title_html', $listing);
 				echo '</div>';
-				
+
 			}else if($ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 4){
 				//style 4 max
 				echo '<figure class="alsp-listing-logo '.$alsp_listings_own_page.'">';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
 						echo '<a href="javascript:void(0);" class="add_to_favourites btn" listingid="'.$listing->post->ID.'"><span class="pacz-icon-'.$hear_icon.'"></span></a>';
 					}
@@ -450,16 +456,16 @@ $output = '';
 					if ($listing->level->sticky){
 						echo '<div class="alsp-sticky-icon"></div>';
 					}
-					
+
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					global $pacz_settings, $accent_color;
 					$cat_bg_color = $pacz_settings['accent-color'];
 
 					$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
 					foreach ($terms as $term){
-						if(alsp_getCategorycolor($term->term_id)){			
+						if(alsp_getCategorycolor($term->term_id)){
 							$category_bg = alsp_getCategorycolor($term->term_id);
 						}else{
 							$category_bg = $cat_bg_color;
@@ -472,26 +478,26 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){			
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 					echo '<header class="alsp-listing-header">';
 						echo $listing_title;
 					echo '</header>';
-					
+
 				echo '</div>';
-				
+
 			}elseif($ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 5){
 				// style 10 ultra
 				echo '<figure class="alsp-listing-logo '.$alsp_listings_own_page.'">';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.get_the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"><i class="pacz-fic4-error"></i></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
 						echo '<a href="javascript:void(0);" class="add_to_favourites btn" listingid="'.$listing->post->ID.'"><span class="pacz-icon-'.$hear_icon.'"></span></a>';
 					}
@@ -502,17 +508,17 @@ $output = '';
 						echo '<div class="alsp-sticky-icon"></div>';
 					}
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<div class="listng-author-img">';
 							if(!empty($author_img_url)) {
-								$params = array( 'width' => 60, 'height' => 60, 'crop' => true );
+								$params = array( 'width' => 60, 'height' => 60, 'crop' => false );
 								echo "<img src='" . bfi_thumb( "$author_img_url", $params ) . "' width='70' height='70' alt='author' />";
-							} else { 
+							} else {
 								$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $authorID), $size = '60' );
-								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';		
+								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';
 							}
-							echo $author_log_status;		
+							echo $author_log_status;
 					echo '</div>';
 					echo '<div class="cat-wrapper">';
 						$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
@@ -521,7 +527,7 @@ $output = '';
 						}
 						if(count(wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX)) > 0){
 							$terms2 = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => $term->term_id, 'order' => 'ASC' ) );
-							
+
 							foreach ($terms2 as $term){
 								echo '<span class="cat-seperator"> > </span>';
 								echo '<a class="listing-cat child" href="'.get_term_link($term, ALSP_CATEGORIES_TAX).'" rel="tag">'.$term->name.'</a>';
@@ -532,21 +538,21 @@ $output = '';
 						echo $listing_title;
 					echo '</header>';
 					echo '<div class="listing-content-fields">';
-						
+
 						global $wpdb;
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'excerpt'){	
+								if($field_id->type == 'excerpt'){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
 								}
-								if($field_id->type != 'excerpt' && $field_id->type != 'content' && $field_id->type != 'address' && $field_id->type != 'categories' && $field_id->type != 'price' && ($field_id->slug != 'price' || $field_id->slug != 'Price') ){			
+								if($field_id->type != 'excerpt' && $field_id->type != 'content' && $field_id->type != 'address' && $field_id->type != 'categories' && $field_id->type != 'price' && ($field_id->slug != 'price' || $field_id->slug != 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
 					echo '</div>';
 					echo '<p class="listing-location">';
@@ -569,11 +575,11 @@ $output = '';
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){			
+								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
 						echo '</div>';
 					echo '</div>';
@@ -584,13 +590,13 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.$listing->post->ID.'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					echo '<div class="listing-logo-overlay"><a href="'.get_permalink().'"></a></div>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
 						echo '<a href="javascript:void(0);" class="add_to_favourites btn" listingid="'.$listing->post->ID.'"><span class="pacz-icon-'.$hear_icon.'"></span></a>';
 					}
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<span class="listing-cat-icon1">'.$cat_icon.'</span>';
 					do_action('alsp_listing_title_html', $listing);
@@ -604,32 +610,32 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){			
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
-					
+
 				echo '</div>';
 			}elseif($ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 7){
-			
+
 				//style 7 exotic
 				echo '<figure class="alsp-listing-logo '.$alsp_listings_own_page.'">';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					echo '<div class="price">';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){			
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 					if ($is_featured == 'featured-ad'){
@@ -638,9 +644,9 @@ $output = '';
 					if ($listing->level->sticky){
 						echo '<div class="alsp-sticky-icon"></div>';
 					}
-					
+
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
 					foreach ($terms as $term){
@@ -659,7 +665,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					echo '<div class="listing-logo-overlay"></div>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad"><i class="pacz-icon-star"></i></span>';
@@ -707,7 +713,7 @@ $output = '';
 					$cat_bg_color = $pacz_settings['accent-color'];
 					$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
 					foreach ($terms as $term){
-						if(alsp_getCategorycolor($term->term_id)){			
+						if(alsp_getCategorycolor($term->term_id)){
 							$category_bg = alsp_getCategorycolor($term->term_id);
 						}else{
 							$category_bg = $cat_bg_color;
@@ -726,11 +732,11 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){			
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
@@ -744,7 +750,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					echo '<div class="listing-logo-overlay"></div>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad"><i class="pacz-icon-star"></i></span>';
@@ -756,11 +762,11 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){	
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 					if(metadata_exists('post', $listing->post->ID, '_listing_mark_as' ) ) {
@@ -770,17 +776,17 @@ $output = '';
 						echo '</div>';
 					}
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<div class="listng-author-img">';
 						if(!empty($author_img_url)) {
-							$params = array( 'width' => 60, 'height' => 60, 'crop' => true );
+							$params = array( 'width' => 60, 'height' => 60, 'crop' => false );
 							echo "<img src='" . bfi_thumb( "$author_img_url", $params ) . "' width='70' height='70' alt='author' />";
-						} else { 
+						} else {
 							$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $authorID), $size = '60' );
-							echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';		
+							echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';
 						}
-						echo $author_log_status;		
+						echo $author_log_status;
 					echo '</div>';
 				$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
 					global $pacz_settings, $accent_color;
@@ -788,7 +794,7 @@ $output = '';
 
 					$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
 					foreach ($terms as $term){
-						if(alsp_getCategorycolor($term->term_id)){			
+						if(alsp_getCategorycolor($term->term_id)){
 							$category_bg = alsp_getCategorycolor($term->term_id);
 						}else{
 							$category_bg = $cat_bg_color;
@@ -819,11 +825,11 @@ $output = '';
 					$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'excerpt'){		
+							if($field_id->type == 'excerpt'){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '<p class="listing-location">';
 						echo '<i class="pacz-fic3-pin-1"></i>';
@@ -846,7 +852,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
 						echo '<a href="javascript:void(0);" class="add_to_favourites btn" listingid="'.$listing->post->ID.'"><span class="pacz-icon-'.$hear_icon.'"></span></a>';
 					}
@@ -869,17 +875,17 @@ $output = '';
 						echo '<div class="alsp-sticky-icon"></div>';
 					}
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<div class="listng-author-img">';
 							if(!empty($author_img_url)) {
-								$params = array( 'width' => 60, 'height' => 60, 'crop' => true );
+								$params = array( 'width' => 60, 'height' => 60, 'crop' => false );
 								echo "<img src='" . bfi_thumb( "$author_img_url", $params ) . "' width='70' height='70' alt='author' />";
-							} else { 
+							} else {
 								$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $authorID), $size = '60' );
-								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';		
+								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';
 							}
-							echo $author_log_status;		
+							echo $author_log_status;
 					echo '</div>';
 					echo '<div class="cat-wrapper">';
 						$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
@@ -888,7 +894,7 @@ $output = '';
 						}
 						if(count(wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX)) > 0){
 							$terms2 = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => $term->term_id, 'order' => 'ASC' ) );
-							
+
 							foreach ($terms2 as $term){
 								echo '<span class="cat-seperator"> > </span>';
 								echo '<a class="listing-cat child" href="'.get_term_link($term, ALSP_CATEGORIES_TAX).'" rel="tag">'.$term->name.'</a>';
@@ -921,11 +927,11 @@ $output = '';
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
 						echo '</div>';
 					echo '</div>';
@@ -936,7 +942,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
 					}
@@ -947,15 +953,15 @@ $output = '';
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
 					echo '</div>';
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<header class="alsp-listing-header">';
 						echo '<span class="listing-cat-icon1">'.$cat_icon.'</span>';
@@ -968,7 +974,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
 					}
@@ -977,7 +983,7 @@ $output = '';
 					}
 					echo '<span class="listing-cat-icon1">'.$cat_icon.'</span>';
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<header class="alsp-listing-header">';
 						echo $listing_title;
@@ -992,11 +998,11 @@ $output = '';
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
 					echo '</div>';
 				echo '</div>';
@@ -1006,7 +1012,7 @@ $output = '';
 					if ($alsp_instance->getShortcodeProperty('webdirectory', 'is_favourites') && alsp_checkQuickList($listing->post->ID)){
 						echo '<div class="alsp-remove-from-favourites-list" listingid="'.the_ID().'" title="'.esc_attr(__('Remove from favourites list', 'ALSP')).'"></div>';
 					}
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
 					}
@@ -1017,15 +1023,15 @@ $output = '';
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
 					echo '</div>';
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<div class="listing-content-left">';
 						echo '<header class="alsp-listing-header">';
@@ -1045,7 +1051,7 @@ $output = '';
 			}elseif($ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 14){
 				// style 14 fantro
 				echo '<figure class="alsp-listing-logo '.$alsp_listings_own_page.'">';
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
 					}
@@ -1062,17 +1068,17 @@ $output = '';
 						echo '</div>';
 					}
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<div class="listng-author-img">';
 							if(!empty($author_img_url)) {
-								$params = array( 'width' => 44, 'height' => 44, 'crop' => true );
+								$params = array( 'width' => 44, 'height' => 44, 'crop' => false );
 								echo "<img src='" . bfi_thumb( "$author_img_url", $params ) . "' width='70' height='70' alt='author' />";
-							} else { 
+							} else {
 								$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $authorID), $size = '44' );
-								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';		
+								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';
 							}
-							echo $author_log_status;		
+							echo $author_log_status;
 					echo '</div>';
 					echo '<div class="cat-wrapper">';
 						$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
@@ -1081,9 +1087,9 @@ $output = '';
 						}
 						if(count(wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX)) > 0){
 							$terms2 = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => $term->term_id, 'order' => 'ASC' ) );
-							
+
 							foreach ($terms2 as $term){
-								
+
 								echo '<a class="listing-cat child" href="'.get_term_link($term, ALSP_CATEGORIES_TAX).'" rel="tag">'.substr($term->name, 0, 12).'</a>';
 							}
 						}
@@ -1091,7 +1097,7 @@ $output = '';
 					echo '<header class="alsp-listing-header">';
 						echo $listing_title;
 					echo '</header>';
-				echo '</div>';	
+				echo '</div>';
 				echo '<div class="listing-bottom-metas clearfix">';
 						echo '<p class="listing-location">';
 							//echo '<i class="pacz-fic3-pin-1"></i>';
@@ -1112,13 +1118,13 @@ $output = '';
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
-						
+
 						echo '</div>';
 				echo '</div>';
 			}elseif($ALSP_ADIMN_SETTINGS['alsp_listing_post_style'] == 15){
@@ -1129,7 +1135,7 @@ $output = '';
 				}
 				// style Directo
 				echo '<figure class="alsp-listing-logo '.$alsp_listings_own_page.'">';
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
 					}
@@ -1140,17 +1146,17 @@ $output = '';
 						echo '</div>';
 					}
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					echo '<div class="listng-author-img">';
 							if(!empty($author_img_url)) {
-								$params = array( 'width' => 44, 'height' => 44, 'crop' => true );
+								$params = array( 'width' => 44, 'height' => 44, 'crop' => false );
 								echo "<img src='" . bfi_thumb( "$author_img_url", $params ) . "' width='70' height='70' alt='author' />";
-							} else { 
+							} else {
 								$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $authorID), $size = '44' );
-								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';		
+								echo '<img src="'.$avatar_url.'" alt="author" width="'.$size.'" height="'.$size.'" />';
 							}
-							echo $author_log_status;		
+							echo $author_log_status;
 					echo '</div>';
 					/*echo '<div class="cat-wrapper">';
 						$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
@@ -1159,9 +1165,9 @@ $output = '';
 						}
 						if(count(wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX)) > 0){
 							$terms2 = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => $term->term_id, 'order' => 'ASC' ) );
-							
+
 							foreach ($terms2 as $term){
-								
+
 								echo '<a class="listing-cat child" href="'.get_term_link($term, ALSP_CATEGORIES_TAX).'" rel="tag">'.substr($term->name, 0, 12).'</a>';
 							}
 						}
@@ -1183,13 +1189,13 @@ $output = '';
 					$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'excerpt'){		
+							if($field_id->type == 'excerpt'){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
-				echo '</div>';	
+				echo '</div>';
 				echo '<div class="listing-bottom-metas clearfix">';
 						echo '<p class="listing-location">';
 							//echo '<i class="pacz-fic3-pin-1"></i>';
@@ -1210,13 +1216,13 @@ $output = '';
 							$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 							foreach( $field_ids as $field_id ) {
 								$singlefield_id = $field_id->id;
-								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+								if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 									if($field_id->on_exerpt_page == 1){
 										$listing->renderContentField($singlefield_id);
 									}
-								}				
+								}
 							}
-						
+
 						echo '</div>';
 				echo '</div>';
 			}
@@ -1224,7 +1230,7 @@ $output = '';
 			if($ALSP_ADIMN_SETTINGS['alsp_listing_listview_post_style'] == 'listview_default'){
 				// style list default
 				echo '<figure class="alsp-listing-logo '.$alsp_listings_own_page.'">';
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					echo '<div class="listing-logo-overlay"></div>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad"><i class="pacz-icon-star"></i></span>';
@@ -1232,15 +1238,15 @@ $output = '';
 					if ($listing->level->sticky){
 						echo '<div class="alsp-sticky-icon"></div>';
 					}
-					
+
 				echo '</figure>';
-	
+
 				echo '<div class="clearfix alsp-listing-text-content-wrap">';
 					global $pacz_settings, $accent_color;
 					$cat_bg_color = $pacz_settings['accent-color'];
 					$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
 					foreach ($terms as $term){
-						if(alsp_getCategorycolor($term->term_id)){			
+						if(alsp_getCategorycolor($term->term_id)){
 							$category_bg = alsp_getCategorycolor($term->term_id);
 						}else{
 							$category_bg = $cat_bg_color;
@@ -1254,11 +1260,11 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 					echo '<header class="alsp-listing-header">';
@@ -1289,7 +1295,7 @@ $output = '';
 			}elseif($ALSP_ADIMN_SETTINGS['alsp_listing_listview_post_style'] == 'listview_ultra'){
 				// style list default
 				echo '<figure class="alsp-listing-logo '.$alsp_listings_own_page.'">';
-					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. pacz_thumbnail_image_gen($image_src, $width, $height).'" width="'.$width.'" height="'.$height.'" /></a>';
+					echo '<a href="'.get_permalink().'"><img alt="'.$listing->title().'" src="'. $image_src .'" width="'.$width.'" height="'.$height.'" /></a>';
 					echo '<div class="listing-logo-overlay"></div>';
 					if ($is_featured == 'featured-ad'){
 						echo '<span class="featured-ad">'.esc_html__('Featured', 'ALSP').'</span>';
@@ -1297,9 +1303,9 @@ $output = '';
 					if ($listing->level->sticky){
 						echo '<div class="alsp-sticky-icon"></div>';
 					}
-					
+
 				echo '</figure>';
-	
+
 					echo '<div class="clearfix alsp-listing-text-content-wrap">';
 						echo '<div class="cat-wrapper">';
 						$terms = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
@@ -1308,7 +1314,7 @@ $output = '';
 						}
 						if(count(wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX)) > 0){
 							$terms2 = wp_get_post_terms($listing->post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => $term->term_id, 'order' => 'ASC' ) );
-							
+
 							foreach ($terms2 as $term){
 								echo '<span class="cat-seperator"> > </span>';
 								echo '<a class="listing-cat child" href="'.get_term_link($term, ALSP_CATEGORIES_TAX).'" rel="tag">'.$term->name.'</a>';
@@ -1327,11 +1333,11 @@ $output = '';
 						$field_ids = $wpdb->get_results('SELECT id, type, slug, on_exerpt_page FROM '.$wpdb->prefix.'alsp_content_fields');
 						foreach( $field_ids as $field_id ) {
 							$singlefield_id = $field_id->id;
-							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){				
+							if($field_id->type == 'price' && ($field_id->slug == 'price' || $field_id->slug == 'Price') ){
 								if($field_id->on_exerpt_page == 1){
 									$listing->renderContentField($singlefield_id);
 								}
-							}				
+							}
 						}
 					echo '</div>';
 					if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list'] && $alsp_instance->action != 'myfavourites'){
@@ -1356,15 +1362,15 @@ $output = '';
 							echo '</p>';
 							echo '<em class="alsp-listing-date" itemprop="dateCreated" datetime="'.date("Y-m-d", mysql2date('U', $listing->post->post_date)).'T'.date("H:i", mysql2date('U', $listing->post->post_date)).'"><i class="pacz-fic3-clock-circular-outline"></i>'. get_the_date().'</em>';
 							echo '<p class="listing-views"><i class="pacz-fic3-medical"></i>'.sprintf(__('Views: %d', 'ALSP'), (get_post_meta($listing->post->ID, '_total_clicks', true) ? get_post_meta($listing->post->ID, '_total_clicks', true) : 0)).'</p>';
-							
+
 						echo '</div>';
 					echo '</header>';
 				echo '</div>';
 			}else{
-				
+
 			}
 		}
-		
+
 	// Hidden styles node for head injection after page load through ajax
 echo '<div id="ajax-'.$id.'" class="alsp-dynamic-styles">';
 echo '</div>';
@@ -1375,4 +1381,4 @@ $alsp_dynamic_styles[] = array(
   'id' => 'ajax-'.$id ,
   'inject' => $alsp_styles
 );
-		
+

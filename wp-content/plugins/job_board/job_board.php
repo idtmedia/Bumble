@@ -91,18 +91,18 @@ function bidding_form( $atts) {
     ob_start();
     if(is_user_logged_in()) {
         if(Job_board::check_can_apply(get_current_user_id(), $a['job_id'])){
+            //            <p class="dir_message_field"><label for="apply_attachment">Attachment</label>
+//                <input type="file" name="apply_attachment" id="apply_attachment" />
+//            </p>
             echo '<form action="" method="post" id="commentform" class="comment-form" enctype="multipart/form-data">
             <p class="dir_message_field">
-                <label for="apply_cost">Cost:</label>
-                <input type="text" id="apply_cost" name="apply_cost" value="" placeholder="Cost" size="25">
+                <label for="apply_cost">'.__('YOUR BID AMOUNT ($)').':</label>
+                <input type="number" min="0.01" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" id="apply_cost" name="apply_cost" placeholder="'.__('YOUR BID AMOUNT ($)').'" size="25">
             </p>
-            <p class="dir_message_field"><label for="apply_message">Message</label>
-                <textarea id="apply_message" name="apply_message" cols="45" rows="3" aria-required="true" required="required" placeholder="Message"></textarea>
+            <p class="dir_message_field"><label for="apply_message">'.__('Message').'</label>
+                <textarea id="apply_message" name="apply_message" cols="84" rows="9" aria-required="true" required="required" placeholder="'.__('Tell us why you’re a good fit for this project (your skills & experience in the field)').'"></textarea>
             </p>
-            <p class="dir_message_field"><label for="apply_attachment">Attachment</label>
-                <input type="file" name="apply_attachment" id="apply_attachment" />
-            </p>
-            <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit application">
+            <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="'.__('Submit application').'">
                 <input type="hidden" name="contractor" value="' . get_current_user_id() . '">
                 <input type="hidden" name="job" value="' . $a['job_id'] . '">
                 ' . wp_nonce_field('post_application_action', 'post_application_nonce') . '
@@ -115,6 +115,39 @@ function bidding_form( $atts) {
         _e('Please login to access the form');
     }
     return ob_get_clean();
+}
+
+function get_total_bids(){
+    $user_id = get_current_user_id();
+    $args = array(
+        'post_type' => 'alsp_listing',
+        'author' => $user_id,
+        'orderby' => 'post_date',
+        'order' => 'ASC',
+        'posts_per_page' => -1
+    );
+    $current_user_jobs = get_posts($args);
+    $post_ids_array = array();
+
+    if (count($current_user_jobs) > 0) {
+        foreach ($current_user_jobs as $post) :
+            setup_postdata($post);
+            $post_ids_array[] = $post->ID;
+        endforeach;
+        wp_reset_postdata();
+    }
+    $applications = get_posts(array(
+        'posts_per_page' => -1,
+        'post_type' => 'bidding',
+        'meta_query' => array(
+            array(
+                'key' => 'job',
+                'value' => $post_ids_array,
+                'compare' => 'IN',
+            ),
+        ),
+    ));
+    return count($applications);
 }
 
 // Deal with images uploaded from the front-end while allowing ACF to do it's thing

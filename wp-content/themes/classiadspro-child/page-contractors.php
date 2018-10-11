@@ -12,9 +12,14 @@
 //}
 //$blog_style = '';
 //$column = '';
+global $ALSP_ADIMN_SETTINGS;
 $frontend_controller = new alsp_directory_controller();
+
 $frontend_controller->init();
-get_header(); ?>
+get_header();
+$hash = $frontend_controller->hash;
+?>
+
     <div id="theme-page">
         <div class="pacz-main-wrapper-holder">
             <div class="theme-page-wrapper pacz-main-wrapper <?php echo esc_attr($layout); ?>-layout pacz-grid vc_row-fluid">
@@ -30,7 +35,7 @@ get_header(); ?>
                                                 <form action=""
                                                       class="search-form-style3 alsp-content alsp-search-form">
                                                     <input type="hidden" name="alsp_action" value="search">
-                                                    <input type="hidden" name="hash" value="<?php echo $frontend_controller->hash; ?>">
+                                                    <input type="hidden" name="hash" value="<?php echo $hash; ?>">
                                                     <input type="hidden" name="controller" value="contractor_controller">
                                                     <div class="alsp-search-overlay alsp-container-fluid">
                                                         <div class="search-wrap row clearfix"
@@ -55,7 +60,7 @@ get_header(); ?>
                                                                     });
                                                                 })(jQuery);
                                                             </script>-->
-                                                            <div class="search-element-col alsp-has-feedback pull-left"
+                                                            <!--<div class="search-element-col alsp-has-feedback pull-left"
                                                                  style="width:25%; padding:0 10px;"><input type="text"
                                                                                                            name="address"
                                                                                                            id="address_9447"
@@ -63,9 +68,9 @@ get_header(); ?>
                                                                                                            placeholder="Enter address or zip code"
                                                                                                            value=""
                                                                                                            autocomplete="off">
-                                                                <!--<span class="alsp-get-location alsp-get-location-9447 glyphicon glyphicon-screenshot form-control-feedback"
-                                                                      title="Get my location"></span>-->
-                                                            </div>
+                                                                <span class="alsp-get-location alsp-get-location-9447 glyphicon glyphicon-screenshot form-control-feedback"
+                                                                      title="Get my location"></span>
+                                                            </div>-->
 
 
                                                             <div class="search-button search-element-col pull-right"
@@ -82,11 +87,11 @@ get_header(); ?>
 
                                             <div class="alsp-content listing-parent pacz-loop-main-wrapper pacz-loop-main-wrapper2"
                                                  style="margin:0 -15px;"
-                                                 id="alsp-controller-<?php echo $frontend_controller->hash; ?>"
-                                                 data-controller-hash="<?php echo $frontend_controller->hash; ?>">
+                                                 id="alsp-controller-<?php echo $hash; ?>"
+                                                 data-controller-hash="<?php echo $hash; ?>">
                                                 <?php $per_page = 4; ?>
                                                 <script>
-                                                    alsp_controller_args_array['<?php echo $frontend_controller->hash; ?>'] = {
+                                                    alsp_controller_args_array['<?php echo $hash; ?>'] = {
                                                         "controller": "contractor_controller",
                                                         "base_url": "<?php echo get_site_url(); ?>/contractors",
                                                         "perpage": "<?php echo $per_page; ?>",
@@ -102,7 +107,7 @@ get_header(); ?>
                                                     <div class="alsp-listings-block-content no-carousel  isotop-enabled pacz-theme-loop  clearfix isotope"
                                                          style="margin-left: -15px; margin-right: -15px; position: relative; "
                                                          data-style="masonry"
-                                                         data-uniqid="<?php echo $frontend_controller->hash; ?>">
+                                                         data-uniqid="<?php echo $hash; ?>">
                                                          <?php
 
                                                          $contractor_query = new WP_User_Query( array( 'role' => 'Contributor', 'number' => $per_page ) );
@@ -120,7 +125,7 @@ get_header(); ?>
                                                                  ?>
 
                                                                  <article
-                                                                          class="row alsp-listing  pacz-isotop-item isotop-item masonry-<?php echo $frontend_controller->hash; ?> responsive-2col listing-post-style-10  clearfix isotope-item"
+                                                                          class="row alsp-listing  pacz-isotop-item isotop-item masonry-<?php echo $hash; ?> responsive-2col listing-post-style-10  clearfix isotope-item"
                                                                           style="padding-left: 15px; padding-right: 15px; margin-bottom: 30px; ">
                                                                      <div class="listing-wrapper clearfix">
 
@@ -133,6 +138,7 @@ get_header(); ?>
                                                                              alt="<?php echo $contractor_name; ?>"
                                                                              src="<?php echo $contractor_img_url //bfi_thumb("$contractor_img_url", $params); ?>"
                                                                              width="370" height="260">
+
                                                                              <?php
                                                                                  } else {
                                                                                  $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', $contractorID), $size = '300'); ?>
@@ -155,9 +161,18 @@ get_header(); ?>
                                                                                        Phones</a></div>-->
                                                                              <header class="alsp-listing-header"><h2><a
                                                                                              href="<?php echo get_site_url().'/author/'.$contractor->user_login; ?>"
-                                                                                             title="<?php echo $contractor_name; ?>"><?php echo $contractor_name; ?></a>
+                                                                                             title="<?php echo $contractor_name; ?>"><?php echo $contractor_name; ?>
+
+                                                                                     </a>
                                                                                      <!--<span
                                                                                              class="author-unverified pacz-icon-check-circle"></span>-->
+                                                                                     <?php
+                                                                                     if ( gearside_is_user_online($contractorID) ){
+                                                                                         echo '<span class="author-active"></span>';
+                                                                                     } else {
+                                                                                         echo '<span class="author-in-active"></span>';
+                                                                                     }
+                                                                                     ?>
                                                                                  </h2></header>
                                                                              <p class="listing-location"><i
                                                                                          class="pacz-fic3-pin-1"></i><span
@@ -192,7 +207,7 @@ get_header(); ?>
                                                     </div>
 
                                                     <button class="btn btn-primary btn-lg btn-block alsp-show-more-button pacz-new-btn-4"
-                                                            data-controller-hash="<?php echo $frontend_controller->hash; ?>">Load
+                                                            data-controller-hash="<?php echo $hash; ?>">Load
                                                         More
                                                     </button>
                                                 </div>

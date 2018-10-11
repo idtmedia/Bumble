@@ -124,6 +124,46 @@ if (class_exists('alsp_plugin')):
         <div class="theme-page-wrapper pacz-main-wrapper <?php echo esc_attr($layout); ?>-layout pacz-grid vc_row-fluid">
             <div class="inner-page-wrapper">
                 <div class="theme-content  author-page" itemprop="mainContentOfPage">
+
+                    <?php
+
+                    echo '<div class="popup" data-popup="single_contact_form">';
+                    echo '<div class="popup-inner single-contact">';
+                    echo '<div class="alsp-popup-title">'.esc_html__('Send Message', 'ALSP').'<a class="popup-close" data-popup-close="single_contact_form" href="#"><i class="pacz-fic4-error"></i></a></div>';
+                    echo '<div class="alsp-popup-content">';
+                    global $current_user;
+
+                    if( is_user_logged_in() && $current_user->ID == $authorID) {
+                        echo esc_html__('You can not send message on your own', 'ALSP');
+                    }elseif(!is_user_logged_in()) {
+                        echo esc_html__('Login Required', 'ALSP');
+                    }elseif( current_user_can('administrator')) {
+                        echo esc_html__('Administrator can not send message from front-end', 'ALSP');
+                    }else{
+                        if($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages'){
+                            echo '<div class="form-new">';
+                            echo do_shortcode('[difp_shortcode_new_message_form to="'.$author_name.'" subject="Contact"]');
+                            echo '</div>';
+                        }/*elseif($ALSP_ADIMN_SETTINGS['message_system'] == 'email_messages'){
+                            if ($ALSP_ADIMN_SETTINGS['alsp_listing_contact_form'] && (!$listing->is_claimable || !$ALSP_ADIMN_SETTINGS['alsp_hide_claim_contact_form']) && ($listing_owner = get_userdata($listing->post->post_author)) && $listing_owner->user_email){
+
+                                if (defined('WPCF7_VERSION') && alsp_get_wpml_dependent_option('alsp_listing_contact_form_7')){
+                                    echo do_shortcode(alsp_get_wpml_dependent_option('alsp_listing_contact_form_7'));
+                                }else{
+                                    alsp_frontendRender('frontend/contact_form.tpl.php', array('listing' => $listing));
+
+                                }
+
+                            }
+                        }*/else{
+                            echo esc_html__('Messages are currenlty disabled by Site Owner', 'ALSP');
+                        }
+                    }
+                    echo'</div>';
+                    echo'</div>';
+                    echo'</div>';
+                    ?>
+
                     <div class="author-detail-section clearfix">
                         <?php
                         //					$output .='<div class="author-detail-section clearfix">';
@@ -135,7 +175,15 @@ if (class_exists('alsp_plugin')):
                             $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', $authorID), $size = '300');
                             $output .= '<img src="' . $avatar_url . '" alt="author" />';
                         }
+                        $output .= '<div class="author-btns style2">
+                                        <div class="author-btn-holder">
+                                            <a class="" data-popup-open="single_contact_form" href="#">Send message</a>
+                                        </div>
+                                    </div>';
                         $output .= '</div>';
+                        ?>
+
+                        <?php
                         $output .= '<div class="author-content-section">';
                         $output .= '<div class="author-title">' . $author_name . $author_log_status . '</div>';
                         $output .= '<p class="author-reg-date">' . esc_html__('Member since', 'classiadspro') . ' ' . $registered . '</p>';
@@ -221,6 +269,7 @@ if (class_exists('alsp_plugin')):
 //                        echo $contractor_role[0];
                         if( $contractor_role[0] == 'contributor'):
                         ?>
+                            <div class="clearfix"></div>
                             <div id="biography">
                                 <section>
                                     <div class="single-post-fancy-title comments-heading-label"><span>Biography</span></div>

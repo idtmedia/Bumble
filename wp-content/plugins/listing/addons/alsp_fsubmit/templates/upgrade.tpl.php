@@ -1,12 +1,6 @@
-<h3>
-	<?php echo sprintf(__('Change level of listing "%s"', 'ALSP'), $alsp_instance->current_listing->title()); ?>
-</h3>
-
-<p><?php _e('The level of listing will be changed. You may upgrade or downgrade the level. If new level has an option of limited active period - expiration date of listing will be reassigned automatically.', 'ALSP'); ?></p>
-
 <form action="<?php echo alsp_dashboardUrl(array('alsp_action' => 'upgrade_listing', 'listing_id' => $alsp_instance->current_listing->post->ID, 'upgrade_action' => 'upgrade', 'referer' => urlencode($frontend_controller->referer))); ?>" method="POST">
 	<?php if ($frontend_controller->action == 'show'): ?>
-	<h3><?php _e('Choose new level', 'ALSP'); ?></h3>
+	<h3><?php _e('Get your listing featured on top!', 'ALSP'); ?></h3>
 	<?php foreach ($alsp_instance->levels->levels_array AS $level):
             $name = $level->name;
 	        if($level->name=='Featured Listing') $name = 'Feature your listing for 7 days!';
@@ -20,7 +14,7 @@
 	
 	<br />
 	<br />
-	<input type="submit" value="<?php esc_attr_e('Change level', 'ALSP'); ?>" class="btn btn-primary" id="submit" name="submit">
+	<input type="submit" value="<?php esc_attr_e('Proceed to checkout', 'ALSP'); ?>" class="btn btn-primary" id="submit" name="submit">
 	&nbsp;&nbsp;&nbsp;
 	<a href="<?php echo $frontend_controller->referer; ?>" class="btn btn-primary"><?php _e('Cancel', 'ALSP'); ?></a>
 	<?php elseif ($frontend_controller->action == 'upgrade'): ?>

@@ -572,16 +572,16 @@ $id = uniqid();
 			if($ALSP_ADIMN_SETTINGS['alsp_listing_bidding']){
 				echo '<div class="popup" data-popup="single_contact_form_bid">';
 					echo '<div class="popup-inner single-contact">';
-						echo '<div class="alsp-popup-title">'.esc_html__('Send Your Bid', 'ALSP').'<a class="popup-close" data-popup-close="single_contact_form_bid" href="#"><i class="pacz-fic4-error"></i></a></div>';
+						echo '<div class="alsp-popup-title">'.esc_html__('SUBMIT YOUR BID FOR THIS PROJECT', 'ALSP').'<a class="popup-close" data-popup-close="single_contact_form_bid" href="#"><i class="pacz-fic4-error"></i></a></div>';
 						echo '<div class="alsp-popup-content">';
 							global $current_user;
 							$listing_owner = get_userdata($listing->post->post_author);
 							if( is_user_logged_in() && $current_user->ID == $authorID) {
-								echo esc_html__('You can not send message on your own lisitng', 'ALSP');
+								echo esc_html__('You can not send application on your own job', 'ALSP');
 							}elseif(!is_user_logged_in()) {
 								echo esc_html__('Login Required', '');
 							}elseif( current_user_can('administrator')) {
-								echo esc_html__('Administrator can not send message from front-end', 'ALSP');
+								echo esc_html__('Administrator can not send application from front-end', 'ALSP');
 							}else{
 //								echo '<div class="form-new bidding-form">'.do_shortcode('[difp_shortcode_new_bidding_form to="'.$authoruser.'" listing_id="'.$listing->post->ID.'" subject="'.$listing->title().'"]').'</div>';
 								echo '<div class="form-new bidding-form">'.do_shortcode('[bidding_form job_id='.$listing->post->ID.']').'</div>';

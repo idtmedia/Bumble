@@ -483,6 +483,7 @@ var alsp_dragended;
 	
 	if (alsp_js_objects.ajax_load) {
 		$('body').on('click', '.alsp-search-form input[type="submit"]', function(e) {
+			// alert('search clicked');
 			var search_inputs = $(this).parents('.alsp-search-form').serializeArray();
 			var post_params = {};
 			for (var attr in search_inputs) {
@@ -498,6 +499,7 @@ var alsp_dragended;
 			var controller_hash = false;
 			if (typeof post_params['hash'] != 'undefined' && post_params['hash'])
 				controller_hash = post_params['hash'];
+
 
 			if (!controller_hash) {
 				if (typeof alsp_controller_args_array != 'undefined' && Object.keys(alsp_controller_args_array)) {
@@ -521,6 +523,9 @@ var alsp_dragended;
 					}
 				});
 			}
+
+			// console.log(controller_hash);
+			// console.log(post_params);
 
 			if (controller_hash) {
 				e.preventDefault();
@@ -603,7 +608,8 @@ var alsp_dragended;
 				if (typeof ga != 'undefined') {
 					ga('send', 'pageview', url);
 				}
-				
+				// console.log(alsp_js_objects.ajaxurl);
+				console.log(post_params);
 				$.post(
 					alsp_js_objects.ajaxurl,
 					post_params,

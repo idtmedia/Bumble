@@ -312,7 +312,7 @@ global $post, $wp_rewrite, $sitepress;
 						echo '<div class="form-group alsp-jquery-ui-slider">';
 							echo '<div class="alsp-search-radius-label">';
 								echo _e('Search in radius', 'ALSP');
-								echo '<strong id="radius_label_'.$random_id.'">'.$radius.'</strong>';
+								echo ' <strong id="radius_label_'.$random_id.'">'.$radius.'</strong> ';
 								if ($ALSP_ADIMN_SETTINGS['alsp_miles_kilometers_in_search'] == 'miles'){
 									echo _e('miles', 'ALSP');
 								}else{
