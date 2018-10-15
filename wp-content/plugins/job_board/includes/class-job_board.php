@@ -313,11 +313,11 @@ class Job_board
                         ])
                         ->send();
 
-                    _e('Your application posted successfully');
+                    _e('YOUR BID HAS BEEN PLACED SUCCESSFULLY');
 //                    wp_redirect(get_permalink(  $post['job'] ));
 //                    exit;
                 } else {
-                    _e('You have applied for this job already');
+                    _e('You have placed bid for this job already');
                 }
 
             }

@@ -562,17 +562,23 @@ add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 function creativeosc_jb_applications_status(){
 //    var_dump($_POST);
     if(isset($_POST['action']) && $_POST['action'] == 'jb_applications_status' && $_POST['id']>0) {
-        update_field('bid_status', $_POST['status'], $_POST['id'] );
+        $bid_id = $_POST['id'];
+        $job = get_field('job', $bid_id);
+        $bid_status = $_POST['status'];
+        update_field('bid_status', $bid_status, $bid_id );
+        if($bid_status=='Accepted'){
+            update_post_meta($job->ID, '_listing_status', 'expired');
+        }
         if($_POST['notify']==1){
-            $contractor = get_field('contractor', $_POST['id']);
+            $contractor = get_field('contractor', $bid_id);
 //            $to = get_the_author_meta( 'email' , $author );
-            $job_data = get_post($_POST['id']);
+            $job_data = get_post($bid_id);
 
             WP_Mail::init()
                 ->to($contractor['email'])
                 ->subject('Your application has been change status in '.get_bloginfo('name'))
                 ->template( get_stylesheet_directory(). '/emails/application-status.html' , [
-                    'status' => $_POST['status'],
+                    'status' => $bid_status,
                     'job' => $job_data->post_title,
 //                            'skills' => [
 //                                'PHP',
@@ -594,26 +600,6 @@ function creativeosc_jb_applications_status(){
 //  ["notify"]=>
 //  string(1) "0"
 //}
-//"
-        /*console.log('test');
-        // echo $_POST['postalcode'];
-        // $responses = wp_remote_get('https://represent.opennorth.ca/postcodes/L5G4L3/');
-        if( is_wp_error( $request ) ) {
-            echo 'not found';
-        }else{
-            $request = wp_remote_get( 'https://represent.opennorth.ca/postcodes/'.preg_replace('/\s+/', '', strtoupper($_POST['postalcode'])).'/' );
-            $body = wp_remote_retrieve_body( $request );
-            $data = json_decode( $body );
-            if( ! empty( $data ) ) {
-                $email = array();
-                foreach( $data->representatives_centroid as $centroid ) {
-                    $email[] = $centroid->email;
-                }
-                echo implode(',', $email);
-            }else{
-                echo 'no result';
-            }
-        }*/
 
     }else{
         return false;

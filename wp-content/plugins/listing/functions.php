@@ -1,12 +1,12 @@
-<?php 
+<?php
 
 if (!function_exists('alsp_getValue')) {
 	function alsp_getValue($target, $key, $default = false) {
 		$target = is_object($target) ? (array) $target : $target;
-	
+
 		if (is_array($target) && isset($target[$key]))
 			return $target[$key];
-	
+
 		return $default;
 	}
 }
@@ -14,20 +14,20 @@ if (!function_exists('alsp_getValue')) {
 if (!function_exists('alsp_addMessage')) {
 	function alsp_addMessage($message, $type = 'updated') {
 		global $alsp_messages;
-		
+
 		if (is_array($message)) {
 			foreach ($message AS $m) {
 				alsp_addMessage($m, $type);
 			}
 			return ;
 		}
-	
+
 		if (!isset($alsp_messages[$type]) || (isset($alsp_messages[$type]) && !in_array($message, $alsp_messages[$type])))
 			$alsp_messages[$type][] = $message;
-	
+
 		if (session_id() == '')
 			@session_start();
-	
+
 		if (!isset($_SESSION['alsp_messages'][$type]) || (isset($_SESSION['alsp_messages'][$type]) && !in_array($message, $_SESSION['alsp_messages'][$type])))
 			$_SESSION['alsp_messages'][$type][] = $message;
 	}
@@ -36,11 +36,11 @@ if (!function_exists('alsp_addMessage')) {
 if (!function_exists('alsp_renderMessages')) {
 	function alsp_renderMessages() {
 		global $alsp_messages;
-	
+
 		$messages = array();
 		if (isset($alsp_messages) && is_array($alsp_messages) && $alsp_messages)
 			$messages = $alsp_messages;
-	
+
 		if (version_compare(phpversion(), '5.4.0', '>=')) {
 			if (session_status() == PHP_SESSION_ACTIVE) {
 				@session_start();
@@ -53,9 +53,9 @@ if (!function_exists('alsp_renderMessages')) {
 		if (isset($_SESSION['alsp_messages'])) {
 			$messages = array_merge($messages, $_SESSION['alsp_messages']);
 		}
-	
+
 		$messages = alsp_superUnique($messages);
-	
+
 		foreach ($messages AS $type=>$messages) {
 			$message_class = (is_admin()) ? $type : "alsp-" . $type;
 
@@ -65,7 +65,7 @@ if (!function_exists('alsp_renderMessages')) {
 			}
 			echo '</div>';
 		}
-		
+
 		$alsp_messages = array();
 		if (isset($_SESSION['alsp_messages'])) {
 			unset($_SESSION['alsp_messages']);
@@ -94,7 +94,7 @@ function alsp_calcExpirationDate($date, $level) {
 			$date = strtotime('+'.$level->active_interval.' year', $date);
 			break;
 	}
-	
+
 	return $date;
 }
 
@@ -114,7 +114,7 @@ function alsp_calcExpirationDate($date, $level) {
 function alsp_addMonths($from_timestamp, $months_to_add) {
 	$first_day_of_month = date('Y-m', $from_timestamp) . '-1';
 	$days_in_next_month = date('t', strtotime("+ {$months_to_add} month", strtotime($first_day_of_month)));
-	
+
 	// Payment is on the last day of the month OR number of days in next billing month is less than the the day of this month (i.e. current billing date is 30th January, next billing date can't be 30th February)
 	if (date('d m Y', $from_timestamp) === date('t m Y', $from_timestamp) || date('d', $from_timestamp) > $days_in_next_month) {
 		for ($i = 1; $i <= $months_to_add; $i++) {
@@ -124,7 +124,7 @@ function alsp_addMonths($from_timestamp, $months_to_add) {
 	} else { // Safe to just add a month
 		$next_timestamp = strtotime("+ {$months_to_add} month", $from_timestamp);
 	}
-	
+
 	return $next_timestamp;
 }
 function alsp_sumDates($date, $active_days, $active_months, $active_years)
@@ -165,28 +165,28 @@ function alsp_isTemplate($template) {
 	 */
 	/*function alsp_frontendRender($template, $args = array(), $return = false) {
 		global $alsp_instance;
-	
+
 		if ($args) {
 			extract($args);
 		}
-		
+
 		$template = apply_filters('alsp_render_template', $template, $args);
-		
+
 		if (is_array($template)) {
 			$template_path = $template[0];
 			$template_file = $template[1];
 			$template = $template_path . $template_file;
 		}
-		
+
 		$template = alsp_isTemplate($template);
 
 		if ($template) {
 			if ($return) {
 				ob_start();
 			}
-		
+
 			include($template);
-			
+
 			if ($return) {
 				$output = ob_get_contents();
 				ob_end_clean();
@@ -202,7 +202,7 @@ function alsp_isAssets($resource) {
 	} elseif (is_file(ALSP_RESOURCES_PATH . $resource)) {
 		return ALSP_RESOURCES_URL . $resource;
 	}
-	
+
 	return false;
 }
 
@@ -210,7 +210,7 @@ function alsp_AssetsIsCdir($dir) {
 	if (is_dir(get_stylesheet_directory() . '/alsp-listing/resources/' . $dir)) {
 		return get_stylesheet_directory() . '/alsp-listing/resources/' . $dir;
 	}
-	
+
 	return false;
 }
 
@@ -218,7 +218,7 @@ function alsp_getCAssetDirurl($dir) {
 	if (is_dir(get_stylesheet_directory() . '/alsp-listing/resources/' . $dir)) {
 		return get_stylesheet_directory_uri() . '/alsp-listing/resources/' . $dir;
 	}
-	
+
 	return false;
 }
 
@@ -228,10 +228,10 @@ function alsp_getCAssetDirurl($dir) {
  * - themes/theme/alsp-plugin/templates/template.tpl.php
  * - plugins/alsp/templates/template-custom.tpl.php
  * - plugins/alsp/templates/template.tpl.php
- * 
+ *
  * templates in addons will be visible by such type of path:
  * - themes/theme/alsp-plugin/templates/alsp_fsubmit/template.tpl.php
- * 
+ *
  */
 function alsp_isFrontPart($template) {
 	$custom_template = str_replace('.tpl.php', '', $template) . '-custom.tpl.php';
@@ -263,28 +263,28 @@ if (!function_exists('alsp_frontendRender')) {
 	 */
 	function alsp_frontendRender($template, $args = array(), $return = false) {
 		global $alsp_instance;
-	
+
 		if ($args) {
 			extract($args);
 		}
-		
+
 		$template = apply_filters('alsp_frontent_render', $template, $args);
-		
+
 		if (is_array($template)) {
 			$template_path = $template[0];
 			$template_file = $template[1];
 			$template = $template_path . $template_file;
 		}
-		
+
 		$template = alsp_isFrontPart($template);
 
 		if ($template) {
 			if ($return) {
 				ob_start();
 			}
-		
+
 			include($template);
-			
+
 			if ($return) {
 				$output = ob_get_contents();
 				ob_end_clean();
@@ -296,7 +296,7 @@ if (!function_exists('alsp_frontendRender')) {
 
 function alsp_getCurrentListingInAdmin() {
 	global $alsp_instance;
-	
+
 	return $alsp_instance->current_listing;
 }
 
@@ -322,7 +322,7 @@ function alsp_getIndexPage() {
 			// found that on some instances of WP "native" trailing slashes may be missing
 			$index_page['url'] = add_query_arg('page_id', $index_page['id'], home_url('/'));
 	}
-	
+
 	return $index_page;
 }
 
@@ -331,14 +331,14 @@ function alsp_getListingPage() {
 
 	if (!($listing_page = $wpdb->get_row("SELECT ID AS id, post_name AS slug FROM {$wpdb->posts} WHERE post_content LIKE '%[" . ALSP_LISTING_SHORTCODE . "]%' AND post_status = 'publish' AND post_type = 'page' LIMIT 1", ARRAY_A)))
 		$listing_page = array('slug' => '', 'id' => 0, 'url' => '');
-	
+
 	// adapted for WPML
 	global $sitepress;
 	if (function_exists('wpml_object_id_filter') && $sitepress) {
 		if ($tpage = apply_filters('wpml_object_id', $listing_page['id'], 'page')) {
 			$listing_page['id'] = $tpage;
 			$listing_page['slug'] = get_post($listing_page['id'])->post_name;
-		} else 
+		} else
 			$listing_page = array('slug' => '', 'id' => 0, 'url' => '');
 	}
 
@@ -355,7 +355,7 @@ function alsp_getListingPage() {
 
 function alsp_directoryUrl($path = '') {
 	global $alsp_instance;
-	
+
 	// adapted for WPML
 	global $sitepress;
 	if (function_exists('wpml_object_id_filter') && $sitepress) {
@@ -378,18 +378,18 @@ function alsp_directoryUrl($path = '') {
 	if (function_exists('wpml_object_id_filter') && $sitepress) {
 		$url = $sitepress->convert_url($url);
 	}
-	
+
 	return utf8_uri_encode($url);
 }
 
 function alsp_ListingUrl($slug) {
 	global $alsp_instance;
-	
+
 	if ($alsp_instance->listing_page_id)
 		$listing_page_url = $alsp_instance->listing_page_url;
 	else
 		$listing_page_url = $alsp_instance->index_page_url;
-	
+
 	// adapted for WPML
 	global $sitepress;
 	if (function_exists('wpml_object_id_filter') && $sitepress) {
@@ -406,7 +406,7 @@ function alsp_ListingUrl($slug) {
 	if (function_exists('wpml_object_id_filter') && $sitepress) {
 		$url = $sitepress->convert_url($url);
 	}
-	
+
 	return utf8_uri_encode($url);
 }
 
@@ -415,19 +415,19 @@ function alsp_get_term_parents($id, $tax, $link = false, $return_array = false, 
 	if (is_wp_error($parent) || !$parent)
 		if ($return_array)
 			return array();
-		else 
+		else
 			return '';
 
 	$name = $parent->name;
-	
+
 	if ($parent->parent && ($parent->parent != $parent->term_id))
 		alsp_get_term_parents($parent->parent, $tax, $link, $return_array, $separator, $chain);
-	
+
 	if ($link)
 		$chain[] = '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="' . get_term_link($parent->slug, $tax) . '" title="' . esc_attr(sprintf(__('View all listings in %s', 'ALSP'), $parent->name)) . '"><span itemprop="name">' . $name . '</span></a></li>';
 	else
 		$chain[] = $name;
-	
+
 	if ($return_array)
 		return $chain;
 	else
@@ -440,7 +440,7 @@ function alsp_get_term_parents_slugs($id, $tax, &$chain = array()) {
 		return '';
 
 	$slug = $parent->slug;
-	
+
 	if ($parent->parent && ($parent->parent != $parent->term_id))
 		alsp_get_term_parents_slugs($parent->parent, $tax, $chain);
 
@@ -455,7 +455,7 @@ function alsp_get_term_parents_ids($id, $tax, &$chain = array()) {
 		return '';
 
 	$id = $parent->term_id;
-	
+
 	if ($parent->parent && ($parent->parent != $parent->term_id))
 		alsp_get_term_parents_ids($parent->parent, $tax, $chain);
 
@@ -475,7 +475,7 @@ function alsp_checkQuickList($is_listing_id = null)
 	if ($is_listing_id)
 		if (in_array($is_listing_id, $favourites))
 			return true;
-		else 
+		else
 			return false;
 
 	$favourites_array = array();
@@ -699,28 +699,28 @@ function alsp_is_tablet($user_agent = null) {
 //get listings for 'works at' on submit listing page
 add_action('wp_ajax_nopriv_get_listing_names', 'ajax_listings');
 add_action('wp_ajax_get_listing_names', 'ajax_listings');
- 
+
 function ajax_listings() {
 	global $wpdb; //get access to the WordPress database object variable
- 
+
 	//get names of all businesses
 	$name = '%'.$wpdb->esc_like(stripslashes($_POST['name'])).'%';
 	$sql = "select post_title 
 		from $wpdb->posts 
 		where post_title like %s 
 		and post_type='alsp_listing' and post_status='publish'";
- 
+
 	$sql = $wpdb->prepare($sql, $name);
-	
+
 	$results = $wpdb->get_results($sql);
- 
+
 	//copy the business titles to a simple array
 	$titles = array();
 	foreach( $results as $r )
 		$titles[] = addslashes($r->post_title);
-		
+
 	echo json_encode($titles); //encode into JSON format and output
- 
+
 	die(); //stop "0" from being output
 }
 function alsp_crop_content($limit = 35, $strip_html = true, $has_link = true, $nofollow = false) {
@@ -729,7 +729,7 @@ function alsp_crop_content($limit = 35, $strip_html = true, $has_link = true, $n
 		$raw_content = apply_filters('the_excerpt', get_the_excerpt());
 	elseif ($ALSP_ADIMN_SETTINGS['alsp_cropped_content_as_excerpt'] && get_post()->post_content !== '')
 		$raw_content = apply_filters('the_content', get_the_content());
-	else 
+	else
 		return ;
 
 	$raw_content = str_replace(']]>', ']]&gt;', $raw_content);
@@ -742,7 +742,7 @@ function alsp_crop_content($limit = 35, $strip_html = true, $has_link = true, $n
 
 	if (!$limit)
 		return $raw_content;
-	
+
 	if ($has_link)
 		$readmore = ' <a href="'.get_permalink(get_the_ID()).'" '.(($nofollow) ? 'rel="nofollow"' : '').'>'.__('...', 'ALSP').'</a>';
 	else
@@ -774,7 +774,7 @@ function alsp_remove_shortcodes($m) {
 function alsp_is_anyone_in_taxonomy($tax) {
 	//global $wpdb;
 	//return $wpdb->get_var('SELECT COUNT(*) FROM ' . $wpdb->term_taxonomy . ' WHERE `taxonomy`="' . $tax . '"');
-	
+
 	return count(get_categories(array('taxonomy' => $tax, 'hide_empty' => false, 'parent' => 0, 'number' => 1)));
 }
 
@@ -782,7 +782,7 @@ function alsp_comments_open() {
 	global $ALSP_ADIMN_SETTINGS;
 	if ($ALSP_ADIMN_SETTINGS['alsp_listings_comments_mode'] == 'enabled' || ($ALSP_ADIMN_SETTINGS['alsp_listings_comments_mode'] == 'wp_settings' && comments_open()))
 		return true;
-	else 
+	else
 		return false;
 }
 
@@ -799,7 +799,7 @@ function alsp_get_term_by_path($term_path, $full_match = true, $output = OBJECT)
 		$full_path = '';
 		foreach ( (array) $term_paths as $pathdir )
 			$full_path .= ( $pathdir != '' ? '/' : '' ) . sanitize_title( $pathdir );
-	
+
 		//$terms = get_terms( array(ALSP_CATEGORIES_TAX, ALSP_LOCATIONS_TAX, ALSP_TAGS_TAX), array('get' => 'all', 'slug' => $leaf_path) );
 		$terms = array();
 		if ($term = get_term_by('slug', $leaf_path, ALSP_CATEGORIES_TAX))
@@ -808,10 +808,10 @@ function alsp_get_term_by_path($term_path, $full_match = true, $output = OBJECT)
 			$terms[] = $term;
 		if ($term = get_term_by('slug', $leaf_path, ALSP_TAGS_TAX))
 			$terms[] = $term;
-	
+
 		if ( empty( $terms ) )
 			return null;
-	
+
 		foreach ( $terms as $term ) {
 			$path = '/' . $leaf_path;
 			$curterm = $term;
@@ -828,7 +828,7 @@ function alsp_get_term_by_path($term_path, $full_match = true, $output = OBJECT)
 				return $term;
 			}
 		}
-	
+
 		// If full matching is not required, return the first cat that matches the leaf.
 		if ( ! $full_match ) {
 			$term = reset( $terms );
@@ -2383,7 +2383,7 @@ function alsp_get_fa_icons_names() {
 		$icons[] = 'pacz-icon-sheqel';
 		$icons[] = 'pacz-icon-ils';
 		$icons[] = 'pacz-icon-meanpath';
-	
+
 	return $icons;
 }
 
@@ -2717,7 +2717,7 @@ function alsp_is_woo_active() {
 		$ALSP_ADIMN_SETTINGS['alsp_payments_addon'] == 'alsp_woo_payment'
 		&&
 		in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))
-	) 
+	)
 		return true;
 }
 
@@ -2748,7 +2748,7 @@ function alsp_get_admin_notification_email() {
 	global $ALSP_ADIMN_SETTINGS;
 	if ($ALSP_ADIMN_SETTINGS['alsp_admin_notifications_email'])
 		return $ALSP_ADIMN_SETTINGS['alsp_admin_notifications_email'];
-	else 
+	else
 		return get_option('admin_email');
 }
 
@@ -2774,16 +2774,16 @@ function alsp_mail($email, $subject, $body, $headers = null) {
 		$headers[] = "Reply-To: " . alsp_get_admin_notification_email();
 		$headers[] = "Content-Type: text/html";
 	}
-		
+
 	$subject = "[" . get_option('blogname') . "] " .$subject;
 
 	$body = make_clickable(wpautop($body));
-	
+
 	$email = apply_filters('alsp_mail_email', $email, $subject, $body, $headers);
 	$subject = apply_filters('alsp_mail_subject', $subject, $email, $body, $headers);
 	$body = apply_filters('alsp_mail_body', $body, $email, $subject, $headers);
 	$headers = apply_filters('alsp_mail_headers', $headers, $email, $subject, $body);
-	
+
 	add_action('wp_mail_failed', 'alsp_error_log');
 
 	return wp_mail($email, $subject, $body, $headers);
@@ -2885,7 +2885,7 @@ function display_total_listing_rating( $post_id = null, $decimals = 2 ) {
 	if ( empty( $rating ) ) {
 		return;
 	} ?>
-	
+
 		<span class="rating-value"><span itemprop="reviewCount"><?php echo get_comments_number() ?></span> <?php echo esc_html__('ratings', 'ALSP'); ?></span>
 	<?php
 }
@@ -2926,7 +2926,7 @@ if (version_compare(get_bloginfo('version'), '4.3.1', '>=')){
         }
 
         $email_body = $ALSP_ADIMN_SETTINGS['alsp_newuser_notification'];
-		
+
 		//$email_body = str_replace('[author]', $display_author_name,
 										//	str_replace('[listing]', $post_title,
 										//	str_replace('[login]', $login_author_name,
@@ -2946,9 +2946,9 @@ if (version_compare(get_bloginfo('version'), '4.3.1', '>=')){
         $message .= sprintf(__('E-mail: %s'), $user->user_email) . "<br />";
         $message .= "<br /><br />";
         $message .= 'Thank you';
-        
+
         $headers = 'Content-type: text/html' . "\r\n" . 'From:' . get_option( 'blogname' ) . ' <' . $sender_email_address . '>' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-        
+
         add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
         @wp_mail(get_option('admin_email'), sprintf(__('[%s] New User Registration'), $blogname), $message, $headers);
 
@@ -2974,7 +2974,7 @@ if (version_compare(get_bloginfo('version'), '4.3.1', '>=')){
         $replacements = array(get_option('blogname'), $user->user_login, $password_set_link);
         $message = preg_replace($patterns, $replacements, $email_body);
         $headers = "MIME-Version: 1.0\r\n" . "From: " . get_option( 'blogname' ) . " " . "<" . $sender_email_address . ">\n" . "Content-Type: text/HTML; charset=\"" . get_option('blog_charset') . "\"\r\n";
-        
+
         add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
         wp_mail($user->user_email, sprintf(__('[%s] Your username and password info'), $blogname), $message, $headers );
         }
@@ -2982,60 +2982,60 @@ if (version_compare(get_bloginfo('version'), '4.3.1', '>=')){
 }else{
     // for wordpress version less than 4.3.1
     if( !function_exists( 'wp_new_user_notification' ) ) {
-    
+
         function wp_new_user_notification( $user_id, $plaintext_pass = '' ) {
 		global $ALSP_ADIMN_SETTINGS;
        // $options = get_option( APSL_SETTINGS );
-        
+
         if( isset( $ALSP_ADIMN_SETTINGS['alsp_admin_notifications_email'] ) && $ALSP_ADIMN_SETTINGS['alsp_admin_notifications_email'] != '' ) {
             $sender_email_address = $ALSP_ADIMN_SETTINGS['alsp_admin_notifications_email'];
-        } 
+        }
         else {
             $sender_email_address = get_option( 'admin_email' );
         }
-        
+
         $email_body = $ALSP_ADIMN_SETTINGS['alsp_newuser_notification'];
-        
+
         $user = new WP_User( $user_id );
-        
+
         $user_login = stripslashes( $user->user_login );
         $user_email = stripslashes( $user->user_email );
-        
+
         $message = sprintf( __( 'New user registration on your site %s:' ), get_option( 'blogname' ) ) . "<br />";
         $message.= sprintf( __( 'Username: %s' ), $user_login ) . "<br />";
         $message.= sprintf( __( 'E-mail: %s' ), $user_email ) . "<br /><br />";
         $message.= "<br /><br />";
         $message.= 'Thank you';
 
-        
+
         $headers = 'Content-type: text/html' . "\r\n" . 'From:' . get_option( 'blogname' ) . ' <' . $sender_email_address . '>' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-        
+
         add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
         @wp_mail( get_option( 'admin_email' ), sprintf( __( '[%s] New User Registration' ), get_option( 'blogname' ) ), $message, $headers );
-        
+
         if( empty( $plaintext_pass ) )return;
         $patterns = array('/#blogname/', '/#username/', '/#password/');
         $replacements = array(get_option('blogname'), $user->user_login, $plaintext_pass);
         $message = preg_replace($patterns, $replacements, $email_body);
         $headers = 'Content-type: text/html' . "\r\n" . 'From:' . get_option( 'blogname' ) . ' <' . $sender_email_address . '>' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
-        
+
         add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
         @wp_mail( $user_email, sprintf( __( '[%s] Your username and password' ), get_option( 'blogname' ) ), $message, $headers );
         }
     }
 }
 
-/* 
+/*
 Adds shortcodes dynamic css into footer.php
 */
 if (!function_exists('alsp_dynamic_css_injection')) {
      function alsp_dynamic_css_injection()
      {
 
-      global $alsp_style_json, $alsp_styles;  
-    
+      global $alsp_style_json, $alsp_styles;
+
     echo '<script type="text/javascript">';
-    
+
 
     $backslash_styles = str_replace('\\', '\\\\', $alsp_styles);
     $clean_styles = preg_replace('!\s+!', ' ', $backslash_styles);
@@ -3057,7 +3057,7 @@ if (!function_exists('alsp_dynamic_css_injection')) {
     head.appendChild(styleTag);
     </script>';
 
-    
+
 
      }
 }
@@ -3091,7 +3091,7 @@ function create_global_styles() {
 }
 create_global_styles();
 //////////////////////////////////////////////////////////////////////////
-// 
+//
 //  Global JSON object to collect all DOM related data
 //  todo - move here all VC shortcode settings
 //
@@ -3114,7 +3114,7 @@ alsp_create_global_dynamic_styles();
 
 /* footer scripts */
 add_action('wp_footer', 'alsp_footer_elements', 1);
-function alsp_footer_elements() { 
+function alsp_footer_elements() {
 global $post, $alsp_style_json;
  $post_id = global_get_post_id();
 
@@ -3129,8 +3129,8 @@ global $post, $alsp_style_json;
 		$alsp_styles_length = 0;
 	}
 	if ($alsp_styles_length > 0) {
-		foreach ($alsp_dynamic_styles as $key => $val) { 
-			$alsp_dynamic_styles_ids[] = $val["id"]; 
+		foreach ($alsp_dynamic_styles as $key => $val) {
+			$alsp_dynamic_styles_ids[] = $val["id"];
 			$alsp_dynamic_styles_inject .= $val["inject"];
 		};
 	}
@@ -3176,7 +3176,7 @@ global $post, $alsp_style_json;
 
 
 
-<?php } 
+<?php }
 
 
 
@@ -3189,7 +3189,7 @@ $current_user = wp_get_current_user();
 $authorID = $current_user->ID;
 $author_name = get_the_author_meta('display_name', $authorID);
 		$output = '';
-		$author_img_url = get_the_author_meta('pacz_author_avatar_url', $authorID, true); 
+		$author_img_url = get_the_author_meta('pacz_author_avatar_url', $authorID, true);
 		//if($_SERVER['SERVER_PORT'] == '443' && strpos( $upload_url, 'https' ) === false){
 			//$author_img_url = str_replace('http', 'https', $author_img_url);
 	//	}
@@ -3202,39 +3202,39 @@ $author_name = get_the_author_meta('display_name', $authorID);
 			));
 			//$params = array( 'width' => 110, 'height' => 110, 'crop' => true );
 			$output .= "<img src='" . pacz_thumbnail_image_gen($image_src, 110, 110) . "' alt='' />";
-		} else { 
+		} else {
 			$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $authorID), $size = '110' );
 			$output .='<img src="'.$avatar_url.'" alt="author" />';
 							}
 		$output .='</div>';
-		
+
 
 		$myaccount_page_id = get_option('woocommerce_myaccount_page_id');
 		$myaccount_address_page_id = get_option( 'woocommerce_myaccount_edit_address_endpoint' );
 		$myaccount_editaccount_page_id = get_option( 'woocommerce_myaccount_edit_account_endpoint' );
 		$myaccount_downloads_page_id = get_option( 'woocommerce_myaccount_downloads_endpoint' );
-		$myaccount_orders_page_id = get_option( 'woocommerce_myaccount_orders_endpoint' ); 
+		$myaccount_orders_page_id = get_option( 'woocommerce_myaccount_orders_endpoint' );
 		$myaccount_payment_method_page_id =  get_option( 'woocommerce_myaccount_payment_methods_endpoint');
-		
+
 		if ( $myaccount_page_id ) {
 			$myaccount_page_url = get_permalink($myaccount_page_id);
-				
+
 		}else{
-			$myaccount_page_url = ''; 
+			$myaccount_page_url = '';
 		}
 		if ( $myaccount_orders_page_id ) {
 			$myaccount_orders_page_url = $myaccount_orders_page_id;
-				
+
 		}else{
-			$myaccount_orders_page_url = ''; 
+			$myaccount_orders_page_url = '';
 		}
 		if ( $myaccount_address_page_id ) {
 			$myaccount_address_page_url = $myaccount_address_page_id;
-				
+
 		}else{
-			$myaccount_address_page_url = ''; 
+			$myaccount_address_page_url = '';
 		}
-		
+
 		if ( gearside_is_user_online($authorID) ){
 			$author_log_status = esc_html__('online', 'ALSP').'<span class="author-active"></span>';
 		} else {
@@ -3244,7 +3244,7 @@ $author_name = get_the_author_meta('display_name', $authorID);
 		//$frontend_controller = new alsp_frontend_controller();
 		//$active_tab = $frontend_controller->init();
  ?>
- <?php 
+ <?php
  global $alsp_dynamic_styles;
  $id = uniqid();
 $panel_menu_regular = $ALSP_ADIMN_SETTINGS['panel_link_color']['regular'];
@@ -3347,7 +3347,7 @@ $alsp_dynamic_styles[] = array(
 		<?php } ?>
 	   </ul>
       </div>
-      
+
     </nav>
   </header>
  <aside class="user-panel-main main-sidebar">
@@ -3365,10 +3365,19 @@ $alsp_dynamic_styles[] = array(
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
+          <?php if(is_contractor()): ?>
+          <li>
+              <a class="" href="?alsp_action=my_bids" rel="nofollow"><i class="fa fa-dollar"></i><span><?php echo  __('My Bids', 'ALSP'); ?></span></a>
+          </li>
+          <?php else: ?>
+              <li>
+                  <a class="" href="?alsp_action=applications" rel="nofollow"><i class="fa fa-dollar"></i><span><?php echo  __('View all bids', 'ALSP'); ?> (<?php echo get_total_bids(); ?>)</span></a>
+              </li>
+          <?php endif; ?>
 		<li><a href="<?php echo alsp_dashboardUrl(); ?>"><i class="fa fa-dashboard"></i><span><?php _e('Dashboard', 'ALSP'); ?></span></a></li>
 		<?php if ($ALSP_ADIMN_SETTINGS['alsp_allow_edit_profile']): ?>
 			<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'profile')); ?>"><i class="pacz-icon-user"></i><span><?php _e('Edit Profile', 'ALSP'); ?></span></a></li>
-			
+
 		<?php endif; ?>
 		<?php if($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages' || $ALSP_ADIMN_SETTINGS['alsp_listing_bidding']){ ?>
 		<li class="treeview">
@@ -3379,16 +3388,16 @@ $alsp_dynamic_styles[] = array(
 				</span>
 			</a>
 			<ul class="treeview-menu">
-			
+
 				<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'messages')); ?>"><?php echo esc_html__('Inbox', 'ALSP'); ?><?php  if (difp_get_new_message_number()){ echo sprintf(__('<small class="label pull-right bg-red"> %s  </small>', 'ALSP'), difp_get_new_message_button() ); } ?></a></li>
 				<li ><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'messages')); ?>&difpaction=announcements"><?php echo esc_html__('announcements', 'ALSP'); ?></a></li>
 				<li ><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'messages')); ?>&difpaction=settings"><?php echo esc_html__('Settings', 'ALSP'); ?></a></li>
-			
-			</ul> 
+
+			</ul>
 		</li>
 		<?php } ?>
 		<?php //do_action('alsp_dashboard_links', $frontend_controller); ?>
-		<?php if(class_exists('WooCommerce') && $ALSP_ADIMN_SETTINGS['alsp_woocommerce_frontend_links']){ 
+		<?php if(class_exists('WooCommerce') && $ALSP_ADIMN_SETTINGS['alsp_woocommerce_frontend_links']){
 		if(is_contractor()):
 		?>
         <li class="treeview">
@@ -3404,11 +3413,11 @@ $alsp_dynamic_styles[] = array(
 			<li><a href="<?php echo $myaccount_page_url.$myaccount_address_page_url; ?>"><i class="fa fa-circle-o"></i><?php _e('Edit Address', 'ALSP'); ?></a></li>
 			<li><a href="<?php echo $myaccount_page_url.$myaccount_payment_method_page_id; ?>"><i class="fa fa-circle-o"></i><?php _e('Payment Methods', 'ALSP'); ?></a></li>
 			<li><a href="<?php echo $myaccount_page_url.$myaccount_downloads_page_id; ?>"><i class="fa fa-circle-o"></i><?php _e('Downloads', 'ALSP'); ?></a></li>
-            
+
           </ul>
         </li>
 		<?php endif; ?>
-		<?php } ?> 
+		<?php } ?>
 		<?php if($ALSP_ADIMN_SETTINGS['alsp_payments_addon'] == 'alsp_buitin_payment'){ ?>
 			<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'invoices')); ?>"><i class="pacz-icon-user"></i><span><?php _e('Invoices', 'ALSP'); ?></span></a></li>
 		<?php } ?>
@@ -3419,7 +3428,7 @@ $alsp_dynamic_styles[] = array(
 			<li>
 				<a class="" href="<?php echo alsp_submitUrl(); ?>" rel="nofollow"><i class="pacz-icon-plus-circle"></i><span><?php echo  __('Submit new listing', 'ALSP'); ?></span></a>
 			</li>
-		<?php } 
+		<?php }
 		} ?>
 		<?php if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list']){ ?>
 		<li>
@@ -3438,7 +3447,7 @@ $alsp_dynamic_styles[] = array(
 			</li>
 		<?php } ?>
       </ul>
-	  
+
     </section>
     <!-- /.sidebar -->
   </aside>

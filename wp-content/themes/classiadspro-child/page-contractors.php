@@ -89,7 +89,7 @@ $hash = $frontend_controller->hash;
                                                  style="margin:0 -15px;"
                                                  id="alsp-controller-<?php echo $hash; ?>"
                                                  data-controller-hash="<?php echo $hash; ?>">
-                                                <?php $per_page = 4; ?>
+                                                <?php $per_page = 30; ?>
                                                 <script>
                                                     alsp_controller_args_array['<?php echo $hash; ?>'] = {
                                                         "controller": "contractor_controller",
@@ -205,11 +205,11 @@ $hash = $frontend_controller->hash;
                                                          endif;
                                                         ?>
                                                     </div>
-
+                                                    <?php if(count($contractor_query->get_results())>$per_page): ?>
                                                     <button class="btn btn-primary btn-lg btn-block alsp-show-more-button pacz-new-btn-4"
-                                                            data-controller-hash="<?php echo $hash; ?>">Load
-                                                        More
+                                                            data-controller-hash="<?php echo $hash; ?>">Load More
                                                     </button>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
                                         </div>

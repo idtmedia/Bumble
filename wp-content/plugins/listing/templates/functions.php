@@ -3412,12 +3412,14 @@ $alsp_dynamic_styles[] = array(
 		<?php
 			global $alsp_instance;
 			if(is_contractor()){
+
 		if ($ALSP_ADIMN_SETTINGS['alsp_fsubmit_button'] && $alsp_instance->submit_page_url){ ?>
 			<li>
 				<a class="" href="<?php echo alsp_submitUrl(); ?>" rel="nofollow"><i class="pacz-icon-plus-circle"></i><span><?php echo  __('Submit new listing', 'ALSP'); ?></span></a>
 			</li>
-		<?php } 
-		} ?>
+		<?php }  ?>
+
+        <?php } ?>
 		<?php if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list']){ ?>
 		<li>
 			<a class="" href="<?php echo alsp_directoryUrl(array('alsp_action' => 'myfavourites')); ?>" target="_blank"> <i class="pacz-fic4-big-heart"></i>  <span><?php echo  __('Bookmarks', 'ALSP'); ?></span></a>

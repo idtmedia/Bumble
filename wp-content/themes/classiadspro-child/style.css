@@ -116,14 +116,15 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 }
 
 /* Applications TOP SEARCH */
+.alsp-dashboard-tabs-content .tab-content{
+    padding: 30px;
+    background: #fff;
+}
 
-#jb-top-search {
-    padding: 12px 12px 0 12px;
-    box-shadow: none;
-    background: #fcfcfc;
-    border: 0px solid #eceff1;
-    color: #546e7a;
-    font-size: 13px;
+.jb-top-search {
+    color: #000;
+    font-size: 15px;
+    text-transform: uppercase;
     clear: both;
     overflow: hidden;
     margin: 0 0 12px 0;
@@ -137,7 +138,6 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 }
 
 .jb-list-search {
-    width:44px;
     margin: 0 0 0 6px;
     float:left;
     box-sizing: content-box;
@@ -146,7 +146,7 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 .jb-search-group-visible {
     /*width: 90%;*/
     /*width: calc( 100% - 50px );*/
-    width: 65%;
+    width: 75%;
     float:left
 }
 
@@ -212,14 +212,25 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 }
 
 #jb-top-search .jb-top-search-submit {
-    float:right;
+    float:left;
 }
 
 .jb-list-search input[type="submit"]{
-    font-size: 11px;
+    font-size: 15px;
     height: 41px;
     line-height: 41px;
     min-height: 41px;
+    background: #fad03d;
+    border-color: #fad03d;
+    color: #000;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.jb-list-search input[type="submit"]:hover{
+    background-color: #c32026;
+    color: #fff;
+    border-color: #c32026;
 }
 
 /** Applications Row ********/
@@ -253,9 +264,12 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 .jb-grid .jb-grid-row {
     clear:both;
     overflow:hidden;
-    padding: 0.75em 0 0.75em 0;
-    margin: 0 0 0 0;
-    border-bottom: 1px solid #0a0a0a;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #dfd9d5;
+    border-radius: 5px;
+    float: left;
+    width: 100%;
 }
 
 .jb-grid .jb-grid-row > div {
@@ -426,7 +440,6 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 .jb-notify-new {
     display: inline-block;
     width: 16px;
-    background-color: tomato;
     height: 16px;
     font-size: 11px !important;
     font-weight: bold;
@@ -495,16 +508,41 @@ span.jb-glyphs.jb-star-rating:before {
 }
 
 .jb-manage-header {
-    margin: 0 0 0 0;
+    margin: 0;
     clear: both;
     overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+}
 
+.jb-manage-header h4{
+    clear: both;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.jb-manage-header h4 a, .jb-manage-header h4 span{
+    color: #ff0000;
+}
+.jb-bid-message{
+    font-size: 12px;
+}
+.jb-manage-header h4:hover{
+    color: #000!important;
+
+}
+.jb-manage-header-left h3{
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .jb-manage-header-right {
-    min-height: 22px;
     margin: 0;
     padding: 0;
+    position: absolute;
+    right: 0;
+    top: 15px;
 }
 
 .jb-manage-header-right > li {
@@ -515,7 +553,49 @@ span.jb-glyphs.jb-star-rating:before {
 .jb-manage-header-right > li .jb-manage-header-right-item-text {
     font-size: 13px;
 }
+.jb-manage-header-right a{
+    font-size: 11px;
+    height: 41px;
+    line-height: 41px;
+    min-height: 41px;
+    background: #fad03d;
+    border-color: #fad03d;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 20px;
+    display: inline-block;
+}
+.jb-accept-bid, .jb-reject-bid{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight:bold;
+    margin-left: 20px;
+    display: inline-block;
+}
+.jb-accept-bid{
+    padding-left: 37px;
+    background: url(img/accept-btn.png) no-repeat left center;
+}
+.jb-reject-bid{
+    padding-left: 37px;
+    background: url(img/reject-btn.png) no-repeat left center;
+}
+.jb-manage-header-right li:last-child a{
+    background: #000;
+    color: #fff;
+}
+.jb-manage-header-right a:hover{
+    background-color: #c32026;
+    color: #fff;
+    border-color: #c32026;
+}
 
+.jb-manage-header-right li:last-child a:hover{
+    background-color: #c32026;
+    color: #fff;
+    border-color: #c32026;
+}
 .jb-no-text-decoration {
     text-decoration: none !important;
 }
@@ -523,10 +603,10 @@ span.jb-glyphs.jb-star-rating:before {
 .jb-manage-application .jb-manage-header-img{
     padding-right: 5px!important;
     padding-top: 5px!important;
+    float: left;
 }
 
 .jb-manage-application .jb-manage-header-img img {
-    border-radius: 50%;
     display: block;
 }
 
@@ -554,6 +634,9 @@ span.jb-glyphs.jb-star-rating:before {
 .jb-manage-actions-wrap {
     overflow: hidden;
     clear: both;
+    padding: 10px;
+    border-top: 1px solid #f2f2f2;
+    line-height: 35px;
 }
 
 .jb-manage-actions-more {
@@ -637,6 +720,8 @@ a.jb-manage-action:visited {
     -webkit-appearance: menulist;
     -moz-appearance: menulist;
     padding: 10px 14px 10px 14px;
+    min-width: 210px;
+    display: inline-block;
 }
 
 /*** icons *********/
@@ -841,4 +926,33 @@ textarea, input[type=number]{
 .view-bids:hover{
     background-color: #c32026!important;
     color: #fff!important;
+}
+
+.author-btns{
+    text-align: center;
+}
+
+.widget_author .author-btns.style2 a{
+    background: #fad03d!important;
+    border-color: #fad03d!important;
+}
+.widget_author .author-btns.style2 a:hover{
+    background: #ef114c!important;
+    border-color: #ef114c!important;
+    color: #fff!important;
+}
+.user-panel-main {
+    position: absolute!important;
+    padding-top: 70px!important;
+}
+
+.message{
+    font-family: Montserrat;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+}
+.single-listing.single-style2 .alsp-single-listing-text-content-wrap .alsp-field-output-block{
+    padding-top: 30px;
 }
