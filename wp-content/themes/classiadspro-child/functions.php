@@ -574,6 +574,7 @@ function creativeosc_jb_applications_status(){
                 ->subject('Your application has been accepted in '.get_bloginfo('name'))
                 ->template( get_stylesheet_directory(). '/emails/application-status.html' , [
                     'job' => $job->post_title,
+                    'dashboard_link' => alsp_dashboardUrl(array('alsp_action' => 'messages')),
                 ])
                 ->send();
         }

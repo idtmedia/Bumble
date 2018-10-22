@@ -224,9 +224,14 @@ if ( !function_exists( 'pacz_header_logreg' ) ) {
 							//$listing_count = 0;
 						//}
 						echo '<div class="dropdown-content"><ul class="clearfix">';
-							echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-li-settings"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
+                             if(is_contractor()){
+                                 echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'my_bids')).'">'.esc_html__('My Bids', 'classiadspro').'</a></li>';
+                             }else{
+                                 echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
+                                 echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
+                             }
+                             echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'messages')).'">'.esc_html__('My Messages', 'classiadspro').'</a></li>';
+                             echo '<li><i class="pacz-li-settings"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
 							echo '<li>';
 								//echo '<i class="pacz-fic-money"></i>';
 								//echo do_action('alsp_dashboard_links2', $frontend_controller);
@@ -247,9 +252,14 @@ if ( !function_exists( 'pacz_header_logreg' ) ) {
 					echo '<div class="dropdown">';
 						echo '<button class="dropbtn">'.$user_thumb .'<p class="author-name-header"><span class="author-displayname">'.$logedin_user_display_name.'</span><span class="author-nicename">'.$logedin_user_name.'</span></p></button>';
 						echo '<div class="dropdown-content"><ul class="clearfix">';
-							echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-li-settings"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
+                            if(is_contractor()){
+                                echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'my_bids')).'">'.esc_html__('My Bids', 'classiadspro').'</a></li>';
+                            }else{
+                                echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
+                                echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
+                            }
+                            echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'messages')).'">'.esc_html__('My Messages', 'classiadspro').'</a></li>';
+                            echo '<li><i class="pacz-li-settings"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
 							//echo '<li>';
 								//echo '<i class="pacz-fic-money"></i>';
 								//echo do_action('alsp_dashboard_links2', $frontend_controller);

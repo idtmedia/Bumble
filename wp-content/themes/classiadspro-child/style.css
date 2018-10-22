@@ -564,18 +564,59 @@ span.jb-glyphs.jb-star-rating:before {
     padding: 0 20px;
     display: inline-block;
 }
-.jb-accept-bid, .jb-reject-bid{
+.jb-accept-btn, .jb-reject-btn{
     text-transform: uppercase;
     font-size: 13px;
     font-weight:bold;
     margin-left: 20px;
     display: inline-block;
 }
-.jb-accept-bid{
+.jb-accept-btn{
     padding-left: 37px;
     background: url(img/accept-btn.png) no-repeat left center;
 }
-.jb-reject-bid{
+.jb-accept-bid, .jb-reject-bid{
+    font-size: 11px;
+    height: 41px;
+    line-height: 41px;
+    min-height: 41px;
+    background: #fad03d;
+    border-color: #fad03d;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 20px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.jb-cancel-btn,
+.jb-cancel-reject-btn{
+    margin-left:10px;
+    font-size: 11px;
+    height: 41px;
+    line-height: 41px;
+    min-height: 41px;
+    border-color: #fad03d;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 20px;
+    display: inline-block;
+    background: #ee2f2f;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.jb-cancel-btn:hover,
+.jb-cancel-reject-btn:hover{
+    background: #000;
+    color: #fff;
+}
+.jb-accept-bid:hover,
+.jb-reject-bid:hover{
+    background-color: #c32026;
+    color: #fff;
+    border-color: #c32026;
+}
+.jb-reject-btn{
     padding-left: 37px;
     background: url(img/reject-btn.png) no-repeat left center;
 }
@@ -963,4 +1004,41 @@ textarea, input[type=number]{
 }
 .navbar.navbar-static-top{
     display: none;
+}
+.popup-status-change{
+    text-align: center;
+}
+.popup-status-change .pacz-fic4-error:before{
+    color: #000;
+}
+.popup-status-change .alsp-popup-content{
+    font-family: "Montserrat";
+    text-transform: uppercase;
+}
+.popup-status-change .alsp-popup-content p a, .popup-status-change .alsp-popup-content p span{
+    color: #ee2f2f;
+}
+.jb-accepted-text, .jb-rejected-text{
+    font-family: "Montserrat";
+    font-size: 11px;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.jb-accepted-text .message-btn{
+    font-size: 11px;
+    height: 41px;
+    line-height: 41px;
+    min-height: 41px;
+    border-color: #fad03d;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 20px;
+    display: inline-block;
+    background: #ee2f2f;
+    color: #fff;
+}
+.jb-accepted-text .message-btn:hover{
+    background: #000;
+    color: #fff;
 }

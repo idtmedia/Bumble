@@ -79,17 +79,11 @@ if($_REQUEST['job_status']!=""){
         'posts_per_page' => -1,
         'post_type' => 'bidding',
         'meta_query' => array(
-//            'relation'		=> 'AND',
             array(
                 'key' => 'job',
                 'value' => $post_ids_array,
                 'compare' => 'IN',
             ),
-//            array(
-//                'key'	  	=> 'featured',
-//                'value'	  	=> '1',
-//                'compare' 	=> '=',
-//            ),
         ),
     ));
 }
@@ -103,6 +97,9 @@ if($_REQUEST['job_status']!=""){
 //            var_dump($contractor);
             $job = get_field('job', $post->ID);
             $status = (get_field('bid_status', $post->ID) != '' ) ? get_field('bid_status', $post->ID) : 'New';
+            global $current_user;
+            global $ALSP_ADIMN_SETTINGS;
+            $author_name = get_the_author_meta('display_name', $contractor->ID);
             ?>
             <div class="jb-grid-row jb-manage-item jb-manage-application jb-application-status-<?php echo strtolower($status); ?>"
                  data-id="<?php echo $post->ID; ?>" data-contractor="<?php echo $contractor['display_name']; ?>">
@@ -167,31 +164,64 @@ if($_REQUEST['job_status']!=""){
                                 </span>
                         </span>
                         <span class="jb-manage-actions-right">
-                            <a href="javascript: void()" class="jb-accept-bid"><?php _e('Accept Bid'); ?></a>
-                            <a href="javascript: void()" class="jb-reject-bid"><?php _e('Reject Bid'); ?></a>
-                            <!--<a href="?alsp_action=applications&view=<?php /*echo $post->ID; */?>"
-                               class="jb-manage-action jb-no-320-760"><span class="jb-glyphs jb-icon-eye"></span>View</a>
-                            <a href="#" class="jb-manage-action jb-manage-app-status-change">
-                                <span class="jb-glyphs jb-icon-down-open"></span>
-                                Status —
-                                <strong class="jb-application-status-current-label"><?php /*echo $status; */?></strong>
-                            </a>-->
+                            <div class="popup popup-status-change" data-popup="jb-accept-bid-<?php echo $post->ID; ?>">
+                                <div class="popup-inner single-contact">
+                                    <div class="alsp-popup-content">
+                                        <a class="popup-close" data-popup-close="jb-accept-bid-<?php echo $post->ID; ?>" href="#"><i class="pacz-fic4-error"></i></a>
+                                        <h3><?php echo $contractor['user_nicename']; ?></h3>
+                                        <p>
+                                            <strong><?php _e('APPLIED FOR:')?></strong> <a href="<?php echo get_permalink($job); ?>"><?php echo get_the_title($job); ?></a><br>
+                                            <strong><?php _e('BID AMOUNT:'); ?></strong> <span>$<?php echo get_field('cost', $post->ID); ?></span>
+                                        </p>
+                                        <a href="javascript: void()" class="jb-accept-bid"><?php _e('I accept this offer'); ?></a>
+                                        <a class="jb-cancel-btn" data-popup-close="jb-accept-bid-<?php echo $post->ID; ?>" href="#"><?php _e('Cancel'); ?></a>
+                                        <p><?php _e('*The contractor will be notified right away'); ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup popup-status-change" data-popup="jb-reject-bid-<?php echo $post->ID; ?>">
+                                <div class="popup-inner single-contact">
+                                    <div class="alsp-popup-content">
+                                        <a class="popup-close" data-popup-close="jb-reject-bid-<?php echo $post->ID; ?>" href="#"><i class="pacz-fic4-error"></i></a>
+                                        <h3><?php echo $contractor['user_nicename']; ?></h3>
+                                        <p>
+                                            <strong><?php _e('APPLIED FOR:')?></strong> <a href="<?php echo get_permalink($job); ?>"><?php echo get_the_title($job); ?></a><br>
+                                            <strong><?php _e('BID AMOUNT:'); ?></strong> <span>$<?php echo get_field('cost', $post->ID); ?></span>
+                                        </p>
+                                        <a href="javascript: void()" class="jb-reject-bid"><?php _e('Reject this offer'); ?></a>
+                                        <a class="jb-cancel-reject-btn" data-popup-close="jb-reject-bid-<?php echo $post->ID; ?>" href="#"><?php _e('Cancel'); ?></a>
+                                        <p><?php _e('*The contractor will be notified right away'); ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+
+                            echo '<div class="popup" data-popup="single_contact_form_'.$post->ID.'">';
+                            echo '<div class="popup-inner single-contact">';
+                            echo '<div class="alsp-popup-title">'.esc_html__('Send a Message', 'ALSP').'<a class="popup-close" data-popup-close="single_contact_form_'.$post->ID.'" href="#"><i class="pacz-fic4-error"></i></a></div>';
+                            echo '<div class="alsp-popup-content">';
+                            if($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages'){
+                                echo '<div class="form-new">';
+                                echo do_shortcode('[difp_shortcode_new_message_form to="'.$author_name.'" subject="You have been accepted for the job"]');
+                                echo '</div>';
+                            }else{
+                                echo esc_html__('Messages are currenlty disabled by Site Owner', 'ALSP');
+                            }
+                            echo'</div>';
+                            echo'</div>';
+                            echo'</div>';
+                            ?>
+                            <?php if($status!='Accepted'&&$status!='Rejected'): ?>
+                                <a href="javascript: void()" class="jb-accept-btn" data-popup-open="jb-accept-bid-<?php echo $post->ID; ?>"><?php _e('Accept Bid'); ?></a>
+                                <a href="javascript: void()" class="jb-reject-btn" data-popup-open="jb-reject-bid-<?php echo $post->ID; ?>"><?php _e('Reject Bid'); ?></a>
+                                <p class="jb-accepted-text" style="display: none;"><?php _e('You’ve accepted this bid.'); ?> <a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a></p>
+                                <p class="jb-rejected-text" style="display: none;"><?php _e('You’ve rejected this bid.'); ?></p>
+                            <?php else: ?>
+                                <p class="jb-accepted-text"><?php _e('You’ve'); ?> <?php echo $status; ?> <?php _e('this bid.'); ?>  <?php if($status=='Accepted'): ?><a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a><?php endif; ?></p>
+                            <?php endif; ?>
                         </span>
                     </div>
                 </div>
-                <!--<div style="clear: both; overflow: hidden"></div>
-                <div class="jb-application-change-status jb-filter-applications" style="display: none">
-                    <select name="job_id" class="jb-application-change-status-dropdown" style="display: inline-block">
-                        <option value="New" data-can-notify="">New</option>
-                        <option value="Read" data-can-notify="">Read</option>
-                        <option value="Rejected" data-can-notify="1">Rejected</option>
-                        <option value="Accepted" data-can-notify="1">Accepted</option>
-                    </select>
-                    <input style="display: inline-block" type="checkbox" value="1" class="jb-application-change-status-checkbox" id="jb-application-status-<?php /*echo $post->ID; */?>">
-                    <label style="display: inline-block" class="jb-application-change-status-label" for="jb-application-status-<?php /*echo $post->ID; */?>">Notify applicant via email</label>
-                    <span style="display: inline-block" class="jb-glyphs jb-icon-spinner jb-animate-spin jb-none jb-application-change-status-loader"></span>
-                    <a style="display: inline-block" href="#" class="jb-button jb-application-change-status-submit" style="float:right">Change</a>
-                </div>-->
             </div>
         <?php endforeach;
         wp_reset_postdata(); ?>
@@ -252,7 +282,7 @@ if($_REQUEST['job_status']!=""){
 
         jQuery.each(this.stars, jQuery.proxy( this.stars_check, this ));
 
-        console.log('clicked');
+//        console.log('clicked');
 
         var data = {
             action: "wpjb_applications_rate",
@@ -293,7 +323,13 @@ if($_REQUEST['job_status']!=""){
         this.element = { };
         this.element.item = item;
         this.element.button = item.find(".jb-manage-app-status-change");
+        this.element.accept_popup_btn = item.find(".jb-accept-btn");
+        this.element.cancel_btn = item.find(".jb-cancel-btn");
+        this.element.cancel_reject_btn = item.find(".jb-cancel-reject-btn");
+        this.element.accept_text = item.find(".jb-accepted-text");
+        this.element.reject_text = item.find(".jb-rejected-text");
         this.element.accept = item.find(".jb-accept-bid");
+        this.element.reject_popup_btn = item.find(".jb-reject-btn");
         this.element.reject = item.find(".jb-reject-bid");
         this.element.status = item.find(".jb-bid-status");
         this.element.more = item.find(".jb-show-more");
@@ -338,7 +374,7 @@ if($_REQUEST['job_status']!=""){
         if(typeof e != "undefined") {
             e.preventDefault();
         }
-        if(confirm('Please confirm that you will be accepting "'+this.contractor+'" as your contract for this project. This project will now be closed')){
+//        if(confirm('Please confirm that you will be accepting "'+this.contractor+'" as your contract for this project. This project will now be closed')){
             var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
             var data = {
@@ -356,13 +392,18 @@ if($_REQUEST['job_status']!=""){
                 success: jQuery.proxy( this.accept_success, this ),
                 error: jQuery.proxy( this.submit_error, this )
             });
-        }
+//        }
     };
     WPJB.Manage.Apps.Item.StatusChange.prototype.accept_success = function(response) {
         this.element.item.removeClass (function (index, className) {
             return (className.match (/(^|\s)jb-application-status-\S+/g) || []).join(' ');
         });
+        this.element.cancel_btn.click();
         this.element.status.text( "Accepted");
+        this.element.accept_popup_btn.slideUp('fast');
+        this.element.reject_popup_btn.slideUp('fast');
+        this.element.accept_text.slideDown('fast');
+//        this.element.item.removeChild( this.element.reject);
     };
 
     WPJB.Manage.Apps.Item.StatusChange.prototype.reject_click = function(e) {
@@ -370,7 +411,7 @@ if($_REQUEST['job_status']!=""){
             e.preventDefault();
         }
 
-        if(confirm('Please confirm that you will be rejecting contract of "'+this.contractor+'" for this project.')){
+//        if(confirm('Please confirm that you will be rejecting contract of "'+this.contractor+'" for this project.')){
             var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
             var data = {
@@ -388,14 +429,18 @@ if($_REQUEST['job_status']!=""){
                 success: jQuery.proxy( this.reject_success, this ),
                 error: jQuery.proxy( this.submit_error, this )
             });
-        }
+//        }
     };
 
     WPJB.Manage.Apps.Item.StatusChange.prototype.reject_success = function(response) {
         this.element.item.removeClass (function (index, className) {
             return (className.match (/(^|\s)jb-application-status-\S+/g) || []).join(' ');
         });
+        this.element.cancel_reject_btn.click();
         this.element.status.text( "Rejected");
+        this.element.accept_popup_btn.slideUp('fast');
+        this.element.reject_popup_btn.slideUp('fast');
+        this.element.reject_text.slideDown('fast');
     };
 
     WPJB.Manage.Apps.Item.StatusChange.prototype.dropdown_change = function(e) {

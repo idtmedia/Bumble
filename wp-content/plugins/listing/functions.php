@@ -3370,11 +3370,12 @@ $alsp_dynamic_styles[] = array(
               <a class="" href="?alsp_action=my_bids" rel="nofollow"><i class="fa fa-dollar"></i><span><?php echo  __('My Bids', 'ALSP'); ?></span></a>
           </li>
           <?php else: ?>
+              <li><a href="<?php echo alsp_dashboardUrl(); ?>"><i class="fa fa-dashboard"></i><span><?php _e('Dashboard', 'ALSP'); ?></span></a></li>
               <li>
                   <a class="" href="?alsp_action=applications" rel="nofollow"><i class="fa fa-dollar"></i><span><?php echo  __('View all bids', 'ALSP'); ?> (<?php echo get_total_bids(); ?>)</span></a>
               </li>
           <?php endif; ?>
-		<li><a href="<?php echo alsp_dashboardUrl(); ?>"><i class="fa fa-dashboard"></i><span><?php _e('Dashboard', 'ALSP'); ?></span></a></li>
+
 		<?php if ($ALSP_ADIMN_SETTINGS['alsp_allow_edit_profile']): ?>
 			<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'profile')); ?>"><i class="pacz-icon-user"></i><span><?php _e('Edit Profile', 'ALSP'); ?></span></a></li>
 

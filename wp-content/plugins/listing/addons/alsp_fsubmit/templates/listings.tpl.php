@@ -4,30 +4,30 @@
 
     if(get_current_user_role()!='contributor'){
         echo'<div class="listing-counts-wrap clearfix">';
-        echo'<div class="total-listing-count col-lg-3 col-md-6 col-sm-6 col-xs-12">';
+        echo'<div class="total-listing-count col-lg-4 col-md-4 col-sm-4 col-xs-12">';
         echo'<div class="total-listing-count-item">';
         echo '<i class="total pacz-fic3-list"></i>';
         echo '<span class="listing-conut-main"><span class="listing-number">'.$frontend_controller->listings_count.'</span>'.esc_html__('Total Listing', 'ALSP').'</span>';
         echo'</div>';
         echo'</div>';
-        echo'<div class="total-listing-count col-lg-3 col-md-6 col-sm-6 col-xs-12">';
+        echo'<div class="total-listing-count col-lg-4 col-md-4 col-sm-4 col-xs-12">';
         echo'<div class="total-listing-count-item">';
         echo '<i class="active pacz-fic4-tick"></i>';
         echo '<span class="listing-conut-main"><span class="listing-number">'.$frontend_controller->listings_count2.'</span>'.esc_html__('Active Listing', 'ALSP').'</span>';
         echo'</div>';
         echo'</div>';
-        echo'<div class="total-listing-count col-lg-3 col-md-6 col-sm-6 col-xs-12">';
+        echo'<div class="total-listing-count col-lg-4 col-md-4 col-sm-4 col-xs-12">';
         echo'<div class="total-listing-count-item">';
         echo '<i class="expired pacz-fic4-warning-1"></i>';
         echo '<span class="listing-conut-main"><span class="listing-number">'.$frontend_controller->listings_count3.'</span>'.esc_html__('Expired Listing', 'ALSP').'</span>';
         echo'</div>';
         echo'</div>';
-        echo'<div class="total-listing-count col-lg-3 col-md-6 col-sm-6 col-xs-12">';
-        echo'<div class="total-listing-count-item">';
-        echo '<i class="pending pacz-fic-clock-4"></i>';
-        echo '<span class="listing-conut-main"><span class="listing-number">'.$frontend_controller->listings_count4.'</span>'.esc_html__('Pending Aprroval', 'ALSP').'</span>';
-        echo'</div>';
-        echo'</div>';
+//        echo'<div class="total-listing-count col-lg-3 col-md-6 col-sm-6 col-xs-12">';
+//        echo'<div class="total-listing-count-item">';
+//        echo '<i class="pending pacz-fic-clock-4"></i>';
+//        echo '<span class="listing-conut-main"><span class="listing-number">'.$frontend_controller->listings_count4.'</span>'.esc_html__('Pending Aprroval', 'ALSP').'</span>';
+//        echo'</div>';
+//        echo'</div>';
         echo'</div>';
     }
 
