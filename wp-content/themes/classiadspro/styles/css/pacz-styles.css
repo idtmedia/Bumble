@@ -6918,11 +6918,9 @@ border-radius: 3px;
 	border-bottom: 1px solid #eee;
   }
   .dir--title label{display:none;}
-  .dir--title input{border:none; border-bottom:1px solid #eee;padding-left:0;}
+  .dir--title input{border:none; border:1px solid #eee;}
   .dir_message_field label{display:none;}
   #commentform #comment{
-	  border:none;
-	  border-bottom:1px solid #eee;
+	  border:1px solid #eee;
 	  width:100%;
-	  padding-left:0;
   }

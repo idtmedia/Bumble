@@ -163,7 +163,7 @@ class alsp_fsubmit_plugin {
 		$page_object = get_page( $page_id );
 		if (strpos(!$page_object->post_content, '[webdirectory-listing]')){
 			if ($ALSP_ADIMN_SETTINGS['alsp_fsubmit_button'] && $alsp_instance->submit_page_url)
-				echo '<a class="alsp-submit-listing-link btn btn-primary" href="' . alsp_submitUrl() . '" rel="nofollow"><span class="glyphicon glyphicon-plus"></span> ' . __('Submit new listing', 'ALSP') . '</a> ';
+				echo '<a class="alsp-submit-listing-link btn btn-primary" href="' . alsp_submitUrl() . '?level=1" rel="nofollow"><span class="glyphicon glyphicon-plus"></span> ' . __('Post your job', 'ALSP') . '</a> ';
 		}
 	}
 

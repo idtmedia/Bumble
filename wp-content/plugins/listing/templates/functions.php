@@ -3415,7 +3415,7 @@ $alsp_dynamic_styles[] = array(
 
 		if ($ALSP_ADIMN_SETTINGS['alsp_fsubmit_button'] && $alsp_instance->submit_page_url){ ?>
 			<li>
-				<a class="" href="<?php echo alsp_submitUrl(); ?>" rel="nofollow"><i class="pacz-icon-plus-circle"></i><span><?php echo  __('Submit new listing', 'ALSP'); ?></span></a>
+				<a class="" href="<?php echo alsp_submitUrl(); ?>?level=1" rel="nofollow"><i class="pacz-icon-plus-circle"></i><span><?php echo  __('Post your job', 'ALSP'); ?></span></a>
 			</li>
 		<?php }  ?>
 

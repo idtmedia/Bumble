@@ -126,6 +126,7 @@ class DHVCForm_Submission{
 				$redirect_url = get_permalink(get_post_meta($this->_form_id,'_post',true));
 			}
 		}
+		$redirect_url = 'http://pwmhosting.ca/bumble';
 		return $redirect_url;
 	}
 	

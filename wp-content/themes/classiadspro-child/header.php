@@ -32,8 +32,6 @@
 //endwhile; endif;
 //var_dump($meta_values);
 //_expiration_date
-	
-
 
 global $pacz_settings;
  $post_id = global_get_post_id();

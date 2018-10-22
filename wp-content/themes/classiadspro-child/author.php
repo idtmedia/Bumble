@@ -124,12 +124,10 @@ if (class_exists('alsp_plugin')):
         <div class="theme-page-wrapper pacz-main-wrapper <?php echo esc_attr($layout); ?>-layout pacz-grid vc_row-fluid">
             <div class="inner-page-wrapper">
                 <div class="theme-content  author-page" itemprop="mainContentOfPage">
-
                     <?php
-
                     echo '<div class="popup" data-popup="single_contact_form">';
                     echo '<div class="popup-inner single-contact">';
-                    echo '<div class="alsp-popup-title">'.esc_html__('Send Message', 'ALSP').'<a class="popup-close" data-popup-close="single_contact_form" href="#"><i class="pacz-fic4-error"></i></a></div>';
+                    echo '<div class="alsp-popup-title">'.esc_html__('Send a Message', 'ALSP').'<a class="popup-close" data-popup-close="single_contact_form" href="#"><i class="pacz-fic4-error"></i></a></div>';
                     echo '<div class="alsp-popup-content">';
                     global $current_user;
 
@@ -177,7 +175,7 @@ if (class_exists('alsp_plugin')):
                         }
                         $output .= '<div class="author-btns style2">
                                         <div class="author-btn-holder">
-                                            <a class="" data-popup-open="single_contact_form" href="#">Send message</a>
+                                            <a class="" data-popup-open="single_contact_form" href="#">'._('Send a message').'</a>
                                         </div>
                                     </div>';
                         $output .= '</div>';
@@ -326,14 +324,15 @@ if (class_exists('alsp_plugin')):
                                                              data-dirrater="<?php the_field('score'); ?>"
                                                              title=""></div>
                                                         <span class="comment-author"><?php
+                                                            $job = get_field('job');
                                                             if ($rater) {
                                                                 $user_info = get_userdata($rater['ID']);
                                                                 echo $user_info->display_name;
                                                             }
-                                                            ?></span>
-                                                        <time class="comment-time">July 16th, 2018 08:12 AM</time>
+                                                            ?> <?php _e('review for'); ?> <?php echo get_the_title($job->ID); ?></span>
+                                                        <time class="comment-time"><?php the_date(); ?></time>
                                                         <span class="comment-reply">
-                                                    </span>
+                                                        </span>
                                                     </div>
                                                     <div class="clearboth"></div>
                                                     <div class="comment-content">
@@ -347,8 +346,59 @@ if (class_exists('alsp_plugin')):
                                     ?>
                                 </ul>
                                 <?php if (is_user_logged_in()):
-                                    if (Rating_Contractor::check_reviewable(get_current_user_id(), $authorID)):
+//                                    if (Rating_Contractor::check_reviewable(get_current_user_id(), $authorID)):
                                         ?>
+                                    <?php
+                                    $args1 = array(
+                                        'post_type' => 'ratingcontractor',
+                                        'post_per_page' => -1,
+                                        'meta_query' => array(
+                                            'relation'		=> 'AND',
+                                            array(
+                                                'key'	  	=> 'rater',
+                                                'value'	  	=> get_current_user_id(),
+                                                'compare' 	=> '=',
+                                            ),
+                                            array(
+                                                'key'	  	=> 'contractor',
+                                                'value'	  	=> $authorID,
+                                                'compare' 	=> '=',
+                                            ),
+                                        ),
+                                    );
+                                    $reviews = get_posts($args1);
+                                    $jobs_rated = array();
+                                    if(count($reviews)>0){
+                                        foreach ($reviews as $review){ setup_postdata($review);
+                                            $job = get_field('job', $review->ID);
+                                            $jobs_rated[] = $job->ID;
+                                        }
+                                    }
+                                    $args2 = array(
+                                        'post_type' => 'bidding',
+                                        'posts_per_page' => -1,
+                                        'meta_query' => array(
+                                            'relation'		=> 'AND',
+                                            array(
+                                                'key' => 'job',
+                                                'value' => $jobs_rated,
+                                                'compare' => 'NOT IN',
+                                            ),
+                                            array(
+                                                'key'	  	=> 'bid_status',
+                                                'value'	  	=> 'Accepted',
+                                                'compare' 	=> '=',
+                                            ),
+                                            array(
+                                                'key'	  	=> 'contractor',
+                                                'value'	  	=> $authorID,
+                                                'compare' 	=> '=',
+                                            ),
+                                        ),
+                                    );
+                                    $jobs = get_posts($args2);
+                                    ?>
+                                    <?php if (count($jobs) > 0): ?>
                                         <div class="inner-content">
 
                                             <div id="respond" class="comment-respond">
@@ -358,11 +408,6 @@ if (class_exists('alsp_plugin')):
                                                     </div>
                                                 </h3>
                                                 <form action="" method="post" id="commentform" class="comment-form">
-                                                    <p class="dir_message_field"><label for="comment">Your
-                                                            Review</label>
-                                                        <textarea id="comment" name="comment" cols="45" rows="3"
-                                                                  aria-required="true" required="required"
-                                                                  placeholder="Review "></textarea></p>
                                                     <div id="new_rating_wrapper" style="cursor: pointer;">
                                                         <label for="new_listing_rating">Your Rating</label>
                                                         <div id="new_listing_rating" data-dirrater="4"
@@ -370,11 +415,32 @@ if (class_exists('alsp_plugin')):
                                                             Exceptional
                                                         </div>
                                                     </div>
+                                                    <p class="">
+                                                        <label for="dirrater_title">Select job for rating:</label>
+
+                                                        <select name="job">
+                                                         <?php foreach ($jobs as $post) : setup_postdata($post); ?>
+                                                         <?php
+                                                         $job = get_field('job', $post->ID);
+                                                         ?>
+                                                          <option value="<?php echo $job->ID; ?>"><?php echo get_the_title($job); ?></option>
+                                                         <?php endforeach; ?>
+                                                        </select>
+
+                                                    </p>
                                                     <p class="dir--title">
                                                         <label for="dirrater_title">Title of your review:</label>
                                                         <input type="text" id="dirrater_title" name="dirrater_title"
                                                                value="" placeholder="Review Title" size="25">
                                                     </p>
+
+                                                    <p class="dir_message_field"><label for="comment">Your
+                                                            Review</label>
+                                                        <textarea id="comment" name="comment" cols="45" rows="3"
+                                                                  aria-required="true" required="required"
+                                                                  placeholder="Review "></textarea></p>
+
+
                                                     <p class="form-submit"><input name="submit" type="submit"
                                                                                   id="submit" class="submit"
                                                                                   value="Submit Review">
@@ -389,6 +455,7 @@ if (class_exists('alsp_plugin')):
                                             <!-- #respond -->
                                         </div>
                                     <?php endif; ?>
+                                    <?php //endif; ?>
                                 <?php else: ?>
                                     <?php _e('Please login as user for review a contractor'); ?>
                                 <?php endif; ?>

@@ -24,7 +24,6 @@ if (count($current_user_jobs) > 0) {
 }
 if($_REQUEST['job_id']>0){
     $post_ids_array = array($_REQUEST['job_id']);
-//    $posts_array[] = array(get_the_title($_REQUEST['job_id']));
 }
 $job_statuses = array('New','Rejected','Accepted');
 ?>
@@ -52,11 +51,6 @@ $job_statuses = array('New','Rejected','Accepted');
             </div>
         </div>
         <div class="jb-list-search">
-            <!--<a href="#" class="jb-button jb-button-search jb-button-submit" title="Filter Results">
-                <span class="jb-glyphs jb-icon-search"></span>
-                <span class="jb-mobile-only">Filter Results</span>
-            </a>-->
-
             <input type="submit" value="<?php _e('Apply filter'); ?>">
         </div>
     </form>

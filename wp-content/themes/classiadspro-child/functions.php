@@ -564,42 +564,21 @@ function creativeosc_jb_applications_status(){
     if(isset($_POST['action']) && $_POST['action'] == 'jb_applications_status' && $_POST['id']>0) {
         $bid_id = $_POST['id'];
         $job = get_field('job', $bid_id);
+        $contractor = get_field('contractor', $bid_id);
         $bid_status = $_POST['status'];
         update_field('bid_status', $bid_status, $bid_id );
         if($bid_status=='Accepted'){
             update_post_meta($job->ID, '_listing_status', 'expired');
-        }
-        if($_POST['notify']==1){
-            $contractor = get_field('contractor', $bid_id);
-//            $to = get_the_author_meta( 'email' , $author );
-            $job_data = get_post($bid_id);
-
             WP_Mail::init()
-                ->to($contractor['email'])
-                ->subject('Your application has been change status in '.get_bloginfo('name'))
+                ->to($contractor['user_email'])//$contractor['user_email']
+                ->subject('Your application has been accepted in '.get_bloginfo('name'))
                 ->template( get_stylesheet_directory(). '/emails/application-status.html' , [
-                    'status' => $bid_status,
-                    'job' => $job_data->post_title,
-//                            'skills' => [
-//                                'PHP',
-//                                'AWS',
-//                            ]
+                    'job' => $job->post_title,
                 ])
                 ->send();
         }
 
         return true;
-//        var_dump($_POST);
-//        "array(4) {
-//  ["action"]=>
-//  string(22) "jb_applications_status"
-//  ["id"]=>
-//  string(4) "2993"
-//  ["status"]=>
-//  string(8) "Rejected"
-//  ["notify"]=>
-//  string(1) "0"
-//}
 
     }else{
         return false;
@@ -609,3 +588,24 @@ function creativeosc_jb_applications_status(){
 }
 add_action('wp_ajax_jb_applications_status', 'creativeosc_jb_applications_status');
 add_action('wp_ajax_nopriv_jb_applications_status', 'creativeosc_jb_applications_status');
+
+/**
+ * @snippet       WooCommerce Only one product in cart
+ * @how-to        Watch tutorial @ https://businessbloomer.com/?p=19055
+ * @sourcecode    https://businessbloomer.com/?p=560
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 3.4.3
+ */
+
+/* Clear cart data before adding new */
+// before addto cart, only allow 1 item in a cart
+/*add_filter( 'woocommerce_add_to_cart_validation', 'woo_custom_add_to_cart_before' );
+
+function woo_custom_add_to_cart_before( $cart_item_data ) {
+
+    global $woocommerce;
+    $woocommerce->cart->empty_cart();
+
+    // Do nothing with the data and return
+    return true;
+}*/

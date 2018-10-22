@@ -180,7 +180,7 @@ _e('POST YOUR JOB','ALSP');
 				<?php endif; ?>
 
 				<?php require_once(ABSPATH . 'wp-admin/includes/template.php'); ?>
-				<?php submit_button(__('Submit new listing', 'ALSP'), 'btn')?>
+				<?php submit_button(__('Post your job', 'ALSP'), 'btn')?>
 			</form>
 		</div>
 	</div>

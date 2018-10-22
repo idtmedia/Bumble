@@ -1,3 +1,7 @@
+<?php
+global $woocommerce;
+$woocommerce->cart->empty_cart();
+?>
 <form action="<?php echo alsp_dashboardUrl(array('alsp_action' => 'upgrade_listing', 'listing_id' => $alsp_instance->current_listing->post->ID, 'upgrade_action' => 'upgrade', 'referer' => urlencode($frontend_controller->referer))); ?>" method="POST">
 	<?php if ($frontend_controller->action == 'show'): ?>
 	<h3><?php _e('Get your listing featured on top!', 'ALSP'); ?></h3>

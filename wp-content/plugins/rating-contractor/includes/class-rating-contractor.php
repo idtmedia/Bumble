@@ -223,7 +223,7 @@ class Rating_Contractor {
         ) {
             print 'Sorry, your nonce did not verify.';
         } else {
-            if(Rating_Contractor::check_reviewable($post['rated_by'], $post['contractor'])){
+            if(Rating_Contractor::check_reviewable($post['rated_by'], $post['contractor'], $post['job'])){
                 $my_review = array(
                     'post_title'	=> $post['dirrater_title'],
                     'post_content'	=> $post['comment'],
@@ -243,18 +243,25 @@ class Rating_Contractor {
                 $field_contractor = "field_5ba876b28c93f";
                 $value = $post['contractor'];
                 update_field( $field_contractor, $value, $post_id );
+
+                $field_job = "field_5bc6d88ad894d";
+                $value = array($post['job']);
+//                var_dump($value);
+                update_field( $field_job, $value, $post_id );
+
                 _e('Your review posted successfully');
             }else{
-                _e('You have reviewed the contactor already');
+                _e('You have reviewed the contractor for the job already');
             }
 
         }
     }
 
-    public static function check_reviewable($user, $contractor){
+    public static function check_reviewable($user, $contractor, $job){
         $contractor_data = get_userdata($contractor);
 
         $contractor_role = $contractor_data->roles;
+        if($job==0) return false;
         if(!in_array(get_current_user_role(), array('subscriber', 'administrator'))){
 	        return false;
         }elseif( $contractor_role[0] != 'contributor') {
@@ -264,6 +271,11 @@ class Rating_Contractor {
                 'post_type'     => 'ratingcontractor',
                 'meta_query' => array(
                     'relation'      => 'AND',
+//                    array(
+//                        'key' => 'job',
+//                        'value'   => array($job),
+//                        'compare' => 'in',
+//                    ),
                     array(
                         'key' => 'contractor',
                         'value'   => $contractor,
@@ -275,8 +287,20 @@ class Rating_Contractor {
                         'compare' => '='
                     )
                 ));
-            $query = new WP_Query( $args );
-            return $query->post_count > 0 ? false : true;
+            $posts = get_posts( $args );
+            if(count($posts)>0){
+                foreach ($posts as $post){
+                    setup_postdata($post);
+                    $job_data = get_field('job', $post->ID);
+                    if($job_data->ID == $job){
+                        return false;
+                    }
+                }
+                return true;
+            }else{
+                return true;
+            }
+//            return count($posts) > 0 ? false : true;
         }
 
     }

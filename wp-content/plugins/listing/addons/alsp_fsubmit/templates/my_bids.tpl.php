@@ -1,21 +1,137 @@
 <?php
 if(!is_contractor()):
     _e('You dont have permission for accessing this section');
-else: ?>
-    <div class="alsp-container-fluid alsp-listings-block cz-listview">
-        <div class="alsp-listings-block-content no-carousel   clearfix" data-style="masonry" data-uniqid="1644d5af9298956001803404d8b46711">
-            <div class="listing-list-view-inner-wrap">
-                <article id="post-2858" class="  row alsp-listing  pacz-isotop-item isotop-item masonry-1644d5af9298956001803404d8b46711 responsive-2col listing-post-style-listview_ultra alsp-featured alsp-sticky clearfix">
-                    <div class="listing-wrapper clearfix">
-                        <figure class="alsp-listing-logo alsp-listings-own-page"><a href="http://pwmhosting.ca/bumble/listings/test2509/"><img alt="test2509" src="http://pwmhosting.ca/bumble/wp-content/uploads/2018/09/DogonLeash_Logo.png" width="130" height="130"></a><div class="listing-logo-overlay"></div><span class="featured-ad">Featured</span><div class="alsp-sticky-icon"></div></figure><div class="clearfix alsp-listing-text-content-wrap"><div class="cat-wrapper"><a class="listing-cat" href="http://pwmhosting.ca/bumble/listings/listings-category/general-contractor-services/" rel="tag">General Contractor Services</a></div><div class="price"><div class="alsp-field alsp-field-output-block alsp-field-output-block-price alsp-field-output-block-9">
-		<span class="alsp-field-caption">
-						<span class="alsp-field-name">Budget:</span>
-			</span>
-                                    <span class="alsp-field-content">
-			<span class="symbol_style2">$</span>10 000.00	</span>
-                                </div></div><a href="javascript:void(0);" class="add_to_favourites btn" listingid="2858"><span class="pacz-icon-heart-o"></span></a><header class="alsp-listing-header"><h2><a href="http://pwmhosting.ca/bumble/listings/test2509/" title="test2509">test2509</a><span class="author-unverified pacz-icon-check-circle"></span></h2><div class="listing-metas clearfix"><p class="listing-location"><i class="pacz-fic3-pin-1"></i><span class="alsp-location" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span class="alsp-show-on-map" data-location-id="374"><span itemprop="addressLocality">Nunavut</span>, <br></span></span></p><em class="alsp-listing-date" itemprop="dateCreated" datetime="2018-09-25T03:44"><i class="pacz-fic3-clock-circular-outline"></i>September 25, 2018</em><p class="listing-views"><i class="pacz-fic3-medical"></i>Views: 48</p></div></header></div>							</div>
-                </article>
+else:
+    $user_id = get_current_user_id();
+    if($_REQUEST['job_status']!=""){
+        $applications = get_posts(array(
+            'numberposts' => -1,
+            'post_type' => 'bidding',
+            'meta_query' => array(
+                'relation'		=> 'AND',
+                array(
+                    'key' => 'contractor',
+                    'value' => $user_id,
+                    'compare' => '=',
+                ),
+                array(
+                    'key'	  	=> 'bid_status',
+                    'value'	  	=> $_REQUEST['job_status'],
+                    'compare' 	=> '=',
+                ),
+            ),
+        ));
+    }else {
+        $applications = get_posts(array(
+            'posts_per_page' => -1,
+            'post_type' => 'bidding',
+            'meta_query' => array(
+                array(
+                    'key' => 'contractor',
+                    'value' => $user_id,
+                    'compare' => '=',
+                ),
+            ),
+        ));
+    }
+    $job_statuses = array('New','Rejected','Accepted');
+?>
+
+    <div class="jb-top-search">
+    <form action="" method="GET">
+        <input type="hidden" name="alsp_action" value="my_bids" />
+        <div class="jb-search jb-search-group-visible">
+            <!--<div class="jb-input jb-input-type-half jb-input-type-half-left">
+                <label><?php /*_e('Filter by job'); */?></label>
+                <select name="job_id">
+                    <option value="">All Jobs</option>
+                    <?php /*foreach ($posts_array as $job): */?>
+                        <option value="<?php /*echo $job[0]; */?>" <?php /*if($_REQUEST['job_id']==$job[0]) echo 'selected'; */?>><?php /*echo $job[1]; */?></option>
+                    <?php /*endforeach; */?>
+                </select>
+            </div>-->
+            <div class="jb-input">
+                <label><?php _e('Filter by status'); ?></label>
+                <select name="job_status">
+                    <option value=""><?php _e('All Statuses'); ?></option>
+                    <?php foreach($job_statuses as $status): ?>
+                        <option value="<?php echo $status; ?>" <?php if($status==$_REQUEST["job_status"]) echo 'selected'; ?>><?php echo $status; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="jb-list-search">
+                <input type="submit" value="<?php _e('Apply filter'); ?>">
             </div>
         </div>
+    </form>
     </div>
-<?php endif; ?>
+    <div class="jb-grid jb-grid-compact">
+        <?php if (count($applications) > 0): ?>
+            <?php foreach ($applications as $post) : setup_postdata($post); ?>
+                <?php
+                $contractor = get_field('contractor', $post->ID);
+                $job = get_field('job', $post->ID);
+                $status = (get_field('bid_status', $post->ID) != '' ) ? get_field('bid_status', $post->ID) : 'New';
+                ?>
+                <div class="jb-grid-row jb-manage-item jb-manage-application jb-application-status-<?php echo strtolower($status); ?>"
+                     data-id="<?php echo $post->ID; ?>" data-contractor="<?php echo $contractor['display_name']; ?>">
+                    <div class="jb-grid-col jb-col-1 jb-manage-header-img" style="width:150px">
+                        <?php $media = get_the_post_thumbnail($job->ID, 'thumbnail'); ?>
+                        <a href="<?php echo get_permalink($job); ?>">
+                            <?php echo get_the_post_thumbnail($job->ID, 'thumbnail'); ?>
+                        </a>
+                    </div>
+                    <div class="jb-grid-col jb-col-90" style="width:calc( 100% - 150px )">
+                        <div class="jb-manage-header">
+                            <h3 class="jb-manage-header-left jb-line-major jb-manage-title">
+                                <a href="<?php echo get_permalink($job); ?>"
+                                   class="jb-no-text-decoration"><?php echo get_the_title($job); ?></a>
+                            </h3>
+                            <h4>
+                                <?php _e('Bid Amount'); ?>: <span class="bid-amount">$<?php echo get_field('cost', $post->ID); ?></span><br>
+                                <?php _e('Bid Status'); ?>: <span class="jb-bid-status"><?php echo $status; ?></span>
+                            </h4>
+                            <div class="jb-bid-message">
+                            <span class="content">
+                                <?php if(strlen(get_the_content($post->ID))>150): ?>
+                                    <div class="jb-short-content">
+                                    <?php echo substr(get_the_content($post->ID), 0, 150); ?>
+                                </div>
+                                    <div class="jb-full-content" style="display: none;">
+                                    <?php echo get_the_content($post->ID); ?>
+                                </div>
+                                    <button class="jb-show-more"><?php _e('Show More');?></button>
+                                <?php else: ?>
+                                    <?php echo get_the_content($post->ID); ?>
+                                <?php endif; ?>
+                            </span>
+                            </div>
+                            <ul class="jb-manage-header-right">
+                                <li>
+                                    <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>"><?php _e('View profile'); ?></a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo get_permalink($job); ?>"><?php _e('View job'); ?></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="jb-manage-actions-wrap">
+                        <span class="jb-manage-actions-left">
+                            <span class="jb-glyphs jb-icon-clock"></span>
+                                <span class="jb-manage-header-right-item-text">
+                            <?php echo date('F d, Y', strtotime($post->post_date)); ?>
+                                </span>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach;
+            wp_reset_postdata(); ?>
+        <?php else: ?>
+            <div class="jb-grid-row jb-manage-item jb-manage-application">
+                <?php _e("No application!"); ?>
+            </div>
+        <?php endif; ?>
+    </div>
+<?php
+endif;

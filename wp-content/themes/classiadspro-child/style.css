@@ -144,9 +144,7 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 }
 
 .jb-search-group-visible {
-    /*width: 90%;*/
-    /*width: calc( 100% - 50px );*/
-    width: 75%;
+    width: 80%;
     float:left
 }
 
@@ -182,7 +180,7 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 
 .jb-search .jb-input {
     width: 48%;
-    margin: 1.5% 12px 1.5% 12px;
+    margin: 0 12px 0 12px;
     padding: 0;
     display: block;
     float: left;
@@ -943,7 +941,7 @@ textarea, input[type=number]{
 }
 .user-panel-main {
     position: absolute!important;
-    padding-top: 70px!important;
+    padding-top: 0px!important;
 }
 
 .message{
@@ -955,4 +953,14 @@ textarea, input[type=number]{
 }
 .single-listing.single-style2 .alsp-single-listing-text-content-wrap .alsp-field-output-block{
     padding-top: 30px;
+}
+
+.author-thumbnail .author-btns .author-btn-holder{
+    width: 100%;
+}
+#new_rating_wrapper{
+    margin-bottom: 20px;
+}
+.navbar.navbar-static-top{
+    display: none;
 }

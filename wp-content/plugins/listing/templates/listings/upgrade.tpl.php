@@ -1,4 +1,8 @@
-<?php alsp_frontendRender('admin_header.tpl.php'); ?>
+<?php alsp_frontendRender('admin_header.tpl.php');
+// Empty Woocommerce cart before upgrading listing.
+global $woocommerce;
+$woocommerce->cart->empty_cart();
+?>
 <form action="<?php echo admin_url('options.php?page=alsp_upgrade&listing_id=' . $listing->post->ID . '&upgrade_action=upgrade&referer=' . urlencode($referer)); ?>" method="POST">
 	<?php if ($action == 'show'): ?>
 	<h3><?php _e('Get your listing featured on top!', 'ALSP'); ?></h3>
