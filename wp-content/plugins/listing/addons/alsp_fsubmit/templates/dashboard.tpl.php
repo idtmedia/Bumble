@@ -3,10 +3,10 @@
 <div class="alsp-content">
 	<?php alsp_renderMessages(); ?>
 
-	
+
 
 	<div class="alsp-dashboard-tabs-content">
-		
+
 		<div class="clearfix"></div>
 		<div class="tab-content">
 			<div class="tab-pane active">

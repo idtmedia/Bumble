@@ -127,20 +127,20 @@ if (class_exists('alsp_plugin')):
                     <?php
                     echo '<div class="popup" data-popup="single_contact_form">';
                     echo '<div class="popup-inner single-contact">';
-                    echo '<div class="alsp-popup-title">'.esc_html__('Send a Message', 'ALSP').'<a class="popup-close" data-popup-close="single_contact_form" href="#"><i class="pacz-fic4-error"></i></a></div>';
+                    echo '<div class="alsp-popup-title">' . esc_html__('Send a Message', 'ALSP') . '<a class="popup-close" data-popup-close="single_contact_form" href="#"><i class="pacz-fic4-error"></i></a></div>';
                     echo '<div class="alsp-popup-content">';
                     global $current_user;
 
-                    if( is_user_logged_in() && $current_user->ID == $authorID) {
+                    if (is_user_logged_in() && $current_user->ID == $authorID) {
                         echo esc_html__('You can not send message on your own', 'ALSP');
-                    }elseif(!is_user_logged_in()) {
-                        echo esc_html__('Login Required', 'ALSP');
-                    }elseif( current_user_can('administrator')) {
+                    } elseif (!is_user_logged_in()) {
+                        echo '<a href="'.get_permalink(100).'">'.esc_html__('Login Required', 'ALSP').'</a>';
+                    } elseif (current_user_can('administrator')) {
                         echo esc_html__('Administrator can not send message from front-end', 'ALSP');
-                    }else{
-                        if($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages'){
+                    } else {
+                        if ($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages') {
                             echo '<div class="form-new">';
-                            echo do_shortcode('[difp_shortcode_new_message_form to="'.$author_name.'" subject="Contact"]');
+                            echo do_shortcode('[difp_shortcode_new_message_form to="' . $author_name . '" subject="Contact"]');
                             echo '</div>';
                         }/*elseif($ALSP_ADIMN_SETTINGS['message_system'] == 'email_messages'){
                             if ($ALSP_ADIMN_SETTINGS['alsp_listing_contact_form'] && (!$listing->is_claimable || !$ALSP_ADIMN_SETTINGS['alsp_hide_claim_contact_form']) && ($listing_owner = get_userdata($listing->post->post_author)) && $listing_owner->user_email){
@@ -153,13 +153,13 @@ if (class_exists('alsp_plugin')):
                                 }
 
                             }
-                        }*/else{
+                        }*/ else {
                             echo esc_html__('Messages are currenlty disabled by Site Owner', 'ALSP');
                         }
                     }
-                    echo'</div>';
-                    echo'</div>';
-                    echo'</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
                     ?>
 
                     <div class="author-detail-section clearfix">
@@ -175,7 +175,7 @@ if (class_exists('alsp_plugin')):
                         }
                         $output .= '<div class="author-btns style2">
                                         <div class="author-btn-holder">
-                                            <a class="" data-popup-open="single_contact_form" href="#">'._('Send a message').'</a>
+                                            <a class="" data-popup-open="single_contact_form" href="#">' . _('Send a message') . '</a>
                                         </div>
                                     </div>';
                         $output .= '</div>';
@@ -264,203 +264,224 @@ if (class_exists('alsp_plugin')):
 
                         $contractor_data = get_userdata($authorID);
                         $contractor_role = $contractor_data->roles;
-//                        echo $contractor_role[0];
-                        if( $contractor_role[0] == 'contributor'):
-                        ?>
+                        //                        echo $contractor_role[0];
+                        if ($contractor_role[0] == 'contributor'):
+                            ?>
                             <div class="clearfix"></div>
                             <div id="biography">
                                 <section>
-                                    <div class="single-post-fancy-title comments-heading-label"><span>Biography</span></div>
+                                    <div class="single-post-fancy-title comments-heading-label"><span>Biography</span>
+                                    </div>
                                     <div><?php echo $description; ?></div>
                                 </section>
                             </div>
-                        <div id="comments-reviews">
-                            <section id="comments">
-                                <?php
-                                echo '<p class="message">';
-                                if ($_POST['post_review_nonce'] != "") {
-                                    Rating_Contractor::post_review($_POST);
-                                }
-                                echo '</p>';
-                                $args = array(
-                                    'post_type' => 'ratingcontractor',
-                                    'meta_key' => 'contractor',
-                                    'meta_value' => $authorID
-                                );
-                                $loop = new WP_Query($args);
-                                ?>
-                                <div class="single-post-fancy-title comments-heading-label"><span>User Reviews <span
-                                                class="comments_numbers">(<?php echo $loop->post_count; ?>
-                                            )</span></span></div>
-                                <ul class="pacz-commentlist">
+                            <div id="comments-reviews">
+                                <section id="comments">
                                     <?php
-                                    while ($loop->have_posts()) : $loop->the_post();
-                                        ?>
-                                        <li class="comment byuser comment-author-designinvento even thread-even depth-1"
-                                            id="li-comment-48">
-                                            <div class="pacz-single-comment userresponse clearfix" id="comment-48">
-                                                <div class="gravatar">
-                                                    <div class="author-img">
-                                                        <?php
-                                                        $rater = get_field('rater');
-                                                        if ($rater) {
-                                                            $user_info = get_userdata($rater['ID']);
-                                                            $author_img_url = get_the_author_meta('pacz_author_avatar_url', $user_info->ID, true);
-                                                            if (!empty($author_img_url)) {
-                                                                $params = array('width' => 300, 'height' => 300, 'crop' => true);
-                                                                echo "<img src='" . bfi_thumb("$author_img_url", $params) . "' alt='' />";
-                                                            } else {
-                                                                $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', get_field('rater')), $size = '300');
-                                                                echo '<img src="' . $avatar_url . '" alt="author" />';
-                                                            }
-                                                        }
-                                                        ?>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-meta-main">
-                                                    <div class="comment-meta">
-                                                        <p class="dirrater_title"><?php the_title(); ?></p>
-                                                        <div class="review_rate"
-                                                             data-dirrater="<?php the_field('score'); ?>"
-                                                             title=""></div>
-                                                        <span class="comment-author"><?php
-                                                            $job = get_field('job');
+                                    echo '<p class="message">';
+                                    if ($_POST['post_review_nonce'] != "") {
+                                        Rating_Contractor::post_review($_POST);
+                                    }
+                                    echo '</p>';
+                                    $args = array(
+                                        'post_type' => 'ratingcontractor',
+                                        'meta_key' => 'contractor',
+                                        'meta_value' => $authorID
+                                    );
+                                    $loop = new WP_Query($args);
+                                    ?>
+                                    <div class="single-post-fancy-title comments-heading-label"><span>User Reviews <span
+                                                    class="comments_numbers">(<?php echo $loop->post_count; ?>
+                                                )</span></span></div>
+                                    <ul class="pacz-commentlist">
+                                        <?php
+                                        while ($loop->have_posts()) : $loop->the_post();
+                                            ?>
+                                            <li class="comment byuser comment-author-designinvento even thread-even depth-1"
+                                                id="li-comment-48">
+                                                <div class="pacz-single-comment userresponse clearfix" id="comment-48">
+                                                    <div class="gravatar">
+                                                        <div class="author-img">
+                                                            <?php
+                                                            $rater = get_field('rater');
                                                             if ($rater) {
                                                                 $user_info = get_userdata($rater['ID']);
-                                                                echo $user_info->display_name;
+                                                                $author_img_url = get_the_author_meta('pacz_author_avatar_url', $user_info->ID, true);
+                                                                if (!empty($author_img_url)) {
+                                                                    $params = array('width' => 300, 'height' => 300, 'crop' => true);
+                                                                    echo "<img src='" . bfi_thumb("$author_img_url", $params) . "' alt='' />";
+                                                                } else {
+                                                                    $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', get_field('rater')), $size = '300');
+                                                                    echo '<img src="' . $avatar_url . '" alt="author" />';
+                                                                }
                                                             }
-                                                            ?> <?php _e('review for'); ?> <?php echo get_the_title($job->ID); ?></span>
-                                                        <time class="comment-time"><?php the_date(); ?></time>
-                                                        <span class="comment-reply">
-                                                        </span>
-                                                    </div>
-                                                    <div class="clearboth"></div>
-                                                    <div class="comment-content">
-                                                        <p><?php the_content(); ?></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <?php
-                                    endwhile;
-                                    ?>
-                                </ul>
-                                <?php if (is_user_logged_in()):
-//                                    if (Rating_Contractor::check_reviewable(get_current_user_id(), $authorID)):
-                                        ?>
-                                    <?php
-                                    $args1 = array(
-                                        'post_type' => 'ratingcontractor',
-                                        'post_per_page' => -1,
-                                        'meta_query' => array(
-                                            'relation'		=> 'AND',
-                                            array(
-                                                'key'	  	=> 'rater',
-                                                'value'	  	=> get_current_user_id(),
-                                                'compare' 	=> '=',
-                                            ),
-                                            array(
-                                                'key'	  	=> 'contractor',
-                                                'value'	  	=> $authorID,
-                                                'compare' 	=> '=',
-                                            ),
-                                        ),
-                                    );
-                                    $reviews = get_posts($args1);
-                                    $jobs_rated = array();
-                                    if(count($reviews)>0){
-                                        foreach ($reviews as $review){ setup_postdata($review);
-                                            $job = get_field('job', $review->ID);
-                                            $jobs_rated[] = $job->ID;
-                                        }
-                                    }
-                                    $args2 = array(
-                                        'post_type' => 'bidding',
-                                        'posts_per_page' => -1,
-                                        'meta_query' => array(
-                                            'relation'		=> 'AND',
-                                            array(
-                                                'key' => 'job',
-                                                'value' => $jobs_rated,
-                                                'compare' => 'NOT IN',
-                                            ),
-                                            array(
-                                                'key'	  	=> 'bid_status',
-                                                'value'	  	=> 'Accepted',
-                                                'compare' 	=> '=',
-                                            ),
-                                            array(
-                                                'key'	  	=> 'contractor',
-                                                'value'	  	=> $authorID,
-                                                'compare' 	=> '=',
-                                            ),
-                                        ),
-                                    );
-                                    $jobs = get_posts($args2);
-                                    ?>
-                                    <?php if (count($jobs) > 0): ?>
-                                        <div class="inner-content">
-
-                                            <div id="respond" class="comment-respond">
-                                                <h3 id="reply-title" class="comment-reply-title">
-                                                    <div class="single-post-fancy-title">
-                                                        <h5>Post New Review</h5>
-                                                    </div>
-                                                </h3>
-                                                <form action="" method="post" id="commentform" class="comment-form">
-                                                    <div id="new_rating_wrapper" style="cursor: pointer;">
-                                                        <label for="new_listing_rating">Your Rating</label>
-                                                        <div id="new_listing_rating" data-dirrater="4"
-                                                             data-assets_path="http://classiads.designinvento.net/classiads-ultra/wp-content/plugins/listing/addons/di-reviews/includes//images">
-                                                            Exceptional
+                                                            ?>
                                                         </div>
                                                     </div>
-                                                    <p class="">
-                                                        <label for="dirrater_title">Select job for rating:</label>
+                                                    <div class="comment-meta-main">
+                                                        <div class="comment-meta">
+                                                            <p class="dirrater_title"><?php the_title(); ?></p>
+                                                            <div class="review_rate"
+                                                                 data-dirrater="<?php the_field('score'); ?>"
+                                                                 title=""></div>
+                                                            <span class="comment-author"><?php
+                                                                $job = get_field('job');
+                                                                if ($rater) {
+                                                                    $user_info = get_userdata($rater['ID']);
+                                                                    echo $user_info->display_name;
+                                                                }
+                                                                ?><?php _e('review for'); ?><?php echo get_the_title($job->ID); ?></span>
+                                                            <time class="comment-time"><?php the_date(); ?></time>
+                                                            <span class="comment-reply">
+                                                        </span>
+                                                        </div>
+                                                        <div class="clearboth"></div>
+                                                        <div class="comment-content">
+                                                            <p><?php the_content(); ?></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <?php
+                                        endwhile;
+                                        ?>
+                                    </ul>
+                                    <?php if (is_user_logged_in()):
+//                                    if (Rating_Contractor::check_reviewable(get_current_user_id(), $authorID)):
+                                        ?>
+                                        <?php
+                                        $args1 = array(
+                                            'post_type' => 'ratingcontractor',
+                                            'post_per_page' => -1,
+                                            'meta_query' => array(
+                                                'relation' => 'AND',
+                                                array(
+                                                    'key' => 'rater',
+                                                    'value' => get_current_user_id(),
+                                                    'compare' => '=',
+                                                ),
+                                                array(
+                                                    'key' => 'contractor',
+                                                    'value' => $authorID,
+                                                    'compare' => '=',
+                                                ),
+                                            ),
+                                        );
+                                        $reviews = get_posts($args1);
+                                        $jobs_rated = array();
+                                        if (count($reviews) > 0) {
+                                            foreach ($reviews as $review) {
+                                                setup_postdata($review);
+                                                $job = get_field('job', $review->ID);
+                                                $jobs_rated[] = $job->ID;
+                                            }
+                                        }
+                                        $args2 = array(
+                                            'post_type' => 'alsp_listing',
+                                            'posts_per_page' => -1,
+                                            'author' => get_current_user_id()
+                                        );
+                                        $jobs = get_posts($args2);
+                                        $jobs_owned = array();
+                                        if (count($jobs) > 0) {
+                                            foreach ($jobs as $post) {
+                                                setup_postdata($post);
+                                                $jobs_owned[] = $post->ID;
+                                            }
+                                        }
+//                                    var_dump($jobs_owned);
+                                        if (count($jobs_owned) > 0):
+                                            $args3 = array(
+                                                'post_type' => 'bidding',
+                                                'posts_per_page' => -1,
+                                                'meta_query' => array(
+                                                    'relation' => 'AND',
+                                                    array(
+                                                        'key' => 'job',
+                                                        'value' => $jobs_rated,
+                                                        'compare' => 'NOT IN',
+                                                    ),
+                                                    array(
+                                                        'key' => 'job',
+                                                        'value' => $jobs_owned,
+                                                        'compare' => 'IN',
+                                                    ),
+                                                    array(
+                                                        'key' => 'bid_status',
+                                                        'value' => 'Completed',
+                                                        'compare' => '=',
+                                                    ),
+                                                    array(
+                                                        'key' => 'contractor',
+                                                        'value' => $authorID,
+                                                        'compare' => '=',
+                                                    ),
+                                                ),
+                                            );
+                                            $jobs = get_posts($args3);
+                                            ?>
+                                            <?php if (count($jobs) > 0): ?>
+                                            <div class="inner-content">
 
-                                                        <select name="job">
-                                                         <?php foreach ($jobs as $post) : setup_postdata($post); ?>
-                                                         <?php
-                                                         $job = get_field('job', $post->ID);
-                                                         ?>
-                                                          <option value="<?php echo $job->ID; ?>"><?php echo get_the_title($job); ?></option>
-                                                         <?php endforeach; ?>
-                                                        </select>
+                                                <div id="respond" class="comment-respond">
+                                                    <h3 id="reply-title" class="comment-reply-title">
+                                                        <div class="single-post-fancy-title">
+                                                            <h5>Post New Review</h5>
+                                                        </div>
+                                                    </h3>
+                                                    <form action="" method="post" id="commentform" class="comment-form">
+                                                        <div id="new_rating_wrapper" style="cursor: pointer;">
+                                                            <label for="new_listing_rating">Your Rating</label>
+                                                            <div id="new_listing_rating" data-dirrater="4"
+                                                                 data-assets_path="http://classiads.designinvento.net/classiads-ultra/wp-content/plugins/listing/addons/di-reviews/includes//images">
+                                                                Exceptional
+                                                            </div>
+                                                        </div>
+                                                        <p class="">
+                                                            <label for="dirrater_title">Select job for rating:</label>
 
-                                                    </p>
-                                                    <p class="dir--title">
-                                                        <label for="dirrater_title">Title of your review:</label>
-                                                        <input type="text" id="dirrater_title" name="dirrater_title"
-                                                               value="" placeholder="Review Title" size="25">
-                                                    </p>
+                                                            <select name="job">
+                                                                <?php foreach ($jobs as $post) : setup_postdata($post); ?>
+                                                                    <?php
+                                                                    $job = get_field('job', $post->ID);
+                                                                    ?>
+                                                                    <option value="<?php echo $job->ID; ?>"><?php echo get_the_title($job); ?></option>
+                                                                <?php endforeach; ?>
+                                                            </select>
 
-                                                    <p class="dir_message_field"><label for="comment">Your
-                                                            Review</label>
-                                                        <textarea id="comment" name="comment" cols="45" rows="3"
-                                                                  aria-required="true" required="required"
-                                                                  placeholder="Review "></textarea></p>
+                                                        </p>
+                                                        <p class="dir--title">
+                                                            <label for="dirrater_title">Title of your review:</label>
+                                                            <input type="text" id="dirrater_title" name="dirrater_title"
+                                                                   value="" placeholder="Review Title" size="25">
+                                                        </p>
+
+                                                        <p class="dir_message_field"><label for="comment">Your
+                                                                Review</label>
+                                                            <textarea id="comment" name="comment" cols="45" rows="3"
+                                                                      aria-required="true" required="required"
+                                                                      placeholder="Review "></textarea></p>
 
 
-                                                    <p class="form-submit"><input name="submit" type="submit"
-                                                                                  id="submit" class="submit"
-                                                                                  value="Submit Review">
-                                                        <input type="hidden" name="rated_by"
-                                                               value="<?php echo get_current_user_id(); ?>"/>
-                                                        <input type="hidden" name="contractor"
-                                                               value="<?php echo $authorID; ?>"/>
-                                                        <?php wp_nonce_field('post_review_action', 'post_review_nonce'); ?>
-                                                    </p>
-                                                </form>
+                                                        <p class="form-submit"><input name="submit" type="submit"
+                                                                                      id="submit" class="submit"
+                                                                                      value="Submit Review">
+                                                            <input type="hidden" name="rated_by"
+                                                                   value="<?php echo get_current_user_id(); ?>"/>
+                                                            <input type="hidden" name="contractor"
+                                                                   value="<?php echo $authorID; ?>"/>
+                                                            <?php wp_nonce_field('post_review_action', 'post_review_nonce'); ?>
+                                                        </p>
+                                                    </form>
+                                                </div>
+                                                <!-- #respond -->
                                             </div>
-                                            <!-- #respond -->
-                                        </div>
+                                        <?php endif; ?>
+                                        <?php endif; ?>
+                                        <?php //endif; ?>
                                     <?php endif; ?>
-                                    <?php //endif; ?>
-                                <?php else: ?>
-                                    <?php _e('Please login as user for review a contractor'); ?>
-                                <?php endif; ?>
-                            </section>
-                        </div>
+                                </section>
+                            </div>
                         <?php endif; ?>
                     </div>
                     <?php

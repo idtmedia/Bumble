@@ -4135,14 +4135,6 @@ only screen and (min-width: 768px) and (max-width: 1199px) {
 .listing-post-style-10 .listing-wrapper figure {
 	overflow: hidden
 }
-.listing-post-style-10 .listing-wrapper figure img {
-	transform: scale(1);
-	transition: all .6s ease
-}
-.listing-post-style-10 .listing-wrapper:hover figure img {
-	transform: scale(1.03);
-	transition: all .6s ease
-}
 .alsp-listings-block.alsp-listings-grid .listing-post-style-10 .alsp-listing-text-content-wrap .listing-views {
 	margin-bottom: 0!important;
 	display: inline-block;

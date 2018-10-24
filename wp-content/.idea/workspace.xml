@@ -24,25 +24,149 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dhvc-form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/dhvc-form/dhvc-form.php">
+      <file leaf-file-name="author.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/author.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="181" column="47" lean-forward="true" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+            <state relative-caret-position="339">
+              <caret line="349" column="71" lean-forward="false" selection-start-line="349" selection-start-column="71" selection-end-line="349" selection-end-column="71" />
               <folding>
-                <marker date="1533569794000" expanded="true" signature="5274:5565" ph="..." />
-                <marker date="1533569794000" expanded="true" signature="14012:14019" ph="×" />
+                <marker date="1540358753022" expanded="true" signature="8499:8571" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="9286:9583" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="9358:9463" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="9358:9540" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="16360:16717" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="16402:16682" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="16499:16564" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="16773:16913" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="16829:16913" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="17679:17884" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="17685:17878" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="17704:17871" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="17950:18747" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="18258:18747" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="18445:18747" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="18520:18747" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="18601:18747" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="20224:20601" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="20307:20601" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="20505:20601" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="20785:20872" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="21573:21637" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="21872:22026" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="27369:29270" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="27461:29270" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="27563:27863" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="27657:27805" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="27984:29270" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="28095:28718" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="28315:28655" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="28787:29270" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="28987:29270" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="29807:30221" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="30047:30160" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="30308:30748" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="30329:30412" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="30530:30744" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="30830:31580" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="30865:31086" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="31184:31297" ph="..." />
+                <marker date="1540358753022" expanded="true" signature="31397:31498" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="submission.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugins/dhvc-form/includes/submission.php">
+      <file leaf-file-name="class-rating-contractor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/rating-contractor/includes/class-rating-contractor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="115" column="36" lean-forward="true" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
+            <state relative-caret-position="832">
+              <caret line="284" column="39" lean-forward="false" selection-start-line="284" selection-start-column="34" selection-end-line="284" selection-end-column="39" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class-job_board.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/job_board/includes/class-job_board.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="330" column="35" lean-forward="false" selection-start-line="330" selection-start-column="35" selection-end-line="330" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frontend.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/listing/resources/css/frontend.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="4136" column="1" lean-forward="false" selection-start-line="4136" selection-start-column="1" selection-end-line="4136" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pacz-styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/classiadspro/styles/css/pacz-styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="604" column="60" lean-forward="false" selection-start-line="604" selection-start-column="60" selection-end-line="604" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applications.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/applications.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="235" column="55" lean-forward="false" selection-start-line="235" selection-start-column="55" selection-end-line="235" selection-end-column="55" />
+              <folding>
+                <element signature="e#14927#14949#0#HTML" expanded="true" />
+                <marker date="1540358681653" expanded="true" signature="16691:16716" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/dashboard.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_form.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/login_form.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="599" column="20" lean-forward="true" selection-start-line="599" selection-start-column="20" selection-end-line="599" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class-difp-message.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/includes/class-difp-message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1130">
+              <caret line="539" column="73" lean-forward="true" selection-start-line="539" selection-start-column="73" selection-end-line="539" selection-end-column="73" />
+              <folding>
+                <marker date="1540354584365" expanded="true" signature="11509:11608" ph="SELECT meta_... ${$wpdb-&gt;postmeta}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,36 +175,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>send m</find>
-      <find>send me</find>
-      <find>send mes</find>
-      <find>send mess</find>
-      <find>send messa</find>
-      <find>send message</find>
-      <find>su</find>
-      <find>sub</find>
-      <find>submit new</find>
-      <find>Submit new listing</find>
-      <find>s</find>
-      <find>submit-ls</find>
-      <find>submit-l</find>
-      <find>submit-lis</find>
-      <find>submit-list</find>
-      <find>submit-listing</find>
-      <find>You have received a new message in</find>
-      <find>raty</find>
-      <find>Exceptional</find>
-      <find>YOU HAVE REVIEWED THE CONTACTOR ALREADY</find>
-      <find>field_5bc6d88ad894d</find>
-      <find>ge</find>
-      <find>get</find>
-      <find>get</find>
-      <find>GET YOUR LISTING FEATURED ON TOP!</find>
-      <find>global \$woocommerce\;\n\$woocommerce\-\&gt;cart\-\&gt;empty_cart\(\)\;</find>
-      <find>g</find>
-      <find>get your list</find>
-      <find>get your listi</find>
-      <find>get your listing</find>
+      <find>my das</find>
+      <find>my dash</find>
+      <find>my dashb</find>
+      <find>my dashboar</find>
+      <find>my dashboard</find>
+      <find>p</find>
+      <find>pendi</find>
+      <find>pending</find>
+      <find>pending app</find>
+      <find>Pending Aprroval</find>
+      <find>Your application has been accepted in</find>
+      <find>m</find>
+      <find>my mes</find>
+      <find>my mess</find>
+      <find>my messa</find>
+      <find>my message</find>
+      <find>my messages</find>
+      <find>single_contact_form</find>
+      <find>.jb-manage-header-right a</find>
+      <find>.jb-cancel-btn</find>
+      <find>jb-cancel-btn</find>
+      <find>jb-rejected-text</find>
+      <find>jb-reject-bid</find>
+      <find>dash</find>
+      <find>Login required</find>
+      <find>jb-cancel-reject-btn</find>
+      <find>jb-cancel-complete-btn</find>
+      <find>cancel_complete_btn</find>
+      <find>jb-completed-text</find>
+      <find>jb-accept-bid</find>
     </findStrings>
     <replaceStrings>
       <replace>$current_user_jobs</replace>
@@ -105,12 +229,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plugins/listing/templates/frontend/jwplayer8.php" />
-        <option value="$PROJECT_DIR$/plugins/listing/templates/listings/upgrade_bulk.tpl.php" />
-        <option value="$PROJECT_DIR$/plugins/listing/templates/content_fields/fields/price_input.tpl.php" />
-        <option value="$PROJECT_DIR$/plugins/listing/templates/bid popup" />
-        <option value="$PROJECT_DIR$/bid popup.html" />
-        <option value="$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/includes/class-difp-shortcodes.php" />
         <option value="$PROJECT_DIR$/plugins/job_board/public/class-job_board-public.php" />
         <option value="$PROJECT_DIR$/themes/classiadspro-child/page-application-form.php" />
         <option value="$PROJECT_DIR$/plugins/listing/templates/listings/change_date.tpl.php" />
@@ -129,7 +247,6 @@
         <option value="$PROJECT_DIR$/plugins/listing/templates/search_archive_form.tpl.php" />
         <option value="$PROJECT_DIR$/themes/classiadspro-child/page-user.php" />
         <option value="$PROJECT_DIR$/plugins/listing/templates/frontend/listing_single.tpl.php" />
-        <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/listings.tpl.php" />
         <option value="$PROJECT_DIR$/plugins/job_board/job_board.php" />
         <option value="$PROJECT_DIR$/themes/classiadspro-child/custom.js" />
         <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/my_biddings.tpl.php" />
@@ -139,23 +256,30 @@
         <option value="$PROJECT_DIR$/plugins/listing/templates/widgets/bids_widget.tpl.php" />
         <option value="$PROJECT_DIR$/plugins/job_board/includes/emails/new-application.html" />
         <option value="$PROJECT_DIR$/plugins/job_board/includes/class-job_board.php" />
-        <option value="$PROJECT_DIR$/themes/classiadspro-child/emails/application-status.html" />
         <option value="$PROJECT_DIR$/themes/classiadspro-child/header.php" />
-        <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/applications.tpl.php" />
         <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/my_bids.tpl.php" />
         <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/alsp_fsubmit.php" />
         <option value="$PROJECT_DIR$/plugins/listing/templates/functions.php" />
         <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/submitlisting_step_create.tpl.php" />
-        <option value="$PROJECT_DIR$/plugins/listing/functions.php" />
         <option value="$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/includes/class-difp-emails.php" />
-        <option value="$PROJECT_DIR$/themes/classiadspro/styles/css/pacz-styles.css" />
         <option value="$PROJECT_DIR$/plugins/rating-contractor/includes/class-rating-contractor.php" />
-        <option value="$PROJECT_DIR$/themes/classiadspro-child/author.php" />
-        <option value="$PROJECT_DIR$/themes/classiadspro-child/functions.php" />
         <option value="$PROJECT_DIR$/plugins/listing/templates/listings/upgrade.tpl.php" />
         <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/upgrade.tpl.php" />
-        <option value="$PROJECT_DIR$/themes/classiadspro-child/style.css" />
+        <option value="$PROJECT_DIR$/plugins/dhvc-form/includes/save.php" />
         <option value="$PROJECT_DIR$/plugins/dhvc-form/includes/submission.php" />
+        <option value="$PROJECT_DIR$/plugins/dhvc-form/dhvc-form.php" />
+        <option value="$PROJECT_DIR$/plugins/listing/functions.php" />
+        <option value="$PROJECT_DIR$/themes/classiadspro/includes/actions/header.php" />
+        <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/listings.tpl.php" />
+        <option value="$PROJECT_DIR$/themes/classiadspro-child/emails/application-status.html" />
+        <option value="$PROJECT_DIR$/themes/classiadspro-child/functions.php" />
+        <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/dashboard.tpl.php" />
+        <option value="$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/includes/class-difp-message.php" />
+        <option value="$PROJECT_DIR$/plugins/listing/resources/css/frontend.css" />
+        <option value="$PROJECT_DIR$/themes/classiadspro/styles/css/pacz-styles.css" />
+        <option value="$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/applications.tpl.php" />
+        <option value="$PROJECT_DIR$/themes/classiadspro-child/author.php" />
+        <option value="$PROJECT_DIR$/themes/classiadspro-child/style.css" />
       </list>
     </option>
   </component>
@@ -204,6 +328,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -390,13 +515,226 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dhvc-form" />
+              <option name="myItemId" value="redirection" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redirection" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rating-contractor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rating-contractor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="di-frontend-pm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="di-frontend-pm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alsp_fsubmit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listing" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alsp_fsubmit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -544,25 +882,28 @@
       <workItem from="1539658362792" duration="13385000" />
       <workItem from="1539747124162" duration="13051000" />
       <workItem from="1539828292707" duration="4065000" />
-      <workItem from="1540174934949" duration="717000" />
+      <workItem from="1540174934949" duration="18602000" />
+      <workItem from="1540262972191" duration="7129000" />
+      <workItem from="1540354389775" duration="3970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224403000" />
+    <option name="totallyTimeSpent" value="253387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730711" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28214827" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2569558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -570,28 +911,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2569558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2806354" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2569558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -606,116 +927,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/listing/classes/shortcodes/directory_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="813" column="28" lean-forward="false" selection-start-line="813" selection-start-column="28" selection-end-line="813" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/bid popup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro/includes/framework/general.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="153" column="24" lean-forward="false" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/search_form.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="306" column="23" lean-forward="true" selection-start-line="306" selection-start-column="23" selection-end-line="306" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/page-user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/search_archive_form.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="149" column="103" lean-forward="false" selection-start-line="149" selection-start-column="103" selection-end-line="149" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7599">
-          <caret line="447" column="9" lean-forward="false" selection-start-line="447" selection-start-column="9" selection-end-line="447" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/templates/shortcode_newmessage_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/job_board/job_board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="103" column="16" lean-forward="true" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9656">
-          <caret line="568" column="9" lean-forward="false" selection-start-line="568" selection-start-column="9" selection-end-line="568" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/nav-menu-roles/nav-menu-roles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8891">
-          <caret line="547" column="4" lean-forward="false" selection-start-line="547" selection-start-column="4" selection-end-line="547" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/classes/ajax_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1335">
-          <caret line="39" column="43" lean-forward="false" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/page-contractors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="207" column="100" lean-forward="false" selection-start-line="207" selection-start-column="100" selection-end-line="207" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/my_biddings.tpl.php" />
     <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/classes/dashboard_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="457" column="91" lean-forward="true" selection-start-line="457" selection-start-column="91" selection-end-line="457" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/listings.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="167" lean-forward="false" selection-start-line="44" selection-start-column="134" selection-end-line="44" selection-end-column="167" />
         </state>
       </provider>
     </entry>
@@ -751,6 +967,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5950">
           <caret line="350" column="43" lean-forward="false" selection-start-line="350" selection-start-column="29" selection-end-line="350" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -782,20 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/job_board/includes/class-job_board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="301" column="67" lean-forward="false" selection-start-line="301" selection-start-column="67" selection-end-line="301" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/job_board/includes/emails/new-application.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1216" lean-forward="false" selection-start-line="4" selection-start-column="1202" selection-end-line="4" selection-end-column="1216" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/job_board/includes/WP_Mail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -807,13 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/emails/application-status.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6015" lean-forward="false" selection-start-line="0" selection-start-column="6015" selection-end-line="0" selection-end-column="6015" />
         </state>
       </provider>
     </entry>
@@ -831,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="3417" column="162" lean-forward="false" selection-start-line="3417" selection-start-column="162" selection-end-line="3417" selection-end-column="162" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/submitlisting_step_create.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
@@ -849,6 +1038,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="671" column="45" lean-forward="false" selection-start-line="671" selection-start-column="45" selection-end-line="671" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -856,6 +1046,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="460" column="9" lean-forward="false" selection-start-line="460" selection-start-column="9" selection-end-line="460" selection-end-column="9" />
+          <folding>
+            <marker date="1539747877523" expanded="true" signature="4363:4597" ph="SELECT ID AS... $" />
+            <marker date="1539747877523" expanded="true" signature="5971:6147" ph="SELECT ID AS... $" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -873,21 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="3428" column="162" lean-forward="false" selection-start-line="3428" selection-start-column="162" selection-end-line="3428" selection-end-column="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro/styles/css/pacz-styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117708">
-          <caret line="6924" column="17" lean-forward="false" selection-start-line="6924" selection-start-column="17" selection-end-line="6924" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_d.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -895,48 +1074,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/applications.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/rating-contractor/includes/class-rating-contractor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4114">
-          <caret line="253" column="60" lean-forward="false" selection-start-line="253" selection-start-column="60" selection-end-line="253" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/author.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7616">
-          <caret line="456" column="51" lean-forward="false" selection-start-line="456" selection-start-column="51" selection-end-line="456" selection-end-column="51" />
-          <folding>
-            <element signature="e#6#184#0#PHP" expanded="true" />
-            <marker date="1539768023717" expanded="true" signature="9223:9516" ph="..." />
-            <marker date="1539768023717" expanded="true" signature="9295:9400" ph="..." />
-            <marker date="1539768023717" expanded="true" signature="9295:9473" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10115">
-          <caret line="598" column="0" lean-forward="false" selection-start-line="598" selection-start-column="0" selection-end-line="598" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/listing/templates/listings/upgrade.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,29 +1089,287 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/style.css">
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="943" column="18" lean-forward="false" selection-start-line="943" selection-start-column="18" selection-end-line="943" selection-end-column="18" />
+        <state relative-caret-position="351">
+          <caret line="573" column="45" lean-forward="false" selection-start-line="571" selection-start-column="8" selection-end-line="573" selection-end-column="45" />
+          <folding>
+            <marker date="1537258683024" expanded="true" signature="15011:15024" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/redirection/redirection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/redirection/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-603">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/dhvc-form/dhvc-form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="181" column="47" lean-forward="true" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
-          <folding>
-            <marker date="1533569794000" expanded="true" signature="5274:5565" ph="..." />
-            <marker date="1533569794000" expanded="true" signature="14012:14019" ph="×" />
-          </folding>
+        <state relative-caret-position="1546">
+          <caret line="189" column="14" lean-forward="true" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/dhvc-form/includes/MCAPI.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/dhvc-form/includes/submission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="115" column="36" lean-forward="true" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
+        <state relative-caret-position="-834">
+          <caret line="265" column="52" lean-forward="false" selection-start-line="265" selection-start-column="28" selection-end-line="265" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/dhvc-form/includes/save.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/templates/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="3366" column="17" lean-forward="false" selection-start-line="3366" selection-start-column="17" selection-end-line="3366" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="3401" column="28" lean-forward="true" selection-start-line="3401" selection-start-column="8" selection-end-line="3401" selection-end-column="28" />
+          <folding>
+            <marker date="1540180552576" expanded="true" signature="8792:9020" ph="SELECT ID AS... $" />
+            <marker date="1540180552576" expanded="true" signature="9806:9980" ph="SELECT ID AS... $" />
+            <marker date="1540180552576" expanded="true" signature="30195:30319" ph="select post_... ${$wpdb-&gt;posts}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/includes/actions/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="260" column="72" lean-forward="false" selection-start-line="260" selection-start-column="72" selection-end-line="260" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/listings.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/dhvc-form/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="197" column="22" lean-forward="false" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/job_board/includes/emails/new-application.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1691" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="1691" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/emails/application-status.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1218" lean-forward="false" selection-start-line="1" selection-start-column="1218" selection-end-line="1" selection-end-column="1218" />
+          <folding>
+            <marker date="1540184701138" expanded="true" signature="2060:2072" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="2091:2150" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="2587:2618" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="3702:3714" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="3733:3792" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="4310:4341" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="4798:4810" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="4829:4888" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="5406:5437" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="6468:6480" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="6499:6558" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="6747:6759" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="6778:6837" ph="..." />
+            <marker date="1540184701138" expanded="true" signature="7410:7441" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9741">
+          <caret line="576" column="93" lean-forward="false" selection-start-line="576" selection-start-column="40" selection-end-line="576" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/messages.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/templates/messagebox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="123" lean-forward="false" selection-start-line="47" selection-start-column="123" selection-end-line="47" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/di-frontend-pm/includes/class-difp-message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1130">
+          <caret line="539" column="73" lean-forward="true" selection-start-line="539" selection-start-column="73" selection-end-line="539" selection-end-column="73" />
+          <folding>
+            <marker date="1540354584365" expanded="true" signature="11509:11608" ph="SELECT meta_... ${$wpdb-&gt;postmeta}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro/styles/css/pacz-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="604" column="60" lean-forward="false" selection-start-line="604" selection-start-column="60" selection-end-line="604" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/login_form.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/dashboard.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/addons/alsp_fsubmit/templates/applications.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="235" column="55" lean-forward="false" selection-start-line="235" selection-start-column="55" selection-end-line="235" selection-end-column="55" />
+          <folding>
+            <element signature="e#14927#14949#0#HTML" expanded="true" />
+            <marker date="1540358681653" expanded="true" signature="16691:16716" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/author.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="349" column="71" lean-forward="false" selection-start-line="349" selection-start-column="71" selection-end-line="349" selection-end-column="71" />
+          <folding>
+            <marker date="1540358753022" expanded="true" signature="8499:8571" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="9286:9583" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="9358:9463" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="9358:9540" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="16360:16717" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="16402:16682" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="16499:16564" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="16773:16913" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="16829:16913" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="17679:17884" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="17685:17878" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="17704:17871" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="17950:18747" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="18258:18747" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="18445:18747" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="18520:18747" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="18601:18747" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="20224:20601" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="20307:20601" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="20505:20601" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="20785:20872" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="21573:21637" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="21872:22026" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="27369:29270" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="27461:29270" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="27563:27863" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="27657:27805" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="27984:29270" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="28095:28718" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="28315:28655" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="28787:29270" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="28987:29270" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="29807:30221" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="30047:30160" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="30308:30748" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="30329:30412" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="30530:30744" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="30830:31580" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="30865:31086" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="31184:31297" ph="..." />
+            <marker date="1540358753022" expanded="true" signature="31397:31498" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/rating-contractor/includes/class-rating-contractor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="284" column="39" lean-forward="false" selection-start-line="284" selection-start-column="34" selection-end-line="284" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/job_board/includes/class-job_board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="330" column="35" lean-forward="false" selection-start-line="330" selection-start-column="35" selection-end-line="330" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/listing/resources/css/frontend.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="4136" column="1" lean-forward="false" selection-start-line="4136" selection-start-column="1" selection-end-line="4136" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/classiadspro-child/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="599" column="20" lean-forward="true" selection-start-line="599" selection-start-column="20" selection-end-line="599" selection-end-column="20" />
           <folding />
         </state>
       </provider>

@@ -194,6 +194,18 @@ if($_REQUEST['job_status']!=""){
                                     </div>
                                 </div>
                             </div>
+                            <div class="popup popup-status-change" data-popup="jb-complete-bid-<?php echo $post->ID; ?>">
+                                <div class="popup-inner single-contact">
+                                    <div class="alsp-popup-content">
+                                        <a class="popup-close" data-popup-close="jb-reject-bid-<?php echo $post->ID; ?>" href="#"><i class="pacz-fic4-error"></i></a>
+                                        <p>
+                                            <?php _e('Please confirm this job has been completed'); ?>
+                                        </p>
+                                        <a href="javascript: void()" class="jb-complete-bid"><?php _e('Completed this job'); ?></a>
+                                        <a class="jb-cancel-complete-btn" data-popup-close="jb-complete-bid-<?php echo $post->ID; ?>" href="#"><?php _e('Cancel'); ?></a>
+                                    </div>
+                                </div>
+                            </div>
                             <?php
 
                             echo '<div class="popup" data-popup="single_contact_form_'.$post->ID.'">';
@@ -211,13 +223,17 @@ if($_REQUEST['job_status']!=""){
                             echo'</div>';
                             echo'</div>';
                             ?>
-                            <?php if($status!='Accepted'&&$status!='Rejected'): ?>
+                            <?php
+                            if($status!='Accepted'&&$status!='Rejected'&&$status!="Completed"): ?>
                                 <a href="javascript: void()" class="jb-accept-btn" data-popup-open="jb-accept-bid-<?php echo $post->ID; ?>"><?php _e('Accept Bid'); ?></a>
                                 <a href="javascript: void()" class="jb-reject-btn" data-popup-open="jb-reject-bid-<?php echo $post->ID; ?>"><?php _e('Reject Bid'); ?></a>
-                                <p class="jb-accepted-text" style="display: none;"><?php _e('You’ve accepted this bid.'); ?> <a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a></p>
+                                <p class="jb-accepted-text" style="display: none;"><?php _e('You’ve accepted this bid.'); ?> <a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a> <a href="javascript: void()" class="jb-complete-btn" data-popup-open="jb-complete-bid-<?php echo $post->ID; ?>" href=""><?php _e('JOB HAS BEEN COMPLETED?'); ?></a></p>
                                 <p class="jb-rejected-text" style="display: none;"><?php _e('You’ve rejected this bid.'); ?></p>
+                            <?php elseif($status=="Completed"): ?>
+                                <p class="jb-completed-text"> <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>"><?php _e('How did it go? Click here to rate this contractor on this job.'); ?></a></p>
                             <?php else: ?>
-                                <p class="jb-accepted-text"><?php _e('You’ve'); ?> <?php echo $status; ?> <?php _e('this bid.'); ?>  <?php if($status=='Accepted'): ?><a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a><?php endif; ?></p>
+                                <p class="jb-accepted-text"><?php _e('You’ve'); ?> <?php echo $status; ?> <?php _e('this bid.'); ?>  <?php if($status=='Accepted'): ?><a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a>  <a href="javascript: void()" class="jb-complete-btn" data-popup-open="jb-complete-bid-<?php echo $post->ID; ?>" href=""><?php _e('JOB HAS BEEN COMPLETED?'); ?></a><?php endif; ?></p>
+                                <p class="jb-completed-text" style="display: none;"> <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>"><?php _e('How did it go? Click here to rate this contractor on this job.'); ?></a></p>
                             <?php endif; ?>
                         </span>
                     </div>
@@ -326,11 +342,14 @@ if($_REQUEST['job_status']!=""){
         this.element.accept_popup_btn = item.find(".jb-accept-btn");
         this.element.cancel_btn = item.find(".jb-cancel-btn");
         this.element.cancel_reject_btn = item.find(".jb-cancel-reject-btn");
+        this.element.cancel_complete_btn = item.find(".jb-cancel-complete-btn");
         this.element.accept_text = item.find(".jb-accepted-text");
         this.element.reject_text = item.find(".jb-rejected-text");
+        this.element.complete_text = item.find(".jb-completed-text");
         this.element.accept = item.find(".jb-accept-bid");
         this.element.reject_popup_btn = item.find(".jb-reject-btn");
         this.element.reject = item.find(".jb-reject-bid");
+        this.element.complete = item.find(".jb-complete-bid");
         this.element.status = item.find(".jb-bid-status");
         this.element.more = item.find(".jb-show-more");
         this.element.shortcontent = item.find(".jb-short-content");
@@ -346,6 +365,7 @@ if($_REQUEST['job_status']!=""){
         this.element.button.on( "click", jQuery.proxy( this.button_click, this ) );
         this.element.accept.on( "click", jQuery.proxy( this.accept_click, this ) );
         this.element.reject.on( "click", jQuery.proxy( this.reject_click, this ) );
+        this.element.complete.on( "click", jQuery.proxy( this.complete_click, this ) );
         this.element.dropdown.on( "click", jQuery.proxy( this.dropdown_change, this ) );
         this.element.submit.on( "click", jQuery.proxy( this.submit_click, this ) );
         this.element.more.on( "click", jQuery.proxy( this.more_toggle, this ) );
@@ -411,25 +431,57 @@ if($_REQUEST['job_status']!=""){
             e.preventDefault();
         }
 
-//        if(confirm('Please confirm that you will be rejecting contract of "'+this.contractor+'" for this project.')){
-            var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+        var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
-            var data = {
-                action: "jb_applications_status",
-                id: this.id,
-                status: 'Rejected',
-                notify: 1
-            };
+        var data = {
+            action: "jb_applications_status",
+            id: this.id,
+            status: 'Rejected',
+            notify: 1
+        };
 
-            jQuery.ajax({
-                url: ajaxurl,
-                type: "post",
-                dataType: "json",
-                data: data,
-                success: jQuery.proxy( this.reject_success, this ),
-                error: jQuery.proxy( this.submit_error, this )
-            });
-//        }
+        jQuery.ajax({
+            url: ajaxurl,
+            type: "post",
+            dataType: "json",
+            data: data,
+            success: jQuery.proxy( this.reject_success, this ),
+            error: jQuery.proxy( this.submit_error, this )
+        });
+    };
+
+    WPJB.Manage.Apps.Item.StatusChange.prototype.complete_click = function(e) {
+        if(typeof e != "undefined") {
+            e.preventDefault();
+        }
+
+        var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+
+        var data = {
+            action: "jb_applications_status",
+            id: this.id,
+            status: 'Completed',
+            notify: 1
+        };
+
+        jQuery.ajax({
+            url: ajaxurl,
+            type: "post",
+            dataType: "json",
+            data: data,
+            success: jQuery.proxy( this.complete_success, this ),
+            error: jQuery.proxy( this.submit_error, this )
+        });
+    };
+
+    WPJB.Manage.Apps.Item.StatusChange.prototype.complete_success = function(response) {
+        this.element.item.removeClass (function (index, className) {
+            return (className.match (/(^|\s)jb-application-status-\S+/g) || []).join(' ');
+        });
+        this.element.cancel_complete_btn.click();
+        this.element.status.text( "Completed");
+        this.element.accept_text.slideUp('fast');
+        this.element.complete_text.slideDown('fast');
     };
 
     WPJB.Manage.Apps.Item.StatusChange.prototype.reject_success = function(response) {

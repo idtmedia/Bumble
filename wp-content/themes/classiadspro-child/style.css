@@ -551,7 +551,7 @@ span.jb-glyphs.jb-star-rating:before {
 .jb-manage-header-right > li .jb-manage-header-right-item-text {
     font-size: 13px;
 }
-.jb-manage-header-right a{
+.jb-manage-header-right a, .jb-complete-btn{
     font-size: 11px;
     height: 41px;
     line-height: 41px;
@@ -564,6 +564,9 @@ span.jb-glyphs.jb-star-rating:before {
     padding: 0 20px;
     display: inline-block;
 }
+.jb-complete-btn{
+    margin-left: 10px;
+}
 .jb-accept-btn, .jb-reject-btn{
     text-transform: uppercase;
     font-size: 13px;
@@ -571,11 +574,12 @@ span.jb-glyphs.jb-star-rating:before {
     margin-left: 20px;
     display: inline-block;
 }
+
 .jb-accept-btn{
     padding-left: 37px;
     background: url(img/accept-btn.png) no-repeat left center;
 }
-.jb-accept-bid, .jb-reject-bid{
+.jb-accept-bid, .jb-reject-bid, .jb-complete-bid{
     font-size: 11px;
     height: 41px;
     line-height: 41px;
@@ -590,6 +594,7 @@ span.jb-glyphs.jb-star-rating:before {
     margin-bottom: 16px;
 }
 .jb-cancel-btn,
+.jb-cancel-complete-btn,
 .jb-cancel-reject-btn{
     margin-left:10px;
     font-size: 11px;
@@ -1041,4 +1046,13 @@ textarea, input[type=number]{
 .jb-accepted-text .message-btn:hover{
     background: #000;
     color: #fff;
+}
+
+#theme-page #commentform select{
+    min-width: 280px;
+}
+
+.jb-completed-text{
+    margin: 0;
+    line-height: 38px;
 }
