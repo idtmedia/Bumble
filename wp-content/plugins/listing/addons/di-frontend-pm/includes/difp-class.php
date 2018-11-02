@@ -293,7 +293,6 @@ if (!class_exists("difp_main_class"))
 	
 function user_settings()
     {
-	  
 	  $template = difp_locate_template( 'settings.php');
 	  
 	  ob_start();

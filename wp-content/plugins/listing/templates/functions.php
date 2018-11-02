@@ -3428,9 +3428,6 @@ $alsp_dynamic_styles[] = array(
 		<li>
 			<a class="" href="<?php echo wp_logout_url(home_url('/')); ?>" rel="nofollow"><i class="pacz-fic4-black-male-user-symbol"></i>  <span><?php echo __('Log out', 'ALSP'); ?></span></a>
 		</li>
-		<li>
-			<a class="" href="<?php echo home_url('/'); ?>" rel="nofollow"><i class="pacz-li-web"></i>  <span><?php echo __('Visit Front-End', 'ALSP'); ?></span></a>
-		</li>
 		<?php if(current_user_can('administrator')){ ?>
 			<li>
 				<a class="" href="<?php echo admin_url('/'); ?>" rel="nofollow"><i class="pacz-li-web"></i>  <span><?php echo __('Visit WP Admin', 'ALSP'); ?></span></a>

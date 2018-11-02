@@ -307,6 +307,7 @@ class Job_board
                         ->template( plugin_dir_path( __FILE__ ). 'emails/new-application.html' , [
                             'from' => $contractor_data->display_name,
                             'job' => $job_data->post_title,
+                            'message' => $post['apply_message'],
                             'dashboard_link' => $dashboard_link,
 //                            'skills' => [
 //                                'PHP',

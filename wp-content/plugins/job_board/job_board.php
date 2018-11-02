@@ -136,18 +136,23 @@ function get_total_bids(){
         endforeach;
         wp_reset_postdata();
     }
-    $applications = get_posts(array(
-        'posts_per_page' => -1,
-        'post_type' => 'bidding',
-        'meta_query' => array(
-            array(
-                'key' => 'job',
-                'value' => $post_ids_array,
-                'compare' => 'IN',
+    if(count($post_ids_array)>0){
+        $applications = get_posts(array(
+            'posts_per_page' => -1,
+            'post_type' => 'bidding',
+            'meta_query' => array(
+                array(
+                    'key' => 'job',
+                    'value' => $post_ids_array,
+                    'compare' => 'IN',
+                ),
             ),
-        ),
-    ));
-    return count($applications);
+        ));
+        return count($applications);
+    }else{
+        return 0;
+    }
+
 }
 
 // Deal with images uploaded from the front-end while allowing ACF to do it's thing

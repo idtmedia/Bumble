@@ -22,6 +22,15 @@ if (count($current_user_jobs) > 0) {
     endforeach;
     wp_reset_postdata();
 }
+if(count($post_ids_array)<1): ?>
+    <div class="jb-grid jb-grid-compact">
+        <div class="jb-grid-row jb-manage-item jb-manage-application">
+            <?php _e("No application!"); ?>
+        </div>
+    </div>
+<?php else: ?>
+    <?php
+
 if($_REQUEST['job_id']>0){
     $post_ids_array = array($_REQUEST['job_id']);
 }
@@ -564,4 +573,5 @@ if($_REQUEST['job_status']!=""){
     });
 
 </script>
+<?php endif; ?>
 <?php endif; ?>

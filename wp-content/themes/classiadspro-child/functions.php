@@ -610,3 +610,9 @@ function woo_custom_add_to_cart_before( $cart_item_data ) {
     // Do nothing with the data and return
     return true;
 }*/
+
+add_filter( 'woocommerce_thankyou_order_received_text', 'avia_thank_you' );
+function avia_thank_you() {
+    $added_text = '<p class="woocommerce-thanks-text">'._('Your order has been successfully placed - your job posting will now appear first on all listings.').'</p>';
+    return $added_text ;
+}

@@ -1056,3 +1056,40 @@ textarea, input[type=number]{
     margin: 0;
     line-height: 38px;
 }
+
+.difp-field input[type=checkbox], .difp-field input[type=radio] {
+    width: auto;
+}
+
+.alsp-listings-block.alsp-listings-grid-3 .alsp-listings-block-content article.alsp-listing{
+    width: 100%;
+    padding: 0;
+}
+
+#theme-page h3{
+    margin-bottom: 24px;
+}
+
+.woocommerce-checkout .pacz-grid, .woocommerce-checkout  .pacz-inner-grid{
+    max-width:96%;
+}
+
+.woocommerce-thanks-text{
+    font-size: 26px;
+}
+
+#theme-page h1:hover, #theme-page h2:hover, #theme-page h3:hover, #theme-page h4:hover, #theme-page h5:hover, #theme-page h6:hover, .subscription-form .title h5:hover{
+    color: #333333!important;
+}
+
+.alsp-search-form input:focus, .alsp-search-form select:focus, .alsp-search-form textarea:focus{
+    text-transform: none!important;
+}
+
+.alsp-search-form input[type=email], .alsp-search-form select, .search-form-style2.alsp-content.alsp-search-form input[type=text], .search-form-style2.alsp-content.alsp-search-form input[type=password], .search-form-style2.alsp-content.alsp-search-form textarea{
+    color: #000!important;
+}
+
+.jb-short-content, .jb-full-content{
+    word-break: break-all;
+}

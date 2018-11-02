@@ -465,7 +465,7 @@ class alsp_listings_manager {
 
 		if ($alsp_form_validation->run()) {
 			if ($this->current_listing->saveExpirationDate($alsp_form_validation->result_array())) {
-				alsp_addMessage(__('Expiration date of listing was changed successfully!', 'ALSP'));
+//				alsp_addMessage(__('Expiration date of listing was changed successfully!', 'ALSP'));
 				$this->current_listing->loadListingFromPost($this->current_listing->post->ID);
 			}
 		} elseif ($error_string = $alsp_form_validation->error_string())

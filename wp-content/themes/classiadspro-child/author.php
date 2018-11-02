@@ -140,7 +140,7 @@ if (class_exists('alsp_plugin')):
                     } else {
                         if ($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages') {
                             echo '<div class="form-new">';
-                            echo do_shortcode('[difp_shortcode_new_message_form to="' . $author_name . '" subject="Contact"]');
+                            echo do_shortcode('[difp_shortcode_new_message_form to="' . $author_name . '" subject=""]');
                             echo '</div>';
                         }/*elseif($ALSP_ADIMN_SETTINGS['message_system'] == 'email_messages'){
                             if ($ALSP_ADIMN_SETTINGS['alsp_listing_contact_form'] && (!$listing->is_claimable || !$ALSP_ADIMN_SETTINGS['alsp_hide_claim_contact_form']) && ($listing_owner = get_userdata($listing->post->post_author)) && $listing_owner->user_email){

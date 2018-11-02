@@ -592,6 +592,7 @@ class Difp_Message
                 $height = 60;
 
                 $image_src_array = wp_get_attachment_image_src($image2, 'full');
+                if($image_src_array[0]!=""):
                 $image_src = bfi_thumb($image_src_array[0], array(
                     'width' => $width,
                     'height' => $height,
@@ -604,6 +605,7 @@ class Difp_Message
                             alt="<?php the_title(); ?>"
                             src="<?php echo pacz_thumbnail_image_gen($image_src, $width, $height); ?>"
                             width="<?php echo $width ?>" height="<?php echo $height ?>"/></a>
+                    <?php endif; ?>
             <span class="<?php echo $class; ?>"><a
                         href="<?php echo difp_query_url('viewmessage', array('difp_id' => get_the_ID())); ?>"><?php the_title(); ?></a>
                 </span><?php echo $span; ?><?php echo $bid_wrap ?><?php

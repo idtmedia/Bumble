@@ -42,7 +42,7 @@ if( $messages->have_posts() ) {
 						
 						?>
 				
-				<img alt="<?php the_title(); ?>" src="<?php echo pacz_thumbnail_image_gen($image_src, $width, $height); ?>" width="<?php echo $width ?>" height="<?php echo $height ?>" />
+<!--				<img alt="--><?php //the_title(); ?><!--" src="--><?php //echo pacz_thumbnail_image_gen($image_src, $width, $height); ?><!--" width="--><?php //echo $width ?><!--" height="--><?php //echo $height ?><!--" />-->
 				<?php the_title(); ?>
 				<?php 
 				$bid = get_post_meta(get_the_ID(), '_listing_bid', true);

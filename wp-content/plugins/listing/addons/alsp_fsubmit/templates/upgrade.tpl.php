@@ -7,7 +7,7 @@ $woocommerce->cart->empty_cart();
 	<h3><?php _e('Get your listing featured on top!', 'ALSP'); ?></h3>
 	<?php foreach ($alsp_instance->levels->levels_array AS $level):
             $name = $level->name;
-	        if($level->name=='Featured Listing') $name = 'Feature your listing for 7 days!';
+	        if($level->name=='Featured Listing') $name = 'Feature your listing for 7 days';
             ?>
 	<?php if ($alsp_instance->current_listing->level->id != $level->id && (!isset($alsp_instance->current_listing->level->upgrade_meta[$level->id]) || !$alsp_instance->current_listing->level->upgrade_meta[$level->id]['disabled'])): ?>
 	<p>

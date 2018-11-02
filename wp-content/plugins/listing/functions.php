@@ -3403,7 +3403,7 @@ $alsp_dynamic_styles[] = array(
 		?>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span><?php _e('Packages', 'ALSP'); ?></span>
+            <i class="fa fa-dashboard"></i> <span><?php _e('Memberships', 'ALSP'); ?></span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -3413,7 +3413,7 @@ $alsp_dynamic_styles[] = array(
 			<li><a href="<?php echo $myaccount_page_url.$myaccount_orders_page_url; ?>"><i class="fa fa-circle-o"></i><?php _e('My Orders', 'ALSP'); ?></a></li>
 			<li><a href="<?php echo $myaccount_page_url.$myaccount_address_page_url; ?>"><i class="fa fa-circle-o"></i><?php _e('Edit Address', 'ALSP'); ?></a></li>
 			<li><a href="<?php echo $myaccount_page_url.$myaccount_payment_method_page_id; ?>"><i class="fa fa-circle-o"></i><?php _e('Payment Methods', 'ALSP'); ?></a></li>
-			<li><a href="<?php echo $myaccount_page_url.$myaccount_downloads_page_id; ?>"><i class="fa fa-circle-o"></i><?php _e('Downloads', 'ALSP'); ?></a></li>
+<!--			<li><a href="--><?php //echo $myaccount_page_url.$myaccount_downloads_page_id; ?><!--"><i class="fa fa-circle-o"></i>--><?php //_e('Downloads', 'ALSP'); ?><!--</a></li>-->
 
           </ul>
         </li>
@@ -3431,17 +3431,15 @@ $alsp_dynamic_styles[] = array(
 			</li>
 		<?php }
 		} ?>
-		<?php if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list']){ ?>
+		<?php if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list']&&is_contractor()){ ?>
 		<li>
-			<a class="" href="<?php echo alsp_directoryUrl(array('alsp_action' => 'myfavourites')); ?>" target="_blank"> <i class="pacz-fic4-big-heart"></i>  <span><?php echo  __('Bookmarks', 'ALSP'); ?></span></a>
+			<a class="" href="<?php echo alsp_directoryUrl(array('alsp_action' => 'myfavourites')); ?>" target="_blank"> <i class="pacz-fic4-big-heart"></i>  <span><?php echo  __('Saved listings', 'ALSP'); ?></span></a>
 		</li>
 		<?php } ?>
 		<li>
 			<a class="" href="<?php echo wp_logout_url(home_url('/')); ?>" rel="nofollow"><i class="pacz-fic4-black-male-user-symbol"></i>  <span><?php echo __('Log out', 'ALSP'); ?></span></a>
 		</li>
-		<li>
-			<a class="" href="<?php echo home_url('/'); ?>" rel="nofollow"><i class="pacz-li-web"></i>  <span><?php echo __('Visit Front-End', 'ALSP'); ?></span></a>
-		</li>
+
 		<?php if(current_user_can('administrator')){ ?>
 			<li>
 				<a class="" href="<?php echo admin_url('/'); ?>" rel="nofollow"><i class="pacz-li-web"></i>  <span><?php echo __('Visit WP Admin', 'ALSP'); ?></span></a>

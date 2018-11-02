@@ -270,7 +270,7 @@ class alsp_submit_controller extends alsp_frontend_controller {
 							$message = __('Listing was saved successfully as draft! Contact site manager, please.', 'ALSP');
 						} elseif ($ALSP_ADIMN_SETTINGS['alsp_fsubmit_default_status'] == 3) {
 							$post_status = 'publish';
-							$message = __('Listing was saved successfully! Now you may manage it in your dashboard.', 'ALSP');
+							$message = __('YOUR JOB HAS BEEN SUCCESSFULLY POSTED AND IS NOW OPEN FOR BIDDING!', 'ALSP');
 						}
 
 						$postarr = array(
