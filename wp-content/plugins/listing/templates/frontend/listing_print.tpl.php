@@ -69,7 +69,7 @@ else
 					<?php do_action('alsp_listing_pre_logo_wrap_html', $listing); ?>
 					<div class="alsp-listing-logo">
 						<?php $src = wp_get_attachment_image_src($listing->logo_image, 'full'); ?>
-						<img src="<?php echo $src[0]; ?>" />
+						<img src="<?php echo $src[0]; ?>" style="max-width: 100%"/>
 					</div>
 				</div>
 				<?php endif; ?>

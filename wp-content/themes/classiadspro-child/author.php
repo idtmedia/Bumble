@@ -20,7 +20,7 @@ if (class_exists('alsp_plugin')):
     $authorID = $author->ID;
 
     $author_img_url = get_the_author_meta('pacz_author_avatar_url', $authorID, true);
-    $author_name = get_the_author_meta('display_name', $authorID);
+    $author_name = get_query_var('author_name');
     $description = get_the_author_meta('description', $authorID);
     if ($ALSP_ADIMN_SETTINGS['frontend_panel_user_phone']) {
         $phone_number = get_the_author_meta('user_phone', $authorID);

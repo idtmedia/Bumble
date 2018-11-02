@@ -10,6 +10,19 @@ Version:		1.0
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #000!important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #000!important;;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #000!important;;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #000!important;;
+}
+
 .how_we_work .wpb_column.vc_column_container.vc_col-sm-4{
 
 position:relative}
@@ -1092,4 +1105,27 @@ textarea, input[type=number]{
 
 .jb-short-content, .jb-full-content{
     word-break: break-all;
+}
+
+.blog #pacz-main-navigation > ul > li.page-item-276 > a,
+.page-id-597 #pacz-main-navigation > ul > li.page-item-597 > a,
+.page-id-4 #pacz-main-navigation > ul > li.page-item-4 > a,
+.page-id-2585 #pacz-main-navigation > ul > li.page-item-2585 > a,
+.page-id-2732 #pacz-main-navigation > ul > li#menu-item-2746 > a{
+    color: #ef114c;
+}
+.author-details p{
+    font-size: 13px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #000;
+}
+#difp-content{
+    border: none;
+    padding: 0;
+    margin:0;
+}
+.difp-per-message{
+    border-bottom: 1px solid #ccc;
 }

@@ -34,13 +34,9 @@ echo $args['before_title'] . $title . $args['after_title'];
         wp_reset_postdata();
 
 		echo '<li><span class="bid-item-label">'.esc_html__('Total Bids', 'ALSP').'</span><span class="bid-item-value">'.$total_bid.'</span></li>';
-		echo '<li><span class="bid-item-label">'.esc_html__('Highest Bid', 'ALSP').'</span><span class="bid-item-value">$'.number_format($highestbid, 2).'</li>';
-		echo '<li><span class="bid-item-label">'.esc_html__('Lowest Bid', 'ALSP').'</span><span class="bid-item-value">$'.number_format($lowestbid,2).'</li>';
-		echo '<li><span class="bid-item-label">'.esc_html__('Average Bid', 'ALSP').'</span><span class="bid-item-value">$'.number_format($avgbid,2).'</li>';
-//		echo '<li><span class="bid-item-label">'.esc_html__('Total Bids', 'ALSP').'</span><span class="bid-item-value">'.$listing->bidcount().'</span></li>';
-//		echo '<li><span class="bid-item-label">'.esc_html__('Highest Bid', 'ALSP').'</span><span class="bid-item-value">'.round($listing->highestbid(), 2).'</li>';
-//		echo '<li><span class="bid-item-label">'.esc_html__('Lowest Bid', 'ALSP').'</span><span class="bid-item-value">'.round($listing->lowestbid(),2).'</li>';
-//		echo '<li><span class="bid-item-label">'.esc_html__('Average Bid', 'ALSP').'</span><span class="bid-item-value">'.round($listing->avgbid(),2).'</li>';
+		echo '<li><span class="bid-item-label">'.esc_html__('Highest Bid', 'ALSP').'</span><span class="bid-item-value">$'.number_format(floatval($highestbid), 2).'</li>';
+		echo '<li><span class="bid-item-label">'.esc_html__('Lowest Bid', 'ALSP').'</span><span class="bid-item-value">$'.number_format(floatval($lowestbid),2).'</li>';
+		echo '<li><span class="bid-item-label">'.esc_html__('Average Bid', 'ALSP').'</span><span class="bid-item-value">$'.number_format(floatval($avgbid),2).'</li>';
 		
 		?>
 	</ul>

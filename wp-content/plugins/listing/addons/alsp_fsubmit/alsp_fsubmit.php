@@ -208,7 +208,7 @@ class alsp_fsubmit_plugin {
 
 		if ($pagenow != 'admin-ajax.php' && $pagenow != 'async-upload.php')
 			if (!current_user_can('administrator') && is_admin()) {
-				alsp_addMessage(__('You can not see dashboard!', 'ALSP'), 'error');
+//				alsp_addMessage(__('You can not see dashboard!', 'ALSP'), 'error');
 				wp_redirect(alsp_dashboardUrl());
 				die();
 			}

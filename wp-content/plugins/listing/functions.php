@@ -3391,7 +3391,7 @@ $alsp_dynamic_styles[] = array(
 			<ul class="treeview-menu">
 
 				<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'messages')); ?>"><?php echo esc_html__('Inbox', 'ALSP'); ?><?php  if (difp_get_new_message_number()){ echo sprintf(__('<small class="label pull-right bg-red"> %s  </small>', 'ALSP'), difp_get_new_message_button() ); } ?></a></li>
-				<li ><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'messages')); ?>&difpaction=announcements"><?php echo esc_html__('announcements', 'ALSP'); ?></a></li>
+				<li ><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'messages')); ?>&difpaction=announcements"><?php echo esc_html__('Announcements', 'ALSP'); ?></a></li>
 				<li ><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'messages')); ?>&difpaction=settings"><?php echo esc_html__('Settings', 'ALSP'); ?></a></li>
 
 			</ul>

@@ -616,3 +616,33 @@ function avia_thank_you() {
     $added_text = '<p class="woocommerce-thanks-text">'._('Your order has been successfully placed - your job posting will now appear first on all listings.').'</p>';
     return $added_text ;
 }
+
+
+//Retrict user for accessing other's media
+
+// Limit media library access
+
+add_filter( 'ajax_query_attachments_args', 'wpb_show_current_user_attachments' );
+
+function wpb_show_current_user_attachments( $query ) {
+    $user_id = get_current_user_id();
+    if ( $user_id && !current_user_can('activate_plugins') && !current_user_can('edit_others_posts
+') ) {
+        $query['author'] = $user_id;
+    }
+    return $query;
+}
+
+//Automatically complete order
+/**
+ * Auto Complete all WooCommerce orders.
+ */
+add_action( 'woocommerce_thankyou', 'custom_woocommerce_auto_complete_order' );
+function custom_woocommerce_auto_complete_order( $order_id ) {
+    if ( ! $order_id ) {
+        return;
+    }
+
+    $order = wc_get_order( $order_id );
+    $order->update_status( 'completed' );
+}

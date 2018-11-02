@@ -300,6 +300,7 @@ class Job_board
                     $author = $job_data->post_author;
                     $to = get_the_author_meta( 'email' , $author );
                     $dashboard_link = get_site_url().'/my-dashboard';
+                    $cost = $post['apply_cost'];
 //                    echo $to;
                     WP_Mail::init()
                         ->to($to)
@@ -307,6 +308,7 @@ class Job_board
                         ->template( plugin_dir_path( __FILE__ ). 'emails/new-application.html' , [
                             'from' => $contractor_data->display_name,
                             'job' => $job_data->post_title,
+                            'cost' => $cost,
                             'message' => $post['apply_message'],
                             'dashboard_link' => $dashboard_link,
 //                            'skills' => [
