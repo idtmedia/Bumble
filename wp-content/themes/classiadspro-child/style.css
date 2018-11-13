@@ -12,12 +12,13 @@ Version:		1.0
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #000!important;
+    text-transform: none!important;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-    color: #000!important;;
+    color: #000!important;
 }
 :-ms-input-placeholder { /* IE 10+ */
-    color: #000!important;;
+    color: #000!important;
 }
 :-moz-placeholder { /* Firefox 18- */
     color: #000!important;;
@@ -192,7 +193,6 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 }
 
 .jb-search .jb-input {
-    width: 48%;
     margin: 0 12px 0 12px;
     padding: 0;
     display: block;
@@ -200,6 +200,7 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    line-height: 41px;
 }
 
 .jb-search .jb-input.jb-input-type-half.jb-input-type-half-left {
@@ -1068,6 +1069,8 @@ textarea, input[type=number]{
 .jb-completed-text{
     margin: 0;
     line-height: 38px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .difp-field input[type=checkbox], .difp-field input[type=radio] {
@@ -1128,4 +1131,92 @@ textarea, input[type=number]{
 }
 .difp-per-message{
     border-bottom: 1px solid #ccc;
+}
+.alsp-popup-content .difp-success{
+    font-size:1em;
+}
+
+.bult-action-wrap .difp-button{
+    font-size: 15px;
+    height: 41px;
+    line-height: 41px;
+    min-height: 41px;
+    background: #fad03d;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 20px;
+    border: 1px solid #eaeaea;
+    margin-left: 20px!important;
+    border-radius: 0;
+}
+.bult-action-wrap .difp-button:hover{
+    background-color: #c32026;
+    color: #fff!important;
+    border-color: #c32026;
+}
+.select2-container--default .select2-selection--single{
+    height: 41px;
+    line-height: 41px;
+}
+
+.pacz-commentlist li .comment-author{
+    font-size: 12px;
+}
+
+.dir_message_field .currency-format{
+    width: 100%;
+}
+
+.jb-show-more{
+    font-size:11px;
+    margin-top: 10px;
+    background: #fad03d;
+    border-color: #fad03d;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 20px;
+    display: inline-block;
+    border: none;
+}
+.jb-show-more:hover{
+    background-color: #c32026;
+    color: #fff;
+}
+
+.jb-search .jb-input select{
+    margin-left: 10px;
+}
+
+.jb-list-search{
+    float: right;
+}
+
+.alsp-updated p{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.pacz-user-avatar{
+    display: block;
+}
+
+.jb-bid-search{
+    float: left;
+}
+
+.alsp-drop-zone{
+    position: relative;
+}
+
+.alsp-ajax-iloader{
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: url(img/loading.gif) center center no-repeat;
+    margin-top: 10%;
+    z-index: 999;
+    position: absolute;
+    top: 20%;
 }

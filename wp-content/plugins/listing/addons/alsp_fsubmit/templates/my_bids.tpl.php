@@ -2,6 +2,11 @@
 if(!is_contractor()):
     _e('You dont have permission for accessing this section');
 else:
+    if($_REQUEST['delete']>0){
+    if(wp_delete_post($_REQUEST['delete'])){
+       $deleted_msg =  _('Your bid deleted');
+    }
+}
     $user_id = get_current_user_id();
     if($_REQUEST['job_status']!=""){
         $applications = get_posts(array(
@@ -36,7 +41,13 @@ else:
     }
     $job_statuses = array('New','Rejected','Accepted');
 ?>
-
+    <?php if($_REQUEST['delete']>0):
+                if(wp_delete_post($_REQUEST['delete'])): ?>
+                    <div class="message"><p>
+                    <?php echo $deleted_msg; ?>
+                        </p></div>
+                <?php          endif;
+                    endif; ?>
     <div class="jb-top-search">
     <form action="" method="GET">
         <input type="hidden" name="alsp_action" value="my_bids" />
@@ -59,13 +70,18 @@ else:
                     <?php endforeach; ?>
                 </select>
             </div>
-            <div class="jb-list-search">
+            <div class="jb-list-search jb-bid-search">
                 <input type="submit" value="<?php _e('Apply filter'); ?>">
             </div>
         </div>
     </form>
     </div>
     <div class="jb-grid jb-grid-compact">
+        <?php if($_REQUEST['delete']>0){
+           if(wp_delete_post($_REQUEST['delete'])){
+             _e('Your bid deleted');
+           }
+        } ?>
         <?php if (count($applications) > 0): ?>
             <?php foreach ($applications as $post) : setup_postdata($post); ?>
                 <?php
@@ -106,9 +122,48 @@ else:
                                 <?php endif; ?>
                             </span>
                             </div>
+                            <?php
+                            global $current_user, $ALSP_ADIMN_SETTINGS;
+                            $author_id = $job->post_author;
+                            $author_name = get_the_author_meta( 'user_nicename' , $author_id );
+                            echo '<div class="popup" data-popup="single_contact_form">';
+                            echo '<div class="popup-inner single-contact">';
+                            echo '<div class="alsp-popup-title">' . esc_html__('Send a Message', 'ALSP') . '<a class="popup-close" data-popup-close="single_contact_form" href="#"><i class="pacz-fic4-error"></i></a></div>';
+                            echo '<div class="alsp-popup-content">';
+
+                            if (is_user_logged_in() && $current_user->ID == $authorID) {
+                                echo esc_html__('You can not send message on your own', 'ALSP');
+                            } elseif (!is_user_logged_in()) {
+                                echo '<a href="'.get_permalink(100).'">'.esc_html__('Login Required', 'ALSP').'</a>';
+                            } elseif (current_user_can('administrator')) {
+                                echo esc_html__('Administrator can not send message from front-end', 'ALSP');
+                            } else {
+                                if ($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages') {
+                                    echo '<div class="form-new">';
+                                    echo do_shortcode('[difp_shortcode_new_message_form to="' . $author_name . '" subject=""]');
+                                    echo '</div>';
+                                }/*elseif($ALSP_ADIMN_SETTINGS['message_system'] == 'email_messages'){
+                            if ($ALSP_ADIMN_SETTINGS['alsp_listing_contact_form'] && (!$listing->is_claimable || !$ALSP_ADIMN_SETTINGS['alsp_hide_claim_contact_form']) && ($listing_owner = get_userdata($listing->post->post_author)) && $listing_owner->user_email){
+
+                                if (defined('WPCF7_VERSION') && alsp_get_wpml_dependent_option('alsp_listing_contact_form_7')){
+                                    echo do_shortcode(alsp_get_wpml_dependent_option('alsp_listing_contact_form_7'));
+                                }else{
+                                    alsp_frontendRender('frontend/contact_form.tpl.php', array('listing' => $listing));
+
+                                }
+
+                            }
+                        }*/ else {
+                                    echo esc_html__('Messages are currenlty disabled by Site Owner', 'ALSP');
+                                }
+                            }
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            ?>
                             <ul class="jb-manage-header-right">
                                 <li>
-                                    <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>"><?php _e('View profile'); ?></a>
+                                    <a href="#<?php //echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>" data-popup-open="single_contact_form"><?php _e('Send a message'); ?></a>
                                 </li>
                                 <li>
                                     <a href="<?php echo get_permalink($job); ?>"><?php _e('View job'); ?></a>
@@ -116,11 +171,28 @@ else:
                             </ul>
                         </div>
                         <div class="jb-manage-actions-wrap">
-                        <span class="jb-manage-actions-left">
-                            <span class="jb-glyphs jb-icon-clock"></span>
-                                <span class="jb-manage-header-right-item-text">
-                            <?php echo date('F d, Y', strtotime($post->post_date)); ?>
-                                </span>
+                            <span class="jb-manage-actions-left">
+                                <span class="jb-glyphs jb-icon-clock"></span>
+                                    <span class="jb-manage-header-right-item-text">
+                                         <?php echo date('F d, Y', strtotime($post->post_date)); ?>
+                                    </span>
+                            </span>
+                            <span class="jb-manage-actions-right">
+                                <div class="popup popup-status-change" data-popup="jb-reject-bid-<?php echo $post->ID; ?>">
+                                    <div class="popup-inner single-contact">
+                                        <div class="alsp-popup-content">
+                                            <a class="popup-close" data-popup-close="jb-reject-bid-<?php echo $post->ID; ?>" href="#"><i class="pacz-fic4-error"></i></a>
+                                            <h3><?php echo $contractor['user_nicename']; ?></h3>
+                                            <p>
+                                                <strong><?php _e('APPLIED FOR:')?></strong> <a href="<?php echo get_permalink($job); ?>"><?php echo get_the_title($job); ?></a><br>
+                                                <strong><?php _e('BID AMOUNT:'); ?></strong> <span>$<?php echo get_field('cost', $post->ID); ?></span>
+                                            </p>
+                                            <a href="?alsp_action=my_bids&delete=<?php echo $post->ID; ?>" class="jb-reject-bid"><?php _e('Delete this Bid'); ?></a>
+                                            <a class="jb-cancel-reject-btn" data-popup-close="jb-reject-bid-<?php echo $post->ID; ?>" href="#"><?php _e('Cancel'); ?></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript: void()" class="jb-reject-btn" data-popup-open="jb-reject-bid-<?php echo $post->ID; ?>"><?php _e('Delete Bid'); ?></a>
                         </span>
                         </div>
                     </div>
@@ -228,7 +300,7 @@ else:
                     this.element.complete_text = item.find(".jb-completed-text");
                     this.element.accept = item.find(".jb-accept-bid");
                     this.element.reject_popup_btn = item.find(".jb-reject-btn");
-                    this.element.reject = item.find(".jb-reject-bid");
+//                    this.element.delete_bid = item.find(".jb-delete-bid");
                     this.element.complete = item.find(".jb-complete-bid");
                     this.element.status = item.find(".jb-bid-status");
                     this.element.more = item.find(".jb-show-more");
@@ -244,7 +316,7 @@ else:
 
                     this.element.button.on( "click", jQuery.proxy( this.button_click, this ) );
                     this.element.accept.on( "click", jQuery.proxy( this.accept_click, this ) );
-                    this.element.reject.on( "click", jQuery.proxy( this.reject_click, this ) );
+//                    this.element.delete_bid.on( "click", jQuery.proxy( this.delete_bid_click, this ) );
                     this.element.complete.on( "click", jQuery.proxy( this.complete_click, this ) );
                     this.element.dropdown.on( "click", jQuery.proxy( this.dropdown_change, this ) );
                     this.element.submit.on( "click", jQuery.proxy( this.submit_click, this ) );
@@ -255,8 +327,6 @@ else:
                     if(typeof e != "undefined") {
                         e.preventDefault();
                     }
-//        console.log('fdafs');
-//        this.element.slider.slideUp("fast");
                     this.element.more.slideUp("fast");
                     this.element.shortcontent.slideUp("fast");
                     this.element.fullcontent.slideDown("fast");
@@ -306,7 +376,7 @@ else:
 //        this.element.item.removeChild( this.element.reject);
                 };
 
-                WPJB.Manage.Apps.Item.StatusChange.prototype.reject_click = function(e) {
+                WPJB.Manage.Apps.Item.StatusChange.prototype.delete_bid_click = function(e) {
                     if(typeof e != "undefined") {
                         e.preventDefault();
                     }
@@ -314,10 +384,8 @@ else:
                     var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
 
                     var data = {
-                        action: "jb_applications_status",
-                        id: this.id,
-                        status: 'Rejected',
-                        notify: 1
+                        action: "jb_applications_delete",
+                        id: this.id
                     };
 
                     jQuery.ajax({
@@ -365,14 +433,15 @@ else:
                 };
 
                 WPJB.Manage.Apps.Item.StatusChange.prototype.reject_success = function(response) {
-                    this.element.item.removeClass (function (index, className) {
-                        return (className.match (/(^|\s)jb-application-status-\S+/g) || []).join(' ');
-                    });
-                    this.element.cancel_reject_btn.click();
-                    this.element.status.text( "Rejected");
-                    this.element.accept_popup_btn.slideUp('fast');
-                    this.element.reject_popup_btn.slideUp('fast');
-                    this.element.reject_text.slideDown('fast');
+//                    this.element.item.removeClass (function (index, className) {
+//                        return (className.match (/(^|\s)jb-application-status-\S+/g) || []).join(' ');
+//                    });
+//                    this.element.cancel_reject_btn.click();
+//                    this.element.status.text( "Rejected");
+//                    this.element.accept_popup_btn.slideUp('fast');
+//                    this.element.reject_popup_btn.slideUp('fast');
+//                    this.element.reject_text.slideDown('fast');
+                    location.reload();
                 };
 
                 WPJB.Manage.Apps.Item.StatusChange.prototype.dropdown_change = function(e) {

@@ -249,7 +249,7 @@ class Rating_Contractor {
 //                var_dump($value);
                 update_field( $field_job, $value, $post_id );
 
-                _e('Your review posted successfully');
+                _e('Thank-you for using Bumble Bidz');
             }else{
                 _e('You have reviewed the contractor for the job already');
             }

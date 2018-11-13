@@ -26,8 +26,15 @@ $output .='<div id="login-register-password">';
 		//registered 
 		
 			$output .='<div class="form-inner">';
-			
+
 				$output .='<h3>'.$form_title.'</h3>';
+                 if(class_exists('APSL_Class') && $allow_social_login == 'true'){
+                     $social_message = esc_html__('Social Connect', 'pacz');
+                     $dashboard = home_url('/').'my-dashboard';
+                     $output .='<div class="access-press-social">';
+                     $output .= do_shortcode('[apsl-login theme="2" login_text="'.$social_message.'" login_redirect_url="'.$dashboard.'"]');
+                     $output .='</div>';
+                 }
 				$dhvc_form_id = $id;
 				if(class_exists('DHVCForm') && !empty($dhvc_form_id)){
 					$output .= do_shortcode('[dhvc_form id="'.$dhvc_form_id.'"]'); 
@@ -40,27 +47,22 @@ $output .='<div id="login-register-password">';
 				}else{
 					$output .='<p>'.esc_html__('please install and activate DHVC plugin', 'pacz').'</p>';
 				}
-				if(class_exists('APSL_Class') && $allow_social_login == 'true'){
-					$social_message = esc_html__('Social Connect', 'pacz');
-					$dashboard = home_url('/').'my-dashboard';
-					$output .='<div class="access-press-social">';
-						$output .= do_shortcode('[apsl-login theme="2" login_text="'.$social_message.'" login_redirect_url="'.$dashboard.'"]');
-					$output .='</div>';
-				}
+
 							
 			$output .='</div>';
 			
 		$output .='</div>';
 	 }else{
 		 $output .='<div class="user_is_logedin">';
-			$output .='<p>'.esc_html__('You are already login', 'pacz').'</p>';
+			$output .='<p>'.esc_html__('You’re already logged into you account.', 'pacz').'</p>';
 			$output .='<div class="user_is_logedin_button">';
+//				$output .='<div class="user_is_logedin_button-inner">';
+//					$output .='<a class="btn btn-primary" href="'.home_url('/').'">'.esc_html__('Browse to Home', 'pacz').'</a>';
+//				$output .='</div>';
 				$output .='<div class="user_is_logedin_button-inner">';
-					$output .='<a class="btn btn-primary" href="'.home_url('/').'">'.esc_html__('Browse to Home', 'pacz').'</a>';
+					$output .='<a class="btn btn-primary" href="'.home_url('/').'my-dashboard">'.esc_html__('VISIT MY DASHBOARD', 'pacz').'</a>';
 				$output .='</div>';
-				$output .='<div class="user_is_logedin_button-inner">';
-					$output .='<a class="btn btn-primary" href="'.home_url('/').'my-dashboard">'.esc_html__('Browse to Account', 'pacz').'</a>';
-				$output .='</div>';
+
 			$output .='</div>';
 		 $output .='</div>';
 		 

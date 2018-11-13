@@ -31,47 +31,21 @@ $hash = $frontend_controller->hash;
                                 <div class="vc_column-inner ">
                                     <div class="wpb_wrapper">
                                         <div class="listings listing-archive alsp-content">
-                                            <div class="main-search-bar">
+                                           <!-- <div class="main-search-bar">
                                                 <form action=""
-                                                      class="search-form-style3 alsp-content alsp-search-form">
-                                                    <input type="hidden" name="alsp_action" value="search">
-                                                    <input type="hidden" name="hash" value="<?php echo $hash; ?>">
-                                                    <input type="hidden" name="controller" value="contractor_controller">
+                                                      class="search-form-style3" method="GET">
+                                                    <input type="hidden" name="action" value="search">
                                                     <div class="alsp-search-overlay alsp-container-fluid">
                                                         <div class="search-wrap row clearfix"
                                                              style="margin-left:-10px; margin-right:-10px;">
                                                             <div class="keyword-search search-element-col pull-left"
                                                                  style="width:25%; padding:0 10px;"><input type="text"
-                                                                                                           name="what_search"
-                                                                                                           class="form-control"
-                                                                                                           size="38"
-                                                                                                           placeholder="Enter keywords"
-                                                                                                           value="">
+                                                                   name="what_search"
+                                                                   class="form-control"
+                                                                   size="38"
+                                                                   placeholder="Enter keywords"
+                                                                   value="<?php /*echo $_REQUEST['what_search']; */?>">
                                                             </div>
-
-                                                           <!-- <script>
-                                                                (function ($) {
-                                                                    "use strict";
-
-                                                                    $(function () {
-                                                                        $(".alsp-get-location-9447").click(function () {
-                                                                            alsp_geocodeField($("#address_9447"), "GeoLocation service does not work on your device!");
-                                                                        });
-                                                                    });
-                                                                })(jQuery);
-                                                            </script>-->
-                                                            <!--<div class="search-element-col alsp-has-feedback pull-left"
-                                                                 style="width:25%; padding:0 10px;"><input type="text"
-                                                                                                           name="address"
-                                                                                                           id="address_9447"
-                                                                                                           class="form-control alsp-field-autocomplete"
-                                                                                                           placeholder="Enter address or zip code"
-                                                                                                           value=""
-                                                                                                           autocomplete="off">
-                                                                <span class="alsp-get-location alsp-get-location-9447 glyphicon glyphicon-screenshot form-control-feedback"
-                                                                      title="Get my location"></span>
-                                                            </div>-->
-
 
                                                             <div class="search-button search-element-col pull-right"
                                                                  style="width:25%; padding:0 10px; margin-top:15px;">
@@ -82,7 +56,7 @@ $hash = $frontend_controller->hash;
                                                         </div>
                                                     </div>
                                                 </form>
-                                            </div>
+                                            </div>-->
 
 
                                             <div class="alsp-content listing-parent pacz-loop-main-wrapper pacz-loop-main-wrapper2"
@@ -107,10 +81,17 @@ $hash = $frontend_controller->hash;
                                                     <div class="alsp-listings-block-content no-carousel  isotop-enabled pacz-theme-loop  clearfix isotope"
                                                          style="margin-left: -15px; margin-right: -15px; position: relative; "
                                                          data-style="masonry"
-                                                         data-uniqid="<?php echo $hash; ?>">
-                                                         <?php
-
-                                                         $contractor_query = new WP_User_Query( array( 'role' => 'Contributor', 'number' => $per_page ) );
+                                                    data-uniqid="<?php echo $hash; ?>">
+                                                        <?php
+                                                        $args = array( 'role' => 'Contributor', 'number' => $per_page );
+                                                         if($_REQUEST['action']=='search'){
+                                                             $args = array(
+                                                                 'role' => 'Contributor',
+                                                                 'search'         => "{$_REQUEST['what_search']}",
+                                                                 'number' => $per_page
+                                                             );
+                                                         }
+                                                        $contractor_query = new WP_User_Query( $args );
                                                          // User Loop
                                                          if ( ! empty( $contractor_query->get_results() ) ):
                                                              foreach ( $contractor_query->get_results() as $contractor ):
@@ -150,15 +131,6 @@ $hash = $frontend_controller->hash;
                                                                                  } ?>
                                                                                 </a></figure>
                                                                          <div class="clearfix alsp-listing-text-content-wrap">
-                                                                             <!--<div class="listng-author-img"><img
-                                                                                         src="http://pwmhosting.ca/classiad/wp-content/uploads/bfi_thumb/img-02-nhxxrgoj9jacamjbpqigsnf3ro8phh6hzqx3hdba6w.jpg"
-                                                                                         width="70" height="70"
-                                                                                         alt="author"><span
-                                                                                         class="author-in-active"></span></div>-->
-                                                                             <!--  <div class="cat-wrapper"><a class="listing-cat"
-                                                                                                           href="http://pwmhosting.ca/classiad/listings/listings-category/mobile-phones/"
-                                                                                                           rel="tag">Mobile
-                                                                                       Phones</a></div>-->
                                                                              <header class="alsp-listing-header"><h2><a
                                                                                              href="<?php echo get_site_url().'/author/'.$contractor->user_login; ?>"
                                                                                              title="<?php echo $contractor_name; ?>"><?php echo $contractor_name; ?>
@@ -183,18 +155,6 @@ $hash = $frontend_controller->hash;
                                                                                              data-location-id=""><span
                                                                                                  itemprop="streetAddress"><?php echo $contractor_address; ?></span></span>
                                                                              </p>
-                                                                             <!--<div class="listing-bottom-metas clearfix"><p
-                                                                                         class="listing-views">Views: 208</p>
-                                                                                 <div class="price">
-                                                                                     <div class="alsp-field alsp-field-output-block alsp-field-output-block-price alsp-field-output-block-9">
-                 <span class="alsp-field-caption">
-                                 <span class="alsp-field-name">Price:</span>
-                     </span>
-                                                                                         <span class="alsp-field-content">
-                     <span class="symbol_style2">$</span>350.00	</span>
-                                                                                     </div>
-                                                                                 </div>
-                                                                             </div>-->
                                                                          </div>
                                                                      </div>
                                                                  </article>

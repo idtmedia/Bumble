@@ -181,8 +181,8 @@
 							//if ($listing->status == 'active' && $listing->post->post_status == 'publish') {
 								echo '<a href="' . alsp_dashboardUrl(array('alsp_action' => 'change_status', 'listing_id' => $listing->post->ID)) . '" class=""><span class="pacz-li-settings"></span>' . esc_attr__('Change Status', 'ALSP') . '</a>';
 							//}?>
-							<a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'notice_to_admin', 'listing_id' => $listing->post->ID)); ?>" class=""><span class="pacz-li-notepad"></span><?php esc_attr_e('Note to Admin', 'ALSP'); ?></a>
-							<?php do_action('alsp_dashboard_listing_options', $listing); ?>
+<!--							<a href="<?php /*echo alsp_dashboardUrl(array('alsp_action' => 'notice_to_admin', 'listing_id' => $listing->post->ID)); */?>" class=""><span class="pacz-li-notepad"></span><?php /*esc_attr_e('Note to Admin', 'ALSP'); */?></a>
+							--><?php /*do_action('alsp_dashboard_listing_options', $listing); */?>
 						 </div>
 					</div>
 					<?php }else{ ?>

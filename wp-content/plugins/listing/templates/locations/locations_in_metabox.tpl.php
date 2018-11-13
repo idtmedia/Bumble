@@ -25,7 +25,7 @@
 			<script>
 				(function($) {
 					"use strict";
-				
+
 					$(function() {
 						$(".alsp-get-location-<?php echo $uID; ?>").click(function() { alsp_geocodeField($("#address_line_<?php echo $uID; ?>"), "<?php echo esc_js(__('GeoLocation service does not work on your device!', 'ALSP')); ?>"); });
 					});
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 			<?php if ($listing->level->google_map): ?>
-			
+
 				<div class="location-input-one-half alsp-manual-coords-wrapper clearfix" <?php if (!$ALSP_ADIMN_SETTINGS['alsp_enable_manual_coords']): ?>style="display: none;"<?php endif; ?>>
 					<!-- manual_coords - required in google_maps.js -->
 					<div class="checkbox alsp-location-input">
@@ -94,7 +94,7 @@
 								<input type="text" name="map_coords_1[<?php echo $uID;?>]" class="alsp-map-coords-1 form-control" value="<?php echo esc_attr($location->map_coords_1); ?>">
 							</div>
 						</div>
-		
+
 						<div class="alsp-location-input">
 							<label class=" alsp-control-label">
 								<?php _e('Longitude', 'ALSP'); ?>
@@ -117,5 +117,5 @@
 			<?php endif; ?>
 			<a href="javascript: void(0);" <?php if (!$delete_location_link) echo 'style="display:none;"'; ?> class="delete_location"><i class="pacz-icon-minus-circle"></i></a>
 		</div>
-		
+
 	</div>

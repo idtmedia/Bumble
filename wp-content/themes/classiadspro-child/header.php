@@ -738,6 +738,29 @@ if($post_id && $layout_template != 'no-title') {
   do_action('page_title');
 }
 
+// Your google API key
+// https://developers.google.com/maps/documentation/geocoding/usage-limits?hl=de
+// 2,500 free requests per day, calculated as the sum of client-side and server-side queries.
+// 50 requests per second, calculated as the sum of client-side and server-side queries.
+//$googleKey = '';
+
+//$zip = '10117';
+//$street = 'Friedrichstrasse 106';
+//$city = 'Berlin';
+//$country = 'DE';
+//$search = implode(', ', [$street, $zip, $city, $country]);
+//
+//$geoData = google_maps_search($search);
+//if (!$geoData) {
+//    echo "Error: " . $id . "\n";
+//    exit;
+//}
+//
+//$mapData = map_google_search_result($geoData);
+//
+//echo $mapData['lat'].'fdafadf'; // 52.5227797
+//echo "\n";
+//echo $mapData['lng'].'fdafadf'; // 13.3880986
 
 ?>
 

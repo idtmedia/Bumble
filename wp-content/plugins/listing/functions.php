@@ -3327,11 +3327,10 @@ $alsp_dynamic_styles[] = array(
  'id' => 'ajax-'.$id ,
  'inject' => $alsp_styles
 );
-
- ?>
+    ?>
 <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="<?php echo get_site_url(); ?>" class="logo">
      <?php if(isset($ALSP_ADIMN_SETTINGS['user_panel_logo']['url']) && !empty($ALSP_ADIMN_SETTINGS['user_panel_logo']['url'])){ ?>  <img src="<?php echo $ALSP_ADIMN_SETTINGS['user_panel_logo']['url'];  ?>" alt="User Panel" /> <?php }else{ ?> <span><?php echo esc_html__('User Panel', 'ALSP'); ?></span> <?php } ?>
     </a>
     <!-- Header Navbar: style can be found in header.less -->

@@ -164,14 +164,15 @@ function alsp_tax_dropdowns_meta_init($tax = 'category', $field_name = null, $te
 				echo '<div id="wrap_chainlist_' . $level_num . '_' .$uID . '" class="alsp-row alsp-form-group alsp-location-input">';
 	
 					if (isset($labels[$key]))
-						echo '<label class="alsp-col-md-2 alsp-control-label" for="chainlist_' . $level_num . '_' . $uID . '">' . $labels[$key] . '</label>';
-	
+						echo '<label class="alsp-col-md-2 alsp-control-label" for="chainlist_' . $level_num . '_' . $uID . '">Province</label>'; //' . $labels[$key] . '
+
 					if (isset($labels[$key]))
 					echo '<div class="alsp-col-md-10">';
 					else
 					echo '<div class="alsp-col-md-12">';
 						echo '<select id="chainlist_' . $level_num . '_' . $uID . '" class="alsp-form-control pacz-select2">';
-						echo '<option value="">- ' . ((isset($titles[$key])) ? $titles[$key] : __('Select term', 'ALSP')) . ' -</option>';
+//						echo '<option value="">- ' . ((isset($titles[$key])) ? $titles[$key] : __('Select term', 'ALSP')) . ' -</option>';
+						echo '<option value="">- ' . __('Please Select', 'ALSP') . ' -</option>';
 						foreach ($terms AS $term) {
 							if ($count)
 								$term_count = " ($term->count)";

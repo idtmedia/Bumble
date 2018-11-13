@@ -302,6 +302,7 @@ if (class_exists('alsp_plugin')):
                                                 <div class="pacz-single-comment userresponse clearfix" id="comment-48">
                                                     <div class="gravatar">
                                                         <div class="author-img">
+
                                                             <?php
                                                             $rater = get_field('rater');
                                                             if ($rater) {
@@ -328,9 +329,10 @@ if (class_exists('alsp_plugin')):
                                                                 $job = get_field('job');
                                                                 if ($rater) {
                                                                     $user_info = get_userdata($rater['ID']);
-                                                                    echo $user_info->display_name;
+                                                                    echo '<strong>USER</strong>: <a href="'.get_author_posts_url($rater['ID']).'">'.$user_info->display_name.'</a><br>';
                                                                 }
-                                                                ?><?php _e('review for'); ?><?php echo get_the_title($job->ID); ?></span>
+
+                                                                ?><strong><?php _e('JOB'); ?></strong>: <a href="<?php echo get_permalink($job->ID); ?>"><?php echo get_the_title($job->ID); ?></a></span>
                                                             <time class="comment-time"><?php the_date(); ?></time>
                                                             <span class="comment-reply">
                                                         </span>

@@ -290,38 +290,6 @@ add_role(
     )
 );
 
-//remove_role('constractor');
-
-// add a link to the WP Toolbar
-/* function Edit_listing_custom_toolbar_link($wp_admin_bar) {
-global $ALSP_ADIMN_SETTINGS;
-if ($frontend_controller->listings):
-			while ($frontend_controller->query->have_posts()):
-				$frontend_controller->query->the_post();
-				 $listing = $frontend_controller->listings[get_the_ID()];
- 
-endwhile;
-endif;
-	$args = array(
-		'id' => 'sing_listing',
-		'title' => 'Edit Listing', 
-		'href' => get_permalink(). $listing->post->ID, 
-		'meta' => array(
-			'class' => 'single_listanig'
-			)
-	);
-	$wp_admin_bar->add_node($args);
-}
-add_action('admin_bar_menu', 'Edit_listing_custom_toolbar_link', 999); 
-
- add_shortcode('imageforemail','daynamic_image_for_email');
-
-function daynamic_image_for_email(){
-	$html = "Hello HTML LInk";
-	return $html;
-}
-*/
-
 
 add_filter('wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3);
 
@@ -331,58 +299,6 @@ function custom_wp_new_user_notification_email($wp_new_user_notification_email, 
     $wp_new_user_notification_email['message'] = sprintf("%s ( %s ) test has registerd to your blog %s.", $user->user_login, $user->user_email, $blogname);
     return $wp_new_user_notification_email;
 }
-
-/*add_action('wp', 'unpublish_expired_listings_hourly');
-function unpublish_expired_listings_hourly()
-{
-    if (!wp_next_scheduled('unpublish_expired_listings')) {
-        wp_schedule_event(time(), 'hourly', 'unpublish_expired_listings');
-    }
-}
-
-add_action('unpublish_expired_listings', 'unpublish_expired_listings_callback');
-
-//https://wordpress.stackexchange.com/questions/152786/posts-to-expire-deleted-after-a-date
-function unpublish_expired_listings_callback()
-{
-    $args = array(
-        'post_type' => 'alsp_listing',
-        'posts_per_page' => -1
-    );
-
-    $listings = new WP_Query($args);
-    if ($listings->have_posts()):
-        while ($listings->have_posts()): $listings->the_post();
-
-            $duration = get_post_meta(get_the_ID(), '_content_field_38', true);
-            if ($duration > 0) {
-                switch ($duration) {
-                    case 1:
-                        $life_time = 259200;
-                        break;
-                    case 2:
-                        $life_time = 604800;
-                        break;
-                    case 3:
-                        $life_time = 1209600;
-                        break;
-                    case 4:
-                    default:
-                        $life_time = 2592000;
-                        break;
-                }
-                $expiration_date_time = get_the_time('U') + $life_time;
-                if ($expiration_date_time < time()) {
-//                    $post = array('ID' => get_the_ID(), 'post_status' => 'draft');
-//                    wp_update_post($post);
-//                    $status = array('expired');
-                    update_post_meta(get_the_ID(), '_listing_status', 'expired');
-                }
-            }
-        endwhile;
-    endif;
-}*/
-
 //Add new customer fields: city, country, zip code
 
 // Add User Contact Methods
@@ -397,32 +313,6 @@ function createiveosc_user_contact_methods($createiveosc_user_contact)
 }
 
 add_filter('user_contactmethods', 'createiveosc_user_contact_methods');
-
-/*function creativeosc_get_email(){
-    if(isset($_POST['cvf_action']) && $_POST['cvf_action'] == 'get_email' && ( $_POST['postalcode']!="" )) {
-        // echo $_POST['postalcode'];
-        // $responses = wp_remote_get('https://represent.opennorth.ca/postcodes/L5G4L3/');
-        if( is_wp_error( $request ) ) {
-            echo 'not found';
-        }else{
-            $request = wp_remote_get( 'https://represent.opennorth.ca/postcodes/'.$_POST['postalcode'].'/' );
-            $body = wp_remote_retrieve_body( $request );
-            $data = json_decode( $body );
-            if( ! empty( $data ) ) {
-                $email = array();
-                foreach( $data->representatives_centroid as $centroid ) {
-                    $email[] = $centroid->email;
-                }
-                echo implode(',', $email);
-            }
-        }
-
-    }
-    // Always exit to avoid further execution
-    exit();
-}
-add_action('wp_ajax_creativeosc_get_email', 'creativeosc_get_email');
-add_action('wp_ajax_nopriv_creativeosc_get_email', 'creativeosc_get_email');*/
 
 function get_client_ip() {
     $ipaddress = '';
@@ -451,6 +341,7 @@ function get_current_address(){
     $data['city'] = $geo_data['geoplugin_city'];
     $data['state'] = $geo_data['geoplugin_region'];
     $data['state_code'] = $geo_data['geoplugin_regionCode'];
+    $data['country'] = $geo_data['geoplugin_countryCode'];
     return $data;
 }
 
@@ -571,7 +462,7 @@ function creativeosc_jb_applications_status(){
             update_post_meta($job->ID, '_listing_status', 'expired');
             WP_Mail::init()
                 ->to($contractor['user_email'])//$contractor['user_email']
-                ->subject('Your application has been accepted in '.get_bloginfo('name'))
+                ->subject('Your bid has been accepted in '.get_bloginfo('name'))
                 ->template( get_stylesheet_directory(). '/emails/application-status.html' , [
                     'job' => $job->post_title,
                     'dashboard_link' => alsp_dashboardUrl(array('alsp_action' => 'messages')),
@@ -597,19 +488,6 @@ add_action('wp_ajax_nopriv_jb_applications_status', 'creativeosc_jb_applications
  * @author        Rodolfo Melogli
  * @testedwith    WooCommerce 3.4.3
  */
-
-/* Clear cart data before adding new */
-// before addto cart, only allow 1 item in a cart
-/*add_filter( 'woocommerce_add_to_cart_validation', 'woo_custom_add_to_cart_before' );
-
-function woo_custom_add_to_cart_before( $cart_item_data ) {
-
-    global $woocommerce;
-    $woocommerce->cart->empty_cart();
-
-    // Do nothing with the data and return
-    return true;
-}*/
 
 add_filter( 'woocommerce_thankyou_order_received_text', 'avia_thank_you' );
 function avia_thank_you() {
@@ -645,4 +523,67 @@ function custom_woocommerce_auto_complete_order( $order_id ) {
 
     $order = wc_get_order( $order_id );
     $order->update_status( 'completed' );
+}
+
+function google_maps_search($address)
+{
+    $key = 'AIzaSyDsTWHd7B7BcCw_J8nfHwkCTbT4EP3rjnU';
+    $url = sprintf('https://maps.googleapis.com/maps/api/geocode/json?address=%s&key=%s', urlencode($address), urlencode($key));
+    $response = file_get_contents($url);
+    $data = json_decode($response, 'true');
+    return $data;
+}
+
+function map_google_search_result($geo)
+{
+    if (empty($geo['status']) || $geo['status'] != 'OK' || empty($geo['results'][0])) {
+        return null;
+    }
+    $data = $geo['results'][0];
+    $postalcode = '';
+    foreach ($data['address_components'] as $comp) {
+        if (!empty($comp['types'][0]) && ($comp['types'][0] == 'postal_code')) {
+            $postalcode = $comp['long_name'];
+            break;
+        }
+    }
+    $location = $data['geometry']['location'];
+    $formatAddress = !empty($data['formated_address']) ? $data['formated_address'] : null;
+    $placeId = !empty($data['place_id']) ? $data['place_id'] : null;
+
+    $result = [
+        'lat' => $location['lat'],
+        'lng' => $location['lng'],
+        'postal_code' => $postalcode,
+        'formated_address' => $formatAddress,
+        'place_id' => $placeId,
+    ];
+    return $result;
+}
+
+/*******************************
+ * Calculates the great-circle distance between two points, with
+ * the Haversine formula.
+ * @param float $latitudeFrom Latitude of start point in [deg decimal]
+ * @param float $longitudeFrom Longitude of start point in [deg decimal]
+ * @param float $latitudeTo Latitude of target point in [deg decimal]
+ * @param float $longitudeTo Longitude of target point in [deg decimal]
+ * @param float $earthRadius Mean earth radius in [m]
+ * @return float Distance between points in [m] (same as earthRadius)
+ ********************************/
+function great_circle_distance(
+    $latitudeFrom, $longitudeFrom, $latitudeTo, $longitudeTo, $earthRadius = 6371000)
+{
+    // convert from degrees to radians
+    $latFrom = deg2rad(floatval($latitudeFrom));
+    $lonFrom = deg2rad(floatval($longitudeFrom));
+    $latTo = deg2rad(floatval($latitudeTo));
+    $lonTo = deg2rad(floatval($longitudeTo));
+
+    $latDelta = $latTo - $latFrom;
+    $lonDelta = $lonTo - $lonFrom;
+
+    $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
+            cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
+    return $angle * $earthRadius;
 }

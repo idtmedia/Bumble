@@ -203,11 +203,11 @@ if( !class_exists( 'APSL_Class' ) ) {
             if( isset($this->apsl_settings['apsl_enable_disable_edd_login_shortcode']) && $this->apsl_settings['apsl_enable_disable_edd_login_shortcode'] == 'yes'){
                 add_action('edd_login_fields_after', array($this, 'add_social_login_form_to_comment'));
             }
-            
+
             if(isset($this->apsl_settings['apsl_enable_disable_edd_register_shortcode']) && $this->apsl_settings['apsl_enable_disable_edd_register_shortcode'] == 'yes'){
                 add_action('edd_register_form_fields_after', array($this, 'add_social_login_form_to_comment'));
             }
-            
+
             // wp_editor( 'afsa', 'apsl-email-body');
 
             $options = get_option( APSL_SETTINGS );
@@ -220,31 +220,31 @@ if( !class_exists( 'APSL_Class' ) ) {
                         add_action( 'bp_before_sidebar_login_form', array($this, 'add_social_login_form_to_comment') );
                     }
                 }
-                
+
                 if( in_array( "register_form", $options['apsl_display_options'] ) ) {
                     add_action( 'register_form', array($this, 'add_social_login') );
                      //add the social logins to the registration form
                     add_action( 'after_signup_form', array($this, 'add_social_login') );
-                    
+
                     //buddypress compactibility check
                     if( $options['apsl_enable_disable_buddypress'] == 'yes' ) {
                         add_action( 'bp_before_account_details_fields', array($this, 'add_social_login_form_to_comment') );
                     }
                 }
-                
+
                 if( in_array( "comment_form", $options['apsl_display_options'] ) ) {
                     add_action( 'comment_form_top', array($this, 'add_social_login_form_to_comment') );
                      //add the social logins to the comment form
-                    add_action( 'comment_form_must_log_in_after', array($this, 'add_social_login_form_to_comment') ); // add the social login buttons if “Users must be registered and logged in to comment�? checked in the discussions settings.
+                    add_action( 'comment_form_must_log_in_after', array($this, 'add_social_login_form_to_comment') ); // add the social login buttons if “Users must be registered and logged in to comment�? checked in the discussions settings.
                 }
             }
-            
+
             //woocommerce compactibility check
             if( $options['apsl_enable_disable_woocommerce'] == 'yes' ) {
                 add_action( 'woocommerce_after_template_part', array($this, 'social_buttons_in_checkout') );
                 add_action( 'woocommerce_login_form', array($this, 'add_social_login_form_to_comment') );
             }
-            
+
             // add_action( 'after_signup_form', array($this, 'add_social_login') ); //save settings of a plugin
             // add_action( 'social_connect_form', array($this, 'add_social_login_form_to_comment') ); //save settings of a plugin
             add_shortcode( 'apsl-login', array($this, 'apsl_shortcode') );
@@ -259,21 +259,21 @@ if( !class_exists( 'APSL_Class' ) ) {
             add_action( 'login_enqueue_scripts', array($this, 'apsl_login_form__enqueue_script'), 1 );
             add_action( 'admin_post_apsl_restore_default_settings', array($this, 'apsl_restore_default_settings') );
              //restores default settings.
-            
-            
+
+
             /**
              * Hook to display custom avatars
              */
             add_filter( 'get_avatar', array($this, 'apsl_social_login_custom_avatar'), 10, 5 );
-            
+
             // Display users avatars from social networks on buddypress
             add_filter( 'bp_core_fetch_avatar', array($this, 'apsl_social_login_bp_user_custom_avatar'), 10, 2 );
-            
+
             //add_action( 'wp_login_failed', array($this, 'aa_login_failed') ); // hook failed login
 
             //add delete action when user is deleted from wordpress backend.
             add_action( 'delete_user', array ($this, 'apsl_delete_user') );
-            
+
             // username validation ajax
             add_action( 'wp_ajax_apsl_check_username', array( $this, 'ajax_check_username' ) );//hook to ajax action
             add_action( 'wp_ajax_nopriv_apsl_check_username', array( $this, 'ajax_check_username' ) );//hook to ajax action

@@ -3328,7 +3328,7 @@ $alsp_dynamic_styles[] = array(
  'inject' => $alsp_styles
 );
 
- ?>
+    ?>
 <header class="main-header">
     <!-- Logo -->
     <a href="#" class="logo">
@@ -3411,11 +3411,15 @@ $alsp_dynamic_styles[] = array(
 		<?php } ?>
 		<?php
 			global $alsp_instance;
+			if(is_contractor()){
+
 		if ($ALSP_ADIMN_SETTINGS['alsp_fsubmit_button'] && $alsp_instance->submit_page_url){ ?>
 			<li>
-				<a class="" href="<?php echo alsp_submitUrl(); ?>" rel="nofollow"><i class="pacz-icon-plus-circle"></i><span><?php echo  __('Submit new listing', 'ALSP'); ?></span></a>
+				<a class="" href="<?php echo alsp_submitUrl(); ?>?level=1" rel="nofollow"><i class="pacz-icon-plus-circle"></i><span><?php echo  __('Post your job', 'ALSP'); ?></span></a>
 			</li>
-		<?php } ?>
+		<?php }  ?>
+
+        <?php } ?>
 		<?php if ($ALSP_ADIMN_SETTINGS['alsp_favourites_list']){ ?>
 		<li>
 			<a class="" href="<?php echo alsp_directoryUrl(array('alsp_action' => 'myfavourites')); ?>" target="_blank"> <i class="pacz-fic4-big-heart"></i>  <span><?php echo  __('Bookmarks', 'ALSP'); ?></span></a>
@@ -3423,9 +3427,6 @@ $alsp_dynamic_styles[] = array(
 		<?php } ?>
 		<li>
 			<a class="" href="<?php echo wp_logout_url(home_url('/')); ?>" rel="nofollow"><i class="pacz-fic4-black-male-user-symbol"></i>  <span><?php echo __('Log out', 'ALSP'); ?></span></a>
-		</li>
-		<li>
-			<a class="" href="<?php echo home_url('/'); ?>" rel="nofollow"><i class="pacz-li-web"></i>  <span><?php echo __('Visit Front-End', 'ALSP'); ?></span></a>
 		</li>
 		<?php if(current_user_can('administrator')){ ?>
 			<li>

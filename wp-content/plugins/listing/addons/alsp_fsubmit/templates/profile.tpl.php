@@ -120,19 +120,19 @@
 				$verification_code_sent = get_the_author_meta('author_vcode', $user_ID); 
 				if($verified_author == 'unverified'){
 			?>
-			<div class="verified-author-code">
+			<!--<div class="verified-author-code">
 				<form action="" id="authorcodeform" method="POST" enctype="multipart/form-data">
 					<input class="" type="hidden" name="author_vcode" value="<?php echo $verification_code; ?>" />
 					<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
 					<button class="btn form-submit" id="SEND_VCODE" name="SEND_VCODE" type="submit"><?php echo esc_html__('Get Verification Code', 'ALSP'); ?></button>
 				</form>
-			</div>
+			</div>-->
 			
 				<?php }else{ ?>
-					<div class="author-verified"><?php echo esc_html__('Verified', 'ALSP'); ?><i class="pacz-icon-check-circle"></i></div>
+            <!--<div class="author-verified"><?php echo esc_html__('Verified', 'ALSP'); ?><i class="pacz-icon-check-circle"></i></div>-->
 				<?php } ?>
 			<?php if(isset($verification_code_sent) && !empty($verification_code_sent) && $verified_author == 'unverified'){ ?>
-			<div class="verified-author-form">
+            <!--<div class="verified-author-form">
 				<form action="" id="authorcodeform2" method="POST" enctype="multipart/form-data">
 					<input class="" type=="text" name="author_vcode_confirm" placeholder="<?php esc_html__('Insert Code Here', 'ALSP'); ?>" />
 					<?php wp_nonce_field('post_nonce', 'post_nonce_field'); ?>
@@ -140,7 +140,7 @@
 					
 				</form>
 				
-			</div>
+			</div>-->
 			<?php } ?>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-6 col-xs-12">

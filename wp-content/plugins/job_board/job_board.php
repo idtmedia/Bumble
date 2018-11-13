@@ -96,8 +96,8 @@ function bidding_form( $atts) {
 //            </p>
             echo '<form action="" method="post" id="commentform" class="comment-form" enctype="multipart/form-data">
             <p class="dir_message_field">
-                <label for="apply_cost">'.__('YOUR BID AMOUNT ($)').':</label>
-                <input type="number" class="currency-format" min="0.01" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" id="apply_cost" name="apply_cost" placeholder="'.__('YOUR BID AMOUNT ($)').'" size="25">
+                <label for="apply_cost">'.__('Your bid amount ($)').':</label>
+                <input type="number" class="currency-format" min="0.01" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" id="apply_cost" name="apply_cost" placeholder="'.__('Please enter the amount you’d like to bid on this project').'" size="25">
             </p>
             <p class="dir_message_field"><label for="apply_message">'.__('Message').'</label>
                 <textarea id="apply_message" name="apply_message" cols="84" rows="9" aria-required="true" required="required" placeholder="'.__('Tell us why you’re a good fit for this project (your skills & experience in the field)').'"></textarea>

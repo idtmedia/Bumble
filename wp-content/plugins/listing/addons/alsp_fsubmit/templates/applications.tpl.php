@@ -206,7 +206,7 @@ if($_REQUEST['job_status']!=""){
                             <div class="popup popup-status-change" data-popup="jb-complete-bid-<?php echo $post->ID; ?>">
                                 <div class="popup-inner single-contact">
                                     <div class="alsp-popup-content">
-                                        <a class="popup-close" data-popup-close="jb-reject-bid-<?php echo $post->ID; ?>" href="#"><i class="pacz-fic4-error"></i></a>
+                                        <a class="popup-close" data-popup-close="jb-complete-bid-<?php echo $post->ID; ?>" href="#"><i class="pacz-fic4-error"></i></a>
                                         <p>
                                             <?php _e('Please confirm this job has been completed'); ?>
                                         </p>
@@ -223,7 +223,7 @@ if($_REQUEST['job_status']!=""){
                             echo '<div class="alsp-popup-content">';
                             if($ALSP_ADIMN_SETTINGS['message_system'] == 'instant_messages'){
                                 echo '<div class="form-new">';
-                                echo do_shortcode('[difp_shortcode_new_message_form to="'.$author_name.'" subject="You have been accepted for the job"]');
+                                echo do_shortcode('[difp_shortcode_new_message_form to="'.$author_name.'" subject="You have been accepted for the job '.get_the_title($job).'"]');
                                 echo '</div>';
                             }else{
                                 echo esc_html__('Messages are currenlty disabled by Site Owner', 'ALSP');

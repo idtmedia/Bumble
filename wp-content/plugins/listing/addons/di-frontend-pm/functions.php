@@ -1368,7 +1368,8 @@ function difp_info_output()
     if (difp_success()->get_error_messages()) {
         $html .= '<div class="difp-success">';
         foreach (difp_success()->get_error_messages() as $s) {
-            $html .= esc_html($s) . '<br />';
+//            $html .= esc_html($s) . '<br />';
+            $html .= $s . '<br />';
         }
         $html .= '</div>';
     }
@@ -1480,7 +1481,7 @@ function difp_form_posted()
                     $message = get_post($message_id);
 
                     if ('publish' == $message->post_status) {
-                        difp_success()->add('publish', __("Message successfully sent.", 'ALSP'));
+                        difp_success()->add('publish', '<a href="'.alsp_dashboardUrl(array('alsp_action' => 'messages')).'">'.__("Your message has been sent, click <u>here</u> to view your messages", 'ALSP').'</a>');
                     } else {
                         difp_success()->add('pending', __("Message successfully sent and waiting for admin moderation.", 'ALSP'));
                     }
