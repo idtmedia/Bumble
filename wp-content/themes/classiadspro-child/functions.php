@@ -587,3 +587,6 @@ function great_circle_distance(
             cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
     return $angle * $earthRadius;
 }
+
+
+//Google place API key AIzaSyD0Pq-kEkLm-xs_gcOPjLl6XBj6BZCKs-E

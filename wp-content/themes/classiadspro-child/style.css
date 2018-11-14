@@ -779,6 +779,7 @@ a.jb-manage-action:visited {
     -moz-appearance: menulist;
     padding: 10px 14px 10px 14px;
     min-width: 210px;
+    max-width: 250px;
     display: inline-block;
 }
 
@@ -1219,4 +1220,8 @@ textarea, input[type=number]{
     z-index: 999;
     position: absolute;
     top: 20%;
+}
+
+#theme-page .user-panel .author-name-info h6:hover{
+    color: #fff!important;
 }
