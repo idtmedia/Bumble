@@ -31,7 +31,7 @@ $hash = $frontend_controller->hash;
                                 <div class="vc_column-inner ">
                                     <div class="wpb_wrapper">
                                         <div class="listings listing-archive alsp-content">
-                                           <!-- <div class="main-search-bar">
+                                           <div class="main-search-bar">
                                                 <form action=""
                                                       class="search-form-style3" method="GET">
                                                     <input type="hidden" name="action" value="search">
@@ -39,12 +39,53 @@ $hash = $frontend_controller->hash;
                                                         <div class="search-wrap row clearfix"
                                                              style="margin-left:-10px; margin-right:-10px;">
                                                             <div class="keyword-search search-element-col pull-left"
-                                                                 style="width:25%; padding:0 10px;"><input type="text"
+                                                                 style="width:25%; padding:0 10px;">
+                                                                <input type="text"
                                                                    name="what_search"
                                                                    class="form-control"
                                                                    size="38"
-                                                                   placeholder="Enter keywords"
-                                                                   value="<?php /*echo $_REQUEST['what_search']; */?>">
+                                                                   placeholder="<?php _e('Enter keywords'); ?>"
+                                                                   value="<?php echo $_REQUEST['what_search']; ?>">
+                                                                <?php
+                                                                // Get all term ID's in a given taxonomy
+                                                                $provinces = get_terms( array(
+                                                                    'taxonomy' => 'location_province',
+                                                                    'hide_empty' => false,
+                                                                ) );
+                                                                ?>
+                                                                <select name="s_state" id="search-province">
+                                                                    <option value="">Select Province</option>
+                                                                    <?php foreach ($provinces as $province):?>
+                                                                    <option value="<?php echo $province->name; ?>" <?php if($_REQUEST['s_state']==$province->name) echo 'selected'; ?> ><?php echo $province->name; ?></option>
+                                                                    <?php endforeach; ?>
+                                                                </select>
+                                                                <?php if($_REQUEST['s_state']!=""):
+                                                                        $options = '';
+                                                                        $cities = get_posts(array(
+                                                                                'showposts' => -1,
+                                                                                'post_type' => 'location_city',
+                                                                                'tax_query' => array(
+                                                                                    array(
+                                                                                        'taxonomy' => 'location_province',
+                                                                                        'field' => 'name',
+                                                                                        'terms' => array($_REQUEST['s_state']))
+                                                                                ),
+                                                                                'orderby' => 'title',
+                                                                                'order' => 'ASC')
+                                                                        );
+                                                                        if (count($cities) > 0):
+                                                                            foreach ($cities as $city) : setup_postdata($city);
+                                                                                if($city->post_title == $_REQUEST['s_city']){
+                                                                                    $options .= '<option value="'.$city->post_title.'" selected>'.$city->post_title.'</option>';
+                                                                                }else $options .= '<option value="'.$city->post_title.'">'.$city->post_title.'</option>';
+                                                                            endforeach;
+                                                                        endif;
+                                                                    endif;
+                                                                    ?>
+                                                                <select name="s_city" id="search-city">
+                                                                    <option value="">Select City</option>
+                                                                    <?php echo $options; ?>
+                                                                </select>
                                                             </div>
 
                                                             <div class="search-button search-element-col pull-right"
@@ -56,14 +97,12 @@ $hash = $frontend_controller->hash;
                                                         </div>
                                                     </div>
                                                 </form>
-                                            </div>-->
-
-
+                                            </div>
                                             <div class="alsp-content listing-parent pacz-loop-main-wrapper pacz-loop-main-wrapper2"
                                                  style="margin:0 -15px;"
                                                  id="alsp-controller-<?php echo $hash; ?>"
                                                  data-controller-hash="<?php echo $hash; ?>">
-                                                <?php $per_page = 30; ?>
+                                                <?php $per_page = 32; ?>
                                                 <script>
                                                     alsp_controller_args_array['<?php echo $hash; ?>'] = {
                                                         "controller": "contractor_controller",
@@ -83,14 +122,49 @@ $hash = $frontend_controller->hash;
                                                          data-style="masonry"
                                                     data-uniqid="<?php echo $hash; ?>">
                                                         <?php
+                                                        $args_total = array( 'role' => 'Contributor' );
                                                         $args = array( 'role' => 'Contributor', 'number' => $per_page );
                                                          if($_REQUEST['action']=='search'){
                                                              $args = array(
                                                                  'role' => 'Contributor',
-                                                                 'search'         => "{$_REQUEST['what_search']}",
-                                                                 'number' => $per_page
+                                                                 'search'         => '*' . esc_attr( $_REQUEST['what_search'] ) . '*',
+                                                                 'number' => $per_page,
+                                                                 'meta_query' => array(
+                                                                     'relation' => 'AND',
+                                                                     array(
+                                                                         'key'     => 'state',
+                                                                         'value'   => $_REQUEST['s_state'],
+                                                                         'compare' => '='
+                                                                     ),
+                                                                     array(
+                                                                         'key'     => 'city',
+                                                                         'value'   => $_REQUEST['s_city'],
+                                                                         'compare' => '='
+                                                                     ),
+
+                                                                 )
+                                                             );
+
+                                                             $args_total = array(
+                                                                 'role' => 'Contributor',
+                                                                 'search'         => '*' . esc_attr( $_REQUEST['what_search'] ) . '*',
+                                                                 'meta_query' => array(
+                                                                     'relation' => 'AND',
+                                                                     array(
+                                                                         'key'     => 'state',
+                                                                         'value'   => $_REQUEST['s_state'],
+                                                                         'compare' => '='
+                                                                     ),
+                                                                     array(
+                                                                         'key'     => 'city',
+                                                                         'value'   => $_REQUEST['s_city'],
+                                                                         'compare' => '='
+                                                                     ),
+
+                                                                 )
                                                              );
                                                          }
+                                                        $contractors_total_query = new WP_User_Query( $args_total );
                                                         $contractor_query = new WP_User_Query( $args );
                                                          // User Loop
                                                          if ( ! empty( $contractor_query->get_results() ) ):
@@ -165,7 +239,7 @@ $hash = $frontend_controller->hash;
                                                          endif;
                                                         ?>
                                                     </div>
-                                                    <?php if(count($contractor_query->get_results())>$per_page): ?>
+                                                    <?php if(count($contractors_total_query->get_results())>$per_page): ?>
                                                     <button class="btn btn-primary btn-lg btn-block alsp-show-more-button pacz-new-btn-4"
                                                             data-controller-hash="<?php echo $hash; ?>">Load More
                                                     </button>
@@ -184,5 +258,43 @@ $hash = $frontend_controller->hash;
             <div class="clearboth"></div>
         </div>
     </div>
+<script>
+    jQuery(document).ready(function(){
+        jQuery('#search-province').change(function () {
+            jQuery('#search-city option:gt(0)').remove();
+            var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>/';
+            var data = {
+                'action': 'creativeosc_get_cities_by_province',
+                'cvf_action': 'get_cities',
+                'province': jQuery(this).val(),
+            };
 
+            jQuery.ajax({
+                type:"POST",
+                url: ajaxurl,
+                data: data,
+                beforeSend: function( ) {
+                    jQuery('#search-city').prop('disabled', 'disabled')
+                },
+                success: function(result){
+                    if( result !="" && result!="no result" ){
+                        var cities = JSON.parse(result);
+
+                        cities.forEach(function(element) {
+                            jQuery('#search-city').append(jQuery("<option></option>")
+                                .attr("value", element).text(element));
+                        });
+//                        jQuery('#city_projects').html(result);
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            }).done(function(){
+                jQuery('#search-city').prop('disabled', false);
+            });
+        })
+    });
+
+</script>
 <?php get_footer(); ?>

@@ -393,7 +393,7 @@ class alsp_dashboard_controller extends alsp_frontend_controller {
 									update_user_meta($user_id, 'author_vimeo', $_POST['author_vimeo']);
 									update_user_meta($user_id, 'author_instagram', $_POST['author_instagram']);
 								}
-								
+                                update_user_meta($user_id, 'googleplaceid', $_POST['googleplaceid']);
 								if($ALSP_ADIMN_SETTINGS['frontend_panel_user_type']){ update_user_meta($user_id, '_user_type', $_POST['user_type']); }
 								
 							} else {
@@ -457,6 +457,10 @@ class alsp_dashboard_controller extends alsp_frontend_controller {
                 $this->template = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'dashboard.tpl.php');
                 $this->subtemplate = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'my_bids.tpl.php');
                 $this->active_tab = 'my_bids';
+			}elseif ($alsp_instance->action == 'my_classifieds') {
+                $this->template = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'dashboard.tpl.php');
+                $this->subtemplate = array(ALSP_FSUBMIT_TEMPLATES_PATH, 'my_classifieds.tpl.php');
+                $this->active_tab = 'my_classifieds';
 			}elseif ($alsp_instance->action == 'claim_listing' && isset($_GET['listing_id']) && is_numeric($_GET['listing_id'])) {
 				$listing_id = alsp_getValue($_GET, 'listing_id');
 				if ($listing_id && ($listing = $alsp_instance->listings_manager->loadListing($listing_id)) && $listing->is_claimable) {

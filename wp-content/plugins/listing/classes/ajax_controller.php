@@ -365,8 +365,8 @@ class alsp_ajax_controller {
 					if (isset($post_args['do_append']) && $post_args['do_append']) {
 						if ($controller->listings)
 							while ($controller->query->have_posts()) {
-								$controller->query->the_post(); 
-								
+								$controller->query->the_post();
+
 								$listings_html .= '<article id="post-' . get_the_ID() . '" class="row alsp-listing '.$alsp_responsive_col.' listing-post-style-'.$listing_style.' pacz-isotop-item isotop-item masonry-'.$controller->hash.'   clearfix isotope-item ' . (($controller->listings[get_the_ID()]->level->featured) ? 'alsp-featured' : '') . ' ' . (($controller->listings[get_the_ID()]->level->sticky) ? 'alsp-sticky' : '') . '" style="padding-left:'.$grid_padding.'px; padding-right:'.$grid_padding.'px; margin-bottom:'.$alsp_grid_margin_bottom.'px;" >';
 								$listings_html .= '<div class="listing-wrapper clearfix">';
 								//$listings_html .= $listing_style_to_show;

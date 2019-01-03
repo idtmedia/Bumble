@@ -33,12 +33,12 @@
 
 
 	?>
-	
-	
-	
+
+
+
 	<?php if ($frontend_controller->listings): ?>
 		<?php
-		
+
         if(get_current_user_role()!='contributor'):
 		 //echo $frontend_controller->listings_count3;
 		?>
@@ -48,9 +48,9 @@
 				<div class="row clearfix">
 		<?php while ($frontend_controller->query->have_posts()): ?>
 			<?php $frontend_controller->query->the_post(); ?>
-			<?php 
-				$listing = $frontend_controller->listings[get_the_ID()]; 
-				require_once PACZ_THEME_PLUGINS_CONFIG . "/image-cropping.php"; 
+			<?php
+				$listing = $frontend_controller->listings[get_the_ID()];
+				require_once PACZ_THEME_PLUGINS_CONFIG . "/image-cropping.php";
 				$image_src_array = wp_get_attachment_image_src($listing->logo_image, 'full');
 				$image_src = bfi_thumb($image_src_array[0], array(
 					'width' => 480,
@@ -60,7 +60,7 @@
 			?>
 			<div class="userpanel-item-wrap">
 			<div class="td-listing-wrapper">
-				
+
 				<div class="td_listings_thumb"><img src="<?php echo pacz_thumbnail_image_gen($image_src, 480, 380); ?>" alt=""/></div>
 				<div class="td_listings_content">
 					<div class="td_listings_status">
@@ -75,7 +75,7 @@
 							echo '<span class="alsp-badge alsp-listing-status-stopped">' . __('stopped', 'ALSP') . '</span>';
 						elseif ($listing->post->post_status == 'pending')
 							echo '<span class="alsp-badge alsp-listing-status-stopped">' . __('pending', 'ALSP') . '</span>';
-						elseif ($listing->post->post_status == 'draft') 
+						elseif ($listing->post->post_status == 'draft')
 							echo '<span class="alsp-badge alsp-listing-status-stopped">' . __('draft', 'ALSP') . '</span>';
 						do_action('alsp_listing_status_option', $listing);
 						?>
@@ -94,7 +94,7 @@
 						<?php if ($listing->claim && $listing->claim->isClaimed()) echo '<div>' . $listing->claim->getClaimMessage() . ($listing->claim->isOption() ? ' <a href="' . alsp_dashboardUrl(array('listing_id' => $listing->post->ID, 'alsp_action' => 'process_claim')) . '">' . __('here', 'ALSP') . '</a>' : '') . '</div>'; ?>
 						</h5>
 					</div>
-					<?php 
+					<?php
 					// adapted for WPML
 					global $sitepress;
 					if (function_exists('wpml_object_id_filter') && $sitepress && $ALSP_ADIMN_SETTINGS['alsp_enable_frontend_translations'] && ($languages = $sitepress->get_active_languages()) && count($languages) > 1): ?>
@@ -123,7 +123,7 @@
 					</div>
 					<?php endif; ?>
 					<div class="td_listings_level">
-						<?php 
+						<?php
 //							if ($listing->level->isUpgradable()):
 //								echo '<a href="' . alsp_dashboardUrl(array('alsp_action' => 'upgrade_listing', 'listing_id' => $listing->post->ID)) . '" title="' . esc_attr__('Change level', 'ALSP') . '">';
 									echo $listing->level->name;
@@ -140,7 +140,7 @@
 							_e('Eternal active period', 'ALSP');
 						else
 							echo date_i18n(get_option('date_format') . ' ' . get_option('time_format'), intval($listing->expiration_date));
-						
+
 						//if ($listing->expiration_date > time())
 							//echo '<br />' . human_time_diff(time(), $listing->expiration_date) . '&nbsp;' . __('left', 'ALSP');
 						?>
@@ -150,7 +150,7 @@
 				<div class="td_listings_id"><span class="pacz-fic4-bookmark-white"></span><span class="id-label"><?php echo esc_html__('AD ID', 'ALSP').' :'; ?></span><?php echo $listing->post->ID; ?></div>
 				<div class="td_listings_options">
 					<?php if (alsp_current_user_can_edit_listing($listing->post->ID)){ ?>
-					
+
 					<div class="dropdown show">
 						  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<?PHP echo esc_html__('options', 'ALSP'); ?>
@@ -198,7 +198,7 @@
 							<?php do_action('alsp_dashboard_listing_options', $listing); ?>
 						 </div>
 					</div>
-					
+
 					<?php } ?>
 				</div>
                     <div class="td_listings_level clearfix">

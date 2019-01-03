@@ -20,7 +20,7 @@ if (class_exists('alsp_plugin')):
     $authorID = $author->ID;
 
     $author_img_url = get_the_author_meta('pacz_author_avatar_url', $authorID, true);
-    $author_name = get_query_var('author_name');
+    $author_name = $author->display_name;
     $description = get_the_author_meta('description', $authorID);
     if ($ALSP_ADIMN_SETTINGS['frontend_panel_user_phone']) {
         $phone_number = get_the_author_meta('user_phone', $authorID);
@@ -32,6 +32,7 @@ if (class_exists('alsp_plugin')):
     if ($ALSP_ADIMN_SETTINGS['frontend_panel_user_address']) {
         $author_address = get_the_author_meta('address', $authorID);
     }
+    $author_not_member = get_the_author_meta('notmember', $authorID);
     if ($ALSP_ADIMN_SETTINGS['frontend_panel_user_type']) {
         $author_type = get_the_author_meta('_user_type', $authorID);
     }
@@ -166,9 +167,12 @@ if (class_exists('alsp_plugin')):
                         <?php
                         //					$output .='<div class="author-detail-section clearfix">';
                         $output .= '<div class="author-thumbnail">';
+                        if($author_not_member!="yes"){
+                            $output .=  '<img src="'.get_stylesheet_directory_uri().'/img/member.png" id="member-logo">';
+                        }
                         if (!empty($author_img_url)) {
-                            $params = array('width' => 300, 'height' => 370, 'crop' => true);
-                            $output .= "<img src='" . bfi_thumb("$author_img_url", $params) . "' alt='' />";
+                            $params = array('width' => 300, 'height' => 370, 'crop' => false);
+                            $output .= "<img src='" .$author_img_url . "' alt='' />"; //bfi_thumb("$author_img_url", $params)
                         } else {
                             $avatar_url = pacz_get_avatar_url(get_the_author_meta('user_email', $authorID), $size = '300');
                             $output .= '<img src="' . $avatar_url . '" alt="author" />';
@@ -183,7 +187,7 @@ if (class_exists('alsp_plugin')):
 
                         <?php
                         $output .= '<div class="author-content-section">';
-                        $output .= '<div class="author-title">' . $author_name . $author_log_status . '</div>';
+                        $output .= '<div class="author-title">' . $author_name . '</div>';
                         $output .= '<p class="author-reg-date">' . esc_html__('Member since', 'classiadspro') . ' ' . $registered . '</p>';
                         if ($author_verified == 'verified') {
                             $output .= '<span class="author_verifed ">' . esc_html__('Verified', 'classiadspro') . '</span>';
@@ -218,6 +222,7 @@ if (class_exists('alsp_plugin')):
                             if ($ALSP_ADIMN_SETTINGS['frontend_panel_user_address']) {
                                 $output .= '<p class=" clearfix"><span class="author-info-title">' . esc_html__('Address ', 'classiadspro') . '</span><span class="author-info-content">' . $author_address . '</span></p>';
                             }
+
                             if ($ALSP_ADIMN_SETTINGS['frontend_panel_social_links']) {
                                 $output .= '<div class="author-details-info clearfix"><span class="author-info-title">' . esc_html__('Follow Me ', 'classiadspro') . '</span>';
                                 $output .= '<ul class="author-info-content">';
@@ -275,6 +280,30 @@ if (class_exists('alsp_plugin')):
                                     <div><?php echo $description; ?></div>
                                 </section>
                             </div>
+                            <?php
+                            $googleplaceid = get_the_author_meta('googleplaceid', $authorID);
+                            if($googleplaceid!=''){
+                            ?>
+                            <div class="single-post-fancy-title comments-heading-label"><span><?php _e('Google Reviews'); ?></div>
+                            <div id="google-reviews"></div>
+                            <p style="margin-top: 10px"><a href="https://search.google.com/local/reviews?placeid=<?php echo $googleplaceid; ?>"><?php _e('View all Reviews'); ?></a></p>
+
+                            <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/google-review/google-places.css">
+<!--                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+                            <script src="<?php echo get_stylesheet_directory_uri(); ?>/google-review/google-places.js"></script>
+                            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAKQtGT-EbDlfuXztbOIQsjqgQFTIbqE0s&signed_in=true&libraries=places"></script>
+
+                            <script>
+                                jQuery(document).ready(function( $ ) {
+                                    $("#google-reviews").googlePlaces({
+                                        placeId: '<?php echo $googleplaceid; ?>' //Find placeID @: https://developers.google.com/places/place-id
+                                        , render: ['reviews']
+                                        , min_rating: 4
+                                        , max_rows:4
+                                    });
+                                });
+                            </script>
+                            <?php } ?>
                             <div id="comments-reviews">
                                 <section id="comments">
                                     <?php
@@ -290,7 +319,7 @@ if (class_exists('alsp_plugin')):
                                     );
                                     $loop = new WP_Query($args);
                                     ?>
-                                    <div class="single-post-fancy-title comments-heading-label"><span>User Reviews <span
+                                    <div class="single-post-fancy-title comments-heading-label"><span>Bumble Reviews <span
                                                     class="comments_numbers">(<?php echo $loop->post_count; ?>
                                                 )</span></span></div>
                                     <ul class="pacz-commentlist">

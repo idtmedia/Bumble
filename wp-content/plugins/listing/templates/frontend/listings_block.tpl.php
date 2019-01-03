@@ -35,18 +35,18 @@ global $ALSP_ADIMN_SETTINGS;
 
 		<?php if (!isset($frontend_controller->custom_home) || !$frontend_controller->custom_home || ($frontend_controller->custom_home && $ALSP_ADIMN_SETTINGS['alsp_listings_on_index'])): ?>
 		<div class="alsp-content listing-parent pacz-loop-main-wrapper <?php if($ALSP_ADIMN_SETTINGS['alsp_grid_masonry_display'] && $listing_style_to_show == 'show_grid_style') echo 'pacz-loop-main-wrapper2'; ?>" style="margin:0 -15px;" id="alsp-controller-<?php echo $frontend_controller->hash; ?>" data-controller-hash="<?php echo $frontend_controller->hash; ?>" <?php if (isset($frontend_controller->custom_home) && $frontend_controller->custom_home): ?>data-custom-home="1"<?php endif; ?>>
-			<?php 
-			
+			<?php
+
 			//$GLOBALS['listing_style_to_show'] = $listing_style_to_show;
 			$view_swither_panel_style = (isset($ALSP_ADIMN_SETTINGS['view_switther_panel_style']))? $ALSP_ADIMN_SETTINGS['view_switther_panel_style'] : 1;
-			if($view_swither_panel_style == 1){ 
+			if($view_swither_panel_style == 1){
 				$view_swither_panel_style_class = 'view_swither_panel_style1';
 			}elseif($view_swither_panel_style == 2){
 				$view_swither_panel_style_class = 'view_swither_panel_style2';
 			}else{
 				$view_swither_panel_style_class = 'view_swither_panel_style1';
 			}
-			
+
 			if(isset($frontend_controller->args['listing_order_by_txt']) && (!empty($frontend_controller->args['listing_order_by_txt']))){
 				$order_by_txt = $frontend_controller->args['listing_order_by_txt'];
 			}else{
@@ -64,14 +64,14 @@ global $ALSP_ADIMN_SETTINGS;
 			 }else{
 				 $carousel = 'no-carousel';
 			 }
-			 
+
 			?>
 			<script>
 			alsp_controller_args_array['<?php echo $frontend_controller->hash; ?>'] = <?php echo json_encode(array_merge(array('controller' => $frontend_controller->request_by, 'base_url' => $frontend_controller->base_url), $frontend_controller->args)); ?>;
 			</script>
 			<?php if ($frontend_controller->do_initial_load): ?>
 				<?php if (get_option('listing_style_to_show') == 'show_grid_style'): ?>
-				
+
 				<div class="alsp-container-fluid alsp-listings-block alsp-listings-grid alsp-listings-grid-<?php echo $frontend_controller->args['listings_view_grid_columns']; ?> <?php if($frontend_controller->args['scroll'] == 0) { echo $masonry; } ?>">
 				<?php else: ?>
 					<div class="alsp-container-fluid alsp-listings-block cz-listview">
@@ -101,7 +101,7 @@ global $ALSP_ADIMN_SETTINGS;
 							</div>
 						<?php endif; ?>
 						<?php endif; ?>
-						
+
 						<?php if ($frontend_controller->args['show_views_switcher']): $GLOBALS['view_switcher_status'] = 'on'; ?>
 						<div class="alsp-views-links pull-right">
 							<div class="btn-group" role="group">
@@ -126,7 +126,7 @@ global $ALSP_ADIMN_SETTINGS;
 						<?php endif; ?>
 				<?php endif; ?>
 				<?php if ($frontend_controller->listings): ?>
-				
+
 					<div class="alsp-listings-block-content <?php echo $carousel; ?>  <?php if($frontend_controller->args['scroll'] == 0){ echo $isotope_el_class; } ?> clearfix" <?php if (get_option('listing_style_to_show') == 'show_grid_style'){ ?> style="margin-left:-<?php echo $grid_padding; ?>px; margin-right: -<?php echo $grid_padding; ?>px;" <?php } ?> <?php if($ALSP_ADIMN_SETTINGS['alsp_grid_masonry_display']){ ?> data-style="masonry" data-uniqid="<?php echo $frontend_controller->hash; } ?>">
 						<?php if ($frontend_controller->args['scroll'] == 1){ ?><!--cz custom -->
 						<div class="owl-carousel owl-on-grid" data-items="<?php echo $frontend_controller->args['desktop_items']; ?>" data-items-tab-ls="<?php echo $frontend_controller->args['tab_landscape_items']; ?>" data-items-tab="<?php echo $frontend_controller->args['tab_items']; ?>" data-autoplay="<?php echo $frontend_controller->args['autoplay']; ?>" data-gutter="<?php echo $frontend_controller->args['gutter']; ?>" data-autowidth="false" data-center="false" data-autoplay-speed="<?php echo $frontend_controller->args['autoplay_speed']; ?>" data-delay="<?php echo $frontend_controller->args['delay']; ?>" data-loop="<?php echo $frontend_controller->args['loop']; ?>" data-nav="<?php echo $frontend_controller->args['owl_nav']; ?>">
@@ -152,9 +152,7 @@ global $ALSP_ADIMN_SETTINGS;
 
 						<article id="post-<?php the_ID(); ?>" class="<?php //echo $bump_class; ?> <?php if ($frontend_controller->args['scroll'] == 1){ echo 'listing-scroll'; } ?> row alsp-listing <?php if($ALSP_ADIMN_SETTINGS['alsp_grid_masonry_display']){ ?> pacz-isotop-item isotop-item masonry-<?php echo $frontend_controller->hash; } ?> <?php  echo $alsp_responsive_col; ?> listing-post-style-<?php if (get_option('listing_style_to_show') == 'show_grid_style'){ echo $ALSP_ADIMN_SETTINGS['alsp_listing_post_style']; }else{ echo $ALSP_ADIMN_SETTINGS['alsp_listing_listview_post_style']; } ?> <?php if ($frontend_controller->listings[get_the_ID()]->level->featured) { echo 'alsp-featured';} ?> <?php if ($frontend_controller->listings[get_the_ID()]->level->sticky) echo 'alsp-sticky'; ?> clearfix" <?php if (get_option('listing_style_to_show') == 'show_grid_style'){ ?> style="padding-left:<?php echo $grid_padding; ?>px; padding-right: <?php echo $grid_padding; ?>px; margin-bottom: <?php echo $alsp_grid_margin_bottom; ?>px;" <?php } ?>>
 							<div class="listing-wrapper clearfix">
-							<?php $frontend_controller->listings[get_the_ID()]->display();
-
-							?>
+							<?php $frontend_controller->listings[get_the_ID()]->display(); ?>
 							</div>
 						</article>
 						<?php endwhile; ?>
@@ -169,7 +167,24 @@ global $ALSP_ADIMN_SETTINGS;
 					<?php if (!$frontend_controller->args['hide_paginator']): ?>
 					<?php alsp_renderPaginator($frontend_controller->query, $frontend_controller->hash, $ALSP_ADIMN_SETTINGS['alsp_show_more_button']); ?>
 					<?php endif; ?>
-				<?php endif; ?>
+				<?php else: ?>
+                    <div class="alsp-listings-block-content <?php echo $carousel; ?>  <?php if($frontend_controller->args['scroll'] == 0){ echo $isotope_el_class; } ?> clearfix" <?php if (get_option('listing_style_to_show') == 'show_grid_style'){ ?> style="margin-left:-<?php echo $grid_padding; ?>px; margin-right: -<?php echo $grid_padding; ?>px;" <?php } ?> <?php if($ALSP_ADIMN_SETTINGS['alsp_grid_masonry_display']){ ?> data-style="masonry" data-uniqid="<?php echo $frontend_controller->hash; } ?>">
+                    <?php if ($frontend_controller->args['scroll'] == 1){ ?><!--cz custom -->
+                    <div class="owl-carousel owl-on-grid" data-items="<?php echo $frontend_controller->args['desktop_items']; ?>" data-items-tab-ls="<?php echo $frontend_controller->args['tab_landscape_items']; ?>" data-items-tab="<?php echo $frontend_controller->args['tab_items']; ?>" data-autoplay="<?php echo $frontend_controller->args['autoplay']; ?>" data-gutter="<?php echo $frontend_controller->args['gutter']; ?>" data-autowidth="false" data-center="false" data-autoplay-speed="<?php echo $frontend_controller->args['autoplay_speed']; ?>" data-delay="<?php echo $frontend_controller->args['delay']; ?>" data-loop="<?php echo $frontend_controller->args['loop']; ?>" data-nav="<?php echo $frontend_controller->args['owl_nav']; ?>">
+                    <?php } ?>
+                    <?php if(get_option('listing_style_to_show') == 'show_list_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_listview_post_style'] == 'listview_ultra'){ ?>
+                    <div class="listing-list-view-inner-wrap">
+                    <?php } ?>
+
+                        <p><strong><?php _e('Sorry there is no listing for this search. Please try again.'); ?></strong></p>
+
+                    <?php if(get_option('listing_style_to_show') == 'show_list_style' && $ALSP_ADIMN_SETTINGS['alsp_listing_listview_post_style'] == 'listview_ultra'){ ?>
+                    </div>
+                    <?php } ?>
+                        <?php if ($frontend_controller->args['scroll'] == 1){ ?><!--cz custom -->
+                    </div>
+                        <?php } ?>
+                <?php endif; ?>
 			</div>
 			<?php endif; ?>
 		</div>

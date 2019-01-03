@@ -1472,15 +1472,17 @@ $('.responsive-nav-link').on('click', function(e) {
 			 $(".mobile-overlay").fadeOut(500);
         }
     }
+    $('#pacz-responsive-wrap').show();
     e.preventDefault();
 });
 $('.res-menu-close').on('click', function(e) {
+
 	var res_nav = $('.responsive-nav-container');
 	$('.responsive-nav-link').removeClass('active-burger');
      res_nav.toggle('slide');
 	 $(".mobile-overlay").fadeOut(500);
      $('body').removeClass('pacz-opened-nav').addClass('pacz-closed-nav').trigger('pacz-closed-nav');
-	 
+	 $('#pacz-responsive-wrap').hide();
 	 e.preventDefault();
 });
 $('.responsive-nav-search-link').on('click', function(e) {

@@ -316,38 +316,93 @@ $header_padding_type = $pacz_settings['sticky-header'] ? 'sticky-header' : 'none
 <?php } ?>
 
 <?php wp_footer(); ?>
+<?php if(is_front_page()): ?>
+<script>
+    // Note: This example requires that you consent to location sharing when
+    // prompted by your browser. If you see the error "The Geolocation service
+    // failed.", it means you probably did not give permission for the browser to
+    // locate you.
+    function initMap() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var geocoder = new google.maps.Geocoder;
+                geocoder.geocode({'location': pos}, function(results, status) {
+                    if (status === 'OK') {
+                        if (results[0]) {
+                            var city = [];
+                            for (var i=0; i<results[0].address_components.length; i++)
+                            {
+                                if (results[0].address_components[i].types[0] == "locality") {
+                                    //this is the object you are looking for City
+                                    city = results[0].address_components[i];
+                                }
+                                if (results[0].address_components[i].types[0] == "administrative_area_level_1") {
+                                    //this is the object you are looking for State
+                                    region = results[0].address_components[i];
+                                }
+                                if (results[0].address_components[i].types[0] == "country") {
+                                    //this is the object you are looking for
+                                    country = results[0].address_components[i];
+                                }
+                            }
+                            if (!city.long_name){
+                                city.long_name = 'Dollard-Des Ormeaux';
+                                city.short_name = 'Dollard-Des Ormeaux';
+                            }
+                            jQuery(document).ready(function(){
+                                jQuery('#current-location').html('<?php echo get_current_city_state(); ?>');
+                                jQuery('#contractors-amount').html('<?php echo get_amount_matched_location(); ?>');
+                                var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>/';
+                                var data = {
+                                 'action': 'creativeosc_get_city_jobs',
+                                 'cvf_action': 'get_city_jobs',
+                                 'city_long': city.long_name,
+                                 'city_short': city.short_name
+                                 };
+                                 jQuery.ajax({
+                                     type:"POST",
+                                     url: ajaxurl,
+                                     data: data,
+                                     success:function(result){
+                                         if( result !="" && result!="no result" ){
+                                             jQuery('#city_projects').html(result);
+                                         }
+                                     },
+                                     error: function(errorThrown){
+                                         console.log(errorThrown);
+                                     }
+                                 });
+                            });
+                        } else {
+                            console.log('No results found');
+                        }
+                    } else {
+                        console.log('Geocoder failed due to: ' + status);
+                    }
 
-<?php
+                });
 
-?>
+            }, function() {
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            console.log('Browser does not support GEO Location')
+        }
+    }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Pq-kEkLm-xs_gcOPjLl6XBj6BZCKs-E&callback=initMap" />
+
 <script>
     jQuery(document).ready(function(){
         jQuery('#current-location').html('<?php echo get_current_city_state(); ?>');
         jQuery('#contractors-amount').html('<?php echo get_amount_matched_location(); ?>');
-//        console.log('<?php //echo get_current_city_state()['geoplugin_city'].', '. get_current_city_state()['geoplugin_regionCode']; ?>//');
-//        var ajaxurl = '<?php //echo admin_url('admin-ajax.php'); ?>//';
-//        jQuery( "#postalcode" ).change(function() {
-            /*var data = {
-                'action': 'creativeosc_get_email',
-                'cvf_action': 'get_email',
-                'postalcode': jQuery('#postalcode').val()
-            };
-            jQuery.ajax({
-                type:"POST",
-                url: ajaxurl,
-                data: data,
-                success:function(data){
-                    if( data !="" && data!="no result" ){
-                        jQuery("#email-mp").attr('href', 'mailto:'+data+'?bcc=admin@canadatolebanon.ca&subject=Allowing%20direct%20travel%20from%20Canada%20to%20Lebanon&body=Dear%20MP%2C%0A%20%0AAs%20a%20constituent%20in%20your%20riding%20I%20wanted%20to%20bring%20an%20important%20issue%20to%20your%20attention.%0A%20%0ACanada%20is%20home%20to%20one%20of%20the%20largest%20Lebanese%20diasporas%20in%20the%20world.%20%20Although%20estimates%20vary%2C%20it%20is%20believed%20that%20almost%20quarter%20of%20a%20million%20Canadians%20are%20of%20Lebanese%20descent.%0A%20%0AIt%20should%20not%20come%20as%20a%20surprise%20therefore%20that%20the%20bonds%20between%20Canada%20and%20Lebanon%20go%20beyond%20just%20culture.%20%0A%20%0ATrade%2C%20tourism%20and%20innovation%20all%20forge%20strong%20connections%20between%20these%20two%20countries.%20%0A%20%0AUnfortunately%2C%20barriers%20to%20further%20expanding%20and%20improving%20these%20links%20remain.%0A%20%0AI%20support%20expanding%20and%20improving%20trade%2C%20tourism%20and%20innovation%20links%20between%20Canada%20and%20Lebanon%20to%20help%20better%20open%20markets%20and%20grow%20our%20economy.%20Direct%20flights%20between%20Canada%20and%20Lebanon%20would%20provide%20a%20strong%20boost.%0A%20%0ALet%27s%20add%20this%20key%20growth%20cornerstone.%0A%20%0ACan%20I%20count%20on%20your%20support%20to%20establish%20direct%20flights%20between%20Canada%20and%20Lebanon%3F%0A%20%0AThank%20you%2C');
-                    }
-
-                },
-                error: function(errorThrown){
-                    console.log(errorThrown);
-                }
-            });*/
-//        });
     });
 </script>
+<?php endif; ?>
 </body>
 </html>

@@ -35,7 +35,7 @@
 
 						$params = array( 'width' => 370, 'height' => 450, 'crop' => true );
 
-						echo "<img class='pacz-user-avatar' src='" . bfi_thumb( "$author_avatar_url", $params ) . "' alt='' />";
+						echo "<img class='pacz-user-avatar' src='" . $author_avatar_url  . "' alt='' />"; //bfi_thumb( "$author_avatar_url", $params )
 
 					} else { 
 
@@ -292,22 +292,68 @@
 						<label for="address"><?php _e('Address', 'ALSP'); ?></label>
 						<input type="text" name="address" class="form-control" value="<?php echo esc_attr($frontend_controller->user->address); ?>" />
 					</p>
+                    <p>
+                        <label for="state"><?php _e('Province', 'ALSP'); ?></label>
+                        <?php
+                        // Get all term ID's in a given taxonomy
+                        $provinces = get_terms( array(
+                            'taxonomy' => 'location_province',
+                            'hide_empty' => false,
+                        ) );
+                        ?>
+                        <select name="state" class="form-control"  id="search-province">
+                            <option value="">Select Province</option>
+                            <?php foreach ($provinces as $province):?>
+                                <option value="<?php echo $province->name; ?>" <?php if(esc_attr($frontend_controller->user->state)==$province->name) echo 'selected'; ?> ><?php echo $province->name; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <!--						<input type="text" name="state" class="form-control" value="--><?php //echo esc_attr($frontend_controller->user->state); ?><!--" />-->
+                    </p>
 					<p>
 						<label for="city"><?php _e('City', 'ALSP'); ?></label>
-						<input type="text" name="city" class="form-control" value="<?php echo esc_attr($frontend_controller->user->city); ?>" />
+                        <?php if(esc_attr($frontend_controller->user->state)!=""):
+                            $options = '';
+                            $cities = get_posts(array(
+                                    'showposts' => -1,
+                                    'post_type' => 'location_city',
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'location_province',
+                                            'field' => 'name',
+                                            'terms' => array(esc_attr($frontend_controller->user->state)))
+                                    ),
+                                    'orderby' => 'title',
+                                    'order' => 'ASC')
+                            );
+                            if (count($cities) > 0):
+                                foreach ($cities as $city) : setup_postdata($city);
+                                    if($city->post_title == esc_attr($frontend_controller->user->city)){
+                                        $options .= '<option value="'.$city->post_title.'" selected>'.$city->post_title.'</option>';
+                                    }else $options .= '<option value="'.$city->post_title.'">'.$city->post_title.'</option>';
+                                endforeach;
+                            endif;
+                        endif;
+
+                        ?>
+                        <select name="city" class="form-control" id="search-city">
+                            <option value="">Select City</option>
+                            <?php echo $options; ?>
+                        </select>
+<!--						<input type="text" name="city" class="form-control" value="--><?php //echo esc_attr($frontend_controller->user->city); ?><!--" />-->
 					</p>
-					<p>
-						<label for="state"><?php _e('State', 'ALSP'); ?></label>
-						<input type="text" name="state" class="form-control" value="<?php echo esc_attr($frontend_controller->user->state); ?>" />
-					</p>
+
                     <p>
                         <label for="postalcode"><?php _e('Postcode', 'ALSP'); ?></label>
                         <input type="text" name="postalcode" class="form-control" value="<?php echo esc_attr($frontend_controller->user->postalcode); ?>" />
                     </p>
-					<p>
-						<label for="country"><?php _e('Country', 'ALSP'); ?></label>
-						<input type="text" name="country" class="form-control" value="<?php echo esc_attr($frontend_controller->user->country); ?>" />
-					</p>
+                    <p>
+                        <label for="postalcode"><?php _e('Google Place ID', 'ALSP'); ?></label>
+                        <input type="text" name="googleplaceid" class="form-control" value="<?php echo esc_attr($frontend_controller->user->googleplaceid); ?>" />
+                    </p>
+<!--					<p>-->
+<!--						<label for="country">--><?php //_e('Country', 'ALSP'); ?><!--</label>-->
+						<input type="hidden" name="country" class="form-control" value="Canada<?php //echo esc_attr($frontend_controller->user->country); ?>" readonly />
+<!--					</p>-->
 					<p>
 						<label for="email"><?php _e('Description', 'ALSP'); ?></label>
                         <textarea name="description" class="form-control" style="min-height: 100px; line-height: 1.6;"><?php echo esc_attr($frontend_controller->user->description); ?></textarea>
@@ -356,58 +402,95 @@
 			</form>
 		</div>
 	</div>
-	<script>
-									var image_custom_uploader;
-									var $thisItem = '';
+<script>
+    var image_custom_uploader;
+    var $thisItem = '';
 
-									jQuery(document).on('click','.choose-author-image', function(e) {
-										e.preventDefault();
+    jQuery(document).on('click','.choose-author-image', function(e) {
+        e.preventDefault();
 
-										$thisItem = jQuery(this);
-										$form = jQuery('#czform');
+        $thisItem = jQuery(this);
+        $form = jQuery('#czform');
 
-										//If the uploader object has already been created, reopen the dialog
-										if (image_custom_uploader) {
-										    image_custom_uploader.open();
-										    return;
-										}
-										var image_custom_uploader = wp.media({
-			            title : '',
-			            multiple : false,
-			            library : { type : 'image'},
-			            button : { text : '<?php echo esc_html__('Insert', 'ALSP'); ?>' },
-			        });
-										
+        //If the uploader object has already been created, reopen the dialog
+        if (image_custom_uploader) {
+            image_custom_uploader.open();
+            return;
+        }
+        var image_custom_uploader = wp.media({
+            title : '',
+            multiple : false,
+            library : { type : 'image'},
+            button : { text : '<?php echo esc_html__('Insert', 'ALSP'); ?>' },
+        });
 
-										//When a file is selected, grab the URL and set it as the text field's value
-										image_custom_uploader.on('select', function() {
-										    attachment = image_custom_uploader.state().get('selection').first().toJSON();
-										    var url = '';
-										    url = attachment['url'];
-										    var attachId = '';
-										    attachId = attachment['id'];
-											
-										   jQuery( "img.pacz-user-avatar" ).attr({
-										        src: url
-										    });
-										  $form.parent().parent().find( ".pacz-image-url" ).attr({
-										        value: url
-										    });
-										    $form.parent().parent().find( ".pacz-image-id" ).attr({
-										        value: attachId
-										    });
-										});
 
-										//Open the uploader dialog
-										image_custom_uploader.open();
-									});
+        //When a file is selected, grab the URL and set it as the text field's value
+        image_custom_uploader.on('select', function() {
+            attachment = image_custom_uploader.state().get('selection').first().toJSON();
+            var url = '';
+            url = attachment['url'];
+            var attachId = '';
+            attachId = attachment['id'];
 
-									jQuery(document).on('click','.pacz-user-avatar-delete', function(e) {
-										jQuery(this).parent().parent().find( ".pacz-image-url" ).attr({
-										   value: ''
-										});
-										jQuery(this).parent().parent().find( "img.pacz-user-avatar" ).attr({
-										     src: ''
-										});
-									});
-								</script>
+           jQuery( "img.pacz-user-avatar" ).attr({
+                src: url
+            });
+          $form.parent().parent().find( ".pacz-image-url" ).attr({
+                value: url
+            });
+            $form.parent().parent().find( ".pacz-image-id" ).attr({
+                value: attachId
+            });
+        });
+
+        //Open the uploader dialog
+        image_custom_uploader.open();
+    });
+
+    jQuery(document).on('click','.pacz-user-avatar-delete', function(e) {
+        jQuery(this).parent().parent().find( ".pacz-image-url" ).attr({
+           value: ''
+        });
+        jQuery(this).parent().parent().find( "img.pacz-user-avatar" ).attr({
+             src: ''
+        });
+    });
+    jQuery(document).ready(function(){
+        jQuery('#search-province').change(function () {
+            jQuery('#search-city option:gt(0)').remove();
+            var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>/';
+            var data = {
+                'action': 'creativeosc_get_cities_by_province',
+                'cvf_action': 'get_cities',
+                'province': jQuery(this).val(),
+            };
+
+            jQuery.ajax({
+                type:"POST",
+                url: ajaxurl,
+                data: data,
+                beforeSend: function( ) {
+                    jQuery('#search-city').prop('disabled', 'disabled')
+                },
+                success: function(result){
+                    if( result !="" && result!="no result" ){
+                        var cities = JSON.parse(result);
+
+                        cities.forEach(function(element) {
+                            jQuery('#search-city').append(jQuery("<option></option>")
+                                .attr("value", element).text(element));
+                        });
+//                        jQuery('#city_projects').html(result);
+                    }
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                }
+            }).done(function(){
+                jQuery('#search-city').prop('disabled', false);
+            });
+        })
+    });
+
+</script>

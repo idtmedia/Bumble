@@ -26,7 +26,7 @@ Version:		1.0
 
 .how_we_work .wpb_column.vc_column_container.vc_col-sm-4{
 
-position:relative}
+    position:relative}
 .how_we_work .wpb_column.vc_column_container.vc_col-sm-4:nth-child(1):after{
     content: "";
     background: url(img/one_two.png) no-repeat center center;
@@ -52,7 +52,7 @@ position:relative}
     height: 50px;
 }
 .dhvc-form-role-box .dhvc-form-label{
-	display: none;
+    display: none;
 }
 
 #dhvcform-1878.dhvc-form-flat .dhvc-form-role-box i{
@@ -64,7 +64,7 @@ position:relative}
 }
 
 #dhvcform-1878.dhvc-form-flat .dhvc-form-role-box label{
-	line-height: 38px!important;
+    line-height: 38px!important;
     display: block;
     padding-left: 0;
 }
@@ -94,7 +94,7 @@ article.alsp-listing.listing-post-style-listview_ultra.bumped {
 }
 .home .author-name-header .author-displayname, .home .author-name-header span.author-nicename
 {
-	color: #fff!important;
+    color: #fff!important;
 }
 .td_listings_level .pacz-icon-cog{
     font-size: 26px;
@@ -593,7 +593,7 @@ span.jb-glyphs.jb-star-rating:before {
     padding-left: 37px;
     background: url(img/accept-btn.png) no-repeat left center;
 }
-.jb-accept-bid, .jb-reject-bid, .jb-complete-bid{
+.jb-accept-bid, .jb-reject-bid, .jb-complete-bid, .jb-delete-bid{
     font-size: 11px;
     height: 41px;
     line-height: 41px;
@@ -925,18 +925,41 @@ div.alsp-content .btn-primary:hover{
 .alsp-listing.listing-post-style-10 .alsp-listing-logo{
     height:270px;
     min-height:270px;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.alsp-listing.listing-post-style-10 .alsp-listing-logo a{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .listing-post-style-grid figure.alsp-listing-logo{
     height:270px;
     min-height:270px;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.listing-post-style-grid figure.alsp-listing-logo a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.alsp-listing.listing-post-style-10 .alsp-listing-logo a img{
+    width: auto;
+    max-height: 100%;
 }
 
 .author-detail-section .author-thumbnail {
     text-align: center;
     padding-bottom: 30px;
+    position: relative;
 }
-
+.author-thumbnail #member-logo{
+    position: absolute;
+    left:10px;
+}
 .author-thumbnail .author-btns{
     margin-top: 15px;
 }
@@ -1044,6 +1067,7 @@ textarea, input[type=number]{
     margin: 0;
     font-weight: bold;
     text-transform: uppercase;
+    line-height: 35px;
 }
 .jb-accepted-text .message-btn{
     font-size: 11px;
@@ -1224,4 +1248,548 @@ textarea, input[type=number]{
 
 #theme-page .user-panel .author-name-info h6:hover{
     color: #fff!important;
+}
+
+.page-template-page-contractors .main-search-bar input.form-control,
+.page-template-page-contractors .main-search-bar select{
+    width: 31%;
+    margin-right: 3%;
+    display: inline-block;
+    float:left;
+    line-height: 44px;
+    height: 44px;
+}
+.page-template-page-contractors .main-search-bar select#search-city{
+    margin: 0;
+}
+.page-template-page-contractors #theme-page .main-search-bar select{
+    appearance: menulist;
+    -ms-appearance: menulist;
+    -o-appearance: menulist;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    color: #000!important;
+    font-size: 14px!important;
+    padding: 0 14px;
+}
+.page-template-page-contractors .main-search-bar .btn-primary{
+    min-height: 44px;
+    line-height: 44px;
+    padding: 0 20px!important;
+    min-width: 125px;
+}
+#theme-page select{
+    line-height:17px;
+}
+
+.page-template-page-contractors  .search-form-style3 .search-wrap {
+    padding: 10px;
+    margin-top: 20px;
+    background: #efefef;
+}
+.page-template-page-contractors  .search-element-col {
+    margin: 0;
+}
+
+.page-template-page-contractors .keyword-search.search-element-col.pull-left{
+    width: 85%!important;
+}
+.page-template-page-contractors .keyword-search.search-element-col.pull-right{
+    width: 15%!important;
+}
+
+#theme-page .userprofile select{
+    -webkit-appearance: menulist-button;
+    -moz-appearance:  menulist-button;
+}
+.single-listing .price label{
+    float: left;
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    color: #000;
+    font-family: Montserrat;
+}
+.single-listing .price .alsp-field-output-block{
+    clear: none!important;
+    float: right;
+    width: auto;
+}
+.author-title{
+    word-break: break-all;
+}
+.alsp-show-more-button img{
+    display: none;
+}
+
+.alsp-listings-block.alsp-listings-grid .alsp-listings-block-content{
+    height: auto!important;
+    overflow: inherit;!important;
+}
+#biography{
+    margin-bottom: 30px;
+}
+.author-name-info h6{
+    word-break: break-all;
+    white-space: normal;
+}
+#pacz-header:not(.header-structure-vertical) .pacz-header-logo img{
+    max-width: 100px;
+}
+#pacz-main-navigation > ul > li.menu-item > a, .listing-btn .listing-header-btn, .pacz-login-2.clearfix, .pacz-register-2{
+    font-size: 13px!important;
+}
+
+.page-template-template-classified .theme-content{
+    padding-top: 70px!important;
+}
+.tax-advert_category #theme-page .theme-page-wrapper.right-layout #pacz-sidebar{
+    float: left;
+}
+.tax-advert_category #theme-page .theme-page-wrapper.right-layout .theme-content{
+    float: right;
+}
+.tax-advert_category .adverts-search,
+.page-template-template-classified .adverts-search{
+    float: left;
+    padding: 0;
+}
+.tax-advert_category .adverts-options .adverts-options-left,
+.page-template-template-classified .adverts-options .adverts-options-left{
+    padding: 0!important;
+    margin-left: 10px;
+}
+.tax-advert_category .adverts-options-right,
+.page-template-template-classified .adverts-options .adverts-options-right{
+    padding: 0!important;
+}
+
+.tax-advert_category .adverts-options,
+.page-template-template-classified .adverts-options{
+    padding: 10px;
+    background: #efefef;
+    border: none;
+}
+.tax-advert_category .adverts-search .advert-input,
+.page-template-template-classified .adverts-search .advert-input{
+    width: 100%;
+    margin: 0;
+}
+
+.tax-advert_category .adverts-search .advert-input input[type=text],
+.page-template-template-classified .adverts-search .advert-input input[type=text]{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #eee;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    font-size: 14px;
+    line-height: 44px;
+    height: 44px;
+    padding: 0 12px;
+    transition: border-color .15s ease-in-out 0s, box-shadow .15s ease-in-out 0s;
+    width: 100%;
+}
+
+.tax-advert_category .adverts-form-submit,
+.page-template-template-classified .adverts-form-submit{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+    border-radius: 0;
+    background: #fad03d;
+    font-size: 12px;
+    min-height: 44px;
+    line-height: 44px;
+    padding: 0 20px;
+    min-width: 125px;
+    display: inline-block;
+    border: none;
+    font-family: Open Sans;
+    text-align: center;
+}
+
+.tax-advert_category .adverts-form-submit:hover,
+.page-template-template-classified .adverts-form-submit:hover{
+    background-color: #f04d4e;
+    color:#fff!important;
+}
+
+.tax-advert_category .cz-submit-btn,
+.page-template-template-classified .cz-submit-btn{
+    background-color: #f04d4e!important;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px!important;
+    min-height: 44px;
+    line-height: 44px;
+    padding: 0 20px!important;
+    min-width: 125px;
+    display: inline-block;
+    border: none;
+    font-family: Open Sans;
+    text-align: center;
+}
+.adverts-single-actions .adverts-show-contact-form, span.adverts-button{
+    background-color: #fad03d!important;
+    font-weight: bold!important;
+    text-transform: uppercase;
+    font-size: 12px!important;
+    min-height: 44px;
+    line-height: 44px!important;
+    padding: 0 20px!important;
+    min-width: 125px;
+    display: inline-block!important;
+    border: none!important;
+    font-family: Open Sans!important;
+    text-align: center;
+    color: #000!important;
+}
+.advert-post-content{
+    padding: 10px 0;
+    clear: both;
+}
+span.adverts-button{
+    background-color: #f04d4e!important;
+    color: #fff!important;
+}
+.adverts-single-actions .adverts-show-contact-form:hover{
+    color: #fff!important;
+}
+span.adverts-button a{
+    color: #fff!important;
+}
+.adverts-button:hover{
+    background-color: #000!important;
+}
+.adverts-single-actions .adverts-show-contact-form:hover{
+    background-color: #f04d4e!important;
+    color:#fff!important;
+}
+
+.page-id-3763 #theme-page{
+    padding: 30px 0;
+}
+.page-id-3763 .theme-content input[type="submit"],
+.adverts-contact-box input[type="submit"],
+.adverts-form input[type="submit"]{
+    background-color: #fad03d!important;
+    font-weight: bold!important;
+    text-transform: uppercase;
+    font-size: 12px!important;
+    min-height: 44px;
+    line-height: 44px!important;
+    padding: 0 20px!important;
+    min-width: 125px;
+    display: inline-block!important;
+    border: none!important;
+    font-family: Open Sans!important;
+    text-align: center;
+}
+.page-id-3763 .theme-content input[type="submit"]:hover,
+.adverts-form input[type="submit"]:hover,
+.adverts-contact-box input[type="submit"]:hover{
+    background-color: #f04d4e!important;
+    color:#fff!important;
+}
+.tax-advert_category .adverts-search .advert-input.advert-input-type-half.advert-input-type-half-left,
+.page-template-template-classified .adverts-search .advert-input.advert-input-type-half.advert-input-type-half-left{
+    width: 100%;
+    margin: 0;
+
+}
+
+.tax-advert_category .advert-item-col-1 .advert-img,
+.page-template-template-classified .advert-item-col-1 .advert-img {
+    float: left;
+    width: 28%;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    background: none;
+}
+.tax-advert_category .advert-item-col-1 .advert-content ,
+.page-template-template-classified .advert-item-col-1 .advert-content {
+    float: right;
+    width: 70%;
+}
+
+.page-template-template-classified .advert-item-col-1 .advert-post-title,
+.page-template-template-classified .advert-item-col-1 .advert-published,
+.tax-advert_category .advert-item-col-1 .advert-post-title,
+.tax-advert_category .advert-item-col-1 .advert-published
+{
+    margin: 0;
+}
+.adverts-price-box, .advert-item-col-1 .advert-price {
+    background-color: #f04d4e !important;
+    color: #fff!important;
+    font-size: 1.2em!important;
+    line-height: 2.2rem;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+}
+.adverts-price-box:hover, .advert-item-col-1 .advert-price:hover{
+    background: #000!important;
+}
+
+.adverts-manage-actions-left a.adverts-manage-action {
+    background: #fad03d;
+    border-color: #fad03d;
+    color: #000!important;
+}
+.adverts-manage-actions-left a.adverts-manage-action:hover {
+    background-color: #f04d4e!important;
+    border-color: #f04d4e!important;
+    color:#fff!important;
+}
+
+.tab-pane p .adverts-button{
+    background-color: #fad03d!important;
+    font-weight: bold!important;
+    text-transform: uppercase;
+    font-size: 12px!important;
+    min-height: 44px;
+    line-height: 44px!important;
+    padding: 0 20px!important;
+    min-width: 125px;
+    display: inline-block!important;
+    border: none!important;
+    font-family: Open Sans!important;
+    text-align: center;
+}
+.tab-pane p .adverts-button:hover{
+    background-color: #f04d4e!important;
+    border-color: #f04d4e!important;
+    color:#fff!important;
+}
+.pacz-responsive-nav li a, .listing-btn .listing-header-btn, .pacz-login-2.clearfix, .pacz-register-2, .pacz-mobile-login-wrap a{
+    text-transform: uppercase!important;
+}
+#pacz-page-title .pacz-page-title-bg{
+    background-image: url(img/apartment-bedroom-ceiling-1082355-1.jpg);
+}
+@media only screen and (max-width: 767px) {
+    .page-template-page-contractors .main-search-bar input.form-control, .page-template-page-contractors .main-search-bar select{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+    .page-template-page-contractors .keyword-search.search-element-col.pull-left{
+        width: 100% !important
+    }
+    .search-element-col{
+        text-align: center;
+    }
+    .page-template-page-contractors .alsp-listings-block.alsp-listings-grid-1 article.alsp-listing.responsive-2col,  .page-template-page-contractors .alsp-listings-block.alsp-listings-grid-2 article.alsp-listing.responsive-2col,  .page-template-page-contractors .alsp-listings-block.alsp-listings-grid-3 article.alsp-listing.responsive-2col,   .page-template-page-contractors .alsp-listings-block.alsp-listings-grid-4 article.alsp-listing.responsive-2col{
+        width: 92%!important;
+    }
+    .page-template-page-contractors .alsp-listings-grid .responsive-2col .listing-wrapper .listing-location{
+        display: block;
+    }
+    .alsp-dashboard-tabs-content .tab-content{
+        padding: 10px;
+    }
+    .jb-search-group-visible {
+        width: 100%;
+        text-align: center;
+    }
+    .jb-search .jb-input{
+        margin: 0 0 10px 0;
+    }
+    .jb-bid-search{
+        width: 100%;
+        margin: 0;
+    }
+    #theme-page .jb-input select, #theme-page select.jb-application-change-status-dropdown{
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+    }
+    .jb-top-search{
+        padding: 10px 35px;
+    }
+    .jb-list-search input[type="submit"]{
+        width: 100%;
+    }
+    .listing-post-style-listview_default figure, .listing-post-style-listview_ultra figure{
+        width: 100%!important;
+    }
+    .listing-post-style-listview_ultra .alsp-listing-text-content-wrap .listing-location,.listing-post-style-listview_ultra .alsp-listing-text-content-wrap header.alsp-listing-header .alsp-listing-date, .listing-post-style-listview_ultra .alsp-listing-text-content-wrap header.alsp-listing-header .listing-views{
+        font-size: 1em;
+        line-height: 1.4em;
+        margin-bottom: 12px;
+    }
+    .single-listing .alsp-listing-date, .single-listing .listing-id, .single-listing .listing-views, .single-location-address span{
+        font-size: 1em;
+    }
+    .single-listing .alsp-field-output-block-price, .single-listing .alsp-field-output-block-select, .single-listing .alsp-field-output-block-string{
+        padding: 5px 10px!important;
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+    .alsp-single-listing-text-content-wrap .alsp-fields-group .alsp-field-output-block{
+        padding: 5px 10px!important;
+    }
+    form#commentform .text-input, form#commentform textarea{
+        max-width: 100%;
+    }
+    .match_page_inner{
+        border: none!important;
+        width: 100%;
+    }
+    .page-template-page-contractors .main-search-bar .btn-primary{
+        width: 100%;
+    }
+    .blog-meta a, .blog-meta .blog-author, .entry-meta a, .entry-meta time, .entry-meta .blog-categories, .entry-meta .entry-categories, .blog-author{
+        font-size: 1em;
+    }
+    .cz-creat-listing{
+        padding: 10px;
+    }
+    .alsp-content.alsp-content-fields-metabox .alsp-field.form-group.form-horizontal label.col-md-1.alsp-control-label{
+        display: block;
+        font-weight: bold;
+        top: 0!important;
+    }
+    .difp-filter.pull-right{
+        width: 100%!important;
+        margin-bottom: 10px;
+    }
+    .select2-container{
+        max-width: 100%;
+    }
+    .bult-action-wrap{
+        width: 100%;
+    }
+    .bult-action-wrap .difp-bulk-action.pull-left{
+        width: auto!important;
+        margin: 0!important;
+        max-width: 68%;
+        float: left!important;
+    }
+    .bult-action-wrap .pull-left{
+        width: auto!important;
+        float: right!important;
+    }
+    .bult-action-wrap .difp-button{
+        margin: 0!important;
+    }
+    .vc_row.wpb_row.vc_row-fluid .wpb_column.vc_column_container.vc_col-sm-12 .vc_column-inner{
+        padding: 0;
+    }
+    .content-wrapper, .right-side{
+        padding-top: 20px;
+    }
+    .user-panel-main {
+        position: relative!important;
+        -webkit-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+        width: 100%;
+    }
+    .alsp-submit-listing-wrap{
+        margin: 0;
+    }
+    .cz-creat-listing{
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .cz-creat-listing-inner {
+        padding: 10px 5px!important;
+        background: none!important;
+        border: none!important;
+    }
+    .jb-manage-header-right{
+        position: relative;
+        top: 0px;
+        margin-top: 10px;
+        width: 100%;
+        float: none;
+    }
+    .jb-manage-header-right li{
+        margin-left: 0;
+        margin-right: 7px;
+    }
+    .jb-grid.jb-grid-compact .jb-grid-row.jb-manage-application  > div{
+        width: 100%!important;
+    }
+    .jb-manage-application .jb-manage-header-img img{
+        margin: 0 auto;
+    }
+    #theme-page h3 {
+        margin-bottom: 12px;
+    }
+    .jb-manage-header{
+        padding: 10px;
+    }
+    .jb-manage-header-right a, .jb-complete-btn{
+        padding: 0 15px;
+    }
+    .jb-manage-actions-right{
+        width: 100%;
+        float: none;
+        text-align: center;
+        clear: both;
+    }
+    .jb-manage-actions-right .jb-accept-btn{
+        margin: 0;
+    }
+    .jb-search .jb-input.jb-input-type-half.jb-input-type-half-left{
+        width: 100%;
+        margin: 0 0 10px;
+    }
+    .jb-list-search{
+        float: none;
+        clear: both;
+    }
+    #pacz-header.mobile-header{
+        background: none!important;
+    }
+    .pacz-burger-icon div{
+        background-color: #000!important;
+    }
+    .pacz-mobile-header-top{
+        max-width: 70%;
+        float: left;
+    }
+    .pacz-mobile-header-bottom{
+        float: right!important;
+        position: relative!important;
+        top: 0!important;
+    }
+    .pacz-mobile-header-bottom #pacz-main-navigation{
+        float: right;
+    }
+    .responsive-nav-link{
+        margin: 0;
+        width:auto;
+    }
+    .pacz-mobile-logo-wrap.pull-left{
+        margin-left:0!important;
+        left: 0!important;;
+    }
+    .pacz-mobile-login-wrap{
+        clear: both;
+        margin-top: 15px;
+        display: block;
+        float: right;
+    }
+    .listing-btn .listing-header-btn, .pacz-login-2.clearfix, .pacz-register-2{
+        font-size: 13px!important;
+        vertical-align: text-bottom;
+    }
+    .mobile-active-menu-user-wrap{
+        background: #000;
+    }
+    .pacz-register-2 {
+        padding-left: 5px;
+    }
 }

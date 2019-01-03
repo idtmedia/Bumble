@@ -177,6 +177,7 @@ $id = uniqid();
 									<?php endif; ?>
 									<h2 itemprop="name"><?php echo $listing->title(); ?><?php echo $author_verified_icon; ?></h2>
 									<div class="price">
+                                        <label><?php _e('Budget'); ?></label>
 										<?php
 										
 											global $wpdb;

@@ -3,6 +3,25 @@ if(get_current_user_role()=='contributor'):
     _e('You dont have permission for accessing this section');
 else:
 $user_id = get_current_user_id();
+
+if($_REQUEST['job_id']>0){
+    $post_ids_array = array($_REQUEST['job_id']);
+}
+$job_statuses = array('New','Rejected','Accepted');
+?>
+<?php if($_REQUEST['delete']>0):
+    $bid = get_post($_REQUEST['delete']);
+    $job = get_field('job', $bid->ID);
+    if($job->post_author == $user_id && wp_delete_post($_REQUEST['delete'])):?>
+    <div class="message"><p>
+            <?php _e('Bid deleted'); ?>
+        </p></div>
+<?php else: ?>
+        <div class="message"><p>
+                <?php _e('You dont have permission for deleting this bid'); ?>
+            </p></div>
+<?php     endif;
+endif;
 $args = array(
     'post_type' => 'alsp_listing',
     'author' => $user_id,
@@ -29,13 +48,7 @@ if(count($post_ids_array)<1): ?>
         </div>
     </div>
 <?php else: ?>
-    <?php
 
-if($_REQUEST['job_id']>0){
-    $post_ids_array = array($_REQUEST['job_id']);
-}
-$job_statuses = array('New','Rejected','Accepted');
-?>
 <div class="jb-top-search">
     <form action="" method="GET">
         <input type="hidden" name="alsp_action" value="applications" />
@@ -163,6 +176,9 @@ if($_REQUEST['job_status']!=""){
                             <li>
                                 <a href="<?php echo get_permalink($job); ?>"><?php _e('View job'); ?></a>
                             </li>
+                            <li>
+                                <a href="#" class="jb-btn-delete" data-popup-open="jb-delete-bid-<?php echo $post->ID; ?>"><?php _e('Delete Bid'); ?></a>
+                            </li>
                         </ul>
                     </div>
                     <div class="jb-manage-actions-wrap">
@@ -215,6 +231,20 @@ if($_REQUEST['job_status']!=""){
                                     </div>
                                 </div>
                             </div>
+                            <div class="popup popup-status-change" data-popup="jb-delete-bid-<?php echo $post->ID; ?>">
+                                <div class="popup-inner single-contact">
+                                    <div class="alsp-popup-content">
+                                        <a class="popup-close" data-popup-close="jb-delete-bid-<?php echo $post->ID; ?>" href="#"><i class="pacz-fic4-error"></i></a>
+                                        <h3><?php echo $contractor['user_nicename']; ?></h3>
+                                        <p>
+                                            <strong><?php _e('APPLIED FOR:')?></strong> <a href="<?php echo get_permalink($job); ?>"><?php echo get_the_title($job); ?></a><br>
+                                            <strong><?php _e('BID AMOUNT:'); ?></strong> <span>$<?php echo get_field('cost', $post->ID); ?></span>
+                                        </p>
+                                        <a href="?alsp_action=applications&delete=<?php echo $post->ID; ?>" class="jb-delete-bid"><?php _e('Delete this Bid'); ?></a>
+                                        <a class="jb-cancel-delete-btn" data-popup-close="jb-delete-bid-<?php echo $post->ID; ?>" href="#"><?php _e('Cancel'); ?></a>
+                                    </div>
+                                </div>
+                            </div>
                             <?php
 
                             echo '<div class="popup" data-popup="single_contact_form_'.$post->ID.'">';
@@ -238,8 +268,46 @@ if($_REQUEST['job_status']!=""){
                                 <a href="javascript: void()" class="jb-reject-btn" data-popup-open="jb-reject-bid-<?php echo $post->ID; ?>"><?php _e('Reject Bid'); ?></a>
                                 <p class="jb-accepted-text" style="display: none;"><?php _e('You’ve accepted this bid.'); ?> <a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a> <a href="javascript: void()" class="jb-complete-btn" data-popup-open="jb-complete-bid-<?php echo $post->ID; ?>" href=""><?php _e('JOB HAS BEEN COMPLETED?'); ?></a></p>
                                 <p class="jb-rejected-text" style="display: none;"><?php _e('You’ve rejected this bid.'); ?></p>
-                            <?php elseif($status=="Completed"): ?>
+                                <p class="jb-completed-text" style="display: none"> <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>"><?php _e('How did it go? Click here to rate this contractor on this job.'); ?></a></p>
+                            <?php elseif($status=="Completed"):
+
+//                                echo $job->ID.'==';
+                                $ratings = get_posts(array(
+                                    'posts_per_page' => -1,
+                                    'post_type' => 'ratingcontractor',
+                                    'meta_query' => array(
+                                        'relation'		=> 'AND',
+//                                        array(
+//                                            'key' => 'job',
+//                                            'value' => '""'.$job->ID.'""',
+//                                            'compare' => 'LIKE',
+//                                        ),
+                                        array(
+                                            'key' => 'contractor',
+                                            'value' => $contractor['ID'],
+                                            'compare' => '=',
+                                        ),
+                                        array(
+                                            'key' => 'rater',
+                                            'value' => $user_id,
+                                            'compare' => '=',
+                                        ),
+                                    ),
+                                ));
+                                ?>
+                                <?php if (count($ratings) > 0): ?>
+                                <?php $chk = 0; ?>
+                                    <?php foreach ($ratings as $rate) : setup_postdata($rate); ?>
+                                       <?php $curjob = get_field('job', $rate->ID);
+                                       if($curjob->ID == $job->ID) $chk = 1;
+                                       ?>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                                <?php if($chk): ?>
+                                <p class="jb-completed-text"><?php _e('Thanks for using Bumble Bidz.'); ?></p>
+                            <?php else: ?>
                                 <p class="jb-completed-text"> <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>"><?php _e('How did it go? Click here to rate this contractor on this job.'); ?></a></p>
+                            <?php endif; ?>
                             <?php else: ?>
                                 <p class="jb-accepted-text"><?php _e('You’ve'); ?> <?php echo $status; ?> <?php _e('this bid.'); ?>  <?php if($status=='Accepted'): ?><a href="javascript: void()" class="message-btn" data-popup-open="single_contact_form_<?php echo $post->ID; ?>"><?php _e('Get Started'); ?></a>  <a href="javascript: void()" class="jb-complete-btn" data-popup-open="jb-complete-bid-<?php echo $post->ID; ?>" href=""><?php _e('JOB HAS BEEN COMPLETED?'); ?></a><?php endif; ?></p>
                                 <p class="jb-completed-text" style="display: none;"> <a href="<?php echo get_author_posts_url($contractor->ID, $contractor['user_nicename']); ?>"><?php _e('How did it go? Click here to rate this contractor on this job.'); ?></a></p>
@@ -251,8 +319,8 @@ if($_REQUEST['job_status']!=""){
         <?php endforeach;
         wp_reset_postdata(); ?>
     <?php else: ?>
-     <div class="jb-grid-row jb-manage-item jb-manage-application">
-        <?php _e("No application!"); ?>
+     <div class="">
+        <?php _e("You currently do not have any bids on your projects."); ?>
      </div>
     <?php endif; ?>
 </div>

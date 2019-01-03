@@ -3374,7 +3374,9 @@ $alsp_dynamic_styles[] = array(
                   <a class="" href="?alsp_action=applications" rel="nofollow"><i class="fa fa-dollar"></i><span><?php echo  __('View all bids', 'ALSP'); ?> (<?php echo get_total_bids(); ?>)</span></a>
               </li>
           <?php endif; ?>
-
+          <li>
+              <a class="" href="?alsp_action=my_classifieds" rel="nofollow"><i class="fa fa-home"></i><span><?php echo  __('Manage Items for Sale', 'ALSP'); ?></span></a>
+          </li>
 		<?php if ($ALSP_ADIMN_SETTINGS['alsp_allow_edit_profile']): ?>
 			<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'profile')); ?>"><i class="pacz-icon-user"></i><span><?php _e('Edit Profile', 'ALSP'); ?></span></a></li>
 
@@ -3399,6 +3401,7 @@ $alsp_dynamic_styles[] = array(
 		<?php //do_action('alsp_dashboard_links', $frontend_controller); ?>
 		<?php if(class_exists('WooCommerce') && $ALSP_ADIMN_SETTINGS['alsp_woocommerce_frontend_links']){
 		if(is_contractor()):
+            /*
 		?>
         <li class="treeview">
           <a href="#">
@@ -3416,7 +3419,7 @@ $alsp_dynamic_styles[] = array(
 
           </ul>
         </li>
-		<?php endif; ?>
+		<?php */ endif; ?>
 		<?php } ?>
 		<?php if($ALSP_ADIMN_SETTINGS['alsp_payments_addon'] == 'alsp_buitin_payment'){ ?>
 			<li><a href="<?php echo alsp_dashboardUrl(array('alsp_action' => 'invoices')); ?>"><i class="pacz-icon-user"></i><span><?php _e('Invoices', 'ALSP'); ?></span></a></li>

@@ -357,12 +357,12 @@ function get_amount_matched_location(){
        'role' => 'Contributor',
         'meta_query' => array(
             'relation' => 'AND',
-            array(
+            /*array(
                 'key'     => 'city',
 //                'value'   => 'Montreal',
                 'value'   => $current_address['city'],
                 'compare' => '='
-            ),
+            ),*/
             array(
                 'key'     => 'state',
 //                'value'   => 'Quebec',
@@ -588,5 +588,180 @@ function great_circle_distance(
     return $angle * $earthRadius;
 }
 
-
 //Google place API key AIzaSyD0Pq-kEkLm-xs_gcOPjLl6XBj6BZCKs-E
+/*********************************
+ * Get Jobs in Current City
+ * Usage: Home page Jobs near me
+ * Author: Thangnn
+ */
+function creativeosc_get_city_jobs(){
+    if(isset($_POST['cvf_action']) && $_POST['cvf_action'] == 'get_city_jobs' && ( $_POST['city_long']!="" )&& ( $_POST['city_short']!="" )) {
+        $args = array(
+            'post_type' => 'alsp_listing',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+        );
+        $current_city_jobs = get_posts($args);
+        $output = '<div class="alsp-content listing-parent pacz-loop-main-wrapper " style="margin:0 -15px;">
+            <div class="alsp-container-fluid alsp-listings-block cz-listview">																										
+					<div class="alsp-listings-block-content no-carousel  clearfix" data-style="masonry">
+																				<div class="listing-list-view-inner-wrap">';
+        if (count($current_city_jobs) > 0) {
+            $i=0;
+            foreach ($current_city_jobs as $post) :
+                if($i>4){
+                    break;
+                }
+                setup_postdata($post);
+                $post_ids_array[] = $post->ID;
+                $listing = new alsp_listing;
+                $listing->loadListingFromPost($post);
+                if((strpos($listing->locations[0]->address_line_1, $_POST['city_short'])!==false || strpos($listing->locations[0]->address_line_1, $_POST['city_long'])!==false) && ($listing->status=='active'))
+                {
+                    $listings[] = $listing;
+                    $terms = wp_get_post_terms($post->ID, ALSP_CATEGORIES_TAX, array( 'parent' => '0', 'order' => 'ASC' ) );
+                    $categories = '';
+                    foreach ($terms as $term){
+                        $categories .= '<a class="listing-cat" href="'.get_term_link($term, ALSP_CATEGORIES_TAX).'" rel="tag">'.$term->name.'</a>';
+                    }
+
+                    $output .= '<article id="post-'.$post->ID.'" class="row alsp-listing  pacz-isotop-item isotop-item responsive-2col listing-post-style-listview_ultra  clearfix">
+                                    <div class="listing-wrapper clearfix">							
+                                        <figure class="alsp-listing-logo alsp-listings-own-page">
+                                            <a href="'.get_permalink($post).'">
+                                                '.get_the_post_thumbnail($post->ID, 'full').'
+                                            </a>
+                                            <div class="listing-logo-overlay">                           
+                                            </div>
+                                        </figure>
+                                        <div class="clearfix alsp-listing-text-content-wrap">
+                                            <div class="cat-wrapper">'.$categories.'</div>
+                                           <div class="price">
+                                                <div class="alsp-field alsp-field-output-block alsp-field-output-block-price alsp-field-output-block-9">
+                                                    <span class="alsp-field-caption">
+                                                        <span class="alsp-field-name">Budget:</span>
+                                                    </span>
+                                                    <span class="alsp-field-content">
+                                                    <span class="symbol_style2">$</span>'.$listing->content_fields[9]->currency_symbol.$listing->content_fields[9]->value.'</span>
+                                                </div>
+                                            </div>
+                                            <!--<a href="javascript:void(0);" class="add_to_favourites btn" listingid="'.$post->ID.'"><span class="pacz-icon-heart-o"></span></a>-->
+                                            <header class="alsp-listing-header"><h2><a href="'.get_permalink($post).'" title="'.$post->post_title.'">'.$post->post_title.'</a></h2>
+                                                <div class="listing-metas clearfix">
+                                                    <p class="listing-location"><i class="pacz-fic3-pin-1"></i><span class="alsp-location" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span class="alsp-show-on-map" data-location-id="">'.$listing->locations[0]->address_line_1.'</span></span></p>
+                                                    <em class="alsp-listing-date" itemprop="dateCreated" datetime="2018-11-12T16:03"><i class="pacz-fic3-clock-circular-outline"></i>'.date_i18n( get_option( 'date_format' ), strtotime( $post->post_date ) ).'</em>
+                                                </div>
+                                            </header>
+                                        </div>							
+                                     </div>
+                                </article>';
+                }
+//                    $listings[] = $listing->status;
+//                    $listings[] = $listing->locations[0]->address_line_1;
+                $i++;
+            endforeach;
+            wp_reset_postdata();
+        }else{
+
+        }
+        $output .= '</div>';
+        $output .= '</div>';
+        $output .= '</div>';
+        $output .= '</div>';
+        echo $output;
+
+    }
+    // Always exit to avoid further execution
+    exit();
+}
+add_action('wp_ajax_creativeosc_get_city_jobs', 'creativeosc_get_city_jobs');
+add_action('wp_ajax_nopriv_creativeosc_get_city_jobs', 'creativeosc_get_city_jobs');
+
+/***********************
+ * Get Cities by Province ajax function
+ * Usage: Page Contractor
+ * Author: ThangNN
+ */
+
+function creativeosc_get_cities_by_province()
+{
+    if (isset($_POST['cvf_action']) && $_POST['cvf_action'] == 'get_cities' && $_POST['province'] != "") {
+        $cities = get_posts(array(
+                'showposts' => -1,
+                'post_type' => 'location_city',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'location_province',
+                        'field' => 'name',
+                        'terms' => array($_POST['province']))
+                ),
+                'orderby' => 'title',
+                'order' => 'ASC')
+        );
+        $city_array = array();
+        if (count($cities) > 0) {
+            foreach ($cities as $city) {
+                setup_postdata($city);
+                $city_array[] = $city->post_title;
+            }
+            echo json_encode($city_array);
+        }else{
+            echo 'no result';
+        }
+        // Always exit to avoid further execution
+        exit();
+    }
+}
+add_action('wp_ajax_creativeosc_get_cities_by_province', 'creativeosc_get_cities_by_province');
+add_action('wp_ajax_nopriv_creativeosc_get_cities_by_province', 'creativeosc_get_cities_by_province');
+
+add_action( 'show_user_profile', 'extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'extra_user_profile_fields' );
+
+function extra_user_profile_fields( $user ) { ?>
+    <h3><?php _e("Google Review", "blank"); ?></h3>
+
+    <table class="form-table">
+        <tr>
+            <th><label for="postalcode"><?php _e("Google Place Id"); ?></label></th>
+            <td>
+                <input type="text" name="googleplaceid" id="googleplaceid" value="<?php echo esc_attr( get_the_author_meta( 'googleplaceid', $user->ID ) ); ?>" class="regular-text" /><br />
+                <span class="description"><?php _e("Please enter your Google Place ID."); ?></span>
+            </td>
+        </tr>
+    </table>
+    <h3><?php _e("Not member?", "blank"); ?></h3>
+
+    <table class="form-table">
+        <tr>
+            <th><label for="postalcode"><?php _e("Not member?"); ?></label></th>
+            <td>
+                <input type="checkbox" name="notmember" id="notmember" value="yes" <?php if( get_the_author_meta( 'notmember', $user->ID )=='yes') echo 'checked="checked"'; ?>>
+            </td>
+        </tr>
+    </table>
+<?php }
+
+add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
+
+function save_extra_user_profile_fields( $user_id ) {
+
+//    if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
+
+    update_user_meta( $user_id, 'googleplaceid', $_POST['googleplaceid'] );
+    update_user_meta( $user_id, 'notmember', $_POST['notmember'] );
+}
+
+/*// For uploading images at classified section
+function idt_handle_attachment($file_handler,$post_id,$set_thu=false) {
+    // check to make sure its a successful upload
+    if ($_FILES[$file_handler]['error'] !== UPLOAD_ERR_OK) __return_false();
+    require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+    require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+    require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+    $attach_id = media_handle_upload( $file_handler, $post_id );
+    // If you want to set a featured image frmo your uploads.
+    if ($set_thu) set_post_thumbnail($post_id, $attach_id);
+    return $attach_id;
+}*/
